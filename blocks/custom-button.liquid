@@ -8,9 +8,22 @@
   {% content_for 'block', type: 'custom-button', id: 'cta-button' %}
 {% enddoc %}
 
+{% liquid
+  assign bg_is_transparent = false
+  if block.settings.background_color == blank or block.settings.background_color == 'transparent'
+    assign bg_is_transparent = true
+  endif
+
+  if bg_is_transparent
+    assign hover_r = block.settings.text_color | color_extract: 'red'
+    assign hover_g = block.settings.text_color | color_extract: 'green'
+    assign hover_b = block.settings.text_color | color_extract: 'blue'
+  endif
+%}
+
 <a
   {{ block.shopify_attributes }}
-  class="custom-button"
+  class="custom-button{% if bg_is_transparent %} custom-button--transparent-bg{% endif %}"
   {% if block.settings.link != blank %}
     href="{{ block.settings.link }}"
   {% endif %}
@@ -48,6 +61,7 @@
     --custom-button-border-radius: {{ block.settings.border_radius }}px;
     --custom-button-border-color: {{ block.settings.border_color }};
     --custom-button-border-width: {{ block.settings.border_width }}px;
+    {% if bg_is_transparent %}--custom-button-hover-bg: rgba({{ hover_r }}, {{ hover_g }}, {{ hover_b }}, 0.18);{% endif %}
   "
 >
   {{ block.settings.label | escape }}
@@ -90,6 +104,11 @@
 .custom-button:hover {
   background-color: var(--custom-button-text-color);
   color: var(--custom-button-bg-color);
+}
+
+.custom-button--transparent-bg:hover {
+  background-color: var(--custom-button-hover-bg);
+  color: var(--custom-button-text-color);
 }
 
 @media screen and (max-width: 749px) {
