@@ -9,9 +9,9 @@
 {% enddoc %}
 
 {% liquid
-  assign slides_per_view_mobile = block.settings.slides_per_view_mobile | default: '1'
-  assign slides_per_view_tablet = block.settings.slides_per_view_tablet | default: '2'
-  assign slides_per_view_desktop = block.settings.slides_per_view_desktop | default: '3'
+  assign slides_per_view_mobile = block.settings.slides_per_view_mobile | default: 1
+  assign slides_per_view_tablet = block.settings.slides_per_view_tablet | default: 2
+  assign slides_per_view_desktop = block.settings.slides_per_view_desktop | default: 3
 
   assign gap_mobile = block.settings.slide_gap_mobile | default: 16
   assign gap_tablet = block.settings.slide_gap_tablet | default: 20
@@ -139,8 +139,6 @@
   {% endif %}
 </carousel-block>
 
-<script src="{{ 'carousel-block.js' | asset_url }}" type="module"></script>
-
 {% stylesheet %}
   .carousel-block {
     display: flex;
@@ -219,10 +217,13 @@
       "content": "t:content.mobile"
     },
     {
-      "type": "text",
+      "type": "range",
       "id": "slides_per_view_mobile",
       "label": "t:settings.slides_per_view_mobile",
-      "default": "1"
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "default": 1
     },
     {
       "type": "number",
@@ -273,10 +274,13 @@
       "content": "t:content.tablet"
     },
     {
-      "type": "text",
+      "type": "range",
       "id": "slides_per_view_tablet",
       "label": "t:settings.slides_per_view_tablet",
-      "default": "2"
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "default": 2
     },
     {
       "type": "number",
@@ -327,10 +331,13 @@
       "content": "t:content.desktop"
     },
     {
-      "type": "text",
+      "type": "range",
       "id": "slides_per_view_desktop",
       "label": "t:settings.slides_per_view_desktop",
-      "default": "3"
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "default": 3
     },
     {
       "type": "number",
