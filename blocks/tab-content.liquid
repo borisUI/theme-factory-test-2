@@ -1,0 +1,68 @@
+{% doc %}
+  Tab Content Block
+
+  Renders a container that is shown/hidden based on the active tab
+  navigation selection. Accepts nested blocks via content_for 'blocks'.
+  Links to a tab navigation block via matching group_id and target_id.
+
+  @example
+  {% content_for 'block', type: 'tab-content', id: 'tab-content-1' %}
+{% enddoc %}
+
+<div
+  {{ block.shopify_attributes }}
+  class="tab-content"
+  role="tabpanel"
+  data-tab-content
+  data-tab-group="{{ block.settings.group_id }}"
+  data-tab-id="{{ block.settings.target_id }}"
+>
+  {% content_for 'blocks' %}
+</div>
+
+{% stylesheet %}
+.tab-content {
+  display: none;
+}
+
+.tab-content--active {
+  display: block;
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.tab_content",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:content.tab_settings"
+    },
+    {
+      "type": "text",
+      "id": "group_id",
+      "label": "t:settings.group_id",
+      "info": "t:settings.group_id_info",
+      "default": "tabs-1"
+    },
+    {
+      "type": "text",
+      "id": "target_id",
+      "label": "t:settings.target_id",
+      "info": "t:settings.target_id_info",
+      "default": "tab-1"
+    }
+  ],
+  "blocks": [
+    { "type": "@theme" },
+    { "type": "@app" }
+  ],
+  "presets": [
+    {
+      "name": "t:names.tab_content",
+      "category": "t:categories.layout"
+    }
+  ]
+}
+{% endschema %}
