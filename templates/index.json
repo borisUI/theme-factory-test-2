@@ -12,6 +12,20 @@
     "generic_section_YQexch": {
       "type": "generic-section",
       "blocks": {
+        "icon_YXbCpi": {
+          "type": "icon",
+          "name": "t:names.icon",
+          "settings": {
+            "icon": "price_tag",
+            "width": 134,
+            "width_mobile": 75,
+            "margin_bottom_desktop": 20,
+            "margin_bottom_mobile": 20,
+            "link": "",
+            "open_in_new_tab": false
+          },
+          "blocks": {}
+        },
         "custom_button_nA9pMX": {
           "type": "custom-button",
           "name": "t:names.custom_button",
@@ -79,6 +93,7 @@
         }
       },
       "block_order": [
+        "icon_YXbCpi",
         "custom_button_nA9pMX",
         "text_nLJf7G"
       ],
