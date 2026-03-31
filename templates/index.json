@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "hero_jVaWmY": {
       "type": "hero",
@@ -62,6 +62,10 @@
       "settings": {
         "media_type_1": "image",
         "media_type_2": "image",
+        "stack_media_on_mobile": false,
+        "custom_mobile_media": false,
+        "media_type_1_mobile": "image",
+        "media_type_2_mobile": "image",
         "link": "",
         "open_in_new_tab": false,
         "content_direction": "column",
@@ -279,10 +283,150 @@
         "padding-block-start": 48,
         "padding-block-end": 48
       }
+    },
+    "generic_section_mkecUm": {
+      "type": "generic-section",
+      "blocks": {
+        "hero_block_8nGT7y": {
+          "type": "hero-block",
+          "name": "t:names.hero_block",
+          "settings": {
+            "height_type_mobile": "auto",
+            "custom_height_mobile": 400,
+            "background_media_mobile": "none",
+            "image_position_mobile": "cover",
+            "video_position_mobile": "cover",
+            "content_width_mobile": "100",
+            "content_position_mobile": "center-center",
+            "padding_top_mobile": 0,
+            "padding_bottom_mobile": 0,
+            "padding_left_mobile": 0,
+            "padding_right_mobile": 0,
+            "margin_bottom_mobile": 0,
+            "height_type_desktop": "custom",
+            "custom_height_desktop": 400,
+            "background_media_desktop": "image",
+            "image_position_desktop": "cover",
+            "video_position_desktop": "cover",
+            "content_width_desktop": "50",
+            "content_position_desktop": "center-center",
+            "padding_top_desktop": 20,
+            "padding_bottom_desktop": 20,
+            "padding_left_desktop": 20,
+            "padding_right_desktop": 20,
+            "margin_bottom_desktop": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top"
+          },
+          "blocks": {
+            "text_Bd6xPe": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>We make things that work better and last longer. Our products solve real problems with clean design and honest materials.We make things that work better and last longer. Our products solve real problems with clean design and honest materials.We make things that work better and last longer. Our products solve real problems with clean design and honest materials.</p>",
+                "width": "100%",
+                "max_width": "none",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_Bd6xPe"
+          ]
+        },
+        "carousel_block_A6PcmR": {
+          "type": "carousel-block",
+          "name": "t:names.carousel_block",
+          "settings": {
+            "slides_per_view_mobile": "1",
+            "slide_gap_mobile": 16,
+            "autoplay_mobile": false,
+            "autoplay_delay_mobile": 5,
+            "show_arrows_mobile": true,
+            "external_arrows_mobile": false,
+            "show_dots_mobile": true,
+            "slides_per_view_tablet": "2",
+            "slide_gap_tablet": 20,
+            "autoplay_tablet": false,
+            "autoplay_delay_tablet": 5,
+            "show_arrows_tablet": true,
+            "external_arrows_tablet": false,
+            "show_dots_tablet": true,
+            "slides_per_view_desktop": "3",
+            "slide_gap_desktop": 24,
+            "autoplay_desktop": false,
+            "autoplay_delay_desktop": 5,
+            "show_arrows_desktop": true,
+            "external_arrows_desktop": false,
+            "show_dots_desktop": true
+          },
+          "blocks": {}
+        },
+        "grid_row_Hexm3j": {
+          "type": "grid-row",
+          "name": "t:names.grid_row",
+          "settings": {
+            "vertical_alignment_mobile": "start",
+            "column_gap_mobile": 16,
+            "row_gap_mobile": 16,
+            "margin_bottom_mobile": 0,
+            "vertical_alignment_tablet": "start",
+            "column_gap_tablet": 20,
+            "row_gap_tablet": 20,
+            "margin_bottom_tablet": 0,
+            "vertical_alignment_desktop": "start",
+            "column_gap_desktop": 24,
+            "row_gap_desktop": 24,
+            "margin_bottom_desktop": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "hero_block_8nGT7y",
+        "carousel_block_A6PcmR",
+        "grid_row_Hexm3j"
+      ],
+      "name": "t:names.generic_section",
+      "settings": {
+        "background_color_mobile": "",
+        "text_color_mobile": "",
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "padding_left_mobile": 20,
+        "padding_right_mobile": 20,
+        "margin_bottom_mobile": 0,
+        "background_color_desktop": "#e1edf5",
+        "text_color_desktop": "#1d3686",
+        "padding_top_desktop": 20,
+        "padding_bottom_desktop": 20,
+        "padding_left_desktop": 20,
+        "padding_right_desktop": 20,
+        "margin_bottom_desktop": 20
+      }
     }
   },
   "order": [
     "hero_jVaWmY",
-    "product_list_fa6P9H"
+    "product_list_fa6P9H",
+    "generic_section_mkecUm"
   ]
 }
