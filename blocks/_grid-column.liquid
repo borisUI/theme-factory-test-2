@@ -21,6 +21,9 @@
     --grid-col-order-mobile: {{ block.settings.column_order_mobile }};
     --grid-col-order-tablet: {{ block.settings.column_order_tablet }};
     --grid-col-order-desktop: {{ block.settings.column_order_desktop }};
+    --grid-col-mb-mobile: {{ block.settings.margin_bottom_mobile | default: 0 }}px;
+    --grid-col-mb-tablet: {{ block.settings.margin_bottom_tablet | default: 0 }}px;
+    --grid-col-mb-desktop: {{ block.settings.margin_bottom_desktop | default: 0 }}px;
   "
   {{ block.shopify_attributes }}
 >
@@ -38,6 +41,7 @@
     .grid-column {
       grid-column: span var(--grid-col-span-mobile, 12);
       order: var(--grid-col-order-mobile, 0);
+      margin-block-end: var(--grid-col-mb-mobile, 0px);
     }
   }
 
@@ -45,6 +49,7 @@
     .grid-column {
       grid-column: span var(--grid-col-span-tablet, 6);
       order: var(--grid-col-order-tablet, 0);
+      margin-block-end: var(--grid-col-mb-tablet, 0px);
     }
   }
 
@@ -52,6 +57,7 @@
     .grid-column {
       grid-column: span var(--grid-col-span-desktop, 4);
       order: var(--grid-col-order-desktop, 0);
+      margin-block-end: var(--grid-col-mb-desktop, 0px);
     }
   }
 {% endstylesheet %}
@@ -74,15 +80,49 @@
       "content": "t:content.mobile"
     },
     {
-      "type": "number",
+      "type": "select",
       "id": "column_span_mobile",
       "label": "t:settings.column_span_mobile",
-      "default": 12
+      "default": "12",
+      "options": [
+        { "value": "1", "label": "1" },
+        { "value": "2", "label": "2" },
+        { "value": "3", "label": "3" },
+        { "value": "4", "label": "4" },
+        { "value": "5", "label": "5" },
+        { "value": "6", "label": "6" },
+        { "value": "7", "label": "7" },
+        { "value": "8", "label": "8" },
+        { "value": "9", "label": "9" },
+        { "value": "10", "label": "10" },
+        { "value": "11", "label": "11" },
+        { "value": "12", "label": "12" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "column_order_mobile",
+      "label": "t:settings.column_order_mobile",
+      "default": "1",
+      "options": [
+        { "value": "1", "label": "1" },
+        { "value": "2", "label": "2" },
+        { "value": "3", "label": "3" },
+        { "value": "4", "label": "4" },
+        { "value": "5", "label": "5" },
+        { "value": "6", "label": "6" },
+        { "value": "7", "label": "7" },
+        { "value": "8", "label": "8" },
+        { "value": "9", "label": "9" },
+        { "value": "10", "label": "10" },
+        { "value": "11", "label": "11" },
+        { "value": "12", "label": "12" }
+      ]
     },
     {
       "type": "number",
-      "id": "column_order_mobile",
-      "label": "t:settings.column_order_mobile",
+      "id": "margin_bottom_mobile",
+      "label": "t:settings.margin_bottom_mobile",
       "default": 0
     },
     {
@@ -90,15 +130,49 @@
       "content": "t:content.tablet"
     },
     {
-      "type": "number",
+      "type": "select",
       "id": "column_span_tablet",
       "label": "t:settings.column_span_tablet",
-      "default": 6
+      "default": "6",
+      "options": [
+        { "value": "1", "label": "1" },
+        { "value": "2", "label": "2" },
+        { "value": "3", "label": "3" },
+        { "value": "4", "label": "4" },
+        { "value": "5", "label": "5" },
+        { "value": "6", "label": "6" },
+        { "value": "7", "label": "7" },
+        { "value": "8", "label": "8" },
+        { "value": "9", "label": "9" },
+        { "value": "10", "label": "10" },
+        { "value": "11", "label": "11" },
+        { "value": "12", "label": "12" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "column_order_tablet",
+      "label": "t:settings.column_order_tablet",
+      "default": "1",
+      "options": [
+        { "value": "1", "label": "1" },
+        { "value": "2", "label": "2" },
+        { "value": "3", "label": "3" },
+        { "value": "4", "label": "4" },
+        { "value": "5", "label": "5" },
+        { "value": "6", "label": "6" },
+        { "value": "7", "label": "7" },
+        { "value": "8", "label": "8" },
+        { "value": "9", "label": "9" },
+        { "value": "10", "label": "10" },
+        { "value": "11", "label": "11" },
+        { "value": "12", "label": "12" }
+      ]
     },
     {
       "type": "number",
-      "id": "column_order_tablet",
-      "label": "t:settings.column_order_tablet",
+      "id": "margin_bottom_tablet",
+      "label": "t:settings.margin_bottom_tablet",
       "default": 0
     },
     {
@@ -106,16 +180,56 @@
       "content": "t:content.desktop"
     },
     {
-      "type": "number",
+      "type": "select",
       "id": "column_span_desktop",
       "label": "t:settings.column_span_desktop",
-      "default": 4
+      "default": "4",
+      "options": [
+        { "value": "1", "label": "1" },
+        { "value": "2", "label": "2" },
+        { "value": "3", "label": "3" },
+        { "value": "4", "label": "4" },
+        { "value": "5", "label": "5" },
+        { "value": "6", "label": "6" },
+        { "value": "7", "label": "7" },
+        { "value": "8", "label": "8" },
+        { "value": "9", "label": "9" },
+        { "value": "10", "label": "10" },
+        { "value": "11", "label": "11" },
+        { "value": "12", "label": "12" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "column_order_desktop",
+      "label": "t:settings.column_order_desktop",
+      "default": "1",
+      "options": [
+        { "value": "1", "label": "1" },
+        { "value": "2", "label": "2" },
+        { "value": "3", "label": "3" },
+        { "value": "4", "label": "4" },
+        { "value": "5", "label": "5" },
+        { "value": "6", "label": "6" },
+        { "value": "7", "label": "7" },
+        { "value": "8", "label": "8" },
+        { "value": "9", "label": "9" },
+        { "value": "10", "label": "10" },
+        { "value": "11", "label": "11" },
+        { "value": "12", "label": "12" }
+      ]
     },
     {
       "type": "number",
-      "id": "column_order_desktop",
-      "label": "t:settings.column_order_desktop",
+      "id": "margin_bottom_desktop",
+      "label": "t:settings.margin_bottom_desktop",
       "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.grid_column",
+      "category": "t:categories.layout"
     }
   ]
 }
