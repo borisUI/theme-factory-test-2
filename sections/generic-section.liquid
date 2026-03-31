@@ -31,13 +31,7 @@
     --gs-mb-desktop: {{ section.settings.margin_bottom_desktop | default: 0 }}px;
   "
 >
-  {% if section.settings.enable_tabs %}
-    <tab-system>
-      {{- children -}}
-    </tab-system>
-  {% else %}
-    {{- children -}}
-  {% endif %}
+  {{- children -}}
 </div>
 
 {% stylesheet %}
@@ -172,17 +166,6 @@
       "label": "t:settings.margin_bottom_desktop",
       "default": 0
     },
-    {
-      "type": "header",
-      "content": "t:content.tab_system"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_tabs",
-      "label": "t:settings.enable_tabs",
-      "info": "t:settings.enable_tabs_info",
-      "default": false
-    }
   ],
   "presets": [
     {

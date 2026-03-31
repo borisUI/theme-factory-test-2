@@ -142,7 +142,6 @@
     "swatches": "Swatches",
     "submenu_feature": "Submenu feature",
     "tab_settings": "Tab Settings",
-    "tab_system": "Tab System",
     // Section header for text positioning settings
     "text": "Text",
     "text_presets": "Text presets",
@@ -897,8 +896,6 @@
     "empty_state_collection": "Empty state collection",
     "empty_state_collection_info": "Shown before a search is entered",
     "enable_filtering": "Filters",
-    "enable_tabs": "Enable tab system",
-    "enable_tabs_info": "Wraps content in a tab system container. All tab navigation and tab content blocks for a group must be in the same section.",
     "enable_grid_density": "Grid layout control",
     "enable_sorting": "Sorting",
     "enable_sticky_add_to_cart": "Sticky add to cart bar",

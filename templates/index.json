@@ -54,8 +54,7 @@
         "padding_bottom_desktop": 0,
         "padding_left_desktop": 0,
         "padding_right_desktop": 0,
-        "margin_bottom_desktop": 0,
-        "enable_tabs": false
+        "margin_bottom_desktop": 0
       }
     },
     "generic_section_yaf9Ab": {
@@ -159,8 +158,7 @@
         "padding_bottom_desktop": 0,
         "padding_left_desktop": 0,
         "padding_right_desktop": 0,
-        "margin_bottom_desktop": 0,
-        "enable_tabs": false
+        "margin_bottom_desktop": 0
       }
     }
   },

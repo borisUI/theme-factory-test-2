@@ -1,182 +1,167 @@
 /**
- * Tab System Custom Element
+ * Tab System — Document-Level Module
  *
  * Groups tab navigation and tab content elements by data-tab-group attribute.
  * Handles tab switching, active states, and theme editor reinitialization.
+ * Operates at document level — no custom element wrapper required.
  *
  * @example
- * <tab-system>
- *   <button data-tab-nav data-tab-group="group-1" data-tab-target="tab-a">Tab A</button>
- *   <button data-tab-nav data-tab-group="group-1" data-tab-target="tab-b">Tab B</button>
- *   <div data-tab-content data-tab-group="group-1" data-tab-id="tab-a">Content A</div>
- *   <div data-tab-content data-tab-group="group-1" data-tab-id="tab-b">Content B</div>
- * </tab-system>
+ * <button data-tab-nav data-tab-group="group-1" data-tab-target="tab-a">Tab A</button>
+ * <button data-tab-nav data-tab-group="group-1" data-tab-target="tab-b">Tab B</button>
+ * <div data-tab-content data-tab-group="group-1" data-tab-id="tab-a">Content A</div>
+ * <div data-tab-content data-tab-group="group-1" data-tab-id="tab-b">Content B</div>
  */
-class TabSystem extends HTMLElement {
-  /** @type {MutationObserver|null} */
-  #observer = null;
 
-  /** @type {number|null} */
-  #debounceTimer = null;
+/** @type {number|null} */
+let debounceTimer = null;
 
-  connectedCallback() {
-    this.#initializeTabs();
-    this.#setupClickListeners();
-    this.#setupMutationObserver();
+/**
+ * Initialize all tab groups — activate the first tab in each group
+ * (or the one marked data-tab-active="true")
+ */
+const initializeTabs = () => {
+  const navItems = document.querySelectorAll('[data-tab-nav]');
+  const contentItems = document.querySelectorAll('[data-tab-content]');
 
-    document.addEventListener('shopify:section:load', this.#handleSectionLoad);
+  /** @type {Map<string, boolean>} */
+  const initializedGroups = new Map();
+
+  for (const nav of navItems) {
+    const groupId = nav.getAttribute('data-tab-group');
+    if (!groupId || initializedGroups.has(groupId)) continue;
+
+    initializedGroups.set(groupId, true);
+
+    const activeNav = document.querySelector(`[data-tab-nav][data-tab-group="${groupId}"][data-tab-active="true"]`);
+    const defaultNav = activeNav || document.querySelector(`[data-tab-nav][data-tab-group="${groupId}"]`);
+    if (!defaultNav) continue;
+
+    const targetId = defaultNav.getAttribute('data-tab-target');
+    activateTab(groupId, targetId);
   }
 
-  disconnectedCallback() {
-    document.removeEventListener('shopify:section:load', this.#handleSectionLoad);
+  // Hide content blocks that have no matching active nav
+  for (const content of contentItems) {
+    const groupId = content.getAttribute('data-tab-group');
+    if (!groupId) continue;
 
-    if (this.#observer) {
-      this.#observer.disconnect();
-      this.#observer = null;
-    }
-
-    if (this.#debounceTimer) {
-      clearTimeout(this.#debounceTimer);
-      this.#debounceTimer = null;
+    if (!initializedGroups.has(groupId)) {
+      content.classList.remove('tab-content--active');
     }
   }
+};
 
-  /**
-   * Initialize all tab groups — activate the first tab in each group
-   */
-  #initializeTabs() {
-    const navItems = this.querySelectorAll('[data-tab-nav]');
-    const contentItems = this.querySelectorAll('[data-tab-content]');
+/**
+ * Activate a specific tab within a group
+ * @param {string} groupId - The group identifier
+ * @param {string} targetId - The target tab identifier
+ */
+const activateTab = (groupId, targetId) => {
+  const groupNavs = document.querySelectorAll(`[data-tab-nav][data-tab-group="${groupId}"]`);
+  const groupContents = document.querySelectorAll(`[data-tab-content][data-tab-group="${groupId}"]`);
 
-    /** @type {Map<string, boolean>} */
-    const initializedGroups = new Map();
-
-    for (const nav of navItems) {
-      const groupId = nav.getAttribute('data-tab-group');
-      if (!groupId || initializedGroups.has(groupId)) continue;
-
-      initializedGroups.set(groupId, true);
-
-      const activeNav = this.querySelector(`[data-tab-nav][data-tab-group="${groupId}"][data-tab-active="true"]`);
-      const defaultNav = activeNav || this.querySelector(`[data-tab-nav][data-tab-group="${groupId}"]`);
-      if (!defaultNav) continue;
-
-      const targetId = defaultNav.getAttribute('data-tab-target');
-      this.#activateTab(groupId, targetId);
-    }
-
-    // Hide content blocks that have no matching active nav
-    for (const content of contentItems) {
-      const groupId = content.getAttribute('data-tab-group');
-      if (!groupId) continue;
-
-      if (!initializedGroups.has(groupId)) {
-        content.classList.remove('tab-content--active');
-      }
-    }
+  for (const nav of groupNavs) {
+    const isActive = nav.getAttribute('data-tab-target') === targetId;
+    nav.classList.toggle('tab-nav--active', isActive);
+    nav.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    nav.setAttribute('tabindex', isActive ? '0' : '-1');
   }
 
-  /**
-   * Activate a specific tab within a group
-   * @param {string} groupId - The group identifier
-   * @param {string} targetId - The target tab identifier
-   */
-  #activateTab(groupId, targetId) {
-    const groupNavs = this.querySelectorAll(`[data-tab-nav][data-tab-group="${groupId}"]`);
-    const groupContents = this.querySelectorAll(`[data-tab-content][data-tab-group="${groupId}"]`);
+  for (const content of groupContents) {
+    const isActive = content.getAttribute('data-tab-id') === targetId;
+    content.classList.toggle('tab-content--active', isActive);
+  }
+};
 
-    for (const nav of groupNavs) {
-      const isActive = nav.getAttribute('data-tab-target') === targetId;
-      nav.classList.toggle('tab-nav--active', isActive);
-      nav.setAttribute('aria-selected', isActive ? 'true' : 'false');
-      nav.setAttribute('tabindex', isActive ? '0' : '-1');
-    }
+/**
+ * Document-level click handler for tab navigation
+ * @param {MouseEvent} event
+ */
+const handleClick = (event) => {
+  const navButton = event.target.closest('[data-tab-nav]');
+  if (!navButton) return;
 
-    for (const content of groupContents) {
-      const isActive = content.getAttribute('data-tab-id') === targetId;
-      content.classList.toggle('tab-content--active', isActive);
-    }
+  const groupId = navButton.getAttribute('data-tab-group');
+  const targetId = navButton.getAttribute('data-tab-target');
+  if (!groupId || !targetId) return;
+
+  activateTab(groupId, targetId);
+};
+
+/**
+ * Document-level keydown handler for tab keyboard navigation
+ * @param {KeyboardEvent} event
+ */
+const handleKeydown = (event) => {
+  const navButton = event.target.closest('[data-tab-nav]');
+  if (!navButton) return;
+
+  const groupId = navButton.getAttribute('data-tab-group');
+  if (!groupId) return;
+
+  const groupNavs = [...document.querySelectorAll(`[data-tab-nav][data-tab-group="${groupId}"]`)];
+  const currentIndex = groupNavs.indexOf(navButton);
+
+  let nextIndex = -1;
+
+  if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
+    event.preventDefault();
+    nextIndex = (currentIndex + 1) % groupNavs.length;
+  } else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
+    event.preventDefault();
+    nextIndex = (currentIndex - 1 + groupNavs.length) % groupNavs.length;
+  } else if (event.key === 'Home') {
+    event.preventDefault();
+    nextIndex = 0;
+  } else if (event.key === 'End') {
+    event.preventDefault();
+    nextIndex = groupNavs.length - 1;
   }
 
-  /**
-   * Set up click listeners using event delegation
-   */
-  #setupClickListeners() {
-    this.addEventListener('click', (event) => {
-      const navButton = event.target.closest('[data-tab-nav]');
-      if (!navButton) return;
+  if (nextIndex >= 0) {
+    const nextNav = groupNavs[nextIndex];
+    nextNav.focus();
+    const targetId = nextNav.getAttribute('data-tab-target');
+    activateTab(groupId, targetId);
+  }
+};
 
-      const groupId = navButton.getAttribute('data-tab-group');
-      const targetId = navButton.getAttribute('data-tab-target');
-      if (!groupId || !targetId) return;
+/**
+ * Handle shopify:section:load event for theme editor reinitialization
+ */
+const handleSectionLoad = () => {
+  initializeTabs();
+};
 
-      this.#activateTab(groupId, targetId);
-    });
+// Set up document-level event listeners
+document.addEventListener('click', handleClick);
+document.addEventListener('keydown', handleKeydown);
+document.addEventListener('shopify:section:load', handleSectionLoad);
 
-    this.addEventListener('keydown', (event) => {
-      const navButton = event.target.closest('[data-tab-nav]');
-      if (!navButton) return;
-
-      const groupId = navButton.getAttribute('data-tab-group');
-      if (!groupId) return;
-
-      const groupNavs = [...this.querySelectorAll(`[data-tab-nav][data-tab-group="${groupId}"]`)];
-      const currentIndex = groupNavs.indexOf(navButton);
-
-      let nextIndex = -1;
-
-      if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
-        event.preventDefault();
-        nextIndex = (currentIndex + 1) % groupNavs.length;
-      } else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
-        event.preventDefault();
-        nextIndex = (currentIndex - 1 + groupNavs.length) % groupNavs.length;
-      } else if (event.key === 'Home') {
-        event.preventDefault();
-        nextIndex = 0;
-      } else if (event.key === 'End') {
-        event.preventDefault();
-        nextIndex = groupNavs.length - 1;
-      }
-
-      if (nextIndex >= 0) {
-        const nextNav = groupNavs[nextIndex];
-        nextNav.focus();
-        const targetId = nextNav.getAttribute('data-tab-target');
-        this.#activateTab(groupId, targetId);
-      }
-    });
+// Set up MutationObserver on document.body for theme editor block changes
+const observer = new MutationObserver(() => {
+  if (debounceTimer) {
+    clearTimeout(debounceTimer);
   }
 
-  /**
-   * Set up MutationObserver for theme editor block changes
-   */
-  #setupMutationObserver() {
-    this.#observer = new MutationObserver(() => {
-      if (this.#debounceTimer) {
-        clearTimeout(this.#debounceTimer);
-      }
+  debounceTimer = setTimeout(() => {
+    initializeTabs();
+  }, 100);
+});
 
-      this.#debounceTimer = setTimeout(() => {
-        this.#initializeTabs();
-      }, 100);
-    });
-
-    this.#observer.observe(this, {
+// Initialize on DOMContentLoaded or immediately if DOM is already ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    initializeTabs();
+    observer.observe(document.body, {
       childList: true,
       subtree: true,
     });
-  }
-
-  /**
-   * Handle shopify:section:load event for theme editor reinitialization
-   * @param {CustomEvent} event
-   */
-  #handleSectionLoad = (event) => {
-    if (this.closest(`[id="${event.detail.sectionId}"]`)) {
-      this.#initializeTabs();
-    }
-  };
+  });
+} else {
+  initializeTabs();
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true,
+  });
 }
-
-customElements.define('tab-system', TabSystem);
