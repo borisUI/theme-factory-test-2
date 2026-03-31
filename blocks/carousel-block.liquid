@@ -20,11 +20,57 @@
   assign autoplay_mobile = block.settings.autoplay_mobile
   assign autoplay_tablet = block.settings.autoplay_tablet
   assign autoplay_desktop = block.settings.autoplay_desktop
-  assign autoplay_delay = block.settings.autoplay_delay | default: 5
 
-  assign show_arrows = block.settings.show_arrows
-  assign external_arrows = block.settings.external_arrows
-  assign show_dots = block.settings.show_dots
+  assign autoplay_delay_mobile = block.settings.autoplay_delay_mobile | default: 5
+  assign autoplay_delay_tablet = block.settings.autoplay_delay_tablet | default: 5
+  assign autoplay_delay_desktop = block.settings.autoplay_delay_desktop | default: 5
+
+  assign show_arrows_mobile = block.settings.show_arrows_mobile
+  assign show_arrows_tablet = block.settings.show_arrows_tablet
+  assign show_arrows_desktop = block.settings.show_arrows_desktop
+
+  assign external_arrows_mobile = block.settings.external_arrows_mobile
+  assign external_arrows_tablet = block.settings.external_arrows_tablet
+  assign external_arrows_desktop = block.settings.external_arrows_desktop
+
+  assign show_dots_mobile = block.settings.show_dots_mobile
+  assign show_dots_tablet = block.settings.show_dots_tablet
+  assign show_dots_desktop = block.settings.show_dots_desktop
+
+  assign any_arrows = show_arrows_mobile | default: false
+  unless any_arrows
+    assign any_arrows = show_arrows_tablet
+  endunless
+  unless any_arrows
+    assign any_arrows = show_arrows_desktop
+  endunless
+
+  assign any_external_arrows = external_arrows_mobile | default: false
+  unless any_external_arrows
+    assign any_external_arrows = external_arrows_tablet
+  endunless
+  unless any_external_arrows
+    assign any_external_arrows = external_arrows_desktop
+  endunless
+
+  assign any_internal_arrows = false
+  if show_arrows_mobile and external_arrows_mobile == false
+    assign any_internal_arrows = true
+  endif
+  if show_arrows_tablet and external_arrows_tablet == false
+    assign any_internal_arrows = true
+  endif
+  if show_arrows_desktop and external_arrows_desktop == false
+    assign any_internal_arrows = true
+  endif
+
+  assign any_dots = show_dots_mobile | default: false
+  unless any_dots
+    assign any_dots = show_dots_tablet
+  endunless
+  unless any_dots
+    assign any_dots = show_dots_desktop
+  endunless
 %}
 
 {%- capture children -%}
@@ -42,13 +88,21 @@
   data-autoplay-mobile="{{ autoplay_mobile }}"
   data-autoplay-tablet="{{ autoplay_tablet }}"
   data-autoplay-desktop="{{ autoplay_desktop }}"
-  data-autoplay-delay="{{ autoplay_delay }}"
-  data-show-arrows="{{ show_arrows }}"
-  data-external-arrows="{{ external_arrows }}"
-  data-show-dots="{{ show_dots }}"
+  data-autoplay-delay-mobile="{{ autoplay_delay_mobile }}"
+  data-autoplay-delay-tablet="{{ autoplay_delay_tablet }}"
+  data-autoplay-delay-desktop="{{ autoplay_delay_desktop }}"
+  data-show-arrows-mobile="{{ show_arrows_mobile }}"
+  data-show-arrows-tablet="{{ show_arrows_tablet }}"
+  data-show-arrows-desktop="{{ show_arrows_desktop }}"
+  data-external-arrows-mobile="{{ external_arrows_mobile }}"
+  data-external-arrows-tablet="{{ external_arrows_tablet }}"
+  data-external-arrows-desktop="{{ external_arrows_desktop }}"
+  data-show-dots-mobile="{{ show_dots_mobile }}"
+  data-show-dots-tablet="{{ show_dots_tablet }}"
+  data-show-dots-desktop="{{ show_dots_desktop }}"
   {{ block.shopify_attributes }}
 >
-  {% if show_arrows and external_arrows %}
+  {% if any_arrows and any_external_arrows %}
     <button class="carousel-block__arrow carousel-block__arrow--prev" aria-label="{{ 'accessibility.slideshow_previous' | t }}">
       <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -61,17 +115,17 @@
       {{- children -}}
     </div>
 
-    {% if show_arrows and external_arrows == false %}
+    {% if any_internal_arrows %}
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
     {% endif %}
 
-    {% if show_dots %}
+    {% if any_dots %}
       <div class="swiper-pagination"></div>
     {% endif %}
   </div>
 
-  {% if show_arrows and external_arrows %}
+  {% if any_arrows and any_external_arrows %}
     <button class="carousel-block__arrow carousel-block__arrow--next" aria-label="{{ 'accessibility.slideshow_next' | t }}">
       <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -160,6 +214,32 @@
       "default": false
     },
     {
+      "type": "number",
+      "id": "autoplay_delay_mobile",
+      "label": "t:settings.autoplay_delay_mobile",
+      "default": 5,
+      "visible_if": "{{ block.settings.autoplay_mobile }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_arrows_mobile",
+      "label": "t:settings.show_arrows_mobile",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "external_arrows_mobile",
+      "label": "t:settings.external_arrows_mobile",
+      "default": false,
+      "visible_if": "{{ block.settings.show_arrows_mobile }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_dots_mobile",
+      "label": "t:settings.show_dots_mobile",
+      "default": true
+    },
+    {
       "type": "header",
       "content": "t:content.tablet"
     },
@@ -180,6 +260,32 @@
       "id": "autoplay_tablet",
       "label": "t:settings.autoplay_tablet",
       "default": false
+    },
+    {
+      "type": "number",
+      "id": "autoplay_delay_tablet",
+      "label": "t:settings.autoplay_delay_tablet",
+      "default": 5,
+      "visible_if": "{{ block.settings.autoplay_tablet }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_arrows_tablet",
+      "label": "t:settings.show_arrows_tablet",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "external_arrows_tablet",
+      "label": "t:settings.external_arrows_tablet",
+      "default": false,
+      "visible_if": "{{ block.settings.show_arrows_tablet }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_dots_tablet",
+      "label": "t:settings.show_dots_tablet",
+      "default": true
     },
     {
       "type": "header",
@@ -204,32 +310,29 @@
       "default": false
     },
     {
-      "type": "header",
-      "content": "t:content.carousel"
-    },
-    {
       "type": "number",
-      "id": "autoplay_delay",
-      "label": "t:settings.autoplay_delay",
-      "default": 5
+      "id": "autoplay_delay_desktop",
+      "label": "t:settings.autoplay_delay_desktop",
+      "default": 5,
+      "visible_if": "{{ block.settings.autoplay_desktop }}"
     },
     {
       "type": "checkbox",
-      "id": "show_arrows",
-      "label": "t:settings.show_arrows",
+      "id": "show_arrows_desktop",
+      "label": "t:settings.show_arrows_desktop",
       "default": true
     },
     {
       "type": "checkbox",
-      "id": "external_arrows",
-      "label": "t:settings.external_arrows",
+      "id": "external_arrows_desktop",
+      "label": "t:settings.external_arrows_desktop",
       "default": false,
-      "visible_if": "{{ block.settings.show_arrows }}"
+      "visible_if": "{{ block.settings.show_arrows_desktop }}"
     },
     {
       "type": "checkbox",
-      "id": "show_dots",
-      "label": "t:settings.show_dots",
+      "id": "show_dots_desktop",
+      "label": "t:settings.show_dots_desktop",
       "default": true
     }
   ],

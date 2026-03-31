@@ -16,6 +16,12 @@ class CarouselBlock extends Component {
   /** @type {boolean} */
   #initialized = false;
 
+  /** @type {MediaQueryList | null} */
+  #mqlTablet = null;
+
+  /** @type {MediaQueryList | null} */
+  #mqlDesktop = null;
+
   connectedCallback() {
     super.connectedCallback();
 
@@ -28,6 +34,7 @@ class CarouselBlock extends Component {
   disconnectedCallback() {
     super.disconnectedCallback();
     this.#destroySwiper();
+    this.#removeBreakpointListeners();
   }
 
   async #loadAndInit() {
@@ -39,6 +46,7 @@ class CarouselBlock extends Component {
       if (!Swiper) return;
 
       this.#initSwiper(Swiper);
+      this.#setupBreakpointListeners();
     } catch (error) {
       console.error('[carousel-block] Failed to load Swiper:', error);
     }
@@ -51,6 +59,16 @@ class CarouselBlock extends Component {
     link.rel = 'stylesheet';
     link.href = SWIPER_CSS_CDN;
     document.head.appendChild(link);
+  }
+
+  /**
+   * Determines the current breakpoint name based on viewport width.
+   * @returns {'mobile' | 'tablet' | 'desktop'}
+   */
+  #getCurrentBreakpoint() {
+    if (window.matchMedia('(min-width: 990px)').matches) return 'desktop';
+    if (window.matchMedia('(min-width: 750px)').matches) return 'tablet';
+    return 'mobile';
   }
 
   /**
@@ -72,13 +90,31 @@ class CarouselBlock extends Component {
     const autoplayMobile = this.dataset.autoplayMobile === 'true';
     const autoplayTablet = this.dataset.autoplayTablet === 'true';
     const autoplayDesktop = this.dataset.autoplayDesktop === 'true';
-    const autoplayDelay = this.#parseInt('data-autoplay-delay', 5) * 1000;
 
-    const showArrows = this.dataset.showArrows === 'true';
-    const externalArrows = this.dataset.externalArrows === 'true';
-    const showDots = this.dataset.showDots === 'true';
+    const autoplayDelayMobile = this.#parseInt('data-autoplay-delay-mobile', 5) * 1000;
+    const autoplayDelayTablet = this.#parseInt('data-autoplay-delay-tablet', 5) * 1000;
+    const autoplayDelayDesktop = this.#parseInt('data-autoplay-delay-desktop', 5) * 1000;
+
+    const showArrowsMobile = this.dataset.showArrowsMobile === 'true';
+    const showArrowsTablet = this.dataset.showArrowsTablet === 'true';
+    const showArrowsDesktop = this.dataset.showArrowsDesktop === 'true';
+
+    const externalArrowsMobile = this.dataset.externalArrowsMobile === 'true';
+    const externalArrowsTablet = this.dataset.externalArrowsTablet === 'true';
+    const externalArrowsDesktop = this.dataset.externalArrowsDesktop === 'true';
+
+    const showDotsMobile = this.dataset.showDotsMobile === 'true';
+    const showDotsTablet = this.dataset.showDotsTablet === 'true';
+    const showDotsDesktop = this.dataset.showDotsDesktop === 'true';
 
     const shouldAutoplay = autoplayMobile || autoplayTablet || autoplayDesktop;
+    const anyArrows = showArrowsMobile || showArrowsTablet || showArrowsDesktop;
+    const anyDots = showDotsMobile || showDotsTablet || showDotsDesktop;
+
+    const breakpoint = this.#getCurrentBreakpoint();
+    const currentAutoplayDelay = breakpoint === 'desktop' ? autoplayDelayDesktop
+      : breakpoint === 'tablet' ? autoplayDelayTablet
+      : autoplayDelayMobile;
 
     /** @type {Object} */
     const config = {
@@ -98,32 +134,30 @@ class CarouselBlock extends Component {
 
     if (shouldAutoplay) {
       config.autoplay = {
-        delay: autoplayDelay,
+        delay: currentAutoplayDelay,
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
       };
     }
 
-    if (showArrows) {
-      if (externalArrows) {
-        const prevEl = this.querySelector('.carousel-block__arrow--prev');
-        const nextEl = this.querySelector('.carousel-block__arrow--next');
+    if (anyArrows) {
+      const prevExternal = this.querySelector('.carousel-block__arrow--prev');
+      const nextExternal = this.querySelector('.carousel-block__arrow--next');
+      const prevInternal = container.querySelector('.swiper-button-prev');
+      const nextInternal = container.querySelector('.swiper-button-next');
 
-        if (prevEl && nextEl) {
-          config.navigation = {
-            prevEl,
-            nextEl,
-          };
-        }
-      } else {
+      const prevEl = prevExternal || prevInternal;
+      const nextEl = nextExternal || nextInternal;
+
+      if (prevEl && nextEl) {
         config.navigation = {
-          prevEl: container.querySelector('.swiper-button-prev'),
-          nextEl: container.querySelector('.swiper-button-next'),
+          prevEl,
+          nextEl,
         };
       }
     }
 
-    if (showDots) {
+    if (anyDots) {
       config.pagination = {
         el: container.querySelector('.swiper-pagination'),
         clickable: true,
@@ -131,13 +165,89 @@ class CarouselBlock extends Component {
     }
 
     this.#swiperInstance = new Swiper(container, config);
+
+    this.#updateVisibility();
   }
+
+  /**
+   * Updates visibility of arrows and dots based on per-breakpoint settings.
+   */
+  #updateVisibility() {
+    const breakpoint = this.#getCurrentBreakpoint();
+
+    const showArrows = this.dataset[`showArrows${this.#capitalize(breakpoint)}`] === 'true';
+    const externalArrows = this.dataset[`externalArrows${this.#capitalize(breakpoint)}`] === 'true';
+    const showDots = this.dataset[`showDots${this.#capitalize(breakpoint)}`] === 'true';
+
+    const externalPrev = this.querySelector('.carousel-block__arrow--prev');
+    const externalNext = this.querySelector('.carousel-block__arrow--next');
+    const internalPrev = this.querySelector('.swiper-button-prev');
+    const internalNext = this.querySelector('.swiper-button-next');
+    const pagination = this.querySelector('.swiper-pagination');
+
+    if (externalPrev) externalPrev.hidden = !(showArrows && externalArrows);
+    if (externalNext) externalNext.hidden = !(showArrows && externalArrows);
+    if (internalPrev) internalPrev.hidden = !(showArrows && !externalArrows);
+    if (internalNext) internalNext.hidden = !(showArrows && !externalArrows);
+    if (pagination) pagination.hidden = !showDots;
+  }
+
+  /**
+   * Sets up breakpoint change listeners to update visibility.
+   */
+  #setupBreakpointListeners() {
+    this.#mqlTablet = window.matchMedia('(min-width: 750px)');
+    this.#mqlDesktop = window.matchMedia('(min-width: 990px)');
+
+    this.#mqlTablet.addEventListener('change', this.#handleBreakpointChange);
+    this.#mqlDesktop.addEventListener('change', this.#handleBreakpointChange);
+  }
+
+  #removeBreakpointListeners() {
+    if (this.#mqlTablet) {
+      this.#mqlTablet.removeEventListener('change', this.#handleBreakpointChange);
+    }
+    if (this.#mqlDesktop) {
+      this.#mqlDesktop.removeEventListener('change', this.#handleBreakpointChange);
+    }
+  }
+
+  /** @type {() => void} */
+  #handleBreakpointChange = () => {
+    this.#updateVisibility();
+
+    if (this.#swiperInstance) {
+      const breakpoint = this.#getCurrentBreakpoint();
+      const autoplayEnabled = this.dataset[`autoplay${this.#capitalize(breakpoint)}`] === 'true';
+      const delayAttr = `data-autoplay-delay-${breakpoint}`;
+      const delay = this.#parseInt(delayAttr, 5) * 1000;
+
+      if (autoplayEnabled && this.#swiperInstance.autoplay) {
+        this.#swiperInstance.params.autoplay = {
+          delay,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        };
+        this.#swiperInstance.autoplay.start();
+      } else if (this.#swiperInstance.autoplay) {
+        this.#swiperInstance.autoplay.stop();
+      }
+    }
+  };
 
   #destroySwiper() {
     if (this.#swiperInstance) {
       this.#swiperInstance.destroy(true, true);
       this.#swiperInstance = null;
     }
+  }
+
+  /**
+   * @param {string} str
+   * @returns {string}
+   */
+  #capitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
   }
 
   /**
