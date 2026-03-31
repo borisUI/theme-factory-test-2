@@ -40,9 +40,6 @@
           "settings": {
             "icon": "price_tag",
             "width": 134,
-            "width_mobile": 32,
-            "margin_bottom_desktop": 20,
-            "margin_bottom_mobile": 20,
             "link": "",
             "open_in_new_tab": false
           },
@@ -120,6 +117,7 @@
         "custom_button_nA9pMX",
         "text_nLJf7G"
       ],
+      "disabled": true,
       "name": "t:names.generic_section",
       "settings": {
         "background_color_mobile": "#e1edf5",
@@ -137,9 +135,212 @@
         "padding_right_desktop": 20,
         "margin_bottom_desktop": 0
       }
+    },
+    "generic_section_B4QeEV": {
+      "type": "generic-section",
+      "blocks": {
+        "tab_navigation_jQTMFP": {
+          "type": "tab-navigation",
+          "name": "t:names.tab_navigation",
+          "settings": {
+            "group_id": "tabs-1",
+            "target_id": "tab-1",
+            "label": "Tab #1"
+          },
+          "blocks": {}
+        },
+        "tab_navigation_9rPw33": {
+          "type": "tab-navigation",
+          "name": "t:names.tab_navigation",
+          "settings": {
+            "group_id": "tabs-1",
+            "target_id": "tab-2",
+            "label": "Tab #2"
+          },
+          "blocks": {}
+        },
+        "tab_navigation_Xgyqd7": {
+          "type": "tab-navigation",
+          "name": "t:names.tab_navigation",
+          "settings": {
+            "group_id": "tabs-1",
+            "target_id": "tab-3",
+            "label": "Tab #3"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "tab_navigation_jQTMFP",
+        "tab_navigation_9rPw33",
+        "tab_navigation_Xgyqd7"
+      ],
+      "name": "t:names.generic_section",
+      "settings": {
+        "background_color_mobile": "",
+        "text_color_mobile": "",
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "padding_left_mobile": 0,
+        "padding_right_mobile": 0,
+        "margin_bottom_mobile": 0,
+        "background_color_desktop": "",
+        "text_color_desktop": "",
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 0,
+        "padding_left_desktop": 0,
+        "padding_right_desktop": 0,
+        "margin_bottom_desktop": 0
+      }
+    },
+    "generic_section_QdbeqE": {
+      "type": "generic-section",
+      "blocks": {
+        "tab_content_p4QdHt": {
+          "type": "tab-content",
+          "name": "t:names.tab_content",
+          "settings": {
+            "group_id": "tabs-1",
+            "target_id": "tab-1"
+          },
+          "blocks": {
+            "text_MkDRUM": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>11111111111 We make things that work better and last longer. Our products solve real problems with clean design and honest materials.</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": 1.4,
+                "letter_spacing": 0,
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_MkDRUM"
+          ]
+        },
+        "tab_content_Eth7TE": {
+          "type": "tab-content",
+          "name": "t:names.tab_content",
+          "settings": {
+            "group_id": "tabs-1",
+            "target_id": "tab-2"
+          },
+          "blocks": {
+            "text_JV8nbn": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>222222222 We make things that work better and last longer. Our products solve real problems with clean design and honest materials.</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": 1.4,
+                "letter_spacing": 0,
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_JV8nbn"
+          ]
+        },
+        "tab_content_ih7WUF": {
+          "type": "tab-content",
+          "name": "t:names.tab_content",
+          "settings": {
+            "group_id": "tabs-1",
+            "target_id": "tab-3"
+          },
+          "blocks": {
+            "text_w4f73Q": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>3333333333 We make things that work better and last longer. Our products solve real problems with clean design and honest materials.</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": 1.4,
+                "letter_spacing": 0,
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_w4f73Q"
+          ]
+        }
+      },
+      "block_order": [
+        "tab_content_p4QdHt",
+        "tab_content_Eth7TE",
+        "tab_content_ih7WUF"
+      ],
+      "name": "t:names.generic_section",
+      "settings": {
+        "background_color_mobile": "",
+        "text_color_mobile": "",
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "padding_left_mobile": 0,
+        "padding_right_mobile": 0,
+        "margin_bottom_mobile": 0,
+        "background_color_desktop": "",
+        "text_color_desktop": "",
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 0,
+        "padding_left_desktop": 0,
+        "padding_right_desktop": 0,
+        "margin_bottom_desktop": 0
+      }
     }
   },
   "order": [
-    "generic_section_YQexch"
+    "generic_section_YQexch",
+    "generic_section_B4QeEV",
+    "generic_section_QdbeqE"
   ]
 }
