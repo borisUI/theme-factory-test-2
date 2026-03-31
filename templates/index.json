@@ -12,6 +12,77 @@
     "generic_section_mkecUm": {
       "type": "generic-section",
       "blocks": {
+        "group_K4QdYQ": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "text_MhVcYD": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>We make things that work better and last longer. Our products solve real problems with clean design and honest materials.</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_MhVcYD"
+          ]
+        },
         "hero_block_8nGT7y": {
           "type": "hero-block",
           "name": "t:names.hero_block",
@@ -81,7 +152,7 @@
           "type": "carousel-block",
           "name": "t:names.carousel_block",
           "settings": {
-            "slides_per_view_mobile": "2",
+            "slides_per_view_mobile": 4.4,
             "slide_gap_mobile": 16,
             "autoplay_mobile": false,
             "autoplay_delay_mobile": 5,
@@ -89,15 +160,15 @@
             "external_arrows_mobile": false,
             "show_dots_mobile": false,
             "margin_bottom_mobile": 0,
-            "slides_per_view_tablet": "2.1",
+            "slides_per_view_tablet": 2.2,
             "slide_gap_tablet": 20,
-            "autoplay_tablet": false,
+            "autoplay_tablet": true,
             "autoplay_delay_tablet": 5,
             "show_arrows_tablet": false,
             "external_arrows_tablet": false,
             "show_dots_tablet": false,
             "margin_bottom_tablet": 0,
-            "slides_per_view_desktop": "2.1",
+            "slides_per_view_desktop": 2.1,
             "slide_gap_desktop": 24,
             "autoplay_desktop": false,
             "autoplay_delay_desktop": 5,
@@ -319,12 +390,12 @@
               "name": "t:names.grid_column",
               "settings": {
                 "column_span_mobile": "12",
-                "column_order_mobile": "1",
+                "column_order_mobile": "0",
                 "margin_bottom_mobile": 0,
                 "column_span_tablet": "6",
-                "column_order_tablet": "1",
+                "column_order_tablet": "0",
                 "margin_bottom_tablet": 0,
-                "column_span_desktop": "6",
+                "column_span_desktop": "5",
                 "column_order_desktop": "1",
                 "margin_bottom_desktop": 0
               },
@@ -365,13 +436,13 @@
               "name": "t:names.grid_column",
               "settings": {
                 "column_span_mobile": "12",
-                "column_order_mobile": "1",
+                "column_order_mobile": "0",
                 "margin_bottom_mobile": 0,
                 "column_span_tablet": "6",
-                "column_order_tablet": "1",
+                "column_order_tablet": "0",
                 "margin_bottom_tablet": 0,
                 "column_span_desktop": "4",
-                "column_order_desktop": "1",
+                "column_order_desktop": "0",
                 "margin_bottom_desktop": 0
               },
               "blocks": {
@@ -414,6 +485,7 @@
         }
       },
       "block_order": [
+        "group_K4QdYQ",
         "hero_block_8nGT7y",
         "carousel_block_A6PcmR",
         "grid_row_Hexm3j"
