@@ -1,7 +1,7 @@
 import { Component } from '@theme/component';
 
 const SWIPER_CSS_CDN = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css';
-const SWIPER_JS_CDN = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.esm.browser.min.js';
+const SWIPER_JS_CDN = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
 
 /**
  * @typedef {Object} CarouselBlockRefs
