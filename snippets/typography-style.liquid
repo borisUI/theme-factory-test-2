@@ -67,14 +67,41 @@
     --font-family: {{ settings.font }};
     --text-transform: {{ settings.case }};
     --text-wrap: {{ settings.wrap | default: 'pretty' }};
-    {% if settings.type_preset == 'custom' and settings.font_size == blank %}
+    {%- liquid
+      assign lh_value = settings.line_height | times: 1.0
+      assign ls_value = settings.letter_spacing | times: 1.0
+      assign lh_str = settings.line_height | append: ''
+      assign ls_str = settings.letter_spacing | append: ''
+      assign lh_is_numeric = false
+      assign ls_is_numeric = false
+
+      assign lh_numeric_check = lh_value | append: ''
+      if lh_str == lh_numeric_check or lh_str contains '.'
+        assign lh_is_numeric = true
+      endif
+
+      assign ls_numeric_check = ls_value | append: ''
+      if ls_str == ls_numeric_check or ls_str contains '.' or ls_str contains '-'
+        assign ls_test = ls_str | times: 1.0 | append: ''
+        if ls_str == ls_test or ls_str contains '.'
+          assign ls_is_numeric = true
+        endif
+      endif
+    -%}
+    {%- if lh_is_numeric -%}
+      --line-height: {{ settings.line_height }};
+    {%- elsif settings.type_preset == 'custom' and settings.font_size == blank -%}
       --line-height--display: var(--line-height--display-{{ settings.line_height }});
       --line-height--heading: var(--line-height--heading-{{ settings.line_height }});
       --line-height--body: var(--line-height--body-{{ settings.line_height }});
-    {% else %}
+    {%- else -%}
       --line-height: var(--line-height--{{ type }}-{{ settings.line_height }});
-    {% endif %}
-    --letter-spacing: var(--letter-spacing--{{ type }}-{{ settings.letter_spacing }});
+    {%- endif -%}
+    {%- if ls_is_numeric -%}
+      --letter-spacing: {{ settings.letter_spacing }}px;
+    {%- else -%}
+      --letter-spacing: var(--letter-spacing--{{ type }}-{{ settings.letter_spacing }});
+    {%- endif -%}
   {%- endif -%}
 {%- endcapture -%}
 {{- variables | strip | strip_newlines -}}
