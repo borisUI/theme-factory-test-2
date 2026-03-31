@@ -13,6 +13,50 @@
   {% content_for 'blocks' %}
 {%- endcapture -%}
 
+{% liquid
+  assign pos_mobile = block.settings.content_position_mobile | default: 'center-center'
+  assign pos_desktop = block.settings.content_position_desktop | default: 'center-center'
+
+  assign pos_mobile_parts = pos_mobile | split: '-'
+  assign pos_desktop_parts = pos_desktop | split: '-'
+
+  case pos_mobile_parts[0]
+    when 'top'
+      assign hero_ai_mobile = 'flex-start'
+    when 'center'
+      assign hero_ai_mobile = 'center'
+    when 'bottom'
+      assign hero_ai_mobile = 'flex-end'
+  endcase
+
+  case pos_mobile_parts[1]
+    when 'left'
+      assign hero_jc_mobile = 'flex-start'
+    when 'center'
+      assign hero_jc_mobile = 'center'
+    when 'right'
+      assign hero_jc_mobile = 'flex-end'
+  endcase
+
+  case pos_desktop_parts[0]
+    when 'top'
+      assign hero_ai_desktop = 'flex-start'
+    when 'center'
+      assign hero_ai_desktop = 'center'
+    when 'bottom'
+      assign hero_ai_desktop = 'flex-end'
+  endcase
+
+  case pos_desktop_parts[1]
+    when 'left'
+      assign hero_jc_desktop = 'flex-start'
+    when 'center'
+      assign hero_jc_desktop = 'center'
+    when 'right'
+      assign hero_jc_desktop = 'flex-end'
+  endcase
+%}
+
 <div
   class="hero-block"
   style="
@@ -30,53 +74,13 @@
     --hero-pr-desktop: {{ block.settings.padding_right_desktop | default: 0 }}px;
     --hero-mb-mobile: {{ block.settings.margin_bottom_mobile | default: 0 }}px;
     --hero-mb-desktop: {{ block.settings.margin_bottom_desktop | default: 0 }}px;
+    --hero-ai-mobile: {{ hero_ai_mobile }};
+    --hero-jc-mobile: {{ hero_jc_mobile }};
+    --hero-ai-desktop: {{ hero_ai_desktop }};
+    --hero-jc-desktop: {{ hero_jc_desktop }};
   "
   {{ block.shopify_attributes }}
 >
-  {% liquid
-    assign pos_mobile = block.settings.content_position_mobile | default: 'center-center'
-    assign pos_desktop = block.settings.content_position_desktop | default: 'center-center'
-
-    assign pos_mobile_parts = pos_mobile | split: '-'
-    assign pos_desktop_parts = pos_desktop | split: '-'
-
-    case pos_mobile_parts[0]
-      when 'top'
-        assign hero_ai_mobile = 'flex-start'
-      when 'center'
-        assign hero_ai_mobile = 'center'
-      when 'bottom'
-        assign hero_ai_mobile = 'flex-end'
-    endcase
-
-    case pos_mobile_parts[1]
-      when 'left'
-        assign hero_jc_mobile = 'flex-start'
-      when 'center'
-        assign hero_jc_mobile = 'center'
-      when 'right'
-        assign hero_jc_mobile = 'flex-end'
-    endcase
-
-    case pos_desktop_parts[0]
-      when 'top'
-        assign hero_ai_desktop = 'flex-start'
-      when 'center'
-        assign hero_ai_desktop = 'center'
-      when 'bottom'
-        assign hero_ai_desktop = 'flex-end'
-    endcase
-
-    case pos_desktop_parts[1]
-      when 'left'
-        assign hero_jc_desktop = 'flex-start'
-      when 'center'
-        assign hero_jc_desktop = 'center'
-      when 'right'
-        assign hero_jc_desktop = 'flex-end'
-    endcase
-  %}
-
   <div class="hero-block__media-wrapper hero-block__media-wrapper--mobile">
     {% render 'background-media',
       background_media: block.settings.background_media_mobile,
@@ -103,15 +107,7 @@
     </div>
   {% endif %}
 
-  <div
-    class="hero-block__content"
-    style="
-      --hero-ai-mobile: {{ hero_ai_mobile }};
-      --hero-jc-mobile: {{ hero_jc_mobile }};
-      --hero-ai-desktop: {{ hero_ai_desktop }};
-      --hero-jc-desktop: {{ hero_jc_desktop }};
-    "
-  >
+  <div class="hero-block__content">
     {{- children -}}
   </div>
 </div>
@@ -142,8 +138,6 @@
     z-index: var(--layer-raised, 2);
     display: flex;
     flex-direction: column;
-    flex: 1;
-    width: 100%;
   }
 
   @media screen and (max-width: 749px) {
@@ -154,6 +148,8 @@
       padding-inline-start: var(--hero-pl-mobile, 0px);
       padding-inline-end: var(--hero-pr-mobile, 0px);
       margin-block-end: var(--hero-mb-mobile, 0px);
+      align-items: var(--hero-jc-mobile, center);
+      justify-content: var(--hero-ai-mobile, center);
     }
 
     .hero-block__media-wrapper--desktop {
@@ -161,9 +157,7 @@
     }
 
     .hero-block__content {
-      max-width: var(--hero-cw-mobile, 100%);
-      align-items: var(--hero-jc-mobile, center);
-      justify-content: var(--hero-ai-mobile, center);
+      width: var(--hero-cw-mobile, 100%);
     }
   }
 
@@ -175,6 +169,8 @@
       padding-inline-start: var(--hero-pl-desktop, 0px);
       padding-inline-end: var(--hero-pr-desktop, 0px);
       margin-block-end: var(--hero-mb-desktop, 0px);
+      align-items: var(--hero-jc-desktop, center);
+      justify-content: var(--hero-ai-desktop, center);
     }
 
     .hero-block__media-wrapper--mobile {
@@ -182,9 +178,7 @@
     }
 
     .hero-block__content {
-      max-width: var(--hero-cw-desktop, 100%);
-      align-items: var(--hero-jc-desktop, center);
-      justify-content: var(--hero-ai-desktop, center);
+      width: var(--hero-cw-desktop, 100%);
     }
   }
 {% endstylesheet %}
