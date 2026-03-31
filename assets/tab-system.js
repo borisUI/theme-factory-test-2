@@ -15,9 +15,13 @@
 /** @type {number|null} */
 let debounceTimer = null;
 
+/** @type {Set<string>} Track groups where the user has clicked or keyboard-navigated */
+const userInteractedGroups = new Set();
+
 /**
  * Initialize all tab groups — activate the first tab in each group
- * (or the one marked data-tab-active="true")
+ * (or the one marked data-tab-active="true").
+ * Skips groups the user has already interacted with (unless in designMode).
  */
 const initializeTabs = () => {
   const navItems = document.querySelectorAll('[data-tab-nav]');
@@ -29,6 +33,13 @@ const initializeTabs = () => {
   for (const nav of navItems) {
     const groupId = nav.getAttribute('data-tab-group');
     if (!groupId || initializedGroups.has(groupId)) continue;
+
+    // Skip user-interacted groups on the storefront to prevent race conditions.
+    // In designMode, always reinitialize so editor block changes take effect.
+    if (!Shopify.designMode && userInteractedGroups.has(groupId)) {
+      initializedGroups.set(groupId, true);
+      continue;
+    }
 
     initializedGroups.set(groupId, true);
 
@@ -65,6 +76,13 @@ const activateTab = (groupId, targetId) => {
     nav.classList.toggle('tab-nav--active', isActive);
     nav.setAttribute('aria-selected', isActive ? 'true' : 'false');
     nav.setAttribute('tabindex', isActive ? '0' : '-1');
+
+    // Persist active state so initializeTabs() respects user selection on re-run
+    if (isActive) {
+      nav.setAttribute('data-tab-active', 'true');
+    } else {
+      nav.removeAttribute('data-tab-active');
+    }
   }
 
   for (const content of groupContents) {
@@ -85,6 +103,7 @@ const handleClick = (event) => {
   const targetId = navButton.getAttribute('data-tab-target');
   if (!groupId || !targetId) return;
 
+  userInteractedGroups.add(groupId);
   activateTab(groupId, targetId);
 };
 
@@ -122,6 +141,7 @@ const handleKeydown = (event) => {
     const nextNav = groupNavs[nextIndex];
     nextNav.focus();
     const targetId = nextNav.getAttribute('data-tab-target');
+    userInteractedGroups.add(groupId);
     activateTab(groupId, targetId);
   }
 };
@@ -138,30 +158,41 @@ document.addEventListener('click', handleClick);
 document.addEventListener('keydown', handleKeydown);
 document.addEventListener('shopify:section:load', handleSectionLoad);
 
-// Set up MutationObserver on document.body for theme editor block changes
-const observer = new MutationObserver(() => {
-  if (debounceTimer) {
-    clearTimeout(debounceTimer);
-  }
+// Set up MutationObserver only in the theme editor — its sole purpose is
+// handling editor block additions/removals. Storefront DOM churn (analytics,
+// lazy images, deferred scripts) no longer triggers reinitialization.
+if (Shopify.designMode) {
+  const observer = new MutationObserver(() => {
+    if (debounceTimer) {
+      clearTimeout(debounceTimer);
+    }
 
-  debounceTimer = setTimeout(() => {
-    initializeTabs();
-  }, 100);
-});
+    debounceTimer = setTimeout(() => {
+      initializeTabs();
+    }, 100);
+  });
 
-// Initialize on DOMContentLoaded or immediately if DOM is already ready
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => {
+  // Initialize and start observing
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      initializeTabs();
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true,
+      });
+    });
+  } else {
     initializeTabs();
     observer.observe(document.body, {
       childList: true,
       subtree: true,
     });
-  });
+  }
 } else {
-  initializeTabs();
-  observer.observe(document.body, {
-    childList: true,
-    subtree: true,
-  });
+  // Storefront: initialize tabs once, no observer needed
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeTabs);
+  } else {
+    initializeTabs();
+  }
 }
