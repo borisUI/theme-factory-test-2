@@ -23,7 +23,7 @@
             "min_width_mobile": 0,
             "width_desktop": "auto",
             "width_mobile": "auto",
-            "background_color": "#ffaaee",
+            "background_color": "rgba(0,0,0,0)",
             "text_color": "#1d3686",
             "font_desktop": "var(--font-body--family)",
             "font_size_desktop": "1rem",
