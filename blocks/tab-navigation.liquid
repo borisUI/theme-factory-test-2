@@ -18,6 +18,7 @@
   data-tab-nav
   data-tab-group="{{ block.settings.group_id }}"
   data-tab-target="{{ block.settings.target_id }}"
+  {% if block.settings.is_active %}data-tab-active="true"{% endif %}
 >
   {{ block.settings.label | escape }}
 </button>
@@ -90,6 +91,13 @@
       "id": "label",
       "label": "t:settings.tab_label",
       "default": "t:text_defaults.tab_label"
+    },
+    {
+      "type": "checkbox",
+      "id": "is_active",
+      "label": "t:settings.is_active",
+      "info": "t:settings.is_active_info",
+      "default": false
     }
   ],
   "presets": [

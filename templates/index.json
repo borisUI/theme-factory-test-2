@@ -168,34 +168,7 @@
             "label": "Tab #3"
           },
           "blocks": {}
-        }
-      },
-      "block_order": [
-        "tab_navigation_jQTMFP",
-        "tab_navigation_9rPw33",
-        "tab_navigation_Xgyqd7"
-      ],
-      "name": "t:names.generic_section",
-      "settings": {
-        "background_color_mobile": "",
-        "text_color_mobile": "",
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0,
-        "padding_left_mobile": 0,
-        "padding_right_mobile": 0,
-        "margin_bottom_mobile": 0,
-        "background_color_desktop": "",
-        "text_color_desktop": "",
-        "padding_top_desktop": 0,
-        "padding_bottom_desktop": 0,
-        "padding_left_desktop": 0,
-        "padding_right_desktop": 0,
-        "margin_bottom_desktop": 0
-      }
-    },
-    "generic_section_QdbeqE": {
-      "type": "generic-section",
-      "blocks": {
+        },
         "tab_content_p4QdHt": {
           "type": "tab-content",
           "name": "t:names.tab_content",
@@ -315,6 +288,9 @@
         }
       },
       "block_order": [
+        "tab_navigation_jQTMFP",
+        "tab_navigation_9rPw33",
+        "tab_navigation_Xgyqd7",
         "tab_content_p4QdHt",
         "tab_content_Eth7TE",
         "tab_content_ih7WUF"
@@ -334,13 +310,13 @@
         "padding_bottom_desktop": 0,
         "padding_left_desktop": 0,
         "padding_right_desktop": 0,
-        "margin_bottom_desktop": 0
+        "margin_bottom_desktop": 0,
+        "enable_tabs": true
       }
     }
   },
   "order": [
     "generic_section_YQexch",
-    "generic_section_B4QeEV",
-    "generic_section_QdbeqE"
+    "generic_section_B4QeEV"
   ]
 }

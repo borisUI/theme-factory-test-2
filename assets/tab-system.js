@@ -57,10 +57,11 @@ class TabSystem extends HTMLElement {
 
       initializedGroups.set(groupId, true);
 
-      const firstNav = this.querySelector(`[data-tab-nav][data-tab-group="${groupId}"]`);
-      if (!firstNav) continue;
+      const activeNav = this.querySelector(`[data-tab-nav][data-tab-group="${groupId}"][data-tab-active="true"]`);
+      const defaultNav = activeNav || this.querySelector(`[data-tab-nav][data-tab-group="${groupId}"]`);
+      if (!defaultNav) continue;
 
-      const targetId = firstNav.getAttribute('data-tab-target');
+      const targetId = defaultNav.getAttribute('data-tab-target');
       this.#activateTab(groupId, targetId);
     }
 
