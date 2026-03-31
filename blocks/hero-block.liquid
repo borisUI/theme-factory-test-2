@@ -1,0 +1,321 @@
+{% doc %}
+  Hero Block
+
+  A layout block that renders a container with configurable height,
+  background media (image or video), optional overlay, and nested child blocks.
+
+  @example
+  {% content_for 'block', type: 'hero-block', id: 'hero' %}
+{% enddoc %}
+
+{% liquid
+  assign height_type = block.settings.height_type
+  assign custom_height = block.settings.custom_height | default: 400
+%}
+
+{%- capture children -%}
+  {% content_for 'blocks' %}
+{%- endcapture -%}
+
+<div
+  class="
+    hero-block
+    hero-block--height-{{ height_type }}
+    {% if block.settings.inherit_color_scheme == false %} color-{{ block.settings.color_scheme }}{% endif %}
+  "
+  style="
+    --hero-block-custom-height: {{ custom_height }}px;
+    --hero-block-padding-top: {{ block.settings.padding-block-start }}px;
+    --hero-block-padding-bottom: {{ block.settings.padding-block-end }}px;
+    --hero-block-padding-left: {{ block.settings.padding-inline-start }}px;
+    --hero-block-padding-right: {{ block.settings.padding-inline-end }}px;
+  "
+  {{ block.shopify_attributes }}
+>
+  <div class="hero-block__media-wrapper">
+    {% render 'background-media',
+      background_media: block.settings.background_media,
+      background_video: block.settings.video,
+      background_video_position: block.settings.video_position,
+      background_image: block.settings.background_image,
+      background_image_position: block.settings.background_image_position
+    %}
+    {% if block.settings.toggle_overlay %}
+      {% render 'overlay', settings: block.settings, layer: '0' %}
+    {% endif %}
+  </div>
+
+  <div class="hero-block__content">
+    {{- children -}}
+  </div>
+</div>
+
+{% stylesheet %}
+  .hero-block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+    padding-block-start: var(--hero-block-padding-top, 0px);
+    padding-block-end: var(--hero-block-padding-bottom, 0px);
+    padding-inline-start: var(--hero-block-padding-left, 0px);
+    padding-inline-end: var(--hero-block-padding-right, 0px);
+  }
+
+  .hero-block--height-auto {
+    height: auto;
+  }
+
+  .hero-block--height-full_viewport {
+    height: 100vh;
+    height: 100dvh;
+  }
+
+  .hero-block--height-custom {
+    height: var(--hero-block-custom-height, 400px);
+  }
+
+  .hero-block__media-wrapper {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .hero-block__content {
+    position: relative;
+    z-index: var(--layer-raised, 2);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.hero_block",
+  "tag": null,
+  "blocks": [
+    {
+      "type": "@theme"
+    },
+    {
+      "type": "@app"
+    }
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:content.layout"
+    },
+    {
+      "type": "select",
+      "id": "height_type",
+      "label": "t:settings.height_type",
+      "options": [
+        {
+          "value": "auto",
+          "label": "t:options.auto_height"
+        },
+        {
+          "value": "full_viewport",
+          "label": "t:options.full_viewport"
+        },
+        {
+          "value": "custom",
+          "label": "t:options.custom_height"
+        }
+      ],
+      "default": "auto"
+    },
+    {
+      "type": "number",
+      "id": "custom_height",
+      "label": "t:settings.custom_height",
+      "default": 400,
+      "visible_if": "{{ block.settings.height_type == 'custom' }}"
+    },
+    {
+      "type": "header",
+      "content": "t:content.appearance"
+    },
+    {
+      "type": "checkbox",
+      "id": "inherit_color_scheme",
+      "label": "t:settings.inherit_color_scheme",
+      "default": true
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:settings.color_scheme",
+      "default": "scheme-1",
+      "visible_if": "{{ block.settings.inherit_color_scheme == false }}"
+    },
+    {
+      "type": "select",
+      "id": "background_media",
+      "label": "t:settings.background_media",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:options.none"
+        },
+        {
+          "value": "image",
+          "label": "t:options.image"
+        },
+        {
+          "value": "video",
+          "label": "t:options.video"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "t:settings.image",
+      "visible_if": "{{ block.settings.background_media == 'image' }}"
+    },
+    {
+      "type": "select",
+      "id": "background_image_position",
+      "label": "t:settings.image_position",
+      "options": [
+        {
+          "value": "cover",
+          "label": "t:options.cover"
+        },
+        {
+          "value": "fit",
+          "label": "t:options.fit"
+        }
+      ],
+      "default": "cover",
+      "visible_if": "{{ block.settings.background_media == 'image' }}"
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "t:settings.video",
+      "visible_if": "{{ block.settings.background_media == 'video' }}"
+    },
+    {
+      "type": "select",
+      "id": "video_position",
+      "label": "t:settings.video_position",
+      "options": [
+        {
+          "value": "cover",
+          "label": "t:options.cover"
+        },
+        {
+          "value": "contain",
+          "label": "t:options.contain"
+        }
+      ],
+      "default": "cover",
+      "visible_if": "{{ block.settings.background_media == 'video' }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "toggle_overlay",
+      "label": "t:settings.background_overlay"
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "t:settings.overlay_color",
+      "alpha": true,
+      "default": "#00000026",
+      "visible_if": "{{ block.settings.toggle_overlay }}"
+    },
+    {
+      "type": "select",
+      "id": "overlay_style",
+      "label": "t:settings.overlay_style",
+      "options": [
+        {
+          "value": "solid",
+          "label": "t:options.solid"
+        },
+        {
+          "value": "gradient",
+          "label": "t:options.gradient"
+        }
+      ],
+      "default": "solid",
+      "visible_if": "{{ block.settings.toggle_overlay }}"
+    },
+    {
+      "type": "select",
+      "id": "gradient_direction",
+      "label": "t:settings.gradient_direction",
+      "options": [
+        {
+          "value": "to top",
+          "label": "t:options.up"
+        },
+        {
+          "value": "to bottom",
+          "label": "t:options.down"
+        }
+      ],
+      "default": "to top",
+      "visible_if": "{{ block.settings.toggle_overlay and block.settings.overlay_style == 'gradient' }}"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.hero_block",
+      "category": "t:categories.layout"
+    }
+  ]
+}
+{% endschema %}

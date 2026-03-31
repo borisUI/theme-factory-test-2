@@ -1,0 +1,226 @@
+{% doc %}
+  Grid Row Block
+
+  A 12-column CSS grid container that only accepts _grid-column children.
+
+  @example
+  {% content_for 'block', type: 'grid-row', id: 'row-1' %}
+{% enddoc %}
+
+{%- capture children -%}
+  {% content_for 'blocks' %}
+{%- endcapture -%}
+
+<div
+  class="grid-row"
+  style="
+    --grid-row-col-gap-mobile: {{ block.settings.column_gap_mobile }}px;
+    --grid-row-col-gap-tablet: {{ block.settings.column_gap_tablet }}px;
+    --grid-row-col-gap-desktop: {{ block.settings.column_gap_desktop }}px;
+    --grid-row-row-gap-mobile: {{ block.settings.row_gap_mobile }}px;
+    --grid-row-row-gap-tablet: {{ block.settings.row_gap_tablet }}px;
+    --grid-row-row-gap-desktop: {{ block.settings.row_gap_desktop }}px;
+    --grid-row-align-mobile: {{ block.settings.vertical_alignment_mobile }};
+    --grid-row-align-tablet: {{ block.settings.vertical_alignment_tablet }};
+    --grid-row-align-desktop: {{ block.settings.vertical_alignment_desktop }};
+    --grid-row-mb-mobile: {{ block.settings.margin_bottom_mobile }}px;
+    --grid-row-mb-tablet: {{ block.settings.margin_bottom_tablet }}px;
+    --grid-row-mb-desktop: {{ block.settings.margin_bottom_desktop }}px;
+  "
+  {{ block.shopify_attributes }}
+>
+  {{- children -}}
+</div>
+
+{% stylesheet %}
+  .grid-row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: 100%;
+  }
+
+  @media screen and (max-width: 749px) {
+    .grid-row {
+      column-gap: var(--grid-row-col-gap-mobile, 16px);
+      row-gap: var(--grid-row-row-gap-mobile, 16px);
+      align-items: var(--grid-row-align-mobile, start);
+      margin-block-end: var(--grid-row-mb-mobile, 0px);
+    }
+  }
+
+  @media screen and (min-width: 750px) and (max-width: 989px) {
+    .grid-row {
+      column-gap: var(--grid-row-col-gap-tablet, 20px);
+      row-gap: var(--grid-row-row-gap-tablet, 20px);
+      align-items: var(--grid-row-align-tablet, start);
+      margin-block-end: var(--grid-row-mb-tablet, 0px);
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    .grid-row {
+      column-gap: var(--grid-row-col-gap-desktop, 24px);
+      row-gap: var(--grid-row-row-gap-desktop, 24px);
+      align-items: var(--grid-row-align-desktop, start);
+      margin-block-end: var(--grid-row-mb-desktop, 0px);
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.grid_row",
+  "tag": null,
+  "blocks": [
+    {
+      "type": "_grid-column"
+    }
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:content.mobile"
+    },
+    {
+      "type": "select",
+      "id": "vertical_alignment_mobile",
+      "label": "t:settings.vertical_alignment_mobile",
+      "options": [
+        {
+          "value": "start",
+          "label": "t:options.top"
+        },
+        {
+          "value": "center",
+          "label": "t:options.center"
+        },
+        {
+          "value": "end",
+          "label": "t:options.bottom"
+        },
+        {
+          "value": "stretch",
+          "label": "t:options.fill"
+        }
+      ],
+      "default": "start"
+    },
+    {
+      "type": "number",
+      "id": "column_gap_mobile",
+      "label": "t:settings.column_gap_mobile",
+      "default": 16
+    },
+    {
+      "type": "number",
+      "id": "row_gap_mobile",
+      "label": "t:settings.row_gap_mobile",
+      "default": 16
+    },
+    {
+      "type": "number",
+      "id": "margin_bottom_mobile",
+      "label": "t:settings.margin_bottom_mobile",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "t:content.tablet"
+    },
+    {
+      "type": "select",
+      "id": "vertical_alignment_tablet",
+      "label": "t:settings.vertical_alignment_tablet",
+      "options": [
+        {
+          "value": "start",
+          "label": "t:options.top"
+        },
+        {
+          "value": "center",
+          "label": "t:options.center"
+        },
+        {
+          "value": "end",
+          "label": "t:options.bottom"
+        },
+        {
+          "value": "stretch",
+          "label": "t:options.fill"
+        }
+      ],
+      "default": "start"
+    },
+    {
+      "type": "number",
+      "id": "column_gap_tablet",
+      "label": "t:settings.column_gap_tablet",
+      "default": 20
+    },
+    {
+      "type": "number",
+      "id": "row_gap_tablet",
+      "label": "t:settings.row_gap_tablet",
+      "default": 20
+    },
+    {
+      "type": "number",
+      "id": "margin_bottom_tablet",
+      "label": "t:settings.margin_bottom_tablet",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "t:content.desktop"
+    },
+    {
+      "type": "select",
+      "id": "vertical_alignment_desktop",
+      "label": "t:settings.vertical_alignment_desktop",
+      "options": [
+        {
+          "value": "start",
+          "label": "t:options.top"
+        },
+        {
+          "value": "center",
+          "label": "t:options.center"
+        },
+        {
+          "value": "end",
+          "label": "t:options.bottom"
+        },
+        {
+          "value": "stretch",
+          "label": "t:options.fill"
+        }
+      ],
+      "default": "start"
+    },
+    {
+      "type": "number",
+      "id": "column_gap_desktop",
+      "label": "t:settings.column_gap_desktop",
+      "default": 24
+    },
+    {
+      "type": "number",
+      "id": "row_gap_desktop",
+      "label": "t:settings.row_gap_desktop",
+      "default": 24
+    },
+    {
+      "type": "number",
+      "id": "margin_bottom_desktop",
+      "label": "t:settings.margin_bottom_desktop",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.grid_row",
+      "category": "t:categories.layout"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,36 @@
+{% doc %}
+  Carousel Slide Block (private)
+
+  A structural container that wraps nested child blocks inside a .swiper-slide.
+  Used exclusively as a child of the carousel-block.
+
+  @example
+  {% content_for 'block', type: '_carousel-slide', id: 'slide-1' %}
+{% enddoc %}
+
+{%- capture children -%}
+  {% content_for 'blocks' %}
+{%- endcapture -%}
+
+<div
+  class="swiper-slide"
+  {{ block.shopify_attributes }}
+>
+  {{- children -}}
+</div>
+
+{% schema %}
+{
+  "name": "t:names.carousel_slide",
+  "tag": null,
+  "blocks": [
+    {
+      "type": "@theme"
+    },
+    {
+      "type": "@app"
+    }
+  ],
+  "settings": []
+}
+{% endschema %}

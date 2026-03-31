@@ -1,0 +1,243 @@
+{% doc %}
+  Carousel Block
+
+  A layout block that wraps child _carousel-slide blocks in a Swiper.js carousel.
+  Supports responsive slides per view, gap, autoplay, arrows, and dots.
+
+  @example
+  {% content_for 'block', type: 'carousel-block', id: 'carousel-1' %}
+{% enddoc %}
+
+{% liquid
+  assign slides_per_view_mobile = block.settings.slides_per_view_mobile | default: '1'
+  assign slides_per_view_tablet = block.settings.slides_per_view_tablet | default: '2'
+  assign slides_per_view_desktop = block.settings.slides_per_view_desktop | default: '3'
+
+  assign gap_mobile = block.settings.slide_gap_mobile | default: 16
+  assign gap_tablet = block.settings.slide_gap_tablet | default: 20
+  assign gap_desktop = block.settings.slide_gap_desktop | default: 24
+
+  assign autoplay_mobile = block.settings.autoplay_mobile
+  assign autoplay_tablet = block.settings.autoplay_tablet
+  assign autoplay_desktop = block.settings.autoplay_desktop
+  assign autoplay_delay = block.settings.autoplay_delay | default: 5
+
+  assign show_arrows = block.settings.show_arrows
+  assign external_arrows = block.settings.external_arrows
+  assign show_dots = block.settings.show_dots
+%}
+
+{%- capture children -%}
+  {% content_for 'blocks' %}
+{%- endcapture -%}
+
+<carousel-block
+  class="carousel-block"
+  data-slides-per-view-mobile="{{ slides_per_view_mobile }}"
+  data-slides-per-view-tablet="{{ slides_per_view_tablet }}"
+  data-slides-per-view-desktop="{{ slides_per_view_desktop }}"
+  data-gap-mobile="{{ gap_mobile }}"
+  data-gap-tablet="{{ gap_tablet }}"
+  data-gap-desktop="{{ gap_desktop }}"
+  data-autoplay-mobile="{{ autoplay_mobile }}"
+  data-autoplay-tablet="{{ autoplay_tablet }}"
+  data-autoplay-desktop="{{ autoplay_desktop }}"
+  data-autoplay-delay="{{ autoplay_delay }}"
+  data-show-arrows="{{ show_arrows }}"
+  data-external-arrows="{{ external_arrows }}"
+  data-show-dots="{{ show_dots }}"
+  {{ block.shopify_attributes }}
+>
+  {% if show_arrows and external_arrows %}
+    <button class="carousel-block__arrow carousel-block__arrow--prev" aria-label="{{ 'accessibility.slideshow_previous' | t }}">
+      <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  {% endif %}
+
+  <div class="swiper" ref="swiperContainer">
+    <div class="swiper-wrapper">
+      {{- children -}}
+    </div>
+
+    {% if show_arrows and external_arrows == false %}
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    {% endif %}
+
+    {% if show_dots %}
+      <div class="swiper-pagination"></div>
+    {% endif %}
+  </div>
+
+  {% if show_arrows and external_arrows %}
+    <button class="carousel-block__arrow carousel-block__arrow--next" aria-label="{{ 'accessibility.slideshow_next' | t }}">
+      <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  {% endif %}
+</carousel-block>
+
+<script src="{{ 'carousel-block.js' | asset_url }}" type="module"></script>
+
+{% stylesheet %}
+  .carousel-block {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-xs, 0.75rem);
+    width: 100%;
+    position: relative;
+  }
+
+  .carousel-block .swiper {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .carousel-block__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 1px solid rgb(var(--color-border));
+    border-radius: 50%;
+    background: rgb(var(--color-background));
+    color: rgb(var(--color-foreground));
+    cursor: pointer;
+    z-index: var(--layer-raised, 2);
+  }
+
+  .carousel-block__arrow:hover {
+    background: rgb(var(--color-foreground) / 0.05);
+  }
+
+  .carousel-block__arrow:focus-visible {
+    outline: 2px solid rgb(var(--color-foreground));
+    outline-offset: 2px;
+  }
+
+  .carousel-block__arrow svg {
+    width: 20px;
+    height: 20px;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.carousel_block",
+  "tag": null,
+  "blocks": [
+    {
+      "type": "_carousel-slide"
+    }
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:content.mobile"
+    },
+    {
+      "type": "text",
+      "id": "slides_per_view_mobile",
+      "label": "t:settings.slides_per_view_mobile",
+      "default": "1"
+    },
+    {
+      "type": "number",
+      "id": "slide_gap_mobile",
+      "label": "t:settings.slide_gap_mobile",
+      "default": 16
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay_mobile",
+      "label": "t:settings.autoplay_mobile",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "t:content.tablet"
+    },
+    {
+      "type": "text",
+      "id": "slides_per_view_tablet",
+      "label": "t:settings.slides_per_view_tablet",
+      "default": "2"
+    },
+    {
+      "type": "number",
+      "id": "slide_gap_tablet",
+      "label": "t:settings.slide_gap_tablet",
+      "default": 20
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay_tablet",
+      "label": "t:settings.autoplay_tablet",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "t:content.desktop"
+    },
+    {
+      "type": "text",
+      "id": "slides_per_view_desktop",
+      "label": "t:settings.slides_per_view_desktop",
+      "default": "3"
+    },
+    {
+      "type": "number",
+      "id": "slide_gap_desktop",
+      "label": "t:settings.slide_gap_desktop",
+      "default": 24
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay_desktop",
+      "label": "t:settings.autoplay_desktop",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "t:content.carousel"
+    },
+    {
+      "type": "number",
+      "id": "autoplay_delay",
+      "label": "t:settings.autoplay_delay",
+      "default": 5
+    },
+    {
+      "type": "checkbox",
+      "id": "show_arrows",
+      "label": "t:settings.show_arrows",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "external_arrows",
+      "label": "t:settings.external_arrows",
+      "default": false,
+      "visible_if": "{{ block.settings.show_arrows }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_dots",
+      "label": "t:settings.show_dots",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.carousel_block",
+      "category": "t:categories.layout"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,122 @@
+{% doc %}
+  Grid Column Block (private)
+
+  A private block that spans N columns in a parent 12-column grid.
+  Accepts nested theme and app blocks.
+
+  @example
+  {% content_for 'block', type: '_grid-column', id: 'col-1' %}
+{% enddoc %}
+
+{%- capture children -%}
+  {% content_for 'blocks' %}
+{%- endcapture -%}
+
+<div
+  class="grid-column"
+  style="
+    --grid-col-span-mobile: {{ block.settings.column_span_mobile }};
+    --grid-col-span-tablet: {{ block.settings.column_span_tablet }};
+    --grid-col-span-desktop: {{ block.settings.column_span_desktop }};
+    --grid-col-order-mobile: {{ block.settings.column_order_mobile }};
+    --grid-col-order-tablet: {{ block.settings.column_order_tablet }};
+    --grid-col-order-desktop: {{ block.settings.column_order_desktop }};
+  "
+  {{ block.shopify_attributes }}
+>
+  {{- children -}}
+</div>
+
+{% stylesheet %}
+  .grid-column {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  @media screen and (max-width: 749px) {
+    .grid-column {
+      grid-column: span var(--grid-col-span-mobile, 12);
+      order: var(--grid-col-order-mobile, 0);
+    }
+  }
+
+  @media screen and (min-width: 750px) and (max-width: 989px) {
+    .grid-column {
+      grid-column: span var(--grid-col-span-tablet, 6);
+      order: var(--grid-col-order-tablet, 0);
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    .grid-column {
+      grid-column: span var(--grid-col-span-desktop, 4);
+      order: var(--grid-col-order-desktop, 0);
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.grid_column",
+  "tag": null,
+  "blocks": [
+    {
+      "type": "@theme"
+    },
+    {
+      "type": "@app"
+    }
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:content.mobile"
+    },
+    {
+      "type": "number",
+      "id": "column_span_mobile",
+      "label": "t:settings.column_span_mobile",
+      "default": 12
+    },
+    {
+      "type": "number",
+      "id": "column_order_mobile",
+      "label": "t:settings.column_order_mobile",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "t:content.tablet"
+    },
+    {
+      "type": "number",
+      "id": "column_span_tablet",
+      "label": "t:settings.column_span_tablet",
+      "default": 6
+    },
+    {
+      "type": "number",
+      "id": "column_order_tablet",
+      "label": "t:settings.column_order_tablet",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "t:content.desktop"
+    },
+    {
+      "type": "number",
+      "id": "column_span_desktop",
+      "label": "t:settings.column_span_desktop",
+      "default": 4
+    },
+    {
+      "type": "number",
+      "id": "column_order_desktop",
+      "label": "t:settings.column_order_desktop",
+      "default": 0
+    }
+  ]
+}
+{% endschema %}
