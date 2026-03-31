@@ -9,291 +9,35 @@
  */
 {
   "sections": {
-    "generic_section_YQexch": {
+    "generic_section_VpbhMW": {
       "type": "generic-section",
       "blocks": {
-        "image_e7nkdk": {
-          "type": "image",
-          "name": "t:names.image",
-          "settings": {
-            "link": "",
-            "image_ratio": "adapt",
-            "width": "custom",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "icon_YXbCpi": {
-          "type": "icon",
-          "name": "t:names.icon",
-          "settings": {
-            "icon": "price_tag",
-            "width": 134,
-            "link": "",
-            "open_in_new_tab": false
-          },
-          "blocks": {}
-        },
-        "custom_button_nA9pMX": {
-          "type": "custom-button",
-          "name": "t:names.custom_button",
-          "settings": {
-            "label": "Button",
-            "link": "",
-            "open_in_new_tab": false,
-            "min_width_desktop": 0,
-            "min_width_mobile": 0,
-            "width_desktop": "auto",
-            "width_mobile": "auto",
-            "background_color": "rgba(0,0,0,0)",
-            "text_color": "#1d3686",
-            "font_desktop": "var(--font-body--family)",
-            "font_size_desktop": "1rem",
-            "font_weight_desktop": "400",
-            "letter_spacing_desktop": 0,
-            "line_height_desktop": 1.4,
-            "case_desktop": "none",
-            "font_mobile": "var(--font-body--family)",
-            "font_size_mobile": "1rem",
-            "font_weight_mobile": "400",
-            "letter_spacing_mobile": 0,
-            "line_height_mobile": 1.4,
-            "case_mobile": "none",
-            "padding_top_desktop": 12,
-            "padding_bottom_desktop": 12,
-            "padding_left_desktop": 24,
-            "padding_right_desktop": 24,
-            "padding_top_mobile": 10,
-            "padding_bottom_mobile": 10,
-            "padding_left_mobile": 20,
-            "padding_right_mobile": 20,
-            "border_radius": 0,
-            "border_color": "#1d3686",
-            "border_width": 2
-          },
-          "blocks": {}
-        },
-        "text_nLJf7G": {
-          "type": "text",
-          "name": "t:names.text",
-          "settings": {
-            "text": "<p>We make things that work better and last longer. Our products solve real problems with clean design and honest materials.</p>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "custom",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": 1.4,
-            "letter_spacing": 0,
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "image_e7nkdk",
-        "icon_YXbCpi",
-        "custom_button_nA9pMX",
-        "text_nLJf7G"
-      ],
-      "disabled": true,
-      "name": "t:names.generic_section",
-      "settings": {
-        "background_color_mobile": "#e1edf5",
-        "text_color_mobile": "#1d3686",
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20,
-        "padding_left_mobile": 20,
-        "padding_right_mobile": 20,
-        "margin_bottom_mobile": 0,
-        "background_color_desktop": "#e1edf5",
-        "text_color_desktop": "#1d3686",
-        "padding_top_desktop": 20,
-        "padding_bottom_desktop": 20,
-        "padding_left_desktop": 20,
-        "padding_right_desktop": 20,
-        "margin_bottom_desktop": 0
-      }
-    },
-    "generic_section_B4QeEV": {
-      "type": "generic-section",
-      "blocks": {
-        "tab_navigation_jQTMFP": {
+        "tab_navigation_AxYYrx": {
           "type": "tab-navigation",
           "name": "t:names.tab_navigation",
           "settings": {
             "group_id": "tabs-1",
             "target_id": "tab-1",
-            "label": "Tab #1"
+            "label": "Tab #1",
+            "is_active": true
           },
           "blocks": {}
         },
-        "tab_navigation_9rPw33": {
+        "tab_navigation_EUHPU9": {
           "type": "tab-navigation",
           "name": "t:names.tab_navigation",
           "settings": {
             "group_id": "tabs-1",
             "target_id": "tab-2",
-            "label": "Tab #2"
+            "label": "Tab #2",
+            "is_active": false
           },
           "blocks": {}
-        },
-        "tab_navigation_Xgyqd7": {
-          "type": "tab-navigation",
-          "name": "t:names.tab_navigation",
-          "settings": {
-            "group_id": "tabs-1",
-            "target_id": "tab-3",
-            "label": "Tab #3"
-          },
-          "blocks": {}
-        },
-        "tab_content_p4QdHt": {
-          "type": "tab-content",
-          "name": "t:names.tab_content",
-          "settings": {
-            "group_id": "tabs-1",
-            "target_id": "tab-1"
-          },
-          "blocks": {
-            "text_MkDRUM": {
-              "type": "text",
-              "name": "t:names.text",
-              "settings": {
-                "text": "<p>11111111111 We make things that work better and last longer. Our products solve real problems with clean design and honest materials.</p>",
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": 1.4,
-                "letter_spacing": 0,
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "text_MkDRUM"
-          ]
-        },
-        "tab_content_Eth7TE": {
-          "type": "tab-content",
-          "name": "t:names.tab_content",
-          "settings": {
-            "group_id": "tabs-1",
-            "target_id": "tab-2"
-          },
-          "blocks": {
-            "text_JV8nbn": {
-              "type": "text",
-              "name": "t:names.text",
-              "settings": {
-                "text": "<p>222222222 We make things that work better and last longer. Our products solve real problems with clean design and honest materials.</p>",
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": 1.4,
-                "letter_spacing": 0,
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "text_JV8nbn"
-          ]
-        },
-        "tab_content_ih7WUF": {
-          "type": "tab-content",
-          "name": "t:names.tab_content",
-          "settings": {
-            "group_id": "tabs-1",
-            "target_id": "tab-3"
-          },
-          "blocks": {
-            "text_w4f73Q": {
-              "type": "text",
-              "name": "t:names.text",
-              "settings": {
-                "text": "<p>3333333333 We make things that work better and last longer. Our products solve real problems with clean design and honest materials.</p>",
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": 1.4,
-                "letter_spacing": 0,
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "text_w4f73Q"
-          ]
         }
       },
       "block_order": [
-        "tab_navigation_jQTMFP",
-        "tab_navigation_9rPw33",
-        "tab_navigation_Xgyqd7",
-        "tab_content_p4QdHt",
-        "tab_content_Eth7TE",
-        "tab_content_ih7WUF"
+        "tab_navigation_AxYYrx",
+        "tab_navigation_EUHPU9"
       ],
       "name": "t:names.generic_section",
       "settings": {
@@ -311,12 +55,117 @@
         "padding_left_desktop": 0,
         "padding_right_desktop": 0,
         "margin_bottom_desktop": 0,
-        "enable_tabs": true
+        "enable_tabs": false
+      }
+    },
+    "generic_section_yaf9Ab": {
+      "type": "generic-section",
+      "blocks": {
+        "tab_content_y9xfnb": {
+          "type": "tab-content",
+          "name": "t:names.tab_content",
+          "settings": {
+            "group_id": "tabs-1",
+            "target_id": "tab-1"
+          },
+          "blocks": {
+            "text_Ug6hVg": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>We make things that work better and last longer. Our products solve real problems with clean design and honest materials.</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": 1.4,
+                "letter_spacing": 0,
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_Ug6hVg"
+          ]
+        },
+        "tab_content_VEjrPH": {
+          "type": "tab-content",
+          "name": "t:names.tab_content",
+          "settings": {
+            "group_id": "tabs-1",
+            "target_id": "tab-2"
+          },
+          "blocks": {
+            "text_zmRiwE": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>We make things that work better and last longer. Our products solve real problems with clean design and honest materials.</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": 1.4,
+                "letter_spacing": 0,
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_zmRiwE"
+          ]
+        }
+      },
+      "block_order": [
+        "tab_content_y9xfnb",
+        "tab_content_VEjrPH"
+      ],
+      "name": "t:names.generic_section",
+      "settings": {
+        "background_color_mobile": "",
+        "text_color_mobile": "",
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "padding_left_mobile": 0,
+        "padding_right_mobile": 0,
+        "margin_bottom_mobile": 0,
+        "background_color_desktop": "",
+        "text_color_desktop": "",
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 0,
+        "padding_left_desktop": 0,
+        "padding_right_desktop": 0,
+        "margin_bottom_desktop": 0,
+        "enable_tabs": false
       }
     }
   },
   "order": [
-    "generic_section_YQexch",
-    "generic_section_B4QeEV"
+    "generic_section_VpbhMW",
+    "generic_section_yaf9Ab"
   ]
 }

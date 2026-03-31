@@ -1,41 +1,16 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-page",
-      "blocks": {
-        "heading": {
-          "type": "text",
-          "name": "Title",
-          "settings": {
-            "text": "<h1>{{ closest.page.title }}</h1>",
-            "width": "100%",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "h2",
-            "font": "var(--font-primary--family)",
-            "font_size": "",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "page-content": {
-          "type": "page-content",
-          "settings": {},
-          "blocks": {}
-        }
-      },
-      "block_order": ["heading", "page-content"],
       "settings": {
         "content_direction": "column",
         "gap": 32,
@@ -43,7 +18,165 @@
         "padding-block-start": 40,
         "padding-block-end": 80
       }
+    },
+    "generic_section_NqDMW6": {
+      "type": "generic-section",
+      "blocks": {
+        "tab_navigation_ETHT4N": {
+          "type": "tab-navigation",
+          "name": "t:names.tab_navigation",
+          "settings": {
+            "group_id": "tabs-1",
+            "target_id": "tab-1",
+            "label": "Tab #1",
+            "is_active": true
+          },
+          "blocks": {}
+        },
+        "tab_navigation_hRUYAn": {
+          "type": "tab-navigation",
+          "name": "t:names.tab_navigation",
+          "settings": {
+            "group_id": "tabs-1",
+            "target_id": "tab-2",
+            "label": "Tab #2",
+            "is_active": true
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "tab_navigation_ETHT4N",
+        "tab_navigation_hRUYAn"
+      ],
+      "name": "t:names.generic_section",
+      "settings": {
+        "background_color_mobile": "",
+        "text_color_mobile": "",
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "padding_left_mobile": 0,
+        "padding_right_mobile": 0,
+        "margin_bottom_mobile": 0,
+        "background_color_desktop": "",
+        "text_color_desktop": "",
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 0,
+        "padding_left_desktop": 0,
+        "padding_right_desktop": 0,
+        "margin_bottom_desktop": 0,
+        "enable_tabs": false
+      }
+    },
+    "generic_section_qR6LhX": {
+      "type": "generic-section",
+      "blocks": {
+        "tab_content_hpcB6W": {
+          "type": "tab-content",
+          "name": "t:names.tab_content",
+          "settings": {
+            "group_id": "tabs-1",
+            "target_id": "tab-1"
+          },
+          "blocks": {
+            "text_6bJcDQ": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>We make things that work better and last longer. Our products solve real problems with clean design and honest materials.</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": 1.4,
+                "letter_spacing": 0,
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_6bJcDQ"
+          ]
+        },
+        "tab_content_ejjRLJ": {
+          "type": "tab-content",
+          "name": "t:names.tab_content",
+          "settings": {
+            "group_id": "tabs-1",
+            "target_id": "tab-2"
+          },
+          "blocks": {
+            "text_qB9YzL": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>We make things that work better and last longer. Our products solve real problems with clean design and honest materials.</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": 1.4,
+                "letter_spacing": 0,
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_qB9YzL"
+          ]
+        }
+      },
+      "block_order": [
+        "tab_content_hpcB6W",
+        "tab_content_ejjRLJ"
+      ],
+      "name": "t:names.generic_section",
+      "settings": {
+        "background_color_mobile": "",
+        "text_color_mobile": "",
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "padding_left_mobile": 0,
+        "padding_right_mobile": 0,
+        "margin_bottom_mobile": 0,
+        "background_color_desktop": "",
+        "text_color_desktop": "",
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 0,
+        "padding_left_desktop": 0,
+        "padding_right_desktop": 0,
+        "margin_bottom_desktop": 0,
+        "enable_tabs": false
+      }
     }
   },
-  "order": ["main"]
+  "order": [
+    "main",
+    "generic_section_NqDMW6",
+    "generic_section_qR6LhX"
+  ]
 }
