@@ -10,7 +10,7 @@
 
 {% liquid
   assign bg_is_transparent = false
-  if block.settings.background_color == blank or block.settings.background_color == 'transparent'
+  if block.settings.background_color == blank or block.settings.background_color == 'transparent' or block.settings.background_color contains 'rgba'
     assign bg_is_transparent = true
   endif
 
