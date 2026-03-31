@@ -79,6 +79,11 @@
 
 <carousel-block
   class="carousel-block"
+  style="
+    --carousel-mb-mobile: {{ block.settings.margin_bottom_mobile | default: 0 }}px;
+    --carousel-mb-tablet: {{ block.settings.margin_bottom_tablet | default: 0 }}px;
+    --carousel-mb-desktop: {{ block.settings.margin_bottom_desktop | default: 0 }}px;
+  "
   data-slides-per-view-mobile="{{ slides_per_view_mobile }}"
   data-slides-per-view-tablet="{{ slides_per_view_tablet }}"
   data-slides-per-view-desktop="{{ slides_per_view_desktop }}"
@@ -179,6 +184,24 @@
     width: 20px;
     height: 20px;
   }
+
+  @media screen and (max-width: 749px) {
+    .carousel-block {
+      margin-block-end: var(--carousel-mb-mobile, 0px);
+    }
+  }
+
+  @media screen and (min-width: 750px) and (max-width: 989px) {
+    .carousel-block {
+      margin-block-end: var(--carousel-mb-tablet, 0px);
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    .carousel-block {
+      margin-block-end: var(--carousel-mb-desktop, 0px);
+    }
+  }
 {% endstylesheet %}
 
 {% schema %}
@@ -240,6 +263,12 @@
       "default": true
     },
     {
+      "type": "number",
+      "id": "margin_bottom_mobile",
+      "label": "t:settings.margin_bottom_mobile",
+      "default": 0
+    },
+    {
       "type": "header",
       "content": "t:content.tablet"
     },
@@ -288,6 +317,12 @@
       "default": true
     },
     {
+      "type": "number",
+      "id": "margin_bottom_tablet",
+      "label": "t:settings.margin_bottom_tablet",
+      "default": 0
+    },
+    {
       "type": "header",
       "content": "t:content.desktop"
     },
@@ -334,6 +369,12 @@
       "id": "show_dots_desktop",
       "label": "t:settings.show_dots_desktop",
       "default": true
+    },
+    {
+      "type": "number",
+      "id": "margin_bottom_desktop",
+      "label": "t:settings.margin_bottom_desktop",
+      "default": 0
     }
   ],
   "presets": [

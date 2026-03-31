@@ -1,0 +1,177 @@
+{% doc %}
+  Generic Section
+
+  A simple styled wrapper section with 2-breakpoint (mobile/desktop) settings
+  for background color, text color, padding, and margin. Accepts any theme blocks.
+
+  @example
+  Used via template JSON with type: "generic-section"
+{% enddoc %}
+
+{%- capture children -%}
+  {% content_for 'blocks' %}
+{%- endcapture -%}
+
+<div
+  class="generic-section"
+  style="
+    --gs-bg-mobile: {{ section.settings.background_color_mobile }};
+    --gs-bg-desktop: {{ section.settings.background_color_desktop }};
+    --gs-text-mobile: {{ section.settings.text_color_mobile }};
+    --gs-text-desktop: {{ section.settings.text_color_desktop }};
+    --gs-pt-mobile: {{ section.settings.padding_top_mobile | default: 0 }}px;
+    --gs-pb-mobile: {{ section.settings.padding_bottom_mobile | default: 0 }}px;
+    --gs-pl-mobile: {{ section.settings.padding_left_mobile | default: 0 }}px;
+    --gs-pr-mobile: {{ section.settings.padding_right_mobile | default: 0 }}px;
+    --gs-pt-desktop: {{ section.settings.padding_top_desktop | default: 0 }}px;
+    --gs-pb-desktop: {{ section.settings.padding_bottom_desktop | default: 0 }}px;
+    --gs-pl-desktop: {{ section.settings.padding_left_desktop | default: 0 }}px;
+    --gs-pr-desktop: {{ section.settings.padding_right_desktop | default: 0 }}px;
+    --gs-mb-mobile: {{ section.settings.margin_bottom_mobile | default: 0 }}px;
+    --gs-mb-desktop: {{ section.settings.margin_bottom_desktop | default: 0 }}px;
+  "
+>
+  {{- children -}}
+</div>
+
+{% stylesheet %}
+  .generic-section {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 749px) {
+    .generic-section {
+      background-color: var(--gs-bg-mobile);
+      color: var(--gs-text-mobile);
+      padding-block-start: var(--gs-pt-mobile, 0px);
+      padding-block-end: var(--gs-pb-mobile, 0px);
+      padding-inline-start: var(--gs-pl-mobile, 0px);
+      padding-inline-end: var(--gs-pr-mobile, 0px);
+      margin-block-end: var(--gs-mb-mobile, 0px);
+    }
+  }
+
+  @media screen and (min-width: 750px) {
+    .generic-section {
+      background-color: var(--gs-bg-desktop);
+      color: var(--gs-text-desktop);
+      padding-block-start: var(--gs-pt-desktop, 0px);
+      padding-block-end: var(--gs-pb-desktop, 0px);
+      padding-inline-start: var(--gs-pl-desktop, 0px);
+      padding-inline-end: var(--gs-pr-desktop, 0px);
+      margin-block-end: var(--gs-mb-desktop, 0px);
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.generic_section",
+  "tag": "section",
+  "class": "section-wrapper",
+  "blocks": [
+    {
+      "type": "@theme"
+    },
+    {
+      "type": "@app"
+    }
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:content.mobile"
+    },
+    {
+      "type": "color",
+      "id": "background_color_mobile",
+      "label": "t:settings.background_color_mobile"
+    },
+    {
+      "type": "color",
+      "id": "text_color_mobile",
+      "label": "t:settings.text_color_mobile"
+    },
+    {
+      "type": "number",
+      "id": "padding_top_mobile",
+      "label": "t:settings.padding_top_mobile",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom_mobile",
+      "label": "t:settings.padding_bottom_mobile",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "padding_left_mobile",
+      "label": "t:settings.padding_left_mobile",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "padding_right_mobile",
+      "label": "t:settings.padding_right_mobile",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "margin_bottom_mobile",
+      "label": "t:settings.margin_bottom_mobile",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "t:content.desktop"
+    },
+    {
+      "type": "color",
+      "id": "background_color_desktop",
+      "label": "t:settings.background_color_desktop"
+    },
+    {
+      "type": "color",
+      "id": "text_color_desktop",
+      "label": "t:settings.text_color_desktop"
+    },
+    {
+      "type": "number",
+      "id": "padding_top_desktop",
+      "label": "t:settings.padding_top_desktop",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom_desktop",
+      "label": "t:settings.padding_bottom_desktop",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "padding_left_desktop",
+      "label": "t:settings.padding_left_desktop",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "padding_right_desktop",
+      "label": "t:settings.padding_right_desktop",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "margin_bottom_desktop",
+      "label": "t:settings.margin_bottom_desktop",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.generic_section",
+      "category": "t:categories.layout"
+    }
+  ]
+}
+{% endschema %}
