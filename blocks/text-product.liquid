@@ -1,0 +1,213 @@
+{% doc %}
+  Text Product Block
+
+  Renders a text-based representation of a product with title and price.
+  Supports overriding the price with a custom value or free label.
+
+  @example
+  {% content_for 'block', type: 'text-product', id: 'tp-1' %}
+{% enddoc %}
+
+{% liquid
+  assign tp_product = block.settings.product
+%}
+
+<div
+  {{ block.shopify_attributes }}
+  class="text-product"
+  style="
+    --tp-bg: {{ block.settings.bg_color }};
+    --tp-text: {{ block.settings.text_color }};
+    --tp-mb-mobile: {{ block.settings.margin_bottom_mobile | default: 0 }}px;
+    --tp-mb-desktop: {{ block.settings.margin_bottom_desktop | default: 0 }}px;
+  "
+>
+  {% if tp_product != blank %}
+    <div class="text-product__info">
+      <h4 class="text-product__title">
+        <a href="{{ tp_product.url }}">{{ tp_product.title | escape }}</a>
+      </h4>
+      {% if block.settings.description != blank %}
+        <div class="text-product__description">{{ block.settings.description }}</div>
+      {% endif %}
+      {% if block.settings.price_label != blank %}
+        <span class="text-product__label">{{ block.settings.price_label | escape }}</span>
+      {% endif %}
+    </div>
+    <div class="text-product__price">
+      {% if block.settings.price_override %}
+        {% if block.settings.free_label != blank %}
+          <span class="text-product__free">{{ block.settings.free_label | escape }}</span>
+        {% elsif block.settings.price_override_value != blank %}
+          <span>{{ block.settings.price_override_value | escape }}</span>
+        {% endif %}
+      {% else %}
+        <span>{{ tp_product.price | money }}</span>
+      {% endif %}
+    </div>
+  {% else %}
+    <div class="text-product__info">
+      <h4 class="text-product__title">Select a product</h4>
+    </div>
+  {% endif %}
+</div>
+
+{% stylesheet %}
+.text-product {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 20px;
+  background-color: var(--tp-bg, transparent);
+  color: var(--tp-text, inherit);
+  border-block-end: 1px solid currentColor;
+  margin-block-end: var(--tp-mb-desktop);
+  opacity: 0.85;
+}
+
+@media screen and (max-width: 749px) {
+  .text-product {
+    margin-block-end: var(--tp-mb-mobile);
+    padding: 12px 16px;
+  }
+}
+
+.text-product__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.text-product__title {
+  font-family: var(--font-heading--family);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  margin: 0;
+}
+
+.text-product__title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.text-product__title a:hover {
+  text-decoration: underline;
+}
+
+.text-product__description {
+  font-family: var(--font-body--family);
+  font-size: 13px;
+  line-height: 18px;
+  opacity: 0.7;
+}
+
+.text-product__description p {
+  margin: 0;
+}
+
+.text-product__label {
+  font-family: var(--font-body--family);
+  font-size: 12px;
+  line-height: 16px;
+  opacity: 0.6;
+}
+
+.text-product__price {
+  font-family: var(--font-body--family);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  flex-shrink: 0;
+}
+
+.text-product__free {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.text_product",
+  "tag": null,
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "t:settings.product"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "t:settings.description"
+    },
+    {
+      "type": "text",
+      "id": "price_label",
+      "label": "t:settings.price_label"
+    },
+    {
+      "type": "header",
+      "content": "t:content.price_override"
+    },
+    {
+      "type": "checkbox",
+      "id": "price_override",
+      "label": "t:settings.price_override",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "price_override_value",
+      "label": "t:settings.price_override_value",
+      "visible_if": "{{ block.settings.price_override == true }}"
+    },
+    {
+      "type": "text",
+      "id": "free_label",
+      "label": "t:settings.free_label",
+      "visible_if": "{{ block.settings.price_override == true }}"
+    },
+    {
+      "type": "header",
+      "content": "t:content.colors"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "t:settings.bg_color"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:settings.text_color"
+    },
+    {
+      "type": "header",
+      "content": "t:content.margin"
+    },
+    {
+      "type": "number",
+      "id": "margin_bottom_mobile",
+      "label": "t:settings.margin_bottom_mobile",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "margin_bottom_desktop",
+      "label": "t:settings.margin_bottom_desktop",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.text_product",
+      "category": "t:categories.product"
+    }
+  ]
+}
+{% endschema %}
