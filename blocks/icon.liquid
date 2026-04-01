@@ -11,19 +11,29 @@
   %}
 {% endcapture %}
 
-{%- if block_settings.link != blank -%}
-  <a
-    href="{{ block_settings.link }}"
-    class="text-inherit"
-    {% if block_settings.open_in_new_tab %}
-      target="_blank" rel="noopener"
-    {% endif %}
-  >
+<div
+  class="icon-block-wrapper"
+  style="
+    --icon-block-width-desktop: {{ block_settings.width }}px;
+    --icon-block-width-mobile: {{ block_settings.width_mobile | default: block_settings.width }}px;
+    --icon-block-mb-desktop: {{ block_settings.margin_bottom_desktop | default: 0 }}px;
+    --icon-block-mb-mobile: {{ block_settings.margin_bottom_mobile | default: 0 }}px;
+  "
+>
+  {%- if block_settings.link != blank -%}
+    <a
+      href="{{ block_settings.link }}"
+      class="text-inherit"
+      {% if block_settings.open_in_new_tab %}
+        target="_blank" rel="noopener"
+      {% endif %}
+    >
+      {{ icon }}
+    </a>
+  {%- else -%}
     {{ icon }}
-  </a>
-{%- else -%}
-  {{ icon }}
-{%- endif -%}
+  {%- endif -%}
+</div>
 
 {% stylesheet %}
   .icon-block {
@@ -33,6 +43,25 @@
 
   .icon-block__media {
     height: auto;
+  }
+
+  .icon-block-wrapper {
+    margin-block-end: var(--icon-block-mb-desktop, 0px);
+  }
+
+  .icon-block-wrapper .icon-block__media {
+    width: var(--icon-block-width-desktop);
+    height: auto;
+  }
+
+  @media screen and (max-width: 749px) {
+    .icon-block-wrapper {
+      margin-block-end: var(--icon-block-mb-mobile, 0px);
+    }
+
+    .icon-block-wrapper .icon-block__media {
+      width: var(--icon-block-width-mobile);
+    }
   }
 {% endstylesheet %}
 
@@ -299,6 +328,28 @@
       "step": 2,
       "unit": "px",
       "default": 24
+    },
+    {
+      "type": "range",
+      "id": "width_mobile",
+      "label": "t:settings.width_mobile",
+      "min": 12,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "number",
+      "id": "margin_bottom_desktop",
+      "label": "t:settings.margin_bottom_desktop",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "margin_bottom_mobile",
+      "label": "t:settings.margin_bottom_mobile",
+      "default": 0
     },
     {
       "type": "url",
