@@ -70,32 +70,34 @@
         <p class="custom-product-card__description">{{ card_product.description | strip_html | truncate: 100 }}</p>
       {% endif %}
 
-      {% if block.settings.show_price %}
-        <div class="custom-product-card__price">
-          {% if card_product.compare_at_price > card_product.price %}
-            <span class="custom-product-card__price-compare">
-              <span class="visually-hidden">Regular price</span>
-              {{ card_product.compare_at_price | money }}
-            </span>
-          {% endif %}
-          <span class="custom-product-card__price-current">
+      <div class="custom-product-card__footer">
+        {% if block.settings.show_price %}
+          <div class="custom-product-card__price">
             {% if card_product.compare_at_price > card_product.price %}
-              <span class="visually-hidden">Sale price</span>
+              <span class="custom-product-card__price-compare">
+                <span class="visually-hidden">Regular price</span>
+                {{ card_product.compare_at_price | money }}
+              </span>
             {% endif %}
-            {{ card_product.price | money }}
-          </span>
-        </div>
-      {% endif %}
+            <span class="custom-product-card__price-current">
+              {% if card_product.compare_at_price > card_product.price %}
+                <span class="visually-hidden">Sale price</span>
+              {% endif %}
+              {{ card_product.price | money }}
+            </span>
+          </div>
+        {% endif %}
 
-      {% if block.settings.show_add_to_cart and card_product.available %}
-        <button
-          class="custom-product-card__atc-btn"
-          type="button"
-          data-variant-id="{{ card_product.selected_or_first_available_variant.id }}"
-        >
-          ADD TO CART
-        </button>
-      {% endif %}
+        {% if block.settings.show_add_to_cart and card_product.available %}
+          <button
+            class="custom-product-card__atc-btn"
+            type="button"
+            data-variant-id="{{ card_product.selected_or_first_available_variant.id }}"
+          >
+            ADD TO CART
+          </button>
+        {% endif %}
+      </div>
     {% else %}
       <h3 class="custom-product-card__title">Select a product</h3>
     {% endif %}
@@ -110,6 +112,7 @@
   flex-direction: column;
   border-radius: 8px;
   overflow: hidden;
+  height: 100%;
   margin-block-end: var(--cpc-mb-desktop);
 }
 
@@ -171,8 +174,9 @@
 .custom-product-card__content {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 16px;
+  flex: 1;
+  gap: 16px;
+  padding: 16px 16px 24px 16px;
   background-color: var(--cpc-content-bg, #FFFFFF);
   color: var(--cpc-text-color, #141414);
 }
@@ -181,7 +185,7 @@
   font-family: var(--font-heading--family);
   font-size: 16px;
   font-weight: 600;
-  line-height: 22px;
+  line-height: 28px;
   margin: 0;
 }
 
@@ -196,10 +200,17 @@
 
 .custom-product-card__description {
   font-family: var(--font-body--family);
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 14px;
+  line-height: 20px;
   margin: 0;
-  opacity: 0.75;
+}
+
+.custom-product-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-block-start: auto;
 }
 
 .custom-product-card__price {
@@ -207,9 +218,9 @@
   align-items: center;
   gap: 8px;
   font-family: var(--font-body--family);
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
 }
 
 .custom-product-card__price-compare {
@@ -221,20 +232,20 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  padding: 12px 16px;
-  margin-block-start: 4px;
+  width: auto;
+  padding: 10px 32px;
   background-color: var(--cpc-btn-bg, #0F1F18);
   color: var(--cpc-btn-text, #FFFFFF);
   border: none;
-  border-radius: 4px;
-  font-family: var(--font-body--family);
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+  border-radius: 24px;
+  font-family: var(--font-heading--family);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
   text-transform: uppercase;
   cursor: pointer;
   transition: opacity 150ms;
+  white-space: nowrap;
 }
 
 .custom-product-card__atc-btn:hover {
