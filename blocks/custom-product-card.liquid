@@ -1,0 +1,377 @@
+{% doc %}
+  Custom Product Card Block
+
+  Renders a product card with optional top/bottom badges, product image,
+  green progress bar, title, description, price with compare-at, and
+  add-to-cart button. Clicking ATC posts to /cart/add.js.
+
+  @example
+  {% content_for 'block', type: 'custom-product-card', id: 'card-1' %}
+{% enddoc %}
+
+{% liquid
+  assign card_product = block.settings.product
+%}
+
+<custom-product-card
+  {{ block.shopify_attributes }}
+  class="custom-product-card"
+  style="
+    --cpc-content-bg: {{ block.settings.content_bg_color }};
+    --cpc-text-color: {{ block.settings.text_color }};
+    --cpc-btn-bg: {{ block.settings.button_bg_color }};
+    --cpc-btn-text: {{ block.settings.button_text_color }};
+    --cpc-mb-mobile: {{ block.settings.margin_bottom_mobile | default: 0 }}px;
+    --cpc-mb-desktop: {{ block.settings.margin_bottom_desktop | default: 0 }}px;
+  "
+>
+  <div class="custom-product-card__image-wrapper">
+    {% if block.settings.top_badge_text != blank %}
+      <span
+        class="custom-product-card__badge custom-product-card__badge--top"
+        style="background-color: {{ block.settings.top_badge_bg_color }}; color: {{ block.settings.top_badge_text_color }};"
+      >
+        {{ block.settings.top_badge_text | escape }}
+      </span>
+    {% endif %}
+
+    {% if block.settings.bottom_badge_text != blank %}
+      <span
+        class="custom-product-card__badge custom-product-card__badge--bottom"
+        style="background-color: {{ block.settings.bottom_badge_bg_color }}; color: {{ block.settings.bottom_badge_text_color }};"
+      >
+        {{ block.settings.bottom_badge_text | escape }}
+      </span>
+    {% endif %}
+
+    {% if card_product != blank and card_product.featured_image %}
+      <img
+        class="custom-product-card__image"
+        src="{{ card_product.featured_image | image_url: width: 800 }}"
+        alt="{{ card_product.featured_image.alt | default: card_product.title | escape }}"
+        width="400"
+        height="400"
+        loading="lazy"
+      />
+    {% else %}
+      <div class="custom-product-card__image-placeholder"></div>
+    {% endif %}
+  </div>
+
+  <div class="custom-product-card__progress-bar"></div>
+
+  <div class="custom-product-card__content">
+    {% if card_product != blank %}
+      <h3 class="custom-product-card__title">
+        <a href="{{ card_product.url }}">{{ card_product.title | escape }}</a>
+      </h3>
+
+      {% if block.settings.show_description and card_product.description != blank %}
+        <p class="custom-product-card__description">{{ card_product.description | strip_html | truncate: 100 }}</p>
+      {% endif %}
+
+      {% if block.settings.show_price %}
+        <div class="custom-product-card__price">
+          {% if card_product.compare_at_price > card_product.price %}
+            <span class="custom-product-card__price-compare">
+              <span class="visually-hidden">Regular price</span>
+              {{ card_product.compare_at_price | money }}
+            </span>
+          {% endif %}
+          <span class="custom-product-card__price-current">
+            {% if card_product.compare_at_price > card_product.price %}
+              <span class="visually-hidden">Sale price</span>
+            {% endif %}
+            {{ card_product.price | money }}
+          </span>
+        </div>
+      {% endif %}
+
+      {% if block.settings.show_add_to_cart and card_product.available %}
+        <button
+          class="custom-product-card__atc-btn"
+          type="button"
+          data-variant-id="{{ card_product.selected_or_first_available_variant.id }}"
+        >
+          ADD TO CART
+        </button>
+      {% endif %}
+    {% else %}
+      <h3 class="custom-product-card__title">Select a product</h3>
+    {% endif %}
+  </div>
+</custom-product-card>
+
+<script src="{{ 'custom-product-card.js' | asset_url }}" type="module" defer></script>
+
+{% stylesheet %}
+.custom-product-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-block-end: var(--cpc-mb-desktop);
+}
+
+@media screen and (max-width: 749px) {
+  .custom-product-card {
+    margin-block-end: var(--cpc-mb-mobile);
+  }
+}
+
+.custom-product-card__image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background-color: #F5F5F5;
+}
+
+.custom-product-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.custom-product-card__image-placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: #D9D9D9;
+}
+
+.custom-product-card__badge {
+  position: absolute;
+  z-index: 1;
+  padding: 4px 10px;
+  font-family: var(--font-body--family);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+.custom-product-card__badge--top {
+  top: 10px;
+  inset-inline-start: 10px;
+}
+
+.custom-product-card__badge--bottom {
+  bottom: 10px;
+  inset-inline-start: 10px;
+}
+
+.custom-product-card__progress-bar {
+  width: 100%;
+  height: 4px;
+  background-color: #4CAF50;
+}
+
+.custom-product-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  background-color: var(--cpc-content-bg, #FFFFFF);
+  color: var(--cpc-text-color, #141414);
+}
+
+.custom-product-card__title {
+  font-family: var(--font-heading--family);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  margin: 0;
+}
+
+.custom-product-card__title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.custom-product-card__title a:hover {
+  text-decoration: underline;
+}
+
+.custom-product-card__description {
+  font-family: var(--font-body--family);
+  font-size: 13px;
+  line-height: 18px;
+  margin: 0;
+  opacity: 0.75;
+}
+
+.custom-product-card__price {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body--family);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.custom-product-card__price-compare {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.custom-product-card__atc-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 12px 16px;
+  margin-block-start: 4px;
+  background-color: var(--cpc-btn-bg, #0F1F18);
+  color: var(--cpc-btn-text, #FFFFFF);
+  border: none;
+  border-radius: 4px;
+  font-family: var(--font-body--family);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 150ms;
+}
+
+.custom-product-card__atc-btn:hover {
+  opacity: 0.85;
+}
+
+.custom-product-card__atc-btn:focus-visible {
+  outline: 2px solid var(--cpc-btn-bg, #0F1F18);
+  outline-offset: 2px;
+}
+
+.custom-product-card__atc-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.custom_product_card",
+  "tag": null,
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "t:settings.product"
+    },
+    {
+      "type": "header",
+      "content": "t:content.badges"
+    },
+    {
+      "type": "text",
+      "id": "top_badge_text",
+      "label": "t:settings.top_badge_text"
+    },
+    {
+      "type": "color",
+      "id": "top_badge_bg_color",
+      "label": "t:settings.top_badge_bg_color",
+      "default": "#141414"
+    },
+    {
+      "type": "color",
+      "id": "top_badge_text_color",
+      "label": "t:settings.top_badge_text_color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "text",
+      "id": "bottom_badge_text",
+      "label": "t:settings.bottom_badge_text"
+    },
+    {
+      "type": "color",
+      "id": "bottom_badge_bg_color",
+      "label": "t:settings.bottom_badge_bg_color",
+      "default": "#EC0606"
+    },
+    {
+      "type": "color",
+      "id": "bottom_badge_text_color",
+      "label": "t:settings.bottom_badge_text_color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "t:content.display"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "label": "t:settings.show_description",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_price",
+      "label": "t:settings.show_price",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_add_to_cart",
+      "label": "t:settings.show_add_to_cart",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "t:content.colors"
+    },
+    {
+      "type": "color",
+      "id": "content_bg_color",
+      "label": "t:settings.content_bg_color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:settings.text_color",
+      "default": "#141414"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "t:settings.button_bg_color",
+      "default": "#0F1F18"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "t:settings.button_text_color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "t:content.margin"
+    },
+    {
+      "type": "number",
+      "id": "margin_bottom_mobile",
+      "label": "t:settings.margin_bottom_mobile",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "margin_bottom_desktop",
+      "label": "t:settings.margin_bottom_desktop",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.custom_product_card",
+      "category": "t:categories.product"
+    }
+  ]
+}
+{% endschema %}
