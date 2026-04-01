@@ -1,45 +1,7 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
-    "generic_section_VpbhMW": {
+    "hero_grid_Ab3kMx": {
       "type": "generic-section",
-      "blocks": {
-        "tab_navigation_AxYYrx": {
-          "type": "tab-navigation",
-          "name": "t:names.tab_navigation",
-          "settings": {
-            "group_id": "tabs-1",
-            "target_id": "tab-1",
-            "label": "Tab #1",
-            "is_active": true
-          },
-          "blocks": {}
-        },
-        "tab_navigation_EUHPU9": {
-          "type": "tab-navigation",
-          "name": "t:names.tab_navigation",
-          "settings": {
-            "group_id": "tabs-1",
-            "target_id": "tab-2",
-            "label": "Tab #2",
-            "is_active": false
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "tab_navigation_AxYYrx",
-        "tab_navigation_EUHPU9"
-      ],
-      "name": "t:names.generic_section",
       "settings": {
         "background_color_mobile": "",
         "text_color_mobile": "",
@@ -55,26 +17,278 @@
         "padding_left_desktop": 0,
         "padding_right_desktop": 0,
         "margin_bottom_desktop": 0
-      }
-    },
-    "generic_section_yaf9Ab": {
-      "type": "generic-section",
+      },
       "blocks": {
-        "tab_content_y9xfnb": {
-          "type": "tab-content",
-          "name": "t:names.tab_content",
+        "grid_row_H1eroR": {
+          "type": "grid-row",
           "settings": {
-            "group_id": "tabs-1",
-            "target_id": "tab-1"
+            "vertical_alignment_mobile": "start",
+            "column_gap_mobile": 0,
+            "row_gap_mobile": 0,
+            "margin_bottom_mobile": 0,
+            "vertical_alignment_tablet": "start",
+            "column_gap_tablet": 0,
+            "row_gap_tablet": 0,
+            "margin_bottom_tablet": 0,
+            "vertical_alignment_desktop": "start",
+            "column_gap_desktop": 0,
+            "row_gap_desktop": 0,
+            "margin_bottom_desktop": 0
           },
           "blocks": {
-            "grid_row_wKAVb6": {
+            "grid_col_left_X1a2B3": {
+              "type": "_grid-column",
+              "settings": {
+                "column_span_mobile": "12",
+                "column_order_mobile": "1",
+                "margin_bottom_mobile": 0,
+                "column_span_tablet": "6",
+                "column_order_tablet": "1",
+                "margin_bottom_tablet": 0,
+                "column_span_desktop": "6",
+                "column_order_desktop": "1",
+                "margin_bottom_desktop": 0
+              },
+              "blocks": {
+                "hero_left_Y2b3C4": {
+                  "type": "hero-block",
+                  "settings": {
+                    "height_type_mobile": "custom",
+                    "custom_height_mobile": 500,
+                    "height_type_desktop": "custom",
+                    "custom_height_desktop": 680,
+                    "background_media_mobile": "image",
+                    "image_mobile": "shopify://shop_images/main-hero-img-3-1-mobile-110526704.png",
+                    "image_position_mobile": "center center",
+                    "background_media_desktop": "image",
+                    "image_desktop": "shopify://shop_images/main-hero-img-3-1-desktop-110524489.png",
+                    "image_position_desktop": "center center",
+                    "toggle_overlay": true,
+                    "overlay_type": "gradient",
+                    "overlay_gradient_angle": 0,
+                    "overlay_gradient_start": "#00000000",
+                    "overlay_gradient_end": "#000000CC",
+                    "content_position_mobile": "bottom-left",
+                    "content_position_desktop": "bottom-left",
+                    "content_width_mobile": "100",
+                    "content_width_desktop": "80",
+                    "padding_top_mobile": 24,
+                    "padding_bottom_mobile": 32,
+                    "padding_left_mobile": 20,
+                    "padding_right_mobile": 20,
+                    "padding_top_desktop": 40,
+                    "padding_bottom_desktop": 48,
+                    "padding_left_desktop": 48,
+                    "padding_right_desktop": 48,
+                    "margin_bottom_mobile": 0,
+                    "margin_bottom_desktop": 0
+                  },
+                  "blocks": {
+                    "hero_heading_Z3c4D5": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<h1>Your Daily Greens, Reinvented</h1>",
+                        "type_preset": "h1",
+                        "width": "100%"
+                      }
+                    },
+                    "hero_sub_A4d5E6": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Better taste. Better routine. Better you.</p>",
+                        "type_preset": "paragraph",
+                        "width": "100%"
+                      }
+                    },
+                    "hero_cta_B5e6F7": {
+                      "type": "custom-button",
+                      "settings": {
+                        "label": "SHOP GREENS",
+                        "background_color": "#FFFFFF",
+                        "text_color": "#141414",
+                        "font_desktop": "var(--font-body--family)",
+                        "font_size_desktop": "0.875rem",
+                        "font_weight_desktop": "600",
+                        "letter_spacing_desktop": 0.5,
+                        "case_desktop": "uppercase",
+                        "font_mobile": "var(--font-body--family)",
+                        "font_size_mobile": "0.875rem",
+                        "font_weight_mobile": "600",
+                        "letter_spacing_mobile": 0.5,
+                        "case_mobile": "uppercase",
+                        "padding_top_desktop": 14,
+                        "padding_bottom_desktop": 14,
+                        "padding_left_desktop": 32,
+                        "padding_right_desktop": 32,
+                        "padding_top_mobile": 12,
+                        "padding_bottom_mobile": 12,
+                        "padding_left_mobile": 24,
+                        "padding_right_mobile": 24,
+                        "border_radius": 4,
+                        "border_width": 0,
+                        "min_width_desktop": 0,
+                        "min_width_mobile": 0,
+                        "width_desktop": "auto",
+                        "width_mobile": "full_width"
+                      }
+                    }
+                  },
+                  "block_order": ["hero_heading_Z3c4D5", "hero_sub_A4d5E6", "hero_cta_B5e6F7"]
+                }
+              },
+              "block_order": ["hero_left_Y2b3C4"]
+            },
+            "grid_col_right_C6f7G8": {
+              "type": "_grid-column",
+              "settings": {
+                "column_span_mobile": "12",
+                "column_order_mobile": "2",
+                "margin_bottom_mobile": 0,
+                "column_span_tablet": "6",
+                "column_order_tablet": "2",
+                "margin_bottom_tablet": 0,
+                "column_span_desktop": "6",
+                "column_order_desktop": "2",
+                "margin_bottom_desktop": 0
+              },
+              "blocks": {
+                "hero_right_D7g8H9": {
+                  "type": "hero-block",
+                  "settings": {
+                    "height_type_mobile": "custom",
+                    "custom_height_mobile": 500,
+                    "height_type_desktop": "custom",
+                    "custom_height_desktop": 680,
+                    "background_media_mobile": "image",
+                    "image_mobile": "shopify://shop_images/image-1-mobile-110526706.png",
+                    "image_position_mobile": "center center",
+                    "background_media_desktop": "image",
+                    "image_desktop": "shopify://shop_images/image-1-desktop-110524490.png",
+                    "image_position_desktop": "center center",
+                    "toggle_overlay": true,
+                    "overlay_type": "gradient",
+                    "overlay_gradient_angle": 0,
+                    "overlay_gradient_start": "#00000000",
+                    "overlay_gradient_end": "#000000CC",
+                    "content_position_mobile": "bottom-left",
+                    "content_position_desktop": "bottom-left",
+                    "content_width_mobile": "100",
+                    "content_width_desktop": "80",
+                    "padding_top_mobile": 24,
+                    "padding_bottom_mobile": 32,
+                    "padding_left_mobile": 20,
+                    "padding_right_mobile": 20,
+                    "padding_top_desktop": 40,
+                    "padding_bottom_desktop": 48,
+                    "padding_left_desktop": 48,
+                    "padding_right_desktop": 48,
+                    "margin_bottom_mobile": 0,
+                    "margin_bottom_desktop": 0
+                  },
+                  "blocks": {
+                    "hero2_heading_E8h9I0": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<h2>DAILY GREENS</h2>",
+                        "type_preset": "h2",
+                        "width": "100%"
+                      }
+                    },
+                    "hero2_cta_F9i0J1": {
+                      "type": "custom-button",
+                      "settings": {
+                        "label": "SHOP DAILY GREENS",
+                        "background_color": "#FFFFFF",
+                        "text_color": "#141414",
+                        "font_desktop": "var(--font-body--family)",
+                        "font_size_desktop": "0.875rem",
+                        "font_weight_desktop": "600",
+                        "letter_spacing_desktop": 0.5,
+                        "case_desktop": "uppercase",
+                        "font_mobile": "var(--font-body--family)",
+                        "font_size_mobile": "0.875rem",
+                        "font_weight_mobile": "600",
+                        "letter_spacing_mobile": 0.5,
+                        "case_mobile": "uppercase",
+                        "padding_top_desktop": 14,
+                        "padding_bottom_desktop": 14,
+                        "padding_left_desktop": 32,
+                        "padding_right_desktop": 32,
+                        "padding_top_mobile": 12,
+                        "padding_bottom_mobile": 12,
+                        "padding_left_mobile": 24,
+                        "padding_right_mobile": 24,
+                        "border_radius": 4,
+                        "border_width": 0,
+                        "min_width_desktop": 0,
+                        "min_width_mobile": 0,
+                        "width_desktop": "auto",
+                        "width_mobile": "full_width"
+                      }
+                    }
+                  },
+                  "block_order": ["hero2_heading_E8h9I0", "hero2_cta_F9i0J1"]
+                }
+              },
+              "block_order": ["hero_right_D7g8H9"]
+            }
+          },
+          "block_order": ["grid_col_left_X1a2B3", "grid_col_right_C6f7G8"]
+        }
+      },
+      "block_order": ["grid_row_H1eroR"]
+    },
+
+    "video_reviews_G0j1K2": {
+      "type": "generic-section",
+      "settings": {
+        "background_color_mobile": "#141414",
+        "text_color_mobile": "#FFFFFF",
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40,
+        "padding_left_mobile": 20,
+        "padding_right_mobile": 20,
+        "margin_bottom_mobile": 0,
+        "background_color_desktop": "#141414",
+        "text_color_desktop": "#FFFFFF",
+        "padding_top_desktop": 64,
+        "padding_bottom_desktop": 64,
+        "padding_left_desktop": 64,
+        "padding_right_desktop": 64,
+        "margin_bottom_desktop": 0
+      },
+      "blocks": {
+        "review_group_H1k2L3": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "horizontal_alignment_flex_direction_column": "center",
+            "gap": 32,
+            "width": "100%"
+          },
+          "blocks": {
+            "stars_icon_I2l3M4": {
+              "type": "text",
+              "settings": {
+                "text": "<p>★★★★★</p>",
+                "type_preset": "h4",
+                "width": "fit-content"
+              }
+            },
+            "review_heading_J3m4N5": {
+              "type": "text",
+              "settings": {
+                "text": "<p>10,000+ 5-Star Reviews</p>",
+                "type_preset": "paragraph",
+                "width": "fit-content"
+              }
+            },
+            "review_grid_K4n5O6": {
               "type": "grid-row",
-              "name": "t:names.grid_row",
               "settings": {
                 "vertical_alignment_mobile": "start",
                 "column_gap_mobile": 16,
-                "row_gap_mobile": 16,
+                "row_gap_mobile": 24,
                 "margin_bottom_mobile": 0,
                 "vertical_alignment_tablet": "start",
                 "column_gap_tablet": 20,
@@ -86,9 +300,8 @@
                 "margin_bottom_desktop": 0
               },
               "blocks": {
-                "grid_column_4dkbCf": {
+                "vt_col1_L5o6P7": {
                   "type": "_grid-column",
-                  "name": "t:names.grid_column",
                   "settings": {
                     "column_span_mobile": "12",
                     "column_order_mobile": "1",
@@ -96,854 +309,1724 @@
                     "column_span_tablet": "6",
                     "column_order_tablet": "1",
                     "margin_bottom_tablet": 0,
-                    "column_span_desktop": "4",
+                    "column_span_desktop": "3",
                     "column_order_desktop": "1",
                     "margin_bottom_desktop": 0
                   },
                   "blocks": {
-                    "product_card_yLnEBD": {
-                      "type": "product-card",
-                      "name": "t:names.product_card",
+                    "vt1_M6p7Q8": {
+                      "type": "video-testimonial",
                       "settings": {
-                        "product": "the-collection-snowboard-hydrogen",
-                        "product_card_gap": 4,
-                        "inherit_color_scheme": true,
-                        "color_scheme": "",
-                        "width": "fill",
-                        "custom_width": 100,
-                        "width_mobile": "fill",
-                        "custom_width_mobile": 100,
-                        "border": "none",
-                        "border_width": 1,
-                        "border_opacity": 100,
-                        "border_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {
-                        "product_card_gallery_3gyhYe": {
-                          "type": "_product-card-gallery",
-                          "settings": {
-                            "image_ratio": "adapt",
-                            "border": "none",
-                            "border_width": 1,
-                            "border_opacity": 100,
-                            "border_radius": 0,
-                            "padding-block-start": 0,
-                            "padding-block-end": 0,
-                            "padding-inline-start": 0,
-                            "padding-inline-end": 0
-                          },
-                          "blocks": {}
-                        },
-                        "product_title_GdrF7P": {
-                          "type": "product-title",
-                          "name": "t:names.product_title",
-                          "settings": {
-                            "width": "fit-content",
-                            "max_width": "normal",
-                            "alignment": "left",
-                            "type_preset": "rte",
-                            "font": "var(--font-body--family)",
-                            "font_size": "1rem",
-                            "line_height": "normal",
-                            "letter_spacing": "normal",
-                            "case": "none",
-                            "wrap": "pretty",
-                            "color": "var(--color-foreground)",
-                            "background": false,
-                            "background_color": "#00000026",
-                            "corner_radius": 0,
-                            "padding-block-start": 4,
-                            "padding-block-end": 0,
-                            "padding-inline-start": 0,
-                            "padding-inline-end": 0
-                          },
-                          "blocks": {}
-                        },
-                        "price_7y8mLU": {
-                          "type": "price",
-                          "name": "t:names.product_price",
-                          "settings": {
-                            "show_sale_price_first": true,
-                            "show_installments": false,
-                            "show_tax_info": false,
-                            "type_preset": "h6",
-                            "width": "100%",
-                            "alignment": "left",
-                            "font": "var(--font-body--family)",
-                            "font_size": "1rem",
-                            "line_height": "normal",
-                            "letter_spacing": "normal",
-                            "case": "none",
-                            "color": "var(--color-foreground)",
-                            "padding-block-start": 0,
-                            "padding-block-end": 0,
-                            "padding-inline-start": 0,
-                            "padding-inline-end": 0
-                          },
-                          "blocks": {}
-                        }
-                      },
-                      "block_order": [
-                        "product_card_gallery_3gyhYe",
-                        "product_title_GdrF7P",
-                        "price_7y8mLU"
-                      ]
+                        "thumbnail_image": "shopify://shop_images/greens-nicole-b-1-desktop-110524516.png",
+                        "quote_text": "This is the best greens powder I've ever tasted. I actually look forward to drinking it every morning.",
+                        "attribution_text": "Nicole B.",
+                        "quote_color": "#FFFFFF",
+                        "attribution_color": "#B5B5A0",
+                        "divider_color": "#B5B5A0"
+                      }
                     }
                   },
-                  "block_order": [
-                    "product_card_yLnEBD"
-                  ]
+                  "block_order": ["vt1_M6p7Q8"]
                 },
-                "grid_column_BRjR9F": {
+                "vt_col2_N7q8R9": {
                   "type": "_grid-column",
-                  "name": "t:names.grid_column",
                   "settings": {
                     "column_span_mobile": "12",
-                    "column_order_mobile": "1",
+                    "column_order_mobile": "2",
                     "margin_bottom_mobile": 0,
                     "column_span_tablet": "6",
-                    "column_order_tablet": "1",
+                    "column_order_tablet": "2",
                     "margin_bottom_tablet": 0,
-                    "column_span_desktop": "4",
-                    "column_order_desktop": "1",
+                    "column_span_desktop": "3",
+                    "column_order_desktop": "2",
                     "margin_bottom_desktop": 0
                   },
                   "blocks": {
-                    "product_card_XB3iqH": {
-                      "type": "product-card",
-                      "name": "t:names.product_card",
+                    "vt2_O8r9S0": {
+                      "type": "video-testimonial",
                       "settings": {
-                        "product": "the-collection-snowboard-hydrogen",
-                        "product_card_gap": 4,
-                        "inherit_color_scheme": true,
-                        "color_scheme": "",
-                        "width": "fill",
-                        "custom_width": 100,
-                        "width_mobile": "fill",
-                        "custom_width_mobile": 100,
-                        "border": "none",
-                        "border_width": 1,
-                        "border_opacity": 100,
-                        "border_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {
-                        "product_card_gallery_AVtAyi": {
-                          "type": "_product-card-gallery",
-                          "settings": {
-                            "image_ratio": "adapt",
-                            "border": "none",
-                            "border_width": 1,
-                            "border_opacity": 100,
-                            "border_radius": 0,
-                            "padding-block-start": 0,
-                            "padding-block-end": 0,
-                            "padding-inline-start": 0,
-                            "padding-inline-end": 0
-                          },
-                          "blocks": {}
-                        },
-                        "product_title_NE9KGU": {
-                          "type": "product-title",
-                          "name": "t:names.product_title",
-                          "settings": {
-                            "width": "fit-content",
-                            "max_width": "normal",
-                            "alignment": "left",
-                            "type_preset": "rte",
-                            "font": "var(--font-body--family)",
-                            "font_size": "1rem",
-                            "line_height": "normal",
-                            "letter_spacing": "normal",
-                            "case": "none",
-                            "wrap": "pretty",
-                            "color": "var(--color-foreground)",
-                            "background": false,
-                            "background_color": "#00000026",
-                            "corner_radius": 0,
-                            "padding-block-start": 4,
-                            "padding-block-end": 0,
-                            "padding-inline-start": 0,
-                            "padding-inline-end": 0
-                          },
-                          "blocks": {}
-                        },
-                        "price_tNPzCr": {
-                          "type": "price",
-                          "name": "t:names.product_price",
-                          "settings": {
-                            "show_sale_price_first": true,
-                            "show_installments": false,
-                            "show_tax_info": false,
-                            "type_preset": "h6",
-                            "width": "100%",
-                            "alignment": "left",
-                            "font": "var(--font-body--family)",
-                            "font_size": "1rem",
-                            "line_height": "normal",
-                            "letter_spacing": "normal",
-                            "case": "none",
-                            "color": "var(--color-foreground)",
-                            "padding-block-start": 0,
-                            "padding-block-end": 0,
-                            "padding-inline-start": 0,
-                            "padding-inline-end": 0
-                          },
-                          "blocks": {}
-                        }
-                      },
-                      "block_order": [
-                        "product_card_gallery_AVtAyi",
-                        "product_title_NE9KGU",
-                        "price_tNPzCr"
-                      ]
+                        "thumbnail_image": "shopify://shop_images/greens-nicole-b-1-desktop-110524524.png",
+                        "quote_text": "I love that it's made from real food ingredients. You can taste the difference compared to other brands.",
+                        "attribution_text": "Sarah M.",
+                        "quote_color": "#FFFFFF",
+                        "attribution_color": "#B5B5A0",
+                        "divider_color": "#B5B5A0"
+                      }
                     }
                   },
-                  "block_order": [
-                    "product_card_XB3iqH"
-                  ]
+                  "block_order": ["vt2_O8r9S0"]
                 },
-                "grid_column_yLiAQC": {
+                "vt_col3_P9s0T1": {
                   "type": "_grid-column",
-                  "name": "t:names.grid_column",
                   "settings": {
                     "column_span_mobile": "12",
-                    "column_order_mobile": "1",
+                    "column_order_mobile": "3",
                     "margin_bottom_mobile": 0,
                     "column_span_tablet": "6",
-                    "column_order_tablet": "1",
+                    "column_order_tablet": "3",
                     "margin_bottom_tablet": 0,
-                    "column_span_desktop": "4",
-                    "column_order_desktop": "1",
+                    "column_span_desktop": "3",
+                    "column_order_desktop": "3",
                     "margin_bottom_desktop": 0
                   },
                   "blocks": {
-                    "product_card_eE9tRj": {
-                      "type": "product-card",
-                      "name": "t:names.product_card",
+                    "vt3_Q0t1U2": {
+                      "type": "video-testimonial",
                       "settings": {
-                        "product": "the-collection-snowboard-hydrogen",
-                        "product_card_gap": 4,
-                        "inherit_color_scheme": true,
-                        "color_scheme": "",
-                        "width": "fill",
-                        "custom_width": 100,
-                        "width_mobile": "fill",
-                        "custom_width_mobile": 100,
-                        "border": "none",
-                        "border_width": 1,
-                        "border_opacity": 100,
-                        "border_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {
-                        "product_card_gallery_GDqNdH": {
-                          "type": "_product-card-gallery",
-                          "settings": {
-                            "image_ratio": "adapt",
-                            "border": "none",
-                            "border_width": 1,
-                            "border_opacity": 100,
-                            "border_radius": 0,
-                            "padding-block-start": 0,
-                            "padding-block-end": 0,
-                            "padding-inline-start": 0,
-                            "padding-inline-end": 0
-                          },
-                          "blocks": {}
-                        },
-                        "product_title_L7CXFn": {
-                          "type": "product-title",
-                          "name": "t:names.product_title",
-                          "settings": {
-                            "width": "fit-content",
-                            "max_width": "normal",
-                            "alignment": "left",
-                            "type_preset": "rte",
-                            "font": "var(--font-body--family)",
-                            "font_size": "1rem",
-                            "line_height": "normal",
-                            "letter_spacing": "normal",
-                            "case": "none",
-                            "wrap": "pretty",
-                            "color": "var(--color-foreground)",
-                            "background": false,
-                            "background_color": "#00000026",
-                            "corner_radius": 0,
-                            "padding-block-start": 4,
-                            "padding-block-end": 0,
-                            "padding-inline-start": 0,
-                            "padding-inline-end": 0
-                          },
-                          "blocks": {}
-                        },
-                        "price_h9MFhX": {
-                          "type": "price",
-                          "name": "t:names.product_price",
-                          "settings": {
-                            "show_sale_price_first": true,
-                            "show_installments": false,
-                            "show_tax_info": false,
-                            "type_preset": "h6",
-                            "width": "100%",
-                            "alignment": "left",
-                            "font": "var(--font-body--family)",
-                            "font_size": "1rem",
-                            "line_height": "normal",
-                            "letter_spacing": "normal",
-                            "case": "none",
-                            "color": "var(--color-foreground)",
-                            "padding-block-start": 0,
-                            "padding-block-end": 0,
-                            "padding-inline-start": 0,
-                            "padding-inline-end": 0
-                          },
-                          "blocks": {}
-                        }
-                      },
-                      "block_order": [
-                        "product_card_gallery_GDqNdH",
-                        "product_title_L7CXFn",
-                        "price_h9MFhX"
-                      ]
+                        "thumbnail_image": "shopify://shop_images/greens-nicole-b-1-desktop-110524532.png",
+                        "quote_text": "Finally a supplement brand that dietitians actually recommend. The transparency in ingredients is unmatched.",
+                        "attribution_text": "Jessica R.",
+                        "quote_color": "#FFFFFF",
+                        "attribution_color": "#B5B5A0",
+                        "divider_color": "#B5B5A0"
+                      }
                     }
                   },
-                  "block_order": [
-                    "product_card_eE9tRj"
-                  ]
+                  "block_order": ["vt3_Q0t1U2"]
+                },
+                "vt_col4_R1u2V3": {
+                  "type": "_grid-column",
+                  "settings": {
+                    "column_span_mobile": "12",
+                    "column_order_mobile": "4",
+                    "margin_bottom_mobile": 0,
+                    "column_span_tablet": "6",
+                    "column_order_tablet": "4",
+                    "margin_bottom_tablet": 0,
+                    "column_span_desktop": "3",
+                    "column_order_desktop": "4",
+                    "margin_bottom_desktop": 0
+                  },
+                  "blocks": {
+                    "vt4_S2v3W4": {
+                      "type": "video-testimonial",
+                      "settings": {
+                        "thumbnail_image": "shopify://shop_images/greens-nicole-b-1-desktop-110524540.png",
+                        "quote_text": "My energy levels have improved so much since I started taking these daily. Game changer for my routine.",
+                        "attribution_text": "David K.",
+                        "quote_color": "#FFFFFF",
+                        "attribution_color": "#B5B5A0",
+                        "divider_color": "#B5B5A0"
+                      }
+                    }
+                  },
+                  "block_order": ["vt4_S2v3W4"]
                 }
               },
-              "block_order": [
-                "grid_column_4dkbCf",
-                "grid_column_BRjR9F",
-                "grid_column_yLiAQC"
-              ]
+              "block_order": ["vt_col1_L5o6P7", "vt_col2_N7q8R9", "vt_col3_P9s0T1", "vt_col4_R1u2V3"]
             }
           },
-          "block_order": [
-            "grid_row_wKAVb6"
-          ]
+          "block_order": ["stars_icon_I2l3M4", "review_heading_J3m4N5", "review_grid_K4n5O6"]
         }
       },
-      "block_order": [
-        "tab_content_y9xfnb"
-      ],
-      "name": "t:names.generic_section",
-      "settings": {
-        "background_color_mobile": "",
-        "text_color_mobile": "",
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0,
-        "padding_left_mobile": 0,
-        "padding_right_mobile": 0,
-        "margin_bottom_mobile": 0,
-        "background_color_desktop": "",
-        "text_color_desktop": "",
-        "padding_top_desktop": 0,
-        "padding_bottom_desktop": 0,
-        "padding_left_desktop": 0,
-        "padding_right_desktop": 0,
-        "margin_bottom_desktop": 0
-      }
+      "block_order": ["review_group_H1k2L3"]
     },
-    "generic_section_gGfnNg": {
+
+    "product_categories_nav_T3w4X5": {
       "type": "generic-section",
+      "settings": {
+        "background_color_mobile": "#F1F1EA",
+        "text_color_mobile": "#141414",
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 24,
+        "padding_left_mobile": 20,
+        "padding_right_mobile": 20,
+        "margin_bottom_mobile": 0,
+        "background_color_desktop": "#F1F1EA",
+        "text_color_desktop": "#141414",
+        "padding_top_desktop": 64,
+        "padding_bottom_desktop": 24,
+        "padding_left_desktop": 64,
+        "padding_right_desktop": 64,
+        "margin_bottom_desktop": 0
+      },
       "blocks": {
-        "tab_content_MXHncU": {
-          "type": "tab-content",
-          "name": "t:names.tab_content",
+        "nav_outer_group_U4x5Y6": {
+          "type": "group",
           "settings": {
-            "group_id": "tabs-1",
-            "target_id": "tab-2"
+            "content_direction": "row",
+            "horizontal_alignment": "space-between",
+            "vertical_alignment": "flex-end",
+            "vertical_on_mobile": true,
+            "gap": 24,
+            "width": "100%"
           },
           "blocks": {
-            "carousel_block_yKFVG9": {
+            "nav_left_group_V5y6Z7": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "gap": 8,
+                "width": "fit-content"
+              },
+              "blocks": {
+                "nav_byline_group_W6z7A8": {
+                  "type": "group",
+                  "settings": {
+                    "content_direction": "row",
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "gap": 8,
+                    "width": "fit-content"
+                  },
+                  "blocks": {
+                    "nav_byline_text_X7a8B9": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>brought to you by</p>",
+                        "type_preset": "paragraph",
+                        "width": "fit-content"
+                      }
+                    },
+                    "nav_byline_icon_Y8b9C0": {
+                      "type": "icon",
+                      "settings": {
+                        "icon": "none",
+                        "image_upload": "shopify://shop_images/agile-support-1-desktop-112594627.png",
+                        "width": 80
+                      }
+                    }
+                  },
+                  "block_order": ["nav_byline_text_X7a8B9", "nav_byline_icon_Y8b9C0"]
+                },
+                "nav_heading_Z9c0D1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h2>Built From Food, Designed for Results</h2>",
+                    "type_preset": "h2",
+                    "width": "100%"
+                  }
+                }
+              },
+              "block_order": ["nav_byline_group_W6z7A8", "nav_heading_Z9c0D1"]
+            },
+            "nav_right_group_A0d1E2": {
+              "type": "group",
+              "settings": {
+                "content_direction": "row",
+                "horizontal_alignment": "flex-end",
+                "vertical_alignment": "flex-end",
+                "gap": 16,
+                "width": "fit-content"
+              },
+              "blocks": {
+                "tab_nav_gut_B1e2F3": {
+                  "type": "tab-navigation",
+                  "settings": {
+                    "group_id": "product-tabs",
+                    "target_id": "gut-health",
+                    "label": "Gut Health",
+                    "is_active": true
+                  }
+                },
+                "tab_nav_recov_C2f3G4": {
+                  "type": "tab-navigation",
+                  "settings": {
+                    "group_id": "product-tabs",
+                    "target_id": "recovery",
+                    "label": "Recovery",
+                    "is_active": false
+                  }
+                },
+                "tab_nav_immun_D3g4H5": {
+                  "type": "tab-navigation",
+                  "settings": {
+                    "group_id": "product-tabs",
+                    "target_id": "immunity",
+                    "label": "Immunity",
+                    "is_active": false
+                  }
+                },
+                "tab_nav_enrgy_E4h5I6": {
+                  "type": "tab-navigation",
+                  "settings": {
+                    "group_id": "product-tabs",
+                    "target_id": "energy-focus",
+                    "label": "Energy & Focus",
+                    "is_active": false
+                  }
+                }
+              },
+              "block_order": ["tab_nav_gut_B1e2F3", "tab_nav_recov_C2f3G4", "tab_nav_immun_D3g4H5", "tab_nav_enrgy_E4h5I6"]
+            }
+          },
+          "block_order": ["nav_left_group_V5y6Z7", "nav_right_group_A0d1E2"]
+        }
+      },
+      "block_order": ["nav_outer_group_U4x5Y6"]
+    },
+
+    "product_tab_gut_F5i6J7": {
+      "type": "generic-section",
+      "settings": {
+        "background_color_mobile": "#F1F1EA",
+        "text_color_mobile": "#141414",
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 40,
+        "padding_left_mobile": 20,
+        "padding_right_mobile": 20,
+        "margin_bottom_mobile": 0,
+        "background_color_desktop": "#F1F1EA",
+        "text_color_desktop": "#141414",
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 64,
+        "padding_left_desktop": 64,
+        "padding_right_desktop": 64,
+        "margin_bottom_desktop": 0
+      },
+      "blocks": {
+        "tab_gut_content_G6j7K8": {
+          "type": "tab-content",
+          "settings": {
+            "group_id": "product-tabs",
+            "target_id": "gut-health"
+          },
+          "blocks": {
+            "carousel_gut_H7k8L9": {
               "type": "carousel-block",
-              "name": "t:names.carousel_block",
               "settings": {
                 "slides_per_view_mobile": 1,
-                "slide_gap_mobile": 16,
-                "autoplay_mobile": false,
-                "autoplay_delay_mobile": 5,
-                "show_arrows_mobile": true,
-                "external_arrows_mobile": false,
-                "show_dots_mobile": true,
-                "margin_bottom_mobile": 0,
                 "slides_per_view_tablet": 2,
+                "slides_per_view_desktop": 4,
+                "slide_gap_mobile": 16,
                 "slide_gap_tablet": 20,
-                "autoplay_tablet": false,
-                "autoplay_delay_tablet": 5,
-                "show_arrows_tablet": true,
-                "external_arrows_tablet": false,
-                "show_dots_tablet": true,
-                "margin_bottom_tablet": 0,
-                "slides_per_view_desktop": 3,
                 "slide_gap_desktop": 24,
-                "autoplay_desktop": false,
-                "autoplay_delay_desktop": 5,
                 "show_arrows_desktop": true,
-                "external_arrows_desktop": false,
-                "show_dots_desktop": true,
+                "show_dots_mobile": true
+              },
+              "blocks": {
+                "slide_g1_I8l9M0": {
+                  "type": "_carousel-slide",
+                  "blocks": {
+                    "card_g1_J9m0N1": {
+                      "type": "custom-product-card",
+                      "settings": {
+                        "top_badge_text": "BEST SELLER",
+                        "top_badge_bg_color": "#141414",
+                        "top_badge_text_color": "#FFFFFF",
+                        "show_description": true,
+                        "show_price": true,
+                        "show_add_to_cart": true,
+                        "content_bg_color": "#FFFFFF",
+                        "text_color": "#141414",
+                        "button_bg_color": "#0F1F18",
+                        "button_text_color": "#FFFFFF"
+                      }
+                    }
+                  },
+                  "block_order": ["card_g1_J9m0N1"]
+                },
+                "slide_g2_K0n1O2": {
+                  "type": "_carousel-slide",
+                  "blocks": {
+                    "card_g2_L1o2P3": {
+                      "type": "custom-product-card",
+                      "settings": {
+                        "show_description": true,
+                        "show_price": true,
+                        "show_add_to_cart": true,
+                        "content_bg_color": "#FFFFFF",
+                        "text_color": "#141414",
+                        "button_bg_color": "#0F1F18",
+                        "button_text_color": "#FFFFFF"
+                      }
+                    }
+                  },
+                  "block_order": ["card_g2_L1o2P3"]
+                },
+                "slide_g3_M2p3Q4": {
+                  "type": "_carousel-slide",
+                  "blocks": {
+                    "card_g3_N3q4R5": {
+                      "type": "custom-product-card",
+                      "settings": {
+                        "show_description": true,
+                        "show_price": true,
+                        "show_add_to_cart": true,
+                        "content_bg_color": "#FFFFFF",
+                        "text_color": "#141414",
+                        "button_bg_color": "#0F1F18",
+                        "button_text_color": "#FFFFFF"
+                      }
+                    }
+                  },
+                  "block_order": ["card_g3_N3q4R5"]
+                },
+                "slide_g4_O4r5S6": {
+                  "type": "_carousel-slide",
+                  "blocks": {
+                    "card_g4_P5s6T7": {
+                      "type": "custom-product-card",
+                      "settings": {
+                        "bottom_badge_text": "NEW",
+                        "bottom_badge_bg_color": "#EC0606",
+                        "bottom_badge_text_color": "#FFFFFF",
+                        "show_description": true,
+                        "show_price": true,
+                        "show_add_to_cart": true,
+                        "content_bg_color": "#FFFFFF",
+                        "text_color": "#141414",
+                        "button_bg_color": "#0F1F18",
+                        "button_text_color": "#FFFFFF"
+                      }
+                    }
+                  },
+                  "block_order": ["card_g4_P5s6T7"]
+                }
+              },
+              "block_order": ["slide_g1_I8l9M0", "slide_g2_K0n1O2", "slide_g3_M2p3Q4", "slide_g4_O4r5S6"]
+            }
+          },
+          "block_order": ["carousel_gut_H7k8L9"]
+        }
+      },
+      "block_order": ["tab_gut_content_G6j7K8"]
+    },
+
+    "product_tab_recov_Q6t7U8": {
+      "type": "generic-section",
+      "settings": {
+        "background_color_mobile": "#F1F1EA",
+        "text_color_mobile": "#141414",
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 40,
+        "padding_left_mobile": 20,
+        "padding_right_mobile": 20,
+        "margin_bottom_mobile": 0,
+        "background_color_desktop": "#F1F1EA",
+        "text_color_desktop": "#141414",
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 64,
+        "padding_left_desktop": 64,
+        "padding_right_desktop": 64,
+        "margin_bottom_desktop": 0
+      },
+      "blocks": {
+        "tab_recov_content_R7u8V9": {
+          "type": "tab-content",
+          "settings": {
+            "group_id": "product-tabs",
+            "target_id": "recovery"
+          },
+          "blocks": {
+            "carousel_recov_S8v9W0": {
+              "type": "carousel-block",
+              "settings": {
+                "slides_per_view_mobile": 1,
+                "slides_per_view_tablet": 2,
+                "slides_per_view_desktop": 4,
+                "slide_gap_mobile": 16,
+                "slide_gap_tablet": 20,
+                "slide_gap_desktop": 24,
+                "show_arrows_desktop": true,
+                "show_dots_mobile": true
+              },
+              "blocks": {
+                "slide_r1_T9w0X1": {
+                  "type": "_carousel-slide",
+                  "blocks": {
+                    "card_r1_U0x1Y2": {
+                      "type": "custom-product-card",
+                      "settings": {
+                        "show_description": true,
+                        "show_price": true,
+                        "show_add_to_cart": true,
+                        "content_bg_color": "#FFFFFF",
+                        "text_color": "#141414",
+                        "button_bg_color": "#0F1F18",
+                        "button_text_color": "#FFFFFF"
+                      }
+                    }
+                  },
+                  "block_order": ["card_r1_U0x1Y2"]
+                },
+                "slide_r2_V1y2Z3": {
+                  "type": "_carousel-slide",
+                  "blocks": {
+                    "card_r2_W2z3A4": {
+                      "type": "custom-product-card",
+                      "settings": {
+                        "show_description": true,
+                        "show_price": true,
+                        "show_add_to_cart": true,
+                        "content_bg_color": "#FFFFFF",
+                        "text_color": "#141414",
+                        "button_bg_color": "#0F1F18",
+                        "button_text_color": "#FFFFFF"
+                      }
+                    }
+                  },
+                  "block_order": ["card_r2_W2z3A4"]
+                },
+                "slide_r3_X3a4B5": {
+                  "type": "_carousel-slide",
+                  "blocks": {
+                    "card_r3_Y4b5C6": {
+                      "type": "custom-product-card",
+                      "settings": {
+                        "show_description": true,
+                        "show_price": true,
+                        "show_add_to_cart": true,
+                        "content_bg_color": "#FFFFFF",
+                        "text_color": "#141414",
+                        "button_bg_color": "#0F1F18",
+                        "button_text_color": "#FFFFFF"
+                      }
+                    }
+                  },
+                  "block_order": ["card_r3_Y4b5C6"]
+                },
+                "slide_r4_Z5c6D7": {
+                  "type": "_carousel-slide",
+                  "blocks": {
+                    "card_r4_A6d7E8": {
+                      "type": "custom-product-card",
+                      "settings": {
+                        "show_description": true,
+                        "show_price": true,
+                        "show_add_to_cart": true,
+                        "content_bg_color": "#FFFFFF",
+                        "text_color": "#141414",
+                        "button_bg_color": "#0F1F18",
+                        "button_text_color": "#FFFFFF"
+                      }
+                    }
+                  },
+                  "block_order": ["card_r4_A6d7E8"]
+                }
+              },
+              "block_order": ["slide_r1_T9w0X1", "slide_r2_V1y2Z3", "slide_r3_X3a4B5", "slide_r4_Z5c6D7"]
+            }
+          },
+          "block_order": ["carousel_recov_S8v9W0"]
+        }
+      },
+      "block_order": ["tab_recov_content_R7u8V9"]
+    },
+
+    "product_tab_immun_B7e8F9": {
+      "type": "generic-section",
+      "settings": {
+        "background_color_mobile": "#F1F1EA",
+        "text_color_mobile": "#141414",
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 40,
+        "padding_left_mobile": 20,
+        "padding_right_mobile": 20,
+        "margin_bottom_mobile": 0,
+        "background_color_desktop": "#F1F1EA",
+        "text_color_desktop": "#141414",
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 64,
+        "padding_left_desktop": 64,
+        "padding_right_desktop": 64,
+        "margin_bottom_desktop": 0
+      },
+      "blocks": {
+        "tab_immun_content_C8f9G0": {
+          "type": "tab-content",
+          "settings": {
+            "group_id": "product-tabs",
+            "target_id": "immunity"
+          },
+          "blocks": {
+            "carousel_immun_D9g0H1": {
+              "type": "carousel-block",
+              "settings": {
+                "slides_per_view_mobile": 1,
+                "slides_per_view_tablet": 2,
+                "slides_per_view_desktop": 4,
+                "slide_gap_mobile": 16,
+                "slide_gap_tablet": 20,
+                "slide_gap_desktop": 24,
+                "show_arrows_desktop": true,
+                "show_dots_mobile": true
+              },
+              "blocks": {
+                "slide_i1_E0h1I2": {
+                  "type": "_carousel-slide",
+                  "blocks": {
+                    "card_i1_F1i2J3": {
+                      "type": "custom-product-card",
+                      "settings": {
+                        "show_description": true,
+                        "show_price": true,
+                        "show_add_to_cart": true,
+                        "content_bg_color": "#FFFFFF",
+                        "text_color": "#141414",
+                        "button_bg_color": "#0F1F18",
+                        "button_text_color": "#FFFFFF"
+                      }
+                    }
+                  },
+                  "block_order": ["card_i1_F1i2J3"]
+                },
+                "slide_i2_G2j3K4": {
+                  "type": "_carousel-slide",
+                  "blocks": {
+                    "card_i2_H3k4L5": {
+                      "type": "custom-product-card",
+                      "settings": {
+                        "show_description": true,
+                        "show_price": true,
+                        "show_add_to_cart": true,
+                        "content_bg_color": "#FFFFFF",
+                        "text_color": "#141414",
+                        "button_bg_color": "#0F1F18",
+                        "button_text_color": "#FFFFFF"
+                      }
+                    }
+                  },
+                  "block_order": ["card_i2_H3k4L5"]
+                },
+                "slide_i3_I4l5M6": {
+                  "type": "_carousel-slide",
+                  "blocks": {
+                    "card_i3_J5m6N7": {
+                      "type": "custom-product-card",
+                      "settings": {
+                        "show_description": true,
+                        "show_price": true,
+                        "show_add_to_cart": true,
+                        "content_bg_color": "#FFFFFF",
+                        "text_color": "#141414",
+                        "button_bg_color": "#0F1F18",
+                        "button_text_color": "#FFFFFF"
+                      }
+                    }
+                  },
+                  "block_order": ["card_i3_J5m6N7"]
+                },
+                "slide_i4_K6n7O8": {
+                  "type": "_carousel-slide",
+                  "blocks": {
+                    "card_i4_L7o8P9": {
+                      "type": "custom-product-card",
+                      "settings": {
+                        "show_description": true,
+                        "show_price": true,
+                        "show_add_to_cart": true,
+                        "content_bg_color": "#FFFFFF",
+                        "text_color": "#141414",
+                        "button_bg_color": "#0F1F18",
+                        "button_text_color": "#FFFFFF"
+                      }
+                    }
+                  },
+                  "block_order": ["card_i4_L7o8P9"]
+                }
+              },
+              "block_order": ["slide_i1_E0h1I2", "slide_i2_G2j3K4", "slide_i3_I4l5M6", "slide_i4_K6n7O8"]
+            }
+          },
+          "block_order": ["carousel_immun_D9g0H1"]
+        }
+      },
+      "block_order": ["tab_immun_content_C8f9G0"]
+    },
+
+    "product_tab_energy_M8p9Q0": {
+      "type": "generic-section",
+      "settings": {
+        "background_color_mobile": "#F1F1EA",
+        "text_color_mobile": "#141414",
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 40,
+        "padding_left_mobile": 20,
+        "padding_right_mobile": 20,
+        "margin_bottom_mobile": 0,
+        "background_color_desktop": "#F1F1EA",
+        "text_color_desktop": "#141414",
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 64,
+        "padding_left_desktop": 64,
+        "padding_right_desktop": 64,
+        "margin_bottom_desktop": 0
+      },
+      "blocks": {
+        "tab_energy_content_N9q0R1": {
+          "type": "tab-content",
+          "settings": {
+            "group_id": "product-tabs",
+            "target_id": "energy-focus"
+          },
+          "blocks": {
+            "carousel_energy_O0r1S2": {
+              "type": "carousel-block",
+              "settings": {
+                "slides_per_view_mobile": 1,
+                "slides_per_view_tablet": 2,
+                "slides_per_view_desktop": 4,
+                "slide_gap_mobile": 16,
+                "slide_gap_tablet": 20,
+                "slide_gap_desktop": 24,
+                "show_arrows_desktop": true,
+                "show_dots_mobile": true
+              },
+              "blocks": {
+                "slide_e1_P1s2T3": {
+                  "type": "_carousel-slide",
+                  "blocks": {
+                    "card_e1_Q2t3U4": {
+                      "type": "custom-product-card",
+                      "settings": {
+                        "show_description": true,
+                        "show_price": true,
+                        "show_add_to_cart": true,
+                        "content_bg_color": "#FFFFFF",
+                        "text_color": "#141414",
+                        "button_bg_color": "#0F1F18",
+                        "button_text_color": "#FFFFFF"
+                      }
+                    }
+                  },
+                  "block_order": ["card_e1_Q2t3U4"]
+                },
+                "slide_e2_R3u4V5": {
+                  "type": "_carousel-slide",
+                  "blocks": {
+                    "card_e2_S4v5W6": {
+                      "type": "custom-product-card",
+                      "settings": {
+                        "show_description": true,
+                        "show_price": true,
+                        "show_add_to_cart": true,
+                        "content_bg_color": "#FFFFFF",
+                        "text_color": "#141414",
+                        "button_bg_color": "#0F1F18",
+                        "button_text_color": "#FFFFFF"
+                      }
+                    }
+                  },
+                  "block_order": ["card_e2_S4v5W6"]
+                },
+                "slide_e3_T5w6X7": {
+                  "type": "_carousel-slide",
+                  "blocks": {
+                    "card_e3_U6x7Y8": {
+                      "type": "custom-product-card",
+                      "settings": {
+                        "show_description": true,
+                        "show_price": true,
+                        "show_add_to_cart": true,
+                        "content_bg_color": "#FFFFFF",
+                        "text_color": "#141414",
+                        "button_bg_color": "#0F1F18",
+                        "button_text_color": "#FFFFFF"
+                      }
+                    }
+                  },
+                  "block_order": ["card_e3_U6x7Y8"]
+                },
+                "slide_e4_V7y8Z9": {
+                  "type": "_carousel-slide",
+                  "blocks": {
+                    "card_e4_W8z9A0": {
+                      "type": "custom-product-card",
+                      "settings": {
+                        "show_description": true,
+                        "show_price": true,
+                        "show_add_to_cart": true,
+                        "content_bg_color": "#FFFFFF",
+                        "text_color": "#141414",
+                        "button_bg_color": "#0F1F18",
+                        "button_text_color": "#FFFFFF"
+                      }
+                    }
+                  },
+                  "block_order": ["card_e4_W8z9A0"]
+                }
+              },
+              "block_order": ["slide_e1_P1s2T3", "slide_e2_R3u4V5", "slide_e3_T5w6X7", "slide_e4_V7y8Z9"]
+            }
+          },
+          "block_order": ["carousel_energy_O0r1S2"]
+        }
+      },
+      "block_order": ["tab_energy_content_N9q0R1"]
+    },
+
+    "marquee_X9a0B1": {
+      "type": "marquee",
+      "settings": {
+        "movement_direction": "right",
+        "color_scheme": "scheme-1",
+        "padding-block-start": 12,
+        "padding-block-end": 12,
+        "gap_between_elements": 40
+      },
+      "blocks": {
+        "mq_txt1_Y0b1C2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Grounded in Food Science</p>",
+            "type_preset": "h6",
+            "color": "#3F7057"
+          }
+        },
+        "mq_txt2_Z1c2D3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>High Quality Ingredients</p>",
+            "type_preset": "h6",
+            "color": "#3F7057"
+          }
+        },
+        "mq_txt3_A2d3E4": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Flavorful Nutrition</p>",
+            "type_preset": "h6",
+            "color": "#3F7057"
+          }
+        },
+        "mq_txt4_B3e4F5": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Dietitian Approved</p>",
+            "type_preset": "h6",
+            "color": "#3F7057"
+          }
+        },
+        "mq_txt5_C4f5G6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>No Added Sugar</p>",
+            "type_preset": "h6",
+            "color": "#3F7057"
+          }
+        },
+        "mq_txt6_D5g6H7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Keto Friendly</p>",
+            "type_preset": "h6",
+            "color": "#3F7057"
+          }
+        },
+        "mq_txt7_E6h7I8": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Grounded in Food Science</p>",
+            "type_preset": "h6",
+            "color": "#3F7057"
+          }
+        },
+        "mq_txt8_F7i8J9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>High Quality Ingredients</p>",
+            "type_preset": "h6",
+            "color": "#3F7057"
+          }
+        }
+      },
+      "block_order": ["mq_txt1_Y0b1C2", "mq_txt2_Z1c2D3", "mq_txt3_A2d3E4", "mq_txt4_B3e4F5", "mq_txt5_C4f5G6", "mq_txt6_D5g6H7", "mq_txt7_E6h7I8", "mq_txt8_F7i8J9"]
+    },
+
+    "why_factor_form_G8j9K0": {
+      "type": "generic-section",
+      "settings": {
+        "background_color_mobile": "#E1F0E2",
+        "text_color_mobile": "#141414",
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40,
+        "padding_left_mobile": 20,
+        "padding_right_mobile": 20,
+        "margin_bottom_mobile": 0,
+        "background_color_desktop": "#E1F0E2",
+        "text_color_desktop": "#141414",
+        "padding_top_desktop": 80,
+        "padding_bottom_desktop": 80,
+        "padding_left_desktop": 64,
+        "padding_right_desktop": 64,
+        "margin_bottom_desktop": 0
+      },
+      "blocks": {
+        "wff_heading_H9k0L1": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Why Factor Form</h2>",
+            "type_preset": "h2",
+            "width": "100%",
+            "alignment": "center"
+          }
+        },
+        "wff_grid_I0l1M2": {
+          "type": "grid-row",
+          "settings": {
+            "vertical_alignment_mobile": "start",
+            "column_gap_mobile": 16,
+            "row_gap_mobile": 32,
+            "margin_bottom_mobile": 0,
+            "vertical_alignment_tablet": "start",
+            "column_gap_tablet": 20,
+            "row_gap_tablet": 24,
+            "margin_bottom_tablet": 0,
+            "vertical_alignment_desktop": "start",
+            "column_gap_desktop": 32,
+            "row_gap_desktop": 24,
+            "margin_bottom_desktop": 0
+          },
+          "blocks": {
+            "wff_col1_J1m2N3": {
+              "type": "_grid-column",
+              "settings": {
+                "column_span_mobile": "12",
+                "column_order_mobile": "1",
+                "margin_bottom_mobile": 0,
+                "column_span_tablet": "6",
+                "column_order_tablet": "1",
+                "margin_bottom_tablet": 0,
+                "column_span_desktop": "3",
+                "column_order_desktop": "1",
                 "margin_bottom_desktop": 0
               },
               "blocks": {
-                "carousel_slide_86YaiB": {
-                  "type": "_carousel-slide",
-                  "name": "t:names.carousel_slide",
-                  "settings": {},
-                  "blocks": {
-                    "product_card_6z8qr9": {
-                      "type": "product-card",
-                      "name": "t:names.product_card",
-                      "settings": {
-                        "product": "the-3p-fulfilled-snowboard",
-                        "product_card_gap": 4,
-                        "inherit_color_scheme": true,
-                        "color_scheme": "",
-                        "width": "fill",
-                        "custom_width": 100,
-                        "width_mobile": "fill",
-                        "custom_width_mobile": 100,
-                        "border": "none",
-                        "border_width": 1,
-                        "border_opacity": 100,
-                        "border_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {
-                        "product_card_gallery_mWjEFL": {
-                          "type": "_product-card-gallery",
-                          "settings": {
-                            "image_ratio": "adapt",
-                            "border": "none",
-                            "border_width": 1,
-                            "border_opacity": 100,
-                            "border_radius": 0,
-                            "padding-block-start": 0,
-                            "padding-block-end": 0,
-                            "padding-inline-start": 0,
-                            "padding-inline-end": 0
-                          },
-                          "blocks": {}
-                        },
-                        "product_title_tYWxpt": {
-                          "type": "product-title",
-                          "name": "t:names.product_title",
-                          "settings": {
-                            "width": "fit-content",
-                            "max_width": "normal",
-                            "alignment": "left",
-                            "type_preset": "rte",
-                            "font": "var(--font-body--family)",
-                            "font_size": "1rem",
-                            "line_height": "normal",
-                            "letter_spacing": "normal",
-                            "case": "none",
-                            "wrap": "pretty",
-                            "color": "var(--color-foreground)",
-                            "background": false,
-                            "background_color": "#00000026",
-                            "corner_radius": 0,
-                            "padding-block-start": 4,
-                            "padding-block-end": 0,
-                            "padding-inline-start": 0,
-                            "padding-inline-end": 0
-                          },
-                          "blocks": {}
-                        },
-                        "price_J7EHCp": {
-                          "type": "price",
-                          "name": "t:names.product_price",
-                          "settings": {
-                            "show_sale_price_first": true,
-                            "show_installments": false,
-                            "show_tax_info": false,
-                            "type_preset": "h6",
-                            "width": "100%",
-                            "alignment": "left",
-                            "font": "var(--font-body--family)",
-                            "font_size": "1rem",
-                            "line_height": "normal",
-                            "letter_spacing": "normal",
-                            "case": "none",
-                            "color": "var(--color-foreground)",
-                            "padding-block-start": 0,
-                            "padding-block-end": 0,
-                            "padding-inline-start": 0,
-                            "padding-inline-end": 0
-                          },
-                          "blocks": {}
-                        }
-                      },
-                      "block_order": [
-                        "product_card_gallery_mWjEFL",
-                        "product_title_tYWxpt",
-                        "price_J7EHCp"
-                      ]
-                    }
-                  },
-                  "block_order": [
-                    "product_card_6z8qr9"
-                  ]
+                "wff_icon1_K2n3O4": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "none",
+                    "image_upload": "shopify://shop_images/image-desktop-112594636.png",
+                    "width": 48,
+                    "margin_bottom_desktop": 12
+                  }
                 },
-                "carousel_slide_E96ayK": {
-                  "type": "_carousel-slide",
-                  "name": "t:names.carousel_slide",
-                  "settings": {},
-                  "blocks": {
-                    "product_card_DE3eHJ": {
-                      "type": "product-card",
-                      "name": "t:names.product_card",
-                      "settings": {
-                        "product": "the-3p-fulfilled-snowboard",
-                        "product_card_gap": 4,
-                        "inherit_color_scheme": true,
-                        "color_scheme": "",
-                        "width": "fill",
-                        "custom_width": 100,
-                        "width_mobile": "fill",
-                        "custom_width_mobile": 100,
-                        "border": "none",
-                        "border_width": 1,
-                        "border_opacity": 100,
-                        "border_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {
-                        "product_card_gallery_gGjaTh": {
-                          "type": "_product-card-gallery",
-                          "settings": {
-                            "image_ratio": "adapt",
-                            "border": "none",
-                            "border_width": 1,
-                            "border_opacity": 100,
-                            "border_radius": 0,
-                            "padding-block-start": 0,
-                            "padding-block-end": 0,
-                            "padding-inline-start": 0,
-                            "padding-inline-end": 0
-                          },
-                          "blocks": {}
-                        },
-                        "product_title_WDaLwa": {
-                          "type": "product-title",
-                          "name": "t:names.product_title",
-                          "settings": {
-                            "width": "fit-content",
-                            "max_width": "normal",
-                            "alignment": "left",
-                            "type_preset": "rte",
-                            "font": "var(--font-body--family)",
-                            "font_size": "1rem",
-                            "line_height": "normal",
-                            "letter_spacing": "normal",
-                            "case": "none",
-                            "wrap": "pretty",
-                            "color": "var(--color-foreground)",
-                            "background": false,
-                            "background_color": "#00000026",
-                            "corner_radius": 0,
-                            "padding-block-start": 4,
-                            "padding-block-end": 0,
-                            "padding-inline-start": 0,
-                            "padding-inline-end": 0
-                          },
-                          "blocks": {}
-                        },
-                        "price_M6FJ6n": {
-                          "type": "price",
-                          "name": "t:names.product_price",
-                          "settings": {
-                            "show_sale_price_first": true,
-                            "show_installments": false,
-                            "show_tax_info": false,
-                            "type_preset": "h6",
-                            "width": "100%",
-                            "alignment": "left",
-                            "font": "var(--font-body--family)",
-                            "font_size": "1rem",
-                            "line_height": "normal",
-                            "letter_spacing": "normal",
-                            "case": "none",
-                            "color": "var(--color-foreground)",
-                            "padding-block-start": 0,
-                            "padding-block-end": 0,
-                            "padding-inline-start": 0,
-                            "padding-inline-end": 0
-                          },
-                          "blocks": {}
-                        }
-                      },
-                      "block_order": [
-                        "product_card_gallery_gGjaTh",
-                        "product_title_WDaLwa",
-                        "price_M6FJ6n"
-                      ]
-                    }
-                  },
-                  "block_order": [
-                    "product_card_DE3eHJ"
-                  ]
+                "wff_title1_L3o4P5": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>More Flexibility</h3>",
+                    "type_preset": "h4",
+                    "width": "100%"
+                  }
                 },
-                "carousel_slide_Ui6Cgh": {
-                  "type": "_carousel-slide",
-                  "name": "t:names.carousel_slide",
-                  "settings": {},
-                  "blocks": {
-                    "product_card_wy6GBJ": {
-                      "type": "product-card",
-                      "name": "t:names.product_card",
-                      "settings": {
-                        "product": "the-3p-fulfilled-snowboard",
-                        "product_card_gap": 4,
-                        "inherit_color_scheme": true,
-                        "color_scheme": "",
-                        "width": "fill",
-                        "custom_width": 100,
-                        "width_mobile": "fill",
-                        "custom_width_mobile": 100,
-                        "border": "none",
-                        "border_width": 1,
-                        "border_opacity": 100,
-                        "border_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {
-                        "product_card_gallery_L7P48R": {
-                          "type": "_product-card-gallery",
-                          "settings": {
-                            "image_ratio": "adapt",
-                            "border": "none",
-                            "border_width": 1,
-                            "border_opacity": 100,
-                            "border_radius": 0,
-                            "padding-block-start": 0,
-                            "padding-block-end": 0,
-                            "padding-inline-start": 0,
-                            "padding-inline-end": 0
-                          },
-                          "blocks": {}
-                        },
-                        "product_title_MCCMD9": {
-                          "type": "product-title",
-                          "name": "t:names.product_title",
-                          "settings": {
-                            "width": "fit-content",
-                            "max_width": "normal",
-                            "alignment": "left",
-                            "type_preset": "rte",
-                            "font": "var(--font-body--family)",
-                            "font_size": "1rem",
-                            "line_height": "normal",
-                            "letter_spacing": "normal",
-                            "case": "none",
-                            "wrap": "pretty",
-                            "color": "var(--color-foreground)",
-                            "background": false,
-                            "background_color": "#00000026",
-                            "corner_radius": 0,
-                            "padding-block-start": 4,
-                            "padding-block-end": 0,
-                            "padding-inline-start": 0,
-                            "padding-inline-end": 0
-                          },
-                          "blocks": {}
-                        },
-                        "price_gx9QD6": {
-                          "type": "price",
-                          "name": "t:names.product_price",
-                          "settings": {
-                            "show_sale_price_first": true,
-                            "show_installments": false,
-                            "show_tax_info": false,
-                            "type_preset": "h6",
-                            "width": "100%",
-                            "alignment": "left",
-                            "font": "var(--font-body--family)",
-                            "font_size": "1rem",
-                            "line_height": "normal",
-                            "letter_spacing": "normal",
-                            "case": "none",
-                            "color": "var(--color-foreground)",
-                            "padding-block-start": 0,
-                            "padding-block-end": 0,
-                            "padding-inline-start": 0,
-                            "padding-inline-end": 0
-                          },
-                          "blocks": {}
-                        }
-                      },
-                      "block_order": [
-                        "product_card_gallery_L7P48R",
-                        "product_title_MCCMD9",
-                        "price_gx9QD6"
-                      ]
-                    }
-                  },
-                  "block_order": [
-                    "product_card_wy6GBJ"
-                  ]
-                },
-                "carousel_slide_j3mVfb": {
-                  "type": "_carousel-slide",
-                  "name": "t:names.carousel_slide",
-                  "settings": {},
-                  "blocks": {
-                    "product_card_hxeWyp": {
-                      "type": "product-card",
-                      "name": "t:names.product_card",
-                      "settings": {
-                        "product": "the-3p-fulfilled-snowboard",
-                        "product_card_gap": 4,
-                        "inherit_color_scheme": true,
-                        "color_scheme": "",
-                        "width": "fill",
-                        "custom_width": 100,
-                        "width_mobile": "fill",
-                        "custom_width_mobile": 100,
-                        "border": "none",
-                        "border_width": 1,
-                        "border_opacity": 100,
-                        "border_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {
-                        "product_card_gallery_HpDNHj": {
-                          "type": "_product-card-gallery",
-                          "settings": {
-                            "image_ratio": "adapt",
-                            "border": "none",
-                            "border_width": 1,
-                            "border_opacity": 100,
-                            "border_radius": 0,
-                            "padding-block-start": 0,
-                            "padding-block-end": 0,
-                            "padding-inline-start": 0,
-                            "padding-inline-end": 0
-                          },
-                          "blocks": {}
-                        },
-                        "product_title_TQgCgp": {
-                          "type": "product-title",
-                          "name": "t:names.product_title",
-                          "settings": {
-                            "width": "fit-content",
-                            "max_width": "normal",
-                            "alignment": "left",
-                            "type_preset": "rte",
-                            "font": "var(--font-body--family)",
-                            "font_size": "1rem",
-                            "line_height": "normal",
-                            "letter_spacing": "normal",
-                            "case": "none",
-                            "wrap": "pretty",
-                            "color": "var(--color-foreground)",
-                            "background": false,
-                            "background_color": "#00000026",
-                            "corner_radius": 0,
-                            "padding-block-start": 4,
-                            "padding-block-end": 0,
-                            "padding-inline-start": 0,
-                            "padding-inline-end": 0
-                          },
-                          "blocks": {}
-                        },
-                        "price_pQkKYW": {
-                          "type": "price",
-                          "name": "t:names.product_price",
-                          "settings": {
-                            "show_sale_price_first": true,
-                            "show_installments": false,
-                            "show_tax_info": false,
-                            "type_preset": "h6",
-                            "width": "100%",
-                            "alignment": "left",
-                            "font": "var(--font-body--family)",
-                            "font_size": "1rem",
-                            "line_height": "normal",
-                            "letter_spacing": "normal",
-                            "case": "none",
-                            "color": "var(--color-foreground)",
-                            "padding-block-start": 0,
-                            "padding-block-end": 0,
-                            "padding-inline-start": 0,
-                            "padding-inline-end": 0
-                          },
-                          "blocks": {}
-                        }
-                      },
-                      "block_order": [
-                        "product_card_gallery_HpDNHj",
-                        "product_title_TQgCgp",
-                        "price_pQkKYW"
-                      ]
-                    }
-                  },
-                  "block_order": [
-                    "product_card_hxeWyp"
-                  ]
+                "wff_desc1_M4p5Q6": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Mix into water, smoothies, or your favorite recipes. Our powder formula fits seamlessly into any routine.</p>",
+                    "type_preset": "paragraph",
+                    "width": "100%"
+                  }
                 }
               },
-              "block_order": [
-                "carousel_slide_86YaiB",
-                "carousel_slide_E96ayK",
-                "carousel_slide_Ui6Cgh",
-                "carousel_slide_j3mVfb"
-              ]
+              "block_order": ["wff_icon1_K2n3O4", "wff_title1_L3o4P5", "wff_desc1_M4p5Q6"]
+            },
+            "wff_col2_N5q6R7": {
+              "type": "_grid-column",
+              "settings": {
+                "column_span_mobile": "12",
+                "column_order_mobile": "2",
+                "margin_bottom_mobile": 0,
+                "column_span_tablet": "6",
+                "column_order_tablet": "2",
+                "margin_bottom_tablet": 0,
+                "column_span_desktop": "3",
+                "column_order_desktop": "2",
+                "margin_bottom_desktop": 0
+              },
+              "blocks": {
+                "wff_icon2_O6r7S8": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "none",
+                    "image_upload": "shopify://shop_images/image-desktop-112594700.png",
+                    "width": 48,
+                    "margin_bottom_desktop": 12
+                  }
+                },
+                "wff_title2_P7s8T9": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>More Quality</h3>",
+                    "type_preset": "h4",
+                    "width": "100%"
+                  }
+                },
+                "wff_desc2_Q8t9U0": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Every ingredient is sourced from real food and rigorously tested for purity. No fillers, no artificial additives.</p>",
+                    "type_preset": "paragraph",
+                    "width": "100%"
+                  }
+                }
+              },
+              "block_order": ["wff_icon2_O6r7S8", "wff_title2_P7s8T9", "wff_desc2_Q8t9U0"]
+            },
+            "wff_col3_R9u0V1": {
+              "type": "_grid-column",
+              "settings": {
+                "column_span_mobile": "12",
+                "column_order_mobile": "3",
+                "margin_bottom_mobile": 0,
+                "column_span_tablet": "6",
+                "column_order_tablet": "3",
+                "margin_bottom_tablet": 0,
+                "column_span_desktop": "3",
+                "column_order_desktop": "3",
+                "margin_bottom_desktop": 0
+              },
+              "blocks": {
+                "wff_icon3_S0v1W2": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "none",
+                    "image_upload": "shopify://shop_images/image-desktop-112594752.png",
+                    "width": 48,
+                    "margin_bottom_desktop": 12
+                  }
+                },
+                "wff_title3_T1w2X3": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>More Nutrition</h3>",
+                    "type_preset": "h4",
+                    "width": "100%"
+                  }
+                },
+                "wff_desc3_U2x3Y4": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Packed with vitamins, minerals, and superfoods in every scoop. Get more from each serving than typical supplements.</p>",
+                    "type_preset": "paragraph",
+                    "width": "100%"
+                  }
+                }
+              },
+              "block_order": ["wff_icon3_S0v1W2", "wff_title3_T1w2X3", "wff_desc3_U2x3Y4"]
+            },
+            "wff_col4_V3y4Z5": {
+              "type": "_grid-column",
+              "settings": {
+                "column_span_mobile": "12",
+                "column_order_mobile": "4",
+                "margin_bottom_mobile": 0,
+                "column_span_tablet": "6",
+                "column_order_tablet": "4",
+                "margin_bottom_tablet": 0,
+                "column_span_desktop": "3",
+                "column_order_desktop": "4",
+                "margin_bottom_desktop": 0
+              },
+              "blocks": {
+                "wff_icon4_W4z5A6": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "none",
+                    "image_upload": "shopify://shop_images/agile-support-1-desktop-112594812.png",
+                    "width": 48,
+                    "margin_bottom_desktop": 12
+                  }
+                },
+                "wff_title4_X5a6B7": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>More Convenience</h3>",
+                    "type_preset": "h4",
+                    "width": "100%"
+                  }
+                },
+                "wff_desc4_Y6b7C8": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>No prep, no mess. Just mix and enjoy. Perfect for busy mornings and on-the-go nutrition.</p>",
+                    "type_preset": "paragraph",
+                    "width": "100%"
+                  }
+                }
+              },
+              "block_order": ["wff_icon4_W4z5A6", "wff_title4_X5a6B7", "wff_desc4_Y6b7C8"]
             }
           },
-          "block_order": [
-            "carousel_block_yKFVG9"
-          ]
+          "block_order": ["wff_col1_J1m2N3", "wff_col2_N5q6R7", "wff_col3_R9u0V1", "wff_col4_V3y4Z5"]
         }
       },
-      "block_order": [
-        "tab_content_MXHncU"
-      ],
-      "name": "t:names.generic_section",
+      "block_order": ["wff_heading_H9k0L1", "wff_grid_I0l1M2"]
+    },
+
+    "factor_standard_Z7c8D9": {
+      "type": "generic-section",
       "settings": {
-        "background_color_mobile": "",
-        "text_color_mobile": "",
+        "background_color_mobile": "#FFFFFF",
+        "text_color_mobile": "#141414",
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40,
+        "padding_left_mobile": 20,
+        "padding_right_mobile": 20,
+        "margin_bottom_mobile": 0,
+        "background_color_desktop": "#FFFFFF",
+        "text_color_desktop": "#141414",
+        "padding_top_desktop": 80,
+        "padding_bottom_desktop": 80,
+        "padding_left_desktop": 64,
+        "padding_right_desktop": 64,
+        "margin_bottom_desktop": 0
+      },
+      "blocks": {
+        "fs_heading_A8d9E0": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>The Factor Standard</h2>",
+            "type_preset": "h2",
+            "width": "100%",
+            "alignment": "center"
+          }
+        },
+        "fs_grid_B9e0F1": {
+          "type": "grid-row",
+          "settings": {
+            "vertical_alignment_mobile": "start",
+            "column_gap_mobile": 16,
+            "row_gap_mobile": 32,
+            "margin_bottom_mobile": 0,
+            "vertical_alignment_tablet": "start",
+            "column_gap_tablet": 24,
+            "row_gap_tablet": 24,
+            "margin_bottom_tablet": 0,
+            "vertical_alignment_desktop": "start",
+            "column_gap_desktop": 32,
+            "row_gap_desktop": 24,
+            "margin_bottom_desktop": 0
+          },
+          "blocks": {
+            "fs_col1_C0f1G2": {
+              "type": "_grid-column",
+              "settings": {
+                "column_span_mobile": "12",
+                "column_order_mobile": "1",
+                "margin_bottom_mobile": 0,
+                "column_span_tablet": "4",
+                "column_order_tablet": "1",
+                "margin_bottom_tablet": 0,
+                "column_span_desktop": "4",
+                "column_order_desktop": "1",
+                "margin_bottom_desktop": 0
+              },
+              "blocks": {
+                "fs_img1_D1g2H3": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "none",
+                    "image_upload": "shopify://shop_images/image-59-desktop-110864992.png",
+                    "width": 120,
+                    "margin_bottom_desktop": 16
+                  }
+                },
+                "fs_title1_E2h3I4": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Dietitian Designed</h3>",
+                    "type_preset": "h4",
+                    "width": "100%"
+                  }
+                },
+                "fs_desc1_F3i4J5": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Every product is formulated by our team of registered dietitians to ensure optimal nutrition and effectiveness.</p>",
+                    "type_preset": "paragraph",
+                    "width": "100%"
+                  }
+                }
+              },
+              "block_order": ["fs_img1_D1g2H3", "fs_title1_E2h3I4", "fs_desc1_F3i4J5"]
+            },
+            "fs_col2_G4j5K6": {
+              "type": "_grid-column",
+              "settings": {
+                "column_span_mobile": "12",
+                "column_order_mobile": "2",
+                "margin_bottom_mobile": 0,
+                "column_span_tablet": "4",
+                "column_order_tablet": "2",
+                "margin_bottom_tablet": 0,
+                "column_span_desktop": "4",
+                "column_order_desktop": "2",
+                "margin_bottom_desktop": 0
+              },
+              "blocks": {
+                "fs_img2_H5k6L7": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "none",
+                    "image_upload": "shopify://shop_images/image-58-desktop-110864999.png",
+                    "width": 120,
+                    "margin_bottom_desktop": 16
+                  }
+                },
+                "fs_title2_I6l7M8": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Third-Party Tested</h3>",
+                    "type_preset": "h4",
+                    "width": "100%"
+                  }
+                },
+                "fs_desc2_J7m8N9": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>All products undergo rigorous third-party testing for purity, potency, and safety before reaching you.</p>",
+                    "type_preset": "paragraph",
+                    "width": "100%"
+                  }
+                }
+              },
+              "block_order": ["fs_img2_H5k6L7", "fs_title2_I6l7M8", "fs_desc2_J7m8N9"]
+            },
+            "fs_col3_K8n9O0": {
+              "type": "_grid-column",
+              "settings": {
+                "column_span_mobile": "12",
+                "column_order_mobile": "3",
+                "margin_bottom_mobile": 0,
+                "column_span_tablet": "4",
+                "column_order_tablet": "3",
+                "margin_bottom_tablet": 0,
+                "column_span_desktop": "4",
+                "column_order_desktop": "3",
+                "margin_bottom_desktop": 0
+              },
+              "blocks": {
+                "fs_img3_L9o0P1": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "none",
+                    "image_upload": "shopify://shop_images/image-60-desktop-110865006.png",
+                    "width": 120,
+                    "margin_bottom_desktop": 16
+                  }
+                },
+                "fs_title3_M0p1Q2": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Made From Real Food</h3>",
+                    "type_preset": "h4",
+                    "width": "100%"
+                  }
+                },
+                "fs_desc3_N1q2R3": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>We source our ingredients from whole foods, not synthetic compounds. Real nutrition from real ingredients.</p>",
+                    "type_preset": "paragraph",
+                    "width": "100%"
+                  }
+                }
+              },
+              "block_order": ["fs_img3_L9o0P1", "fs_title3_M0p1Q2", "fs_desc3_N1q2R3"]
+            }
+          },
+          "block_order": ["fs_col1_C0f1G2", "fs_col2_G4j5K6", "fs_col3_K8n9O0"]
+        }
+      },
+      "block_order": ["fs_heading_A8d9E0", "fs_grid_B9e0F1"]
+    },
+
+    "testimonials_O2r3S4": {
+      "type": "generic-section",
+      "settings": {
+        "background_color_mobile": "#F1F1EA",
+        "text_color_mobile": "#141414",
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40,
+        "padding_left_mobile": 20,
+        "padding_right_mobile": 20,
+        "margin_bottom_mobile": 0,
+        "background_color_desktop": "#F1F1EA",
+        "text_color_desktop": "#141414",
+        "padding_top_desktop": 80,
+        "padding_bottom_desktop": 80,
+        "padding_left_desktop": 64,
+        "padding_right_desktop": 64,
+        "margin_bottom_desktop": 0
+      },
+      "blocks": {
+        "test_heading_P3s4T5": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Backed By Factor Dietitians</h2>",
+            "type_preset": "h2",
+            "width": "100%",
+            "alignment": "center"
+          }
+        },
+        "test_desc_Q4t5U6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Hear from the nutrition experts who stand behind every Factor Form product.</p>",
+            "type_preset": "paragraph",
+            "width": "100%",
+            "alignment": "center"
+          }
+        },
+        "test_grid_R5u6V7": {
+          "type": "grid-row",
+          "settings": {
+            "vertical_alignment_mobile": "start",
+            "column_gap_mobile": 16,
+            "row_gap_mobile": 24,
+            "margin_bottom_mobile": 0,
+            "vertical_alignment_tablet": "start",
+            "column_gap_tablet": 24,
+            "row_gap_tablet": 24,
+            "margin_bottom_tablet": 0,
+            "vertical_alignment_desktop": "stretch",
+            "column_gap_desktop": 24,
+            "row_gap_desktop": 24,
+            "margin_bottom_desktop": 0
+          },
+          "blocks": {
+            "test_col1_S6v7W8": {
+              "type": "_grid-column",
+              "settings": {
+                "column_span_mobile": "12",
+                "column_order_mobile": "1",
+                "margin_bottom_mobile": 0,
+                "column_span_tablet": "4",
+                "column_order_tablet": "1",
+                "margin_bottom_tablet": 0,
+                "column_span_desktop": "4",
+                "column_order_desktop": "1",
+                "margin_bottom_desktop": 0
+              },
+              "blocks": {
+                "tc1_T7w8X9": {
+                  "type": "testimonial-card",
+                  "settings": {
+                    "image": "shopify://shop_images/image-61-desktop-118265456.png",
+                    "testimonial_title": "A Greens Powder I Actually Recommend",
+                    "testimonial_description": "As a registered dietitian, I'm very selective about what I recommend. Factor Form's Daily Greens checks every box — real ingredients, great taste, and backed by science.",
+                    "testimonial_name": "Dr. Sarah Chen",
+                    "testimonial_role": "Registered Dietitian, RD",
+                    "bg_color": "#FFFFFF",
+                    "text_color": "#141414"
+                  }
+                }
+              },
+              "block_order": ["tc1_T7w8X9"]
+            },
+            "test_col2_U8x9Y0": {
+              "type": "_grid-column",
+              "settings": {
+                "column_span_mobile": "12",
+                "column_order_mobile": "2",
+                "margin_bottom_mobile": 0,
+                "column_span_tablet": "4",
+                "column_order_tablet": "2",
+                "margin_bottom_tablet": 0,
+                "column_span_desktop": "4",
+                "column_order_desktop": "2",
+                "margin_bottom_desktop": 0
+              },
+              "blocks": {
+                "tc2_V9y0Z1": {
+                  "type": "testimonial-card",
+                  "settings": {
+                    "image": "shopify://shop_images/image-62-desktop-118265466.png",
+                    "testimonial_title": "Quality You Can Trust",
+                    "testimonial_description": "The transparency in sourcing and third-party testing gives me complete confidence recommending Factor Form to my clients looking for daily nutritional support.",
+                    "testimonial_name": "Michael Torres",
+                    "testimonial_role": "Nutrition Consultant, MS",
+                    "bg_color": "#FFFFFF",
+                    "text_color": "#141414"
+                  }
+                }
+              },
+              "block_order": ["tc2_V9y0Z1"]
+            },
+            "test_col3_W0z1A2": {
+              "type": "_grid-column",
+              "settings": {
+                "column_span_mobile": "12",
+                "column_order_mobile": "3",
+                "margin_bottom_mobile": 0,
+                "column_span_tablet": "4",
+                "column_order_tablet": "3",
+                "margin_bottom_tablet": 0,
+                "column_span_desktop": "4",
+                "column_order_desktop": "3",
+                "margin_bottom_desktop": 0
+              },
+              "blocks": {
+                "tc3_X1a2B3": {
+                  "type": "testimonial-card",
+                  "settings": {
+                    "image": "shopify://shop_images/image-63-desktop-118265476.png",
+                    "testimonial_title": "Real Food, Real Results",
+                    "testimonial_description": "What sets Factor Form apart is their commitment to whole food ingredients. My patients have seen noticeable improvements in energy and digestion within weeks.",
+                    "testimonial_name": "Dr. Emily Park",
+                    "testimonial_role": "Clinical Dietitian, PhD",
+                    "bg_color": "#FFFFFF",
+                    "text_color": "#141414"
+                  }
+                }
+              },
+              "block_order": ["tc3_X1a2B3"]
+            }
+          },
+          "block_order": ["test_col1_S6v7W8", "test_col2_U8x9Y0", "test_col3_W0z1A2"]
+        }
+      },
+      "block_order": ["test_heading_P3s4T5", "test_desc_Q4t5U6", "test_grid_R5u6V7"]
+    },
+
+    "text_products_Y2b3C4": {
+      "type": "generic-section",
+      "settings": {
+        "background_color_mobile": "#E1F0E2",
+        "text_color_mobile": "#141414",
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0,
         "padding_left_mobile": 0,
         "padding_right_mobile": 0,
         "margin_bottom_mobile": 0,
-        "background_color_desktop": "",
-        "text_color_desktop": "",
+        "background_color_desktop": "#E1F0E2",
+        "text_color_desktop": "#141414",
         "padding_top_desktop": 0,
         "padding_bottom_desktop": 0,
         "padding_left_desktop": 0,
         "padding_right_desktop": 0,
         "margin_bottom_desktop": 0
-      }
+      },
+      "blocks": {
+        "tp_grid_Z3c4D5": {
+          "type": "grid-row",
+          "settings": {
+            "vertical_alignment_mobile": "start",
+            "column_gap_mobile": 0,
+            "row_gap_mobile": 0,
+            "margin_bottom_mobile": 0,
+            "vertical_alignment_tablet": "stretch",
+            "column_gap_tablet": 0,
+            "row_gap_tablet": 0,
+            "margin_bottom_tablet": 0,
+            "vertical_alignment_desktop": "stretch",
+            "column_gap_desktop": 0,
+            "row_gap_desktop": 0,
+            "margin_bottom_desktop": 0
+          },
+          "blocks": {
+            "tp_col_left_A4d5E6": {
+              "type": "_grid-column",
+              "settings": {
+                "column_span_mobile": "12",
+                "column_order_mobile": "1",
+                "margin_bottom_mobile": 0,
+                "column_span_tablet": "6",
+                "column_order_tablet": "1",
+                "margin_bottom_tablet": 0,
+                "column_span_desktop": "6",
+                "column_order_desktop": "1",
+                "margin_bottom_desktop": 0
+              },
+              "blocks": {
+                "tp_hero_B5e6F7": {
+                  "type": "hero-block",
+                  "settings": {
+                    "height_type_mobile": "custom",
+                    "custom_height_mobile": 400,
+                    "height_type_desktop": "custom",
+                    "custom_height_desktop": 600,
+                    "background_media_mobile": "image",
+                    "image_mobile": "shopify://shop_images/daily-nouri-d37stewmyqy-unsplash-3-mobile-110527232.png",
+                    "image_position_mobile": "center center",
+                    "background_media_desktop": "image",
+                    "image_desktop": "shopify://shop_images/daily-nouri-d37stewmyqy-unsplash-3-desktop-110525076.png",
+                    "image_position_desktop": "center center",
+                    "toggle_overlay": false,
+                    "content_position_mobile": "top-left",
+                    "content_position_desktop": "top-left",
+                    "content_width_mobile": "100",
+                    "content_width_desktop": "100",
+                    "padding_top_mobile": 20,
+                    "padding_bottom_mobile": 20,
+                    "padding_left_mobile": 20,
+                    "padding_right_mobile": 20,
+                    "padding_top_desktop": 32,
+                    "padding_bottom_desktop": 32,
+                    "padding_left_desktop": 32,
+                    "padding_right_desktop": 32,
+                    "margin_bottom_mobile": 0,
+                    "margin_bottom_desktop": 0
+                  },
+                  "blocks": {
+                    "tp_badge_C6f7G8": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>FREE WELCOME KIT</p>",
+                        "type_preset": "h6",
+                        "width": "fit-content"
+                      }
+                    }
+                  },
+                  "block_order": ["tp_badge_C6f7G8"]
+                }
+              },
+              "block_order": ["tp_hero_B5e6F7"]
+            },
+            "tp_col_right_D7g8H9": {
+              "type": "_grid-column",
+              "settings": {
+                "column_span_mobile": "12",
+                "column_order_mobile": "2",
+                "margin_bottom_mobile": 0,
+                "column_span_tablet": "6",
+                "column_order_tablet": "2",
+                "margin_bottom_tablet": 0,
+                "column_span_desktop": "6",
+                "column_order_desktop": "2",
+                "margin_bottom_desktop": 0
+              },
+              "blocks": {
+                "tp_right_group_E8h9I0": {
+                  "type": "group",
+                  "settings": {
+                    "content_direction": "column",
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 0,
+                    "width": "100%",
+                    "padding_top": 48,
+                    "padding_bottom": 48,
+                    "padding_left": 48,
+                    "padding_right": 48
+                  },
+                  "blocks": {
+                    "tp_right_heading_F9i0J1": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<h2>Start Your Routine</h2>",
+                        "type_preset": "h2",
+                        "width": "100%"
+                      }
+                    },
+                    "tp_right_desc_G0j1K2": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Build your daily wellness stack with our most popular products.</p>",
+                        "type_preset": "paragraph",
+                        "width": "100%"
+                      }
+                    },
+                    "tp1_H1k2L3": {
+                      "type": "text-product",
+                      "settings": {
+                        "description": "<p>Superfood greens blend</p>",
+                        "price_label": "30 servings"
+                      }
+                    },
+                    "tp2_I2l3M4": {
+                      "type": "text-product",
+                      "settings": {
+                        "description": "<p>Gut health support</p>",
+                        "price_label": "30 servings"
+                      }
+                    },
+                    "tp3_J3m4N5": {
+                      "type": "text-product",
+                      "settings": {
+                        "description": "<p>Energy & focus formula</p>",
+                        "price_label": "30 servings"
+                      }
+                    },
+                    "tp_cta_K4n5O6": {
+                      "type": "custom-button",
+                      "settings": {
+                        "label": "SHOP ALL PRODUCTS",
+                        "background_color": "#0F1F18",
+                        "text_color": "#FFFFFF",
+                        "font_desktop": "var(--font-body--family)",
+                        "font_size_desktop": "0.875rem",
+                        "font_weight_desktop": "600",
+                        "letter_spacing_desktop": 0.5,
+                        "case_desktop": "uppercase",
+                        "font_mobile": "var(--font-body--family)",
+                        "font_size_mobile": "0.875rem",
+                        "font_weight_mobile": "600",
+                        "letter_spacing_mobile": 0.5,
+                        "case_mobile": "uppercase",
+                        "padding_top_desktop": 14,
+                        "padding_bottom_desktop": 14,
+                        "padding_left_desktop": 32,
+                        "padding_right_desktop": 32,
+                        "padding_top_mobile": 12,
+                        "padding_bottom_mobile": 12,
+                        "padding_left_mobile": 24,
+                        "padding_right_mobile": 24,
+                        "border_radius": 4,
+                        "border_width": 0,
+                        "min_width_desktop": 0,
+                        "min_width_mobile": 0,
+                        "width_desktop": "full_width",
+                        "width_mobile": "full_width"
+                      }
+                    }
+                  },
+                  "block_order": ["tp_right_heading_F9i0J1", "tp_right_desc_G0j1K2", "tp1_H1k2L3", "tp2_I2l3M4", "tp3_J3m4N5", "tp_cta_K4n5O6"]
+                }
+              },
+              "block_order": ["tp_right_group_E8h9I0"]
+            }
+          },
+          "block_order": ["tp_col_left_A4d5E6", "tp_col_right_D7g8H9"]
+        }
+      },
+      "block_order": ["tp_grid_Z3c4D5"]
+    },
+
+    "faq_L5o6P7": {
+      "type": "generic-section",
+      "settings": {
+        "background_color_mobile": "#FFFFFF",
+        "text_color_mobile": "#141414",
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40,
+        "padding_left_mobile": 20,
+        "padding_right_mobile": 20,
+        "margin_bottom_mobile": 0,
+        "background_color_desktop": "#FFFFFF",
+        "text_color_desktop": "#141414",
+        "padding_top_desktop": 80,
+        "padding_bottom_desktop": 80,
+        "padding_left_desktop": 64,
+        "padding_right_desktop": 64,
+        "margin_bottom_desktop": 0
+      },
+      "blocks": {
+        "faq_heading_M6p7Q8": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Frequently Asked Questions</h2>",
+            "type_preset": "h2",
+            "width": "100%",
+            "alignment": "center"
+          }
+        },
+        "faq_accordion_N7q8R9": {
+          "type": "accordion",
+          "settings": {
+            "icon": "plus",
+            "dividers": true,
+            "type_preset": "h5",
+            "inherit_color_scheme": true
+          },
+          "blocks": {
+            "faq_row1_O8r9S0": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "What makes Factor Form different from other supplement brands?",
+                "open_by_default": false,
+                "icon": "none"
+              },
+              "blocks": {
+                "faq_ans1_P9s0T1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Factor Form is built from real food ingredients, designed by registered dietitians, and rigorously third-party tested. Every product is made with whole food sources rather than synthetic compounds.</p>",
+                    "type_preset": "paragraph",
+                    "width": "100%"
+                  }
+                }
+              },
+              "block_order": ["faq_ans1_P9s0T1"]
+            },
+            "faq_row2_Q0t1U2": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "How should I take Factor Form Daily Greens?",
+                "open_by_default": false,
+                "icon": "none"
+              },
+              "blocks": {
+                "faq_ans2_R1u2V3": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Mix one scoop with 8-12oz of water, your favorite smoothie, or juice. For best results, take it first thing in the morning as part of your daily routine.</p>",
+                    "type_preset": "paragraph",
+                    "width": "100%"
+                  }
+                }
+              },
+              "block_order": ["faq_ans2_R1u2V3"]
+            },
+            "faq_row3_S2v3W4": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Are Factor Form products third-party tested?",
+                "open_by_default": false,
+                "icon": "none"
+              },
+              "blocks": {
+                "faq_ans3_T3w4X5": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Yes. Every batch of Factor Form products undergoes rigorous third-party testing for purity, potency, and safety. We believe in full transparency and publish our test results.</p>",
+                    "type_preset": "paragraph",
+                    "width": "100%"
+                  }
+                }
+              },
+              "block_order": ["faq_ans3_T3w4X5"]
+            },
+            "faq_row4_U4x5Y6": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "What is your return policy?",
+                "open_by_default": false,
+                "icon": "none"
+              },
+              "blocks": {
+                "faq_ans4_V5y6Z7": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>We offer a 30-day satisfaction guarantee. If you're not completely happy with your purchase, contact our support team for a full refund — no questions asked.</p>",
+                    "type_preset": "paragraph",
+                    "width": "100%"
+                  }
+                }
+              },
+              "block_order": ["faq_ans4_V5y6Z7"]
+            },
+            "faq_row5_W6z7A8": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Do you offer free shipping?",
+                "open_by_default": false,
+                "icon": "none"
+              },
+              "blocks": {
+                "faq_ans5_X7a8B9": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Yes! We offer free standard shipping on all orders over $50 within the United States. Orders typically arrive within 3-5 business days.</p>",
+                    "type_preset": "paragraph",
+                    "width": "100%"
+                  }
+                }
+              },
+              "block_order": ["faq_ans5_X7a8B9"]
+            }
+          },
+          "block_order": ["faq_row1_O8r9S0", "faq_row2_Q0t1U2", "faq_row3_S2v3W4", "faq_row4_U4x5Y6", "faq_row5_W6z7A8"]
+        }
+      },
+      "block_order": ["faq_heading_M6p7Q8", "faq_accordion_N7q8R9"]
     }
   },
   "order": [
-    "generic_section_VpbhMW",
-    "generic_section_yaf9Ab",
-    "generic_section_gGfnNg"
+    "hero_grid_Ab3kMx",
+    "video_reviews_G0j1K2",
+    "product_categories_nav_T3w4X5",
+    "product_tab_gut_F5i6J7",
+    "product_tab_recov_Q6t7U8",
+    "product_tab_immun_B7e8F9",
+    "product_tab_energy_M8p9Q0",
+    "marquee_X9a0B1",
+    "why_factor_form_G8j9K0",
+    "factor_standard_Z7c8D9",
+    "testimonials_O2r3S4",
+    "text_products_Y2b3C4",
+    "faq_L5o6P7"
   ]
 }
