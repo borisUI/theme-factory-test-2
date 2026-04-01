@@ -164,13 +164,13 @@
       "type": "text",
       "id": "price_override_value",
       "label": "t:settings.price_override_value",
-      "visible_if": "{{ price_override == true }}"
+      "visible_if": "{{ block.settings.price_override == true }}"
     },
     {
       "type": "text",
       "id": "free_label",
       "label": "t:settings.free_label",
-      "visible_if": "{{ price_override == true }}"
+      "visible_if": "{{ block.settings.price_override == true }}"
     },
     {
       "type": "header",
