@@ -51,6 +51,7 @@
                     "background_media_mobile": "image",
                     "image_mobile": "shopify://shop_images/main-hero-img-3-1-mobile-110526704.png",
                     "image_position_mobile": "center center",
+                    "video_position_mobile": "cover",
                     "content_width_mobile": "100",
                     "content_position_mobile": "bottom-left",
                     "padding_top_mobile": 24,
@@ -63,6 +64,7 @@
                     "background_media_desktop": "image",
                     "image_desktop": "shopify://shop_images/main-hero-img-3-1-desktop-110524489.png",
                     "image_position_desktop": "center center",
+                    "video_position_desktop": "cover",
                     "content_width_desktop": "80",
                     "content_position_desktop": "bottom-left",
                     "padding_top_desktop": 40,
@@ -70,7 +72,10 @@
                     "padding_left_desktop": 48,
                     "padding_right_desktop": 48,
                     "margin_bottom_desktop": 0,
-                    "toggle_overlay": true
+                    "toggle_overlay": true,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top"
                   },
                   "blocks": {
                     "hero_heading_Z3c4D5": {
@@ -78,52 +83,74 @@
                       "settings": {
                         "text": "<h1>Your Daily Greens, Reinvented</h1>",
                         "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
                         "type_preset": "custom",
                         "font": "Simplon Norm, sans-serif",
                         "font_size": "3.5rem",
                         "line_height": 1.1,
                         "letter_spacing": 0,
                         "case": "none",
+                        "wrap": "pretty",
                         "color": "var(--color-foreground)",
-                        "padding-block-end": 8
-                      }
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 8,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
                     },
                     "hero_sub_A4d5E6": {
                       "type": "text",
                       "settings": {
                         "text": "<p>Better taste. Better routine. Better you.</p>",
                         "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
                         "type_preset": "custom",
                         "font": "Jakarta Plus, sans-serif",
                         "font_size": "1.125rem",
                         "line_height": 1.6,
                         "letter_spacing": 0,
                         "case": "none",
+                        "wrap": "pretty",
                         "color": "var(--color-foreground)",
-                        "padding-block-end": 32
-                      }
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 32,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
                     },
                     "hero_cta_B5e6F7": {
                       "type": "custom-button",
                       "settings": {
                         "label": "Shop Now",
+                        "link": "",
+                        "open_in_new_tab": false,
                         "min_width_desktop": 0,
                         "min_width_mobile": 0,
                         "width_desktop": "auto",
                         "width_mobile": "auto",
-                        "background_color": "#FFFFFF",
+                        "background_color": "#ffffff",
                         "text_color": "#141414",
                         "font_desktop": "Simplon Norm, sans-serif",
                         "font_size_desktop": "1rem",
                         "font_weight_desktop": "700",
                         "letter_spacing_desktop": 1.6,
-                        "line_height_desktop": 1.0,
+                        "line_height_desktop": 1,
                         "case_desktop": "uppercase",
                         "font_mobile": "Simplon Norm, sans-serif",
                         "font_size_mobile": "0.875rem",
                         "font_weight_mobile": "700",
                         "letter_spacing_mobile": 1.6,
-                        "line_height_mobile": 1.0,
+                        "line_height_mobile": 1,
                         "case_mobile": "uppercase",
                         "padding_top_desktop": 16,
                         "padding_bottom_desktop": 16,
@@ -134,8 +161,10 @@
                         "padding_left_mobile": 32,
                         "padding_right_mobile": 32,
                         "border_radius": 24,
+                        "border_color": "#000000",
                         "border_width": 0
-                      }
+                      },
+                      "blocks": {}
                     }
                   },
                   "block_order": [
@@ -171,6 +200,7 @@
                     "background_media_mobile": "image",
                     "image_mobile": "shopify://shop_images/image-1-mobile-110526706.png",
                     "image_position_mobile": "center center",
+                    "video_position_mobile": "cover",
                     "content_width_mobile": "100",
                     "content_position_mobile": "bottom-left",
                     "padding_top_mobile": 24,
@@ -183,6 +213,7 @@
                     "background_media_desktop": "image",
                     "image_desktop": "shopify://shop_images/image-1-desktop-110524490.png",
                     "image_position_desktop": "center center",
+                    "video_position_desktop": "cover",
                     "content_width_desktop": "80",
                     "content_position_desktop": "bottom-left",
                     "padding_top_desktop": 40,
@@ -190,7 +221,10 @@
                     "padding_left_desktop": 48,
                     "padding_right_desktop": 48,
                     "margin_bottom_desktop": 0,
-                    "toggle_overlay": false
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top"
                   },
                   "blocks": {}
                 }
@@ -233,11 +267,39 @@
           "type": "group",
           "settings": {
             "content_direction": "row",
+            "vertical_on_mobile": true,
             "horizontal_alignment": "center",
             "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
             "gap": 16,
             "width": "fill",
-            "padding-block-end": 40
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 40,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {
             "stars_icon_I2l3M4": {
@@ -245,28 +307,50 @@
               "settings": {
                 "text": "<p>★★★★★</p>",
                 "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
                 "type_preset": "custom",
                 "font": "Simplon Norm, sans-serif",
                 "font_size": "1rem",
-                "line_height": 1.0,
+                "line_height": 1,
                 "letter_spacing": 0,
                 "case": "none",
-                "color": "var(--color-foreground)"
-              }
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
             },
             "review_heading_J3m4N5": {
               "type": "text",
               "settings": {
                 "text": "<p>Over 5,000 5-stars reviews on Trustpilot</p>",
                 "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
                 "type_preset": "custom",
                 "font": "Simplon Norm, sans-serif",
                 "font_size": "1.5rem",
                 "line_height": 1.3,
                 "letter_spacing": 0,
                 "case": "none",
-                "color": "var(--color-foreground)"
-              }
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -308,14 +392,17 @@
                 "vt1_M6p7Q8": {
                   "type": "video-testimonial",
                   "settings": {
+                    "video_url": "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
                     "thumbnail_image": "shopify://shop_images/greens-nicole-b-1-desktop-110524516.png",
                     "quote_text": "This is the best greens powder I've ever tasted. I actually look forward to drinking it every morning.",
                     "attribution_text": "Nicole B.",
-                    "quote_color": "#FFFFFF",
-                    "attribution_color": "#B5B5A0",
-                    "divider_color": "#B5B5A0",
-                    "video_url": "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-                  }
+                    "quote_color": "#ffffff",
+                    "attribution_color": "#b5b5a0",
+                    "divider_color": "#b5b5a0",
+                    "margin_bottom_mobile": 0,
+                    "margin_bottom_desktop": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -339,14 +426,17 @@
                 "vt2_O8r9S0": {
                   "type": "video-testimonial",
                   "settings": {
+                    "video_url": "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
                     "thumbnail_image": "shopify://shop_images/greens-nicole-b-1-desktop-110524524.png",
                     "quote_text": "I love that it's made from real food ingredients. You can taste the difference compared to other brands.",
                     "attribution_text": "Sarah M.",
-                    "quote_color": "#FFFFFF",
-                    "attribution_color": "#B5B5A0",
-                    "divider_color": "#B5B5A0",
-                    "video_url": "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-                  }
+                    "quote_color": "#ffffff",
+                    "attribution_color": "#b5b5a0",
+                    "divider_color": "#b5b5a0",
+                    "margin_bottom_mobile": 0,
+                    "margin_bottom_desktop": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -370,14 +460,17 @@
                 "vt3_Q0t1U2": {
                   "type": "video-testimonial",
                   "settings": {
+                    "video_url": "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
                     "thumbnail_image": "shopify://shop_images/greens-nicole-b-1-desktop-110524532.png",
                     "quote_text": "Finally a supplement brand that dietitians actually recommend. The transparency in ingredients is unmatched.",
                     "attribution_text": "Jessica R.",
-                    "quote_color": "#FFFFFF",
-                    "attribution_color": "#B5B5A0",
-                    "divider_color": "#B5B5A0",
-                    "video_url": "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-                  }
+                    "quote_color": "#ffffff",
+                    "attribution_color": "#b5b5a0",
+                    "divider_color": "#b5b5a0",
+                    "margin_bottom_mobile": 0,
+                    "margin_bottom_desktop": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -401,14 +494,17 @@
                 "vt4_S2v3W4": {
                   "type": "video-testimonial",
                   "settings": {
+                    "video_url": "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
                     "thumbnail_image": "shopify://shop_images/greens-nicole-b-1-desktop-110524540.png",
                     "quote_text": "My energy levels have improved so much since I started taking these daily. Game changer for my routine.",
                     "attribution_text": "David K.",
-                    "quote_color": "#FFFFFF",
-                    "attribution_color": "#B5B5A0",
-                    "divider_color": "#B5B5A0",
-                    "video_url": "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-                  }
+                    "quote_color": "#ffffff",
+                    "attribution_color": "#b5b5a0",
+                    "divider_color": "#b5b5a0",
+                    "margin_bottom_mobile": 0,
+                    "margin_bottom_desktop": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -430,14 +526,14 @@
       ],
       "settings": {
         "background_color_mobile": "#141414",
-        "text_color_mobile": "#FFFFFF",
+        "text_color_mobile": "#ffffff",
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40,
         "padding_left_mobile": 20,
         "padding_right_mobile": 20,
         "margin_bottom_mobile": 0,
         "background_color_desktop": "#141414",
-        "text_color_desktop": "#FFFFFF",
+        "text_color_desktop": "#ffffff",
         "padding_top_desktop": 64,
         "padding_bottom_desktop": 64,
         "padding_left_desktop": 64,
@@ -455,27 +551,114 @@
             "vertical_on_mobile": true,
             "horizontal_alignment": "space-between",
             "vertical_alignment": "flex-end",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
             "gap": 24,
-            "width": "100%"
+            "width": "100%",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {
             "nav_left_group_V5y6Z7": {
               "type": "group",
               "settings": {
                 "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
                 "gap": 8,
-                "width": "fit-content"
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {
                 "nav_byline_group_W6z7A8": {
                   "type": "group",
                   "settings": {
                     "content_direction": "row",
+                    "vertical_on_mobile": true,
                     "horizontal_alignment": "flex-start",
                     "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
                     "gap": 8,
-                    "width": "fit-content"
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "background_media": "none",
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "placeholder": "",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
                   },
                   "blocks": {
                     "nav_byline_text_X7a8B9": {
@@ -483,16 +666,39 @@
                       "settings": {
                         "text": "<p>brought to you by</p>",
                         "width": "fit-content",
-                        "type_preset": "paragraph"
-                      }
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "paragraph",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": 1.4,
+                        "letter_spacing": 0,
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
                     },
                     "nav_byline_icon_Y8b9C0": {
                       "type": "icon",
                       "settings": {
                         "icon": "none",
                         "image_upload": "shopify://shop_images/agile-support-1-desktop-112594627.png",
-                        "width": 80
-                      }
+                        "width": 80,
+                        "width_mobile": 24,
+                        "margin_bottom_desktop": 0,
+                        "margin_bottom_mobile": 0,
+                        "link": "",
+                        "open_in_new_tab": false
+                      },
+                      "blocks": {}
                     }
                   },
                   "block_order": [
@@ -505,8 +711,25 @@
                   "settings": {
                     "text": "<h2>Built From Food, Designed for Results</h2>",
                     "width": "100%",
-                    "type_preset": "h2"
-                  }
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h2",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": 1.4,
+                    "letter_spacing": 0,
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -518,10 +741,39 @@
               "type": "group",
               "settings": {
                 "content_direction": "row",
+                "vertical_on_mobile": true,
                 "horizontal_alignment": "flex-end",
                 "vertical_alignment": "flex-end",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
                 "gap": 16,
-                "width": "fit-content"
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {
                 "tab_nav_gut_B1e2F3": {
@@ -531,7 +783,8 @@
                     "target_id": "gut-health",
                     "label": "Gut Health",
                     "is_active": true
-                  }
+                  },
+                  "blocks": {}
                 },
                 "tab_nav_recov_C2f3G4": {
                   "type": "tab-navigation",
@@ -540,7 +793,8 @@
                     "target_id": "recovery",
                     "label": "Recovery",
                     "is_active": false
-                  }
+                  },
+                  "blocks": {}
                 },
                 "tab_nav_immun_D3g4H5": {
                   "type": "tab-navigation",
@@ -549,7 +803,8 @@
                     "target_id": "immunity",
                     "label": "Immunity",
                     "is_active": false
-                  }
+                  },
+                  "blocks": {}
                 },
                 "tab_nav_enrgy_E4h5I6": {
                   "type": "tab-navigation",
@@ -558,7 +813,8 @@
                     "target_id": "energy-focus",
                     "label": "Energy & Focus",
                     "is_active": false
-                  }
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -579,14 +835,14 @@
         "nav_outer_group_U4x5Y6"
       ],
       "settings": {
-        "background_color_mobile": "#F1F1EA",
+        "background_color_mobile": "#f1f1ea",
         "text_color_mobile": "#141414",
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 24,
         "padding_left_mobile": 20,
         "padding_right_mobile": 20,
         "margin_bottom_mobile": 0,
-        "background_color_desktop": "#F1F1EA",
+        "background_color_desktop": "#f1f1ea",
         "text_color_desktop": "#141414",
         "padding_top_desktop": 64,
         "padding_bottom_desktop": 24,
@@ -610,12 +866,28 @@
               "settings": {
                 "slides_per_view_mobile": 1,
                 "slide_gap_mobile": 16,
+                "autoplay_mobile": false,
+                "autoplay_delay_mobile": 5,
+                "show_arrows_mobile": true,
+                "external_arrows_mobile": false,
                 "show_dots_mobile": true,
+                "margin_bottom_mobile": 0,
                 "slides_per_view_tablet": 2,
                 "slide_gap_tablet": 20,
+                "autoplay_tablet": false,
+                "autoplay_delay_tablet": 5,
+                "show_arrows_tablet": true,
+                "external_arrows_tablet": false,
+                "show_dots_tablet": true,
+                "margin_bottom_tablet": 0,
                 "slides_per_view_desktop": 4,
                 "slide_gap_desktop": 24,
-                "show_arrows_desktop": true
+                "autoplay_desktop": false,
+                "autoplay_delay_desktop": 5,
+                "show_arrows_desktop": true,
+                "external_arrows_desktop": false,
+                "show_dots_desktop": true,
+                "margin_bottom_desktop": 0
               },
               "blocks": {
                 "slide_g1_I8l9M0": {
@@ -625,17 +897,24 @@
                     "card_g1_J9m0N1": {
                       "type": "custom-product-card",
                       "settings": {
+                        "product": "selling-plans-ski-wax",
                         "top_badge_text": "BEST SELLER",
                         "top_badge_bg_color": "#141414",
-                        "top_badge_text_color": "#FFFFFF",
+                        "top_badge_text_color": "#ffffff",
+                        "bottom_badge_text": "",
+                        "bottom_badge_bg_color": "#ec0606",
+                        "bottom_badge_text_color": "#ffffff",
                         "show_description": true,
                         "show_price": true,
                         "show_add_to_cart": true,
-                        "content_bg_color": "#FFFFFF",
+                        "content_bg_color": "#ffffff",
                         "text_color": "#141414",
-                        "button_bg_color": "#0F1F18",
-                        "button_text_color": "#FFFFFF"
-                      }
+                        "button_bg_color": "#0f1f18",
+                        "button_text_color": "#ffffff",
+                        "margin_bottom_mobile": 0,
+                        "margin_bottom_desktop": 0
+                      },
+                      "blocks": {}
                     }
                   },
                   "block_order": [
@@ -649,14 +928,24 @@
                     "card_g2_L1o2P3": {
                       "type": "custom-product-card",
                       "settings": {
+                        "product": "gift-card",
+                        "top_badge_text": "",
+                        "top_badge_bg_color": "#141414",
+                        "top_badge_text_color": "#ffffff",
+                        "bottom_badge_text": "",
+                        "bottom_badge_bg_color": "#ec0606",
+                        "bottom_badge_text_color": "#ffffff",
                         "show_description": true,
                         "show_price": true,
                         "show_add_to_cart": true,
-                        "content_bg_color": "#FFFFFF",
+                        "content_bg_color": "#ffffff",
                         "text_color": "#141414",
-                        "button_bg_color": "#0F1F18",
-                        "button_text_color": "#FFFFFF"
-                      }
+                        "button_bg_color": "#0f1f18",
+                        "button_text_color": "#ffffff",
+                        "margin_bottom_mobile": 0,
+                        "margin_bottom_desktop": 0
+                      },
+                      "blocks": {}
                     }
                   },
                   "block_order": [
@@ -670,14 +959,24 @@
                     "card_g3_N3q4R5": {
                       "type": "custom-product-card",
                       "settings": {
+                        "product": "test-50-product",
+                        "top_badge_text": "",
+                        "top_badge_bg_color": "#141414",
+                        "top_badge_text_color": "#ffffff",
+                        "bottom_badge_text": "",
+                        "bottom_badge_bg_color": "#ec0606",
+                        "bottom_badge_text_color": "#ffffff",
                         "show_description": true,
                         "show_price": true,
                         "show_add_to_cart": true,
-                        "content_bg_color": "#FFFFFF",
+                        "content_bg_color": "#ffffff",
                         "text_color": "#141414",
-                        "button_bg_color": "#0F1F18",
-                        "button_text_color": "#FFFFFF"
-                      }
+                        "button_bg_color": "#0f1f18",
+                        "button_text_color": "#ffffff",
+                        "margin_bottom_mobile": 0,
+                        "margin_bottom_desktop": 0
+                      },
+                      "blocks": {}
                     }
                   },
                   "block_order": [
@@ -691,17 +990,24 @@
                     "card_g4_P5s6T7": {
                       "type": "custom-product-card",
                       "settings": {
+                        "product": "the-collection-snowboard-liquid",
+                        "top_badge_text": "",
+                        "top_badge_bg_color": "#141414",
+                        "top_badge_text_color": "#ffffff",
                         "bottom_badge_text": "NEW",
-                        "bottom_badge_bg_color": "#EC0606",
-                        "bottom_badge_text_color": "#FFFFFF",
+                        "bottom_badge_bg_color": "#ec0606",
+                        "bottom_badge_text_color": "#ffffff",
                         "show_description": true,
                         "show_price": true,
                         "show_add_to_cart": true,
-                        "content_bg_color": "#FFFFFF",
+                        "content_bg_color": "#ffffff",
                         "text_color": "#141414",
-                        "button_bg_color": "#0F1F18",
-                        "button_text_color": "#FFFFFF"
-                      }
+                        "button_bg_color": "#0f1f18",
+                        "button_text_color": "#ffffff",
+                        "margin_bottom_mobile": 0,
+                        "margin_bottom_desktop": 0
+                      },
+                      "blocks": {}
                     }
                   },
                   "block_order": [
@@ -726,14 +1032,14 @@
         "tab_gut_content_G6j7K8"
       ],
       "settings": {
-        "background_color_mobile": "#F1F1EA",
+        "background_color_mobile": "#f1f1ea",
         "text_color_mobile": "#141414",
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 40,
         "padding_left_mobile": 20,
         "padding_right_mobile": 20,
         "margin_bottom_mobile": 0,
-        "background_color_desktop": "#F1F1EA",
+        "background_color_desktop": "#f1f1ea",
         "text_color_desktop": "#141414",
         "padding_top_desktop": 0,
         "padding_bottom_desktop": 64,
@@ -757,12 +1063,28 @@
               "settings": {
                 "slides_per_view_mobile": 1,
                 "slide_gap_mobile": 16,
+                "autoplay_mobile": false,
+                "autoplay_delay_mobile": 5,
+                "show_arrows_mobile": true,
+                "external_arrows_mobile": false,
                 "show_dots_mobile": true,
+                "margin_bottom_mobile": 0,
                 "slides_per_view_tablet": 2,
                 "slide_gap_tablet": 20,
+                "autoplay_tablet": false,
+                "autoplay_delay_tablet": 5,
+                "show_arrows_tablet": true,
+                "external_arrows_tablet": false,
+                "show_dots_tablet": true,
+                "margin_bottom_tablet": 0,
                 "slides_per_view_desktop": 4,
                 "slide_gap_desktop": 24,
-                "show_arrows_desktop": true
+                "autoplay_desktop": false,
+                "autoplay_delay_desktop": 5,
+                "show_arrows_desktop": true,
+                "external_arrows_desktop": false,
+                "show_dots_desktop": true,
+                "margin_bottom_desktop": 0
               },
               "blocks": {
                 "slide_r1_T9w0X1": {
@@ -772,14 +1094,24 @@
                     "card_r1_U0x1Y2": {
                       "type": "custom-product-card",
                       "settings": {
+                        "product": "",
+                        "top_badge_text": "",
+                        "top_badge_bg_color": "#141414",
+                        "top_badge_text_color": "#ffffff",
+                        "bottom_badge_text": "",
+                        "bottom_badge_bg_color": "#ec0606",
+                        "bottom_badge_text_color": "#ffffff",
                         "show_description": true,
                         "show_price": true,
                         "show_add_to_cart": true,
-                        "content_bg_color": "#FFFFFF",
+                        "content_bg_color": "#ffffff",
                         "text_color": "#141414",
-                        "button_bg_color": "#0F1F18",
-                        "button_text_color": "#FFFFFF"
-                      }
+                        "button_bg_color": "#0f1f18",
+                        "button_text_color": "#ffffff",
+                        "margin_bottom_mobile": 0,
+                        "margin_bottom_desktop": 0
+                      },
+                      "blocks": {}
                     }
                   },
                   "block_order": [
@@ -793,14 +1125,24 @@
                     "card_r2_W2z3A4": {
                       "type": "custom-product-card",
                       "settings": {
+                        "product": "",
+                        "top_badge_text": "",
+                        "top_badge_bg_color": "#141414",
+                        "top_badge_text_color": "#ffffff",
+                        "bottom_badge_text": "",
+                        "bottom_badge_bg_color": "#ec0606",
+                        "bottom_badge_text_color": "#ffffff",
                         "show_description": true,
                         "show_price": true,
                         "show_add_to_cart": true,
-                        "content_bg_color": "#FFFFFF",
+                        "content_bg_color": "#ffffff",
                         "text_color": "#141414",
-                        "button_bg_color": "#0F1F18",
-                        "button_text_color": "#FFFFFF"
-                      }
+                        "button_bg_color": "#0f1f18",
+                        "button_text_color": "#ffffff",
+                        "margin_bottom_mobile": 0,
+                        "margin_bottom_desktop": 0
+                      },
+                      "blocks": {}
                     }
                   },
                   "block_order": [
@@ -814,14 +1156,24 @@
                     "card_r3_Y4b5C6": {
                       "type": "custom-product-card",
                       "settings": {
+                        "product": "",
+                        "top_badge_text": "",
+                        "top_badge_bg_color": "#141414",
+                        "top_badge_text_color": "#ffffff",
+                        "bottom_badge_text": "",
+                        "bottom_badge_bg_color": "#ec0606",
+                        "bottom_badge_text_color": "#ffffff",
                         "show_description": true,
                         "show_price": true,
                         "show_add_to_cart": true,
-                        "content_bg_color": "#FFFFFF",
+                        "content_bg_color": "#ffffff",
                         "text_color": "#141414",
-                        "button_bg_color": "#0F1F18",
-                        "button_text_color": "#FFFFFF"
-                      }
+                        "button_bg_color": "#0f1f18",
+                        "button_text_color": "#ffffff",
+                        "margin_bottom_mobile": 0,
+                        "margin_bottom_desktop": 0
+                      },
+                      "blocks": {}
                     }
                   },
                   "block_order": [
@@ -835,14 +1187,24 @@
                     "card_r4_A6d7E8": {
                       "type": "custom-product-card",
                       "settings": {
+                        "product": "",
+                        "top_badge_text": "",
+                        "top_badge_bg_color": "#141414",
+                        "top_badge_text_color": "#ffffff",
+                        "bottom_badge_text": "",
+                        "bottom_badge_bg_color": "#ec0606",
+                        "bottom_badge_text_color": "#ffffff",
                         "show_description": true,
                         "show_price": true,
                         "show_add_to_cart": true,
-                        "content_bg_color": "#FFFFFF",
+                        "content_bg_color": "#ffffff",
                         "text_color": "#141414",
-                        "button_bg_color": "#0F1F18",
-                        "button_text_color": "#FFFFFF"
-                      }
+                        "button_bg_color": "#0f1f18",
+                        "button_text_color": "#ffffff",
+                        "margin_bottom_mobile": 0,
+                        "margin_bottom_desktop": 0
+                      },
+                      "blocks": {}
                     }
                   },
                   "block_order": [
@@ -867,14 +1229,14 @@
         "tab_recov_content_R7u8V9"
       ],
       "settings": {
-        "background_color_mobile": "#F1F1EA",
+        "background_color_mobile": "#f1f1ea",
         "text_color_mobile": "#141414",
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 40,
         "padding_left_mobile": 20,
         "padding_right_mobile": 20,
         "margin_bottom_mobile": 0,
-        "background_color_desktop": "#F1F1EA",
+        "background_color_desktop": "#f1f1ea",
         "text_color_desktop": "#141414",
         "padding_top_desktop": 0,
         "padding_bottom_desktop": 64,
@@ -898,12 +1260,28 @@
               "settings": {
                 "slides_per_view_mobile": 1,
                 "slide_gap_mobile": 16,
+                "autoplay_mobile": false,
+                "autoplay_delay_mobile": 5,
+                "show_arrows_mobile": true,
+                "external_arrows_mobile": false,
                 "show_dots_mobile": true,
+                "margin_bottom_mobile": 0,
                 "slides_per_view_tablet": 2,
                 "slide_gap_tablet": 20,
+                "autoplay_tablet": false,
+                "autoplay_delay_tablet": 5,
+                "show_arrows_tablet": true,
+                "external_arrows_tablet": false,
+                "show_dots_tablet": true,
+                "margin_bottom_tablet": 0,
                 "slides_per_view_desktop": 4,
                 "slide_gap_desktop": 24,
-                "show_arrows_desktop": true
+                "autoplay_desktop": false,
+                "autoplay_delay_desktop": 5,
+                "show_arrows_desktop": true,
+                "external_arrows_desktop": false,
+                "show_dots_desktop": true,
+                "margin_bottom_desktop": 0
               },
               "blocks": {
                 "slide_i1_E0h1I2": {
@@ -913,14 +1291,24 @@
                     "card_i1_F1i2J3": {
                       "type": "custom-product-card",
                       "settings": {
+                        "product": "",
+                        "top_badge_text": "",
+                        "top_badge_bg_color": "#141414",
+                        "top_badge_text_color": "#ffffff",
+                        "bottom_badge_text": "",
+                        "bottom_badge_bg_color": "#ec0606",
+                        "bottom_badge_text_color": "#ffffff",
                         "show_description": true,
                         "show_price": true,
                         "show_add_to_cart": true,
-                        "content_bg_color": "#FFFFFF",
+                        "content_bg_color": "#ffffff",
                         "text_color": "#141414",
-                        "button_bg_color": "#0F1F18",
-                        "button_text_color": "#FFFFFF"
-                      }
+                        "button_bg_color": "#0f1f18",
+                        "button_text_color": "#ffffff",
+                        "margin_bottom_mobile": 0,
+                        "margin_bottom_desktop": 0
+                      },
+                      "blocks": {}
                     }
                   },
                   "block_order": [
@@ -934,14 +1322,24 @@
                     "card_i2_H3k4L5": {
                       "type": "custom-product-card",
                       "settings": {
+                        "product": "",
+                        "top_badge_text": "",
+                        "top_badge_bg_color": "#141414",
+                        "top_badge_text_color": "#ffffff",
+                        "bottom_badge_text": "",
+                        "bottom_badge_bg_color": "#ec0606",
+                        "bottom_badge_text_color": "#ffffff",
                         "show_description": true,
                         "show_price": true,
                         "show_add_to_cart": true,
-                        "content_bg_color": "#FFFFFF",
+                        "content_bg_color": "#ffffff",
                         "text_color": "#141414",
-                        "button_bg_color": "#0F1F18",
-                        "button_text_color": "#FFFFFF"
-                      }
+                        "button_bg_color": "#0f1f18",
+                        "button_text_color": "#ffffff",
+                        "margin_bottom_mobile": 0,
+                        "margin_bottom_desktop": 0
+                      },
+                      "blocks": {}
                     }
                   },
                   "block_order": [
@@ -955,14 +1353,24 @@
                     "card_i3_J5m6N7": {
                       "type": "custom-product-card",
                       "settings": {
+                        "product": "",
+                        "top_badge_text": "",
+                        "top_badge_bg_color": "#141414",
+                        "top_badge_text_color": "#ffffff",
+                        "bottom_badge_text": "",
+                        "bottom_badge_bg_color": "#ec0606",
+                        "bottom_badge_text_color": "#ffffff",
                         "show_description": true,
                         "show_price": true,
                         "show_add_to_cart": true,
-                        "content_bg_color": "#FFFFFF",
+                        "content_bg_color": "#ffffff",
                         "text_color": "#141414",
-                        "button_bg_color": "#0F1F18",
-                        "button_text_color": "#FFFFFF"
-                      }
+                        "button_bg_color": "#0f1f18",
+                        "button_text_color": "#ffffff",
+                        "margin_bottom_mobile": 0,
+                        "margin_bottom_desktop": 0
+                      },
+                      "blocks": {}
                     }
                   },
                   "block_order": [
@@ -976,14 +1384,24 @@
                     "card_i4_L7o8P9": {
                       "type": "custom-product-card",
                       "settings": {
+                        "product": "",
+                        "top_badge_text": "",
+                        "top_badge_bg_color": "#141414",
+                        "top_badge_text_color": "#ffffff",
+                        "bottom_badge_text": "",
+                        "bottom_badge_bg_color": "#ec0606",
+                        "bottom_badge_text_color": "#ffffff",
                         "show_description": true,
                         "show_price": true,
                         "show_add_to_cart": true,
-                        "content_bg_color": "#FFFFFF",
+                        "content_bg_color": "#ffffff",
                         "text_color": "#141414",
-                        "button_bg_color": "#0F1F18",
-                        "button_text_color": "#FFFFFF"
-                      }
+                        "button_bg_color": "#0f1f18",
+                        "button_text_color": "#ffffff",
+                        "margin_bottom_mobile": 0,
+                        "margin_bottom_desktop": 0
+                      },
+                      "blocks": {}
                     }
                   },
                   "block_order": [
@@ -1008,14 +1426,14 @@
         "tab_immun_content_C8f9G0"
       ],
       "settings": {
-        "background_color_mobile": "#F1F1EA",
+        "background_color_mobile": "#f1f1ea",
         "text_color_mobile": "#141414",
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 40,
         "padding_left_mobile": 20,
         "padding_right_mobile": 20,
         "margin_bottom_mobile": 0,
-        "background_color_desktop": "#F1F1EA",
+        "background_color_desktop": "#f1f1ea",
         "text_color_desktop": "#141414",
         "padding_top_desktop": 0,
         "padding_bottom_desktop": 64,
@@ -1039,12 +1457,28 @@
               "settings": {
                 "slides_per_view_mobile": 1,
                 "slide_gap_mobile": 16,
+                "autoplay_mobile": false,
+                "autoplay_delay_mobile": 5,
+                "show_arrows_mobile": true,
+                "external_arrows_mobile": false,
                 "show_dots_mobile": true,
+                "margin_bottom_mobile": 0,
                 "slides_per_view_tablet": 2,
                 "slide_gap_tablet": 20,
+                "autoplay_tablet": false,
+                "autoplay_delay_tablet": 5,
+                "show_arrows_tablet": true,
+                "external_arrows_tablet": false,
+                "show_dots_tablet": true,
+                "margin_bottom_tablet": 0,
                 "slides_per_view_desktop": 4,
                 "slide_gap_desktop": 24,
-                "show_arrows_desktop": true
+                "autoplay_desktop": false,
+                "autoplay_delay_desktop": 5,
+                "show_arrows_desktop": true,
+                "external_arrows_desktop": false,
+                "show_dots_desktop": true,
+                "margin_bottom_desktop": 0
               },
               "blocks": {
                 "slide_e1_P1s2T3": {
@@ -1054,14 +1488,24 @@
                     "card_e1_Q2t3U4": {
                       "type": "custom-product-card",
                       "settings": {
+                        "product": "",
+                        "top_badge_text": "",
+                        "top_badge_bg_color": "#141414",
+                        "top_badge_text_color": "#ffffff",
+                        "bottom_badge_text": "",
+                        "bottom_badge_bg_color": "#ec0606",
+                        "bottom_badge_text_color": "#ffffff",
                         "show_description": true,
                         "show_price": true,
                         "show_add_to_cart": true,
-                        "content_bg_color": "#FFFFFF",
+                        "content_bg_color": "#ffffff",
                         "text_color": "#141414",
-                        "button_bg_color": "#0F1F18",
-                        "button_text_color": "#FFFFFF"
-                      }
+                        "button_bg_color": "#0f1f18",
+                        "button_text_color": "#ffffff",
+                        "margin_bottom_mobile": 0,
+                        "margin_bottom_desktop": 0
+                      },
+                      "blocks": {}
                     }
                   },
                   "block_order": [
@@ -1075,14 +1519,24 @@
                     "card_e2_S4v5W6": {
                       "type": "custom-product-card",
                       "settings": {
+                        "product": "",
+                        "top_badge_text": "",
+                        "top_badge_bg_color": "#141414",
+                        "top_badge_text_color": "#ffffff",
+                        "bottom_badge_text": "",
+                        "bottom_badge_bg_color": "#ec0606",
+                        "bottom_badge_text_color": "#ffffff",
                         "show_description": true,
                         "show_price": true,
                         "show_add_to_cart": true,
-                        "content_bg_color": "#FFFFFF",
+                        "content_bg_color": "#ffffff",
                         "text_color": "#141414",
-                        "button_bg_color": "#0F1F18",
-                        "button_text_color": "#FFFFFF"
-                      }
+                        "button_bg_color": "#0f1f18",
+                        "button_text_color": "#ffffff",
+                        "margin_bottom_mobile": 0,
+                        "margin_bottom_desktop": 0
+                      },
+                      "blocks": {}
                     }
                   },
                   "block_order": [
@@ -1096,14 +1550,24 @@
                     "card_e3_U6x7Y8": {
                       "type": "custom-product-card",
                       "settings": {
+                        "product": "",
+                        "top_badge_text": "",
+                        "top_badge_bg_color": "#141414",
+                        "top_badge_text_color": "#ffffff",
+                        "bottom_badge_text": "",
+                        "bottom_badge_bg_color": "#ec0606",
+                        "bottom_badge_text_color": "#ffffff",
                         "show_description": true,
                         "show_price": true,
                         "show_add_to_cart": true,
-                        "content_bg_color": "#FFFFFF",
+                        "content_bg_color": "#ffffff",
                         "text_color": "#141414",
-                        "button_bg_color": "#0F1F18",
-                        "button_text_color": "#FFFFFF"
-                      }
+                        "button_bg_color": "#0f1f18",
+                        "button_text_color": "#ffffff",
+                        "margin_bottom_mobile": 0,
+                        "margin_bottom_desktop": 0
+                      },
+                      "blocks": {}
                     }
                   },
                   "block_order": [
@@ -1117,14 +1581,24 @@
                     "card_e4_W8z9A0": {
                       "type": "custom-product-card",
                       "settings": {
+                        "product": "",
+                        "top_badge_text": "",
+                        "top_badge_bg_color": "#141414",
+                        "top_badge_text_color": "#ffffff",
+                        "bottom_badge_text": "",
+                        "bottom_badge_bg_color": "#ec0606",
+                        "bottom_badge_text_color": "#ffffff",
                         "show_description": true,
                         "show_price": true,
                         "show_add_to_cart": true,
-                        "content_bg_color": "#FFFFFF",
+                        "content_bg_color": "#ffffff",
                         "text_color": "#141414",
-                        "button_bg_color": "#0F1F18",
-                        "button_text_color": "#FFFFFF"
-                      }
+                        "button_bg_color": "#0f1f18",
+                        "button_text_color": "#ffffff",
+                        "margin_bottom_mobile": 0,
+                        "margin_bottom_desktop": 0
+                      },
+                      "blocks": {}
                     }
                   },
                   "block_order": [
@@ -1149,14 +1623,14 @@
         "tab_energy_content_N9q0R1"
       ],
       "settings": {
-        "background_color_mobile": "#F1F1EA",
+        "background_color_mobile": "#f1f1ea",
         "text_color_mobile": "#141414",
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 40,
         "padding_left_mobile": 20,
         "padding_right_mobile": 20,
         "margin_bottom_mobile": 0,
-        "background_color_desktop": "#F1F1EA",
+        "background_color_desktop": "#f1f1ea",
         "text_color_desktop": "#141414",
         "padding_top_desktop": 0,
         "padding_bottom_desktop": 64,
@@ -1172,65 +1646,201 @@
           "type": "text",
           "settings": {
             "text": "<p>Grounded in Food Science</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
             "type_preset": "h6",
-            "color": "#3F7057"
-          }
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": 1.4,
+            "letter_spacing": 0,
+            "case": "none",
+            "wrap": "pretty",
+            "color": "#3F7057",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         },
         "mq_txt2_Z1c2D3": {
           "type": "text",
           "settings": {
             "text": "<p>High Quality Ingredients</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
             "type_preset": "h6",
-            "color": "#3F7057"
-          }
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": 1.4,
+            "letter_spacing": 0,
+            "case": "none",
+            "wrap": "pretty",
+            "color": "#3F7057",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         },
         "mq_txt3_A2d3E4": {
           "type": "text",
           "settings": {
             "text": "<p>Flavorful Nutrition</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
             "type_preset": "h6",
-            "color": "#3F7057"
-          }
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": 1.4,
+            "letter_spacing": 0,
+            "case": "none",
+            "wrap": "pretty",
+            "color": "#3F7057",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         },
         "mq_txt4_B3e4F5": {
           "type": "text",
           "settings": {
             "text": "<p>Dietitian Approved</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
             "type_preset": "h6",
-            "color": "#3F7057"
-          }
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": 1.4,
+            "letter_spacing": 0,
+            "case": "none",
+            "wrap": "pretty",
+            "color": "#3F7057",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         },
         "mq_txt5_C4f5G6": {
           "type": "text",
           "settings": {
             "text": "<p>No Added Sugar</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
             "type_preset": "h6",
-            "color": "#3F7057"
-          }
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": 1.4,
+            "letter_spacing": 0,
+            "case": "none",
+            "wrap": "pretty",
+            "color": "#3F7057",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         },
         "mq_txt6_D5g6H7": {
           "type": "text",
           "settings": {
             "text": "<p>Keto Friendly</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
             "type_preset": "h6",
-            "color": "#3F7057"
-          }
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": 1.4,
+            "letter_spacing": 0,
+            "case": "none",
+            "wrap": "pretty",
+            "color": "#3F7057",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         },
         "mq_txt7_E6h7I8": {
           "type": "text",
           "settings": {
             "text": "<p>Grounded in Food Science</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
             "type_preset": "h6",
-            "color": "#3F7057"
-          }
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": 1.4,
+            "letter_spacing": 0,
+            "case": "none",
+            "wrap": "pretty",
+            "color": "#3F7057",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         },
         "mq_txt8_F7i8J9": {
           "type": "text",
           "settings": {
             "text": "<p>High Quality Ingredients</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
             "type_preset": "h6",
-            "color": "#3F7057"
-          }
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": 1.4,
+            "letter_spacing": 0,
+            "case": "none",
+            "wrap": "pretty",
+            "color": "#3F7057",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         }
       },
       "block_order": [
@@ -1259,9 +1869,25 @@
           "settings": {
             "text": "<h2>Why Factor Form</h2>",
             "width": "100%",
+            "max_width": "normal",
             "alignment": "center",
-            "type_preset": "h2"
-          }
+            "type_preset": "h2",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": 1.4,
+            "letter_spacing": 0,
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         },
         "wff_grid_I0l1M2": {
           "type": "grid-row",
@@ -1300,24 +1926,63 @@
                     "icon": "none",
                     "image_upload": "shopify://shop_images/image-desktop-112594636.png",
                     "width": 48,
-                    "margin_bottom_desktop": 12
-                  }
+                    "width_mobile": 24,
+                    "margin_bottom_desktop": 12,
+                    "margin_bottom_mobile": 0,
+                    "link": "",
+                    "open_in_new_tab": false
+                  },
+                  "blocks": {}
                 },
                 "wff_title1_L3o4P5": {
                   "type": "text",
                   "settings": {
                     "text": "<h3>More Flexibility</h3>",
                     "width": "100%",
-                    "type_preset": "h4"
-                  }
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h4",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": 1.4,
+                    "letter_spacing": 0,
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 },
                 "wff_desc1_M4p5Q6": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Mix into water, smoothies, or your favorite recipes. Our powder formula fits seamlessly into any routine.</p>",
                     "width": "100%",
-                    "type_preset": "paragraph"
-                  }
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": 1.4,
+                    "letter_spacing": 0,
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -1346,24 +2011,63 @@
                     "icon": "none",
                     "image_upload": "shopify://shop_images/image-desktop-112594700.png",
                     "width": 48,
-                    "margin_bottom_desktop": 12
-                  }
+                    "width_mobile": 24,
+                    "margin_bottom_desktop": 12,
+                    "margin_bottom_mobile": 0,
+                    "link": "",
+                    "open_in_new_tab": false
+                  },
+                  "blocks": {}
                 },
                 "wff_title2_P7s8T9": {
                   "type": "text",
                   "settings": {
                     "text": "<h3>More Quality</h3>",
                     "width": "100%",
-                    "type_preset": "h4"
-                  }
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h4",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": 1.4,
+                    "letter_spacing": 0,
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 },
                 "wff_desc2_Q8t9U0": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Every ingredient is sourced from real food and rigorously tested for purity. No fillers, no artificial additives.</p>",
                     "width": "100%",
-                    "type_preset": "paragraph"
-                  }
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": 1.4,
+                    "letter_spacing": 0,
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -1392,24 +2096,63 @@
                     "icon": "none",
                     "image_upload": "shopify://shop_images/image-desktop-112594752.png",
                     "width": 48,
-                    "margin_bottom_desktop": 12
-                  }
+                    "width_mobile": 24,
+                    "margin_bottom_desktop": 12,
+                    "margin_bottom_mobile": 0,
+                    "link": "",
+                    "open_in_new_tab": false
+                  },
+                  "blocks": {}
                 },
                 "wff_title3_T1w2X3": {
                   "type": "text",
                   "settings": {
                     "text": "<h3>More Nutrition</h3>",
                     "width": "100%",
-                    "type_preset": "h4"
-                  }
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h4",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": 1.4,
+                    "letter_spacing": 0,
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 },
                 "wff_desc3_U2x3Y4": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Packed with vitamins, minerals, and superfoods in every scoop. Get more from each serving than typical supplements.</p>",
                     "width": "100%",
-                    "type_preset": "paragraph"
-                  }
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": 1.4,
+                    "letter_spacing": 0,
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -1438,24 +2181,63 @@
                     "icon": "none",
                     "image_upload": "shopify://shop_images/agile-support-1-desktop-112594812.png",
                     "width": 48,
-                    "margin_bottom_desktop": 12
-                  }
+                    "width_mobile": 24,
+                    "margin_bottom_desktop": 12,
+                    "margin_bottom_mobile": 0,
+                    "link": "",
+                    "open_in_new_tab": false
+                  },
+                  "blocks": {}
                 },
                 "wff_title4_X5a6B7": {
                   "type": "text",
                   "settings": {
                     "text": "<h3>More Convenience</h3>",
                     "width": "100%",
-                    "type_preset": "h4"
-                  }
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h4",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": 1.4,
+                    "letter_spacing": 0,
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 },
                 "wff_desc4_Y6b7C8": {
                   "type": "text",
                   "settings": {
                     "text": "<p>No prep, no mess. Just mix and enjoy. Perfect for busy mornings and on-the-go nutrition.</p>",
                     "width": "100%",
-                    "type_preset": "paragraph"
-                  }
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": 1.4,
+                    "letter_spacing": 0,
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -1478,14 +2260,14 @@
         "wff_grid_I0l1M2"
       ],
       "settings": {
-        "background_color_mobile": "#E1F0E2",
+        "background_color_mobile": "#e1f0e2",
         "text_color_mobile": "#141414",
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40,
         "padding_left_mobile": 20,
         "padding_right_mobile": 20,
         "margin_bottom_mobile": 0,
-        "background_color_desktop": "#E1F0E2",
+        "background_color_desktop": "#e1f0e2",
         "text_color_desktop": "#141414",
         "padding_top_desktop": 80,
         "padding_bottom_desktop": 80,
@@ -1502,9 +2284,25 @@
           "settings": {
             "text": "<h2>The Factor Standard</h2>",
             "width": "100%",
+            "max_width": "normal",
             "alignment": "center",
-            "type_preset": "h2"
-          }
+            "type_preset": "h2",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": 1.4,
+            "letter_spacing": 0,
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         },
         "fs_grid_B9e0F1": {
           "type": "grid-row",
@@ -1543,24 +2341,63 @@
                     "icon": "none",
                     "image_upload": "shopify://shop_images/image-59-desktop-110864992.png",
                     "width": 120,
-                    "margin_bottom_desktop": 16
-                  }
+                    "width_mobile": 24,
+                    "margin_bottom_desktop": 16,
+                    "margin_bottom_mobile": 0,
+                    "link": "",
+                    "open_in_new_tab": false
+                  },
+                  "blocks": {}
                 },
                 "fs_title1_E2h3I4": {
                   "type": "text",
                   "settings": {
                     "text": "<h3>Dietitian Designed</h3>",
                     "width": "100%",
-                    "type_preset": "h4"
-                  }
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h4",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": 1.4,
+                    "letter_spacing": 0,
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 },
                 "fs_desc1_F3i4J5": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Every product is formulated by our team of registered dietitians to ensure optimal nutrition and effectiveness.</p>",
                     "width": "100%",
-                    "type_preset": "paragraph"
-                  }
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": 1.4,
+                    "letter_spacing": 0,
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -1589,24 +2426,63 @@
                     "icon": "none",
                     "image_upload": "shopify://shop_images/image-58-desktop-110864999.png",
                     "width": 120,
-                    "margin_bottom_desktop": 16
-                  }
+                    "width_mobile": 24,
+                    "margin_bottom_desktop": 16,
+                    "margin_bottom_mobile": 0,
+                    "link": "",
+                    "open_in_new_tab": false
+                  },
+                  "blocks": {}
                 },
                 "fs_title2_I6l7M8": {
                   "type": "text",
                   "settings": {
                     "text": "<h3>Third-Party Tested</h3>",
                     "width": "100%",
-                    "type_preset": "h4"
-                  }
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h4",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": 1.4,
+                    "letter_spacing": 0,
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 },
                 "fs_desc2_J7m8N9": {
                   "type": "text",
                   "settings": {
                     "text": "<p>All products undergo rigorous third-party testing for purity, potency, and safety before reaching you.</p>",
                     "width": "100%",
-                    "type_preset": "paragraph"
-                  }
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": 1.4,
+                    "letter_spacing": 0,
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -1635,24 +2511,63 @@
                     "icon": "none",
                     "image_upload": "shopify://shop_images/image-60-desktop-110865006.png",
                     "width": 120,
-                    "margin_bottom_desktop": 16
-                  }
+                    "width_mobile": 24,
+                    "margin_bottom_desktop": 16,
+                    "margin_bottom_mobile": 0,
+                    "link": "",
+                    "open_in_new_tab": false
+                  },
+                  "blocks": {}
                 },
                 "fs_title3_M0p1Q2": {
                   "type": "text",
                   "settings": {
                     "text": "<h3>Made From Real Food</h3>",
                     "width": "100%",
-                    "type_preset": "h4"
-                  }
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h4",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": 1.4,
+                    "letter_spacing": 0,
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 },
                 "fs_desc3_N1q2R3": {
                   "type": "text",
                   "settings": {
                     "text": "<p>We source our ingredients from whole foods, not synthetic compounds. Real nutrition from real ingredients.</p>",
                     "width": "100%",
-                    "type_preset": "paragraph"
-                  }
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": 1.4,
+                    "letter_spacing": 0,
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -1674,14 +2589,14 @@
         "fs_grid_B9e0F1"
       ],
       "settings": {
-        "background_color_mobile": "#FFFFFF",
+        "background_color_mobile": "#ffffff",
         "text_color_mobile": "#141414",
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40,
         "padding_left_mobile": 20,
         "padding_right_mobile": 20,
         "margin_bottom_mobile": 0,
-        "background_color_desktop": "#FFFFFF",
+        "background_color_desktop": "#ffffff",
         "text_color_desktop": "#141414",
         "padding_top_desktop": 80,
         "padding_bottom_desktop": 80,
@@ -1698,18 +2613,50 @@
           "settings": {
             "text": "<h2>Backed By Factor Dietitians</h2>",
             "width": "100%",
+            "max_width": "normal",
             "alignment": "center",
-            "type_preset": "h2"
-          }
+            "type_preset": "h2",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": 1.4,
+            "letter_spacing": 0,
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         },
         "test_desc_Q4t5U6": {
           "type": "text",
           "settings": {
             "text": "<p>Hear from the nutrition experts who stand behind every Factor Form product.</p>",
             "width": "100%",
+            "max_width": "normal",
             "alignment": "center",
-            "type_preset": "paragraph"
-          }
+            "type_preset": "paragraph",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": 1.4,
+            "letter_spacing": 0,
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         },
         "test_grid_R5u6V7": {
           "type": "grid-row",
@@ -1750,9 +2697,12 @@
                     "testimonial_description": "As a registered dietitian, I'm very selective about what I recommend. Factor Form's Daily Greens checks every box — real ingredients, great taste, and backed by science.",
                     "testimonial_name": "Dr. Sarah Chen",
                     "testimonial_role": "Registered Dietitian, RD",
-                    "bg_color": "#FFFFFF",
-                    "text_color": "#141414"
-                  }
+                    "bg_color": "#ffffff",
+                    "text_color": "#141414",
+                    "margin_bottom_mobile": 0,
+                    "margin_bottom_desktop": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -1781,9 +2731,12 @@
                     "testimonial_description": "The transparency in sourcing and third-party testing gives me complete confidence recommending Factor Form to my clients looking for daily nutritional support.",
                     "testimonial_name": "Michael Torres",
                     "testimonial_role": "Nutrition Consultant, MS",
-                    "bg_color": "#FFFFFF",
-                    "text_color": "#141414"
-                  }
+                    "bg_color": "#ffffff",
+                    "text_color": "#141414",
+                    "margin_bottom_mobile": 0,
+                    "margin_bottom_desktop": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -1812,9 +2765,12 @@
                     "testimonial_description": "What sets Factor Form apart is their commitment to whole food ingredients. My patients have seen noticeable improvements in energy and digestion within weeks.",
                     "testimonial_name": "Dr. Emily Park",
                     "testimonial_role": "Clinical Dietitian, PhD",
-                    "bg_color": "#FFFFFF",
-                    "text_color": "#141414"
-                  }
+                    "bg_color": "#ffffff",
+                    "text_color": "#141414",
+                    "margin_bottom_mobile": 0,
+                    "margin_bottom_desktop": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -1835,14 +2791,14 @@
         "test_grid_R5u6V7"
       ],
       "settings": {
-        "background_color_mobile": "#F1F1EA",
+        "background_color_mobile": "#f1f1ea",
         "text_color_mobile": "#141414",
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40,
         "padding_left_mobile": 20,
         "padding_right_mobile": 20,
         "margin_bottom_mobile": 0,
-        "background_color_desktop": "#F1F1EA",
+        "background_color_desktop": "#f1f1ea",
         "text_color_desktop": "#141414",
         "padding_top_desktop": 80,
         "padding_bottom_desktop": 80,
@@ -1893,6 +2849,7 @@
                     "background_media_mobile": "image",
                     "image_mobile": "shopify://shop_images/daily-nouri-d37stewmyqy-unsplash-3-mobile-110527232.png",
                     "image_position_mobile": "center center",
+                    "video_position_mobile": "cover",
                     "content_width_mobile": "100",
                     "content_position_mobile": "top-left",
                     "padding_top_mobile": 20,
@@ -1905,6 +2862,7 @@
                     "background_media_desktop": "image",
                     "image_desktop": "shopify://shop_images/daily-nouri-d37stewmyqy-unsplash-3-desktop-110525076.png",
                     "image_position_desktop": "center center",
+                    "video_position_desktop": "cover",
                     "content_width_desktop": "100",
                     "content_position_desktop": "top-left",
                     "padding_top_desktop": 32,
@@ -1912,7 +2870,10 @@
                     "padding_left_desktop": 32,
                     "padding_right_desktop": 32,
                     "margin_bottom_desktop": 0,
-                    "toggle_overlay": false
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top"
                   },
                   "blocks": {
                     "tp_badge_C6f7G8": {
@@ -1920,8 +2881,25 @@
                       "settings": {
                         "text": "<p>FREE WELCOME KIT</p>",
                         "width": "fit-content",
-                        "type_preset": "h6"
-                      }
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "h6",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": 1.4,
+                        "letter_spacing": 0,
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
                     }
                   },
                   "block_order": [
@@ -1951,10 +2929,39 @@
                   "type": "group",
                   "settings": {
                     "content_direction": "column",
+                    "vertical_on_mobile": true,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
                     "horizontal_alignment_flex_direction_column": "flex-start",
                     "vertical_alignment_flex_direction_column": "center",
                     "gap": 0,
-                    "width": "100%"
+                    "width": "100%",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "background_media": "none",
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "placeholder": "",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
                   },
                   "blocks": {
                     "tp_right_heading_F9i0J1": {
@@ -1962,57 +2969,122 @@
                       "settings": {
                         "text": "<h2>Start Your Routine</h2>",
                         "width": "100%",
-                        "type_preset": "h2"
-                      }
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "h2",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": 1.4,
+                        "letter_spacing": 0,
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
                     },
                     "tp_right_desc_G0j1K2": {
                       "type": "text",
                       "settings": {
                         "text": "<p>Build your daily wellness stack with our most popular products.</p>",
                         "width": "100%",
-                        "type_preset": "paragraph"
-                      }
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "paragraph",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": 1.4,
+                        "letter_spacing": 0,
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
                     },
                     "tp1_H1k2L3": {
                       "type": "text-product",
                       "settings": {
+                        "product": "",
                         "description": "<p>Superfood greens blend</p>",
-                        "price_label": "30 servings"
-                      }
+                        "price_label": "30 servings",
+                        "price_override": false,
+                        "price_override_value": "",
+                        "free_label": "",
+                        "bg_color": "",
+                        "text_color": "",
+                        "margin_bottom_mobile": 0,
+                        "margin_bottom_desktop": 0
+                      },
+                      "blocks": {}
                     },
                     "tp2_I2l3M4": {
                       "type": "text-product",
                       "settings": {
+                        "product": "",
                         "description": "<p>Gut health support</p>",
-                        "price_label": "30 servings"
-                      }
+                        "price_label": "30 servings",
+                        "price_override": false,
+                        "price_override_value": "",
+                        "free_label": "",
+                        "bg_color": "",
+                        "text_color": "",
+                        "margin_bottom_mobile": 0,
+                        "margin_bottom_desktop": 0
+                      },
+                      "blocks": {}
                     },
                     "tp3_J3m4N5": {
                       "type": "text-product",
                       "settings": {
+                        "product": "",
                         "description": "<p>Energy & focus formula</p>",
-                        "price_label": "30 servings"
-                      }
+                        "price_label": "30 servings",
+                        "price_override": false,
+                        "price_override_value": "",
+                        "free_label": "",
+                        "bg_color": "",
+                        "text_color": "",
+                        "margin_bottom_mobile": 0,
+                        "margin_bottom_desktop": 0
+                      },
+                      "blocks": {}
                     },
                     "tp_cta_K4n5O6": {
                       "type": "custom-button",
                       "settings": {
                         "label": "SHOP ALL PRODUCTS",
+                        "link": "",
+                        "open_in_new_tab": false,
                         "min_width_desktop": 0,
                         "min_width_mobile": 0,
                         "width_desktop": "full_width",
                         "width_mobile": "full_width",
-                        "background_color": "#0F1F18",
-                        "text_color": "#FFFFFF",
+                        "background_color": "#0f1f18",
+                        "text_color": "#ffffff",
                         "font_desktop": "var(--font-body--family)",
                         "font_size_desktop": "0.875rem",
                         "font_weight_desktop": "600",
                         "letter_spacing_desktop": 0.5,
+                        "line_height_desktop": 1.4,
                         "case_desktop": "uppercase",
                         "font_mobile": "var(--font-body--family)",
                         "font_size_mobile": "0.875rem",
                         "font_weight_mobile": "600",
                         "letter_spacing_mobile": 0.5,
+                        "line_height_mobile": 1.4,
                         "case_mobile": "uppercase",
                         "padding_top_desktop": 14,
                         "padding_bottom_desktop": 14,
@@ -2023,8 +3095,10 @@
                         "padding_left_mobile": 24,
                         "padding_right_mobile": 24,
                         "border_radius": 4,
+                        "border_color": "#000000",
                         "border_width": 0
-                      }
+                      },
+                      "blocks": {}
                     }
                   },
                   "block_order": [
@@ -2052,14 +3126,14 @@
         "tp_grid_Z3c4D5"
       ],
       "settings": {
-        "background_color_mobile": "#E1F0E2",
+        "background_color_mobile": "#e1f0e2",
         "text_color_mobile": "#141414",
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0,
         "padding_left_mobile": 0,
         "padding_right_mobile": 0,
         "margin_bottom_mobile": 0,
-        "background_color_desktop": "#E1F0E2",
+        "background_color_desktop": "#e1f0e2",
         "text_color_desktop": "#141414",
         "padding_top_desktop": 0,
         "padding_bottom_desktop": 0,
@@ -2076,9 +3150,25 @@
           "settings": {
             "text": "<h2>Frequently Asked Questions</h2>",
             "width": "100%",
+            "max_width": "normal",
             "alignment": "center",
-            "type_preset": "h2"
-          }
+            "type_preset": "h2",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": 1.4,
+            "letter_spacing": 0,
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         },
         "faq_accordion_N7q8R9": {
           "type": "accordion",
@@ -2086,7 +3176,16 @@
             "icon": "plus",
             "dividers": true,
             "type_preset": "h5",
-            "inherit_color_scheme": true
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {
             "faq_row1_O8r9S0": {
@@ -2094,7 +3193,8 @@
               "settings": {
                 "heading": "What makes Factor Form different from other supplement brands?",
                 "open_by_default": false,
-                "icon": "none"
+                "icon": "none",
+                "width": 20
               },
               "blocks": {
                 "faq_ans1_P9s0T1": {
@@ -2102,8 +3202,25 @@
                   "settings": {
                     "text": "<p>Factor Form is built from real food ingredients, designed by registered dietitians, and rigorously third-party tested. Every product is made with whole food sources rather than synthetic compounds.</p>",
                     "width": "100%",
-                    "type_preset": "paragraph"
-                  }
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": 1.4,
+                    "letter_spacing": 0,
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -2115,7 +3232,8 @@
               "settings": {
                 "heading": "How should I take Factor Form Daily Greens?",
                 "open_by_default": false,
-                "icon": "none"
+                "icon": "none",
+                "width": 20
               },
               "blocks": {
                 "faq_ans2_R1u2V3": {
@@ -2123,8 +3241,25 @@
                   "settings": {
                     "text": "<p>Mix one scoop with 8-12oz of water, your favorite smoothie, or juice. For best results, take it first thing in the morning as part of your daily routine.</p>",
                     "width": "100%",
-                    "type_preset": "paragraph"
-                  }
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": 1.4,
+                    "letter_spacing": 0,
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -2136,7 +3271,8 @@
               "settings": {
                 "heading": "Are Factor Form products third-party tested?",
                 "open_by_default": false,
-                "icon": "none"
+                "icon": "none",
+                "width": 20
               },
               "blocks": {
                 "faq_ans3_T3w4X5": {
@@ -2144,8 +3280,25 @@
                   "settings": {
                     "text": "<p>Yes. Every batch of Factor Form products undergoes rigorous third-party testing for purity, potency, and safety. We believe in full transparency and publish our test results.</p>",
                     "width": "100%",
-                    "type_preset": "paragraph"
-                  }
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": 1.4,
+                    "letter_spacing": 0,
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -2157,7 +3310,8 @@
               "settings": {
                 "heading": "What is your return policy?",
                 "open_by_default": false,
-                "icon": "none"
+                "icon": "none",
+                "width": 20
               },
               "blocks": {
                 "faq_ans4_V5y6Z7": {
@@ -2165,8 +3319,25 @@
                   "settings": {
                     "text": "<p>We offer a 30-day satisfaction guarantee. If you're not completely happy with your purchase, contact our support team for a full refund — no questions asked.</p>",
                     "width": "100%",
-                    "type_preset": "paragraph"
-                  }
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": 1.4,
+                    "letter_spacing": 0,
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -2178,7 +3349,8 @@
               "settings": {
                 "heading": "Do you offer free shipping?",
                 "open_by_default": false,
-                "icon": "none"
+                "icon": "none",
+                "width": 20
               },
               "blocks": {
                 "faq_ans5_X7a8B9": {
@@ -2186,8 +3358,25 @@
                   "settings": {
                     "text": "<p>Yes! We offer free standard shipping on all orders over $50 within the United States. Orders typically arrive within 3-5 business days.</p>",
                     "width": "100%",
-                    "type_preset": "paragraph"
-                  }
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": 1.4,
+                    "letter_spacing": 0,
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -2209,14 +3398,14 @@
         "faq_accordion_N7q8R9"
       ],
       "settings": {
-        "background_color_mobile": "#FFFFFF",
+        "background_color_mobile": "#ffffff",
         "text_color_mobile": "#141414",
         "padding_top_mobile": 40,
         "padding_bottom_mobile": 40,
         "padding_left_mobile": 20,
         "padding_right_mobile": 20,
         "margin_bottom_mobile": 0,
-        "background_color_desktop": "#FFFFFF",
+        "background_color_desktop": "#ffffff",
         "text_color_desktop": "#141414",
         "padding_top_desktop": 80,
         "padding_bottom_desktop": 80,
