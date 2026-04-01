@@ -246,7 +246,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<h2>Real Reviews from Real Customers</h2>",
+                "text": "<h2>Over 5,000 5-stars reviews on Trustpilot</h2>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "type_preset": "h3",
@@ -262,7 +262,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>4,500+ 5-Star Reviews</p>",
+                "text": "<p>Hear what our customers have to say</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "type_preset": "paragraph",
@@ -314,6 +314,7 @@
                   "type": "video-testimonial",
                   "name": "t:names.video_testimonial",
                   "settings": {
+                    "thumbnail_image": "shopify://shop_images/greens-nicole-b-1-desktop-110524516.png",
                     "quote_text": "Factor meals have completely changed my weekly routine. So easy!",
                     "attribution_text": "Sarah K.",
                     "quote_color": "#FFFFFF",
@@ -346,6 +347,7 @@
                   "type": "video-testimonial",
                   "name": "t:names.video_testimonial",
                   "settings": {
+                    "thumbnail_image": "shopify://shop_images/greens-nicole-b-1-desktop-110524516.png",
                     "quote_text": "I've tried every meal service and Factor is by far the best quality.",
                     "attribution_text": "James R.",
                     "quote_color": "#FFFFFF",
@@ -378,6 +380,7 @@
                   "type": "video-testimonial",
                   "name": "t:names.video_testimonial",
                   "settings": {
+                    "thumbnail_image": "shopify://shop_images/greens-nicole-b-1-desktop-110524516.png",
                     "quote_text": "As a busy parent, Factor saves me hours every week on meal prep.",
                     "attribution_text": "Emily T.",
                     "quote_color": "#FFFFFF",
@@ -410,6 +413,7 @@
                   "type": "video-testimonial",
                   "name": "t:names.video_testimonial",
                   "settings": {
+                    "thumbnail_image": "shopify://shop_images/greens-nicole-b-1-desktop-110524516.png",
                     "quote_text": "The variety keeps me excited about healthy eating every single week.",
                     "attribution_text": "Michael D.",
                     "quote_color": "#FFFFFF",
@@ -1217,7 +1221,7 @@
             "text": "<p>Grounded in Food Science</p>",
             "type_preset": "h5",
             "font": "var(--font-heading--family)",
-            "color": "#FFFFFF"
+            "color": "#3F7057"
           }
         },
         "marquee_text_2": {
@@ -1226,7 +1230,7 @@
             "text": "<p>High Quality Ingredients</p>",
             "type_preset": "h5",
             "font": "var(--font-heading--family)",
-            "color": "#FFFFFF"
+            "color": "#3F7057"
           }
         },
         "marquee_text_3": {
@@ -1235,7 +1239,7 @@
             "text": "<p>Flavorful Nutrition</p>",
             "type_preset": "h5",
             "font": "var(--font-heading--family)",
-            "color": "#FFFFFF"
+            "color": "#3F7057"
           }
         },
         "marquee_text_4": {
@@ -1244,7 +1248,7 @@
             "text": "<p>Dietitian Approved</p>",
             "type_preset": "h5",
             "font": "var(--font-heading--family)",
-            "color": "#FFFFFF"
+            "color": "#3F7057"
           }
         },
         "marquee_text_5": {
@@ -1253,7 +1257,7 @@
             "text": "<p>No Added Sugar</p>",
             "type_preset": "h5",
             "font": "var(--font-heading--family)",
-            "color": "#FFFFFF"
+            "color": "#3F7057"
           }
         },
         "marquee_text_6": {
@@ -1262,14 +1266,32 @@
             "text": "<p>Keto Friendly</p>",
             "type_preset": "h5",
             "font": "var(--font-heading--family)",
-            "color": "#FFFFFF"
+            "color": "#3F7057"
+          }
+        },
+        "marquee_text_7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Grounded in Food Science</p>",
+            "type_preset": "h5",
+            "font": "var(--font-heading--family)",
+            "color": "#3F7057"
+          }
+        },
+        "marquee_text_8": {
+          "type": "text",
+          "settings": {
+            "text": "<p>High Quality Ingredients</p>",
+            "type_preset": "h5",
+            "font": "var(--font-heading--family)",
+            "color": "#3F7057"
           }
         }
       },
-      "block_order": ["marquee_text_1", "marquee_text_2", "marquee_text_3", "marquee_text_4", "marquee_text_5", "marquee_text_6"],
+      "block_order": ["marquee_text_1", "marquee_text_2", "marquee_text_3", "marquee_text_4", "marquee_text_5", "marquee_text_6", "marquee_text_7", "marquee_text_8"],
       "settings": {
         "movement_direction": "normal",
-        "color_scheme": "scheme-5",
+        "color_scheme": "scheme-3",
         "padding-block-start": 6,
         "padding-block-end": 6,
         "gap_between_elements": 48
@@ -2046,7 +2068,7 @@
                     "height_type_mobile": "custom",
                     "custom_height_mobile": 300,
                     "background_media_mobile": "image",
-                    "image_mobile": "shopify://shop_images/daily-nouri-desktop-110524491.png",
+                    "image_mobile": "shopify://shop_images/daily-nouri-d37stewmyqy-unsplash-3-desktop-110525076.png",
                     "image_position_mobile": "cover",
                     "content_width_mobile": "100",
                     "content_position_mobile": "top-left",
@@ -2058,7 +2080,7 @@
                     "height_type_desktop": "custom",
                     "custom_height_desktop": 480,
                     "background_media_desktop": "image",
-                    "image_desktop": "shopify://shop_images/daily-nouri-desktop-110524491.png",
+                    "image_desktop": "shopify://shop_images/daily-nouri-d37stewmyqy-unsplash-3-desktop-110525076.png",
                     "image_position_desktop": "cover",
                     "content_width_desktop": "100",
                     "content_position_desktop": "top-left",
@@ -2109,7 +2131,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<h2>This Week's Picks</h2>",
+                    "text": "<h2>FREE Daily Greens Welcome Kit worth $36</h2>",
                     "type_preset": "h3",
                     "color": "#141414",
                     "padding-block-start": 0,
@@ -2123,7 +2145,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Curated by our team of dietitians</p>",
+                    "text": "<p>With your first order of $50+</p>",
                     "type_preset": "paragraph",
                     "color": "#656558",
                     "padding-block-start": 0,
