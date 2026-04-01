@@ -78,7 +78,14 @@
                       "settings": {
                         "text": "<h1>Your Daily Greens, Reinvented</h1>",
                         "width": "100%",
-                        "type_preset": "h1"
+                        "type_preset": "custom",
+                        "font": "Simplon Norm, sans-serif",
+                        "font_size": "3.5rem",
+                        "line_height": 1.1,
+                        "letter_spacing": 0,
+                        "case": "none",
+                        "color": "var(--color-foreground)",
+                        "padding-block-end": 8
                       }
                     },
                     "hero_sub_A4d5E6": {
@@ -86,38 +93,47 @@
                       "settings": {
                         "text": "<p>Better taste. Better routine. Better you.</p>",
                         "width": "100%",
-                        "type_preset": "paragraph"
+                        "type_preset": "custom",
+                        "font": "Jakarta Plus, sans-serif",
+                        "font_size": "1.125rem",
+                        "line_height": 1.6,
+                        "letter_spacing": 0,
+                        "case": "none",
+                        "color": "var(--color-foreground)",
+                        "padding-block-end": 32
                       }
                     },
                     "hero_cta_B5e6F7": {
                       "type": "custom-button",
                       "settings": {
-                        "label": "SHOP GREENS",
+                        "label": "Shop Now",
                         "min_width_desktop": 0,
                         "min_width_mobile": 0,
                         "width_desktop": "auto",
-                        "width_mobile": "full_width",
+                        "width_mobile": "auto",
                         "background_color": "#FFFFFF",
                         "text_color": "#141414",
-                        "font_desktop": "var(--font-body--family)",
-                        "font_size_desktop": "0.875rem",
-                        "font_weight_desktop": "600",
-                        "letter_spacing_desktop": 0.5,
+                        "font_desktop": "Simplon Norm, sans-serif",
+                        "font_size_desktop": "1rem",
+                        "font_weight_desktop": "700",
+                        "letter_spacing_desktop": 1.6,
+                        "line_height_desktop": 1.0,
                         "case_desktop": "uppercase",
-                        "font_mobile": "var(--font-body--family)",
+                        "font_mobile": "Simplon Norm, sans-serif",
                         "font_size_mobile": "0.875rem",
-                        "font_weight_mobile": "600",
-                        "letter_spacing_mobile": 0.5,
+                        "font_weight_mobile": "700",
+                        "letter_spacing_mobile": 1.6,
+                        "line_height_mobile": 1.0,
                         "case_mobile": "uppercase",
-                        "padding_top_desktop": 14,
-                        "padding_bottom_desktop": 14,
-                        "padding_left_desktop": 32,
-                        "padding_right_desktop": 32,
-                        "padding_top_mobile": 12,
-                        "padding_bottom_mobile": 12,
-                        "padding_left_mobile": 24,
-                        "padding_right_mobile": 24,
-                        "border_radius": 4,
+                        "padding_top_desktop": 16,
+                        "padding_bottom_desktop": 16,
+                        "padding_left_desktop": 48,
+                        "padding_right_desktop": 48,
+                        "padding_top_mobile": 14,
+                        "padding_bottom_mobile": 14,
+                        "padding_left_mobile": 32,
+                        "padding_right_mobile": 32,
+                        "border_radius": 24,
                         "border_width": 0
                       }
                     }
@@ -174,54 +190,10 @@
                     "padding_left_desktop": 48,
                     "padding_right_desktop": 48,
                     "margin_bottom_desktop": 0,
-                    "toggle_overlay": true
+                    "toggle_overlay": false
                   },
-                  "blocks": {
-                    "hero2_heading_E8h9I0": {
-                      "type": "text",
-                      "settings": {
-                        "text": "<h2>DAILY GREENS</h2>",
-                        "width": "100%",
-                        "type_preset": "h2"
-                      }
-                    },
-                    "hero2_cta_F9i0J1": {
-                      "type": "custom-button",
-                      "settings": {
-                        "label": "SHOP DAILY GREENS",
-                        "min_width_desktop": 0,
-                        "min_width_mobile": 0,
-                        "width_desktop": "auto",
-                        "width_mobile": "full_width",
-                        "background_color": "#FFFFFF",
-                        "text_color": "#141414",
-                        "font_desktop": "var(--font-body--family)",
-                        "font_size_desktop": "0.875rem",
-                        "font_weight_desktop": "600",
-                        "letter_spacing_desktop": 0.5,
-                        "case_desktop": "uppercase",
-                        "font_mobile": "var(--font-body--family)",
-                        "font_size_mobile": "0.875rem",
-                        "font_weight_mobile": "600",
-                        "letter_spacing_mobile": 0.5,
-                        "case_mobile": "uppercase",
-                        "padding_top_desktop": 14,
-                        "padding_bottom_desktop": 14,
-                        "padding_left_desktop": 32,
-                        "padding_right_desktop": 32,
-                        "padding_top_mobile": 12,
-                        "padding_bottom_mobile": 12,
-                        "padding_left_mobile": 24,
-                        "padding_right_mobile": 24,
-                        "border_radius": 4,
-                        "border_width": 0
-                      }
-                    }
-                  },
-                  "block_order": [
-                    "hero2_heading_E8h9I0",
-                    "hero2_cta_F9i0J1"
-                  ]
+                  "blocks": {},
+                  "block_order": []
                 }
               },
               "block_order": [
