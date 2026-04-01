@@ -26,7 +26,8 @@
       "@theme/comparison-slider": "{{ 'comparison-slider.js' | asset_url }}",
       "@theme/sticky-add-to-cart": "{{ 'sticky-add-to-cart.js' | asset_url }}",
       "@theme/fly-to-cart": "{{ 'fly-to-cart.js' | asset_url }}",
-      "@theme/carousel-block": "{{ 'carousel-block.js' | asset_url }}"
+      "@theme/carousel-block": "{{ 'carousel-block.js' | asset_url }}",
+      "@theme/tab-system": "{{ 'tab-system.js' | asset_url }}"
     }
   }
 </script>
@@ -189,6 +190,11 @@
 ></script>
 <script
   src="{{ 'carousel-block.js' | asset_url }}"
+  type="module"
+  fetchpriority="low"
+></script>
+<script
+  src="{{ 'tab-system.js' | asset_url }}"
   type="module"
   fetchpriority="low"
 ></script>

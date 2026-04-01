@@ -1,0 +1,110 @@
+{% doc %}
+  Tab Navigation Block
+
+  Renders a clickable tab button that controls which tab content block
+  is visible. Links to a tab content block via matching group_id and target_id.
+
+  @example
+  {% content_for 'block', type: 'tab-navigation', id: 'tab-nav-1' %}
+{% enddoc %}
+
+<button
+  {{ block.shopify_attributes }}
+  class="tab-nav"
+  type="button"
+  role="tab"
+  aria-selected="false"
+  tabindex="-1"
+  data-tab-nav
+  data-tab-group="{{ block.settings.group_id }}"
+  data-tab-target="{{ block.settings.target_id }}"
+  {% if block.settings.is_active %}data-tab-active="true"{% endif %}
+>
+  {{ block.settings.label | escape }}
+</button>
+
+{% stylesheet %}
+.tab-nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-block-end: 8px;
+  border: none;
+  border-block-end: 2px solid transparent;
+  background: none;
+  font-family: var(--font-heading--family);
+  font-size: var(--font-size--lg);
+  font-weight: 500;
+  line-height: 1;
+  color: rgb(var(--color-foreground) / 0.5);
+  cursor: pointer;
+  transition: color var(--animation-speed) ease, border-color var(--animation-speed) ease;
+  white-space: nowrap;
+}
+
+.tab-nav:hover {
+  color: rgb(var(--color-foreground) / 0.75);
+}
+
+.tab-nav:focus-visible {
+  outline: 2px solid rgb(var(--color-foreground) / 0.5);
+  outline-offset: 2px;
+}
+
+.tab-nav--active {
+  color: rgb(var(--color-foreground));
+  border-block-end-color: rgb(var(--color-foreground));
+}
+
+@media screen and (max-width: 749px) {
+  .tab-nav {
+    font-size: var(--font-size--base);
+  }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.tab_navigation",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:content.tab_settings"
+    },
+    {
+      "type": "text",
+      "id": "group_id",
+      "label": "t:settings.group_id",
+      "info": "t:settings.group_id_info",
+      "default": "tabs-1"
+    },
+    {
+      "type": "text",
+      "id": "target_id",
+      "label": "t:settings.target_id",
+      "info": "t:settings.target_id_info",
+      "default": "tab-1"
+    },
+    {
+      "type": "text",
+      "id": "label",
+      "label": "t:settings.tab_label",
+      "default": "t:text_defaults.tab_label"
+    },
+    {
+      "type": "checkbox",
+      "id": "is_active",
+      "label": "t:settings.is_active",
+      "info": "t:settings.is_active_info",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.tab_navigation",
+      "category": "t:categories.interactive"
+    }
+  ]
+}
+{% endschema %}

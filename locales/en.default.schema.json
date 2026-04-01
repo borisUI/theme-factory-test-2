@@ -29,7 +29,8 @@
     "product_list": "Featured collection",
     "other_sections": "Other",
     "storytelling": "Storytelling",
-    "text": "Text"
+    "text": "Text",
+    "interactive": "Interactive"
   },
   "content": {
     "visible_if_collection_has_more_products": "Visible if collection has more products than shown",
@@ -140,6 +141,7 @@
     "submit_button": "Submit button",
     "swatches": "Swatches",
     "submenu_feature": "Submenu feature",
+    "tab_settings": "Tab Settings",
     // Section header for text positioning settings
     "text": "Text",
     "text_presets": "Text presets",
@@ -430,7 +432,10 @@
     "submit_button": "Submit button",
     "summary": "Summary",
     "swatches": "Swatches",
+    "tab_navigation": "Tab Navigation",
+    "tab_content": "Tab Content",
     "testimonials": "Testimonials",
+    "tab_system": "Tab System",
     "text": "Text",
     "title": "Title",
     "typography": "Typography",
@@ -924,6 +929,8 @@
     "full_width_first_image": "Full width first image",
     "full_width_on_mobile": "Full width on mobile",
     "gap": "Gap",
+    "group_id": "Group ID",
+    "group_id_info": "Tabs with the same Group ID are linked together. Must match between navigation and content blocks.",
     // CSS Y-axis transform setting for vertical positioning (legacy/unused)
     "geometric_translate_y": "Geometric translate Y",
     "gift_card_form": "Gift card form",
@@ -965,6 +972,8 @@
     // Checkbox to embed submit button inside email input field
     "integrated_button": "Integrated button",
     "items_to_show": "Items to show",
+    "is_active": "Default active tab",
+    "is_active_info": "Set this tab as the initially active tab in its group",
     "label": "Label",
     "language_selector": "Language selector",
     "large": "Large",
@@ -1160,6 +1169,9 @@
     "success_color": "Success",
     "swatches": "Swatches",
     "tertiary_font": "Tertiary font",
+    "tab_label": "Label",
+    "target_id": "Target ID",
+    "target_id_info": "Must match the Target ID of the corresponding Tab Content block.",
     // Generic label for text-related settings (content or color)
     "text": "Text",
     // Text capitalization setting for typography (uppercase/lowercase)
@@ -1334,6 +1346,7 @@
     "sign_up_button_label": "Sign up",
     "sign_up": "Sign up",
     "submit_button_label": "Submit",
+    "tab_label": "Tab",
     "trending_now": "Trending now",
     "up_the_ante": "Up\nThe\nAnte",
     "view_all_button_label": "View all",
