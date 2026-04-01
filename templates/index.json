@@ -669,9 +669,9 @@
                         "max_width": "normal",
                         "alignment": "left",
                         "type_preset": "custom",
-                        "font": "Jakarta Plus, sans-serif",
+                        "font": "Plus Jakarta Sans, sans-serif",
                         "font_size": "1.125rem",
-                        "line_height": 1.4,
+                        "line_height": 1.0,
                         "letter_spacing": 0,
                         "case": "none",
                         "wrap": "pretty",
@@ -689,7 +689,7 @@
                     "nav_byline_icon_Y8b9C0": {
                       "type": "custom-liquid",
                       "settings": {
-                        "custom_liquid": "<img src=\"{{ 'logo-factor.svg' | asset_url }}\" alt=\"Factor logo\" width=\"80\" height=\"24\" loading=\"lazy\" style=\"display:block;\" />"
+                        "custom_liquid": "<img src=\"{{ 'logo-factor.svg' | asset_url }}\" alt=\"Factor logo\" width=\"130\" height=\"18\" loading=\"lazy\" style=\"display:block;\" />"
                       },
                       "blocks": {}
                     }
@@ -709,7 +709,7 @@
                     "type_preset": "custom",
                     "font": "Simplon Norm, sans-serif",
                     "font_size": "3rem",
-                    "line_height": 1.2,
+                    "line_height": 1.167,
                     "letter_spacing": 0,
                     "case": "none",
                     "wrap": "pretty",
@@ -893,6 +893,7 @@
                         "height_type_mobile": "custom",
                         "custom_height_mobile": 400,
                         "background_media_mobile": "image",
+                        "image_mobile": "shopify://shop_images/agile-support-1-mobile-112593546.png",
                         "image_position_mobile": "cover",
                         "content_width_mobile": "100",
                         "content_position_mobile": "bottom-left",
@@ -904,6 +905,7 @@
                         "height_type_desktop": "auto",
                         "custom_height_desktop": 400,
                         "background_media_desktop": "image",
+                        "image_desktop": "shopify://shop_images/agile-support-1-desktop-112594627.png",
                         "image_position_desktop": "cover",
                         "content_width_desktop": "100",
                         "content_position_desktop": "bottom-left",
@@ -913,7 +915,7 @@
                         "padding_right_desktop": 24,
                         "margin_bottom_desktop": 0,
                         "toggle_overlay": true,
-                        "overlay_color": "#00000040",
+                        "overlay_color": "#141414",
                         "overlay_style": "gradient",
                         "gradient_direction": "to top"
                       },
@@ -921,14 +923,39 @@
                         "hero_heading_A1b2C3": {
                           "type": "text",
                           "settings": {
-                            "text": "<h3>Gut Health Essentials</h3>",
+                            "text": "<h3>Gut Health</h3>",
                             "width": "100%",
                             "max_width": "normal",
                             "alignment": "left",
                             "type_preset": "custom",
                             "font": "Simplon Norm, sans-serif",
-                            "font_size": "1.5rem",
-                            "line_height": 1.2,
+                            "font_size": "1.25rem",
+                            "line_height": 1.4,
+                            "letter_spacing": 0,
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "#FFFFFF",
+                            "background": false,
+                            "background_color": "#00000026",
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        },
+                        "hero_desc_B2c3D4": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>Superfoods and nutrients for daily digestive support</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "custom",
+                            "font": "Plus Jakarta Sans, sans-serif",
+                            "font_size": "1rem",
+                            "line_height": 1.5,
                             "letter_spacing": 0,
                             "case": "none",
                             "wrap": "pretty",
@@ -952,19 +979,19 @@
                             "min_width_mobile": 0,
                             "width_desktop": "auto",
                             "width_mobile": "auto",
-                            "background_color": "#FFFFFF",
-                            "text_color": "#0F1F18",
+                            "background_color": "transparent",
+                            "text_color": "#FFFFFF",
                             "font_desktop": "var(--font-heading--family)",
                             "font_size_desktop": "0.875rem",
                             "font_weight_desktop": "700",
                             "line_height_desktop": "1.2",
-                            "letter_spacing_desktop": 1,
+                            "letter_spacing_desktop": 1.4,
                             "case_desktop": "uppercase",
                             "font_mobile": "var(--font-heading--family)",
                             "font_size_mobile": "0.75rem",
                             "font_weight_mobile": "700",
                             "line_height_mobile": "1.2",
-                            "letter_spacing_mobile": 1,
+                            "letter_spacing_mobile": 1.4,
                             "case_mobile": "uppercase",
                             "padding_top_desktop": 10,
                             "padding_bottom_desktop": 10,
@@ -974,15 +1001,16 @@
                             "padding_bottom_mobile": 8,
                             "padding_left_mobile": 16,
                             "padding_right_mobile": 16,
-                            "border_radius": 24,
+                            "border_radius": 0,
                             "border_color": "#FFFFFF",
-                            "border_width": 0
+                            "border_width": 1
                           },
                           "blocks": {}
                         }
                       },
                       "block_order": [
                         "hero_heading_A1b2C3",
+                        "hero_desc_B2c3D4",
                         "hero_cta_D4e5F6"
                       ]
                     }
