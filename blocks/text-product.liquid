@@ -27,6 +27,9 @@
       <h4 class="text-product__title">
         <a href="{{ tp_product.url }}">{{ tp_product.title | escape }}</a>
       </h4>
+      {% if block.settings.description != blank %}
+        <div class="text-product__description">{{ block.settings.description }}</div>
+      {% endif %}
       {% if block.settings.price_label != blank %}
         <span class="text-product__label">{{ block.settings.price_label | escape }}</span>
       {% endif %}
@@ -94,6 +97,17 @@
   text-decoration: underline;
 }
 
+.text-product__description {
+  font-family: var(--font-body--family);
+  font-size: 13px;
+  line-height: 18px;
+  opacity: 0.7;
+}
+
+.text-product__description p {
+  margin: 0;
+}
+
 .text-product__label {
   font-family: var(--font-body--family);
   font-size: 12px;
@@ -125,6 +139,11 @@
       "type": "product",
       "id": "product",
       "label": "t:settings.product"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "t:settings.description"
     },
     {
       "type": "text",
