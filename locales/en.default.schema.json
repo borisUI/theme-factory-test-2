@@ -161,7 +161,10 @@
     "navigation": "Navigation",
     "mobile": "Mobile",
     "tablet": "Tablet",
-    "desktop": "Desktop"
+    "desktop": "Desktop",
+    "badges": "Badges",
+    "display": "Display",
+    "price_override": "Price override"
   },
   "html_defaults": {
     "join_our_email_list": "<h2>Join our email list</h2>",
@@ -454,7 +457,11 @@
     "carousel_block": "Carousel",
     "carousel_slide": "Carousel slide",
     "generic_section": "Generic section",
-    "custom_button": "Custom Button"
+    "custom_button": "Custom Button",
+    "video_testimonial": "Video Testimonial",
+    "custom_product_card": "Custom Product Card",
+    "testimonial_card": "Testimonial Card",
+    "text_product": "Text Product"
   },
   "options": {
     "above_carousel": "Above carousel",
@@ -1314,7 +1321,35 @@
     "image_position_mobile": "Image position (mobile)",
     "image_position_desktop": "Image position (desktop)",
     "video_position_mobile": "Video position (mobile)",
-    "video_position_desktop": "Video position (desktop)"
+    "video_position_desktop": "Video position (desktop)",
+    "video_url": "Video URL",
+    "thumbnail_image": "Thumbnail image",
+    "quote_text": "Quote text",
+    "attribution_text": "Attribution",
+    "quote_color": "Quote color",
+    "attribution_color": "Attribution color",
+    "divider_color": "Divider color",
+    "top_badge_text": "Top badge text",
+    "top_badge_bg_color": "Top badge background",
+    "top_badge_text_color": "Top badge text color",
+    "bottom_badge_text": "Bottom badge text",
+    "bottom_badge_bg_color": "Bottom badge background",
+    "bottom_badge_text_color": "Bottom badge text color",
+    "show_description": "Show description",
+    "show_price": "Show price",
+    "show_add_to_cart": "Show add to cart",
+    "content_bg_color": "Content background",
+    "button_bg_color": "Button background",
+    "button_text_color": "Button text color",
+    "testimonial_title": "Title",
+    "testimonial_description": "Description",
+    "testimonial_name": "Name",
+    "testimonial_role": "Role",
+    "bg_color": "Background color",
+    "price_override": "Override price",
+    "price_override_value": "Price override value",
+    "price_label": "Price label",
+    "free_label": "Free label"
   },
   "text_defaults": {
     "accordion_heading": "Accordion heading",
