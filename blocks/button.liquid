@@ -1,3 +1,51 @@
+{% comment %}
+  == AI DOCUMENTATION ==
+
+  ▸ PURPOSE
+  Leaf block for CTA links / buttons. Delegates rendering to snippets/button.liquid.
+  Supports primary, secondary, and link styles with per-breakpoint width control.
+
+  ▸ CONTEXT
+  - Parent: any container block or section that accepts @theme blocks
+    (group, grid-row > _grid-column, carousel-block > _carousel-slide,
+    hero-block, tab-content, generic-section, section.liquid, etc.)
+  - Children: none (leaf block, tag: null)
+
+  ▸ KEY SCHEMA SETTINGS
+  - label (text): button label text
+  - link (url): destination URL
+  - open_in_new_tab (checkbox): target="_blank"
+  - style_class (select): button (primary) | button-secondary | link
+  - width (select): fit-content | custom (desktop)
+  - custom_width (range 0-100%): visible when width == custom
+  - width_mobile (select): fit-content | custom
+  - custom_width_mobile (range 0-100%): visible when width_mobile == custom
+
+  ▸ USAGE EXAMPLES
+  Template JSON — primary CTA inside a hero:
+    {
+      "type": "button",
+      "settings": {
+        "label": "Shop Now",
+        "link": "shopify://collections/all",
+        "style_class": "button",
+        "width": "fit-content",
+        "width_mobile": "custom",
+        "custom_width_mobile": 100
+      }
+    }
+
+  Template JSON — secondary link-style button:
+    {
+      "type": "button",
+      "settings": {
+        "label": "Learn More",
+        "link": "/pages/about",
+        "style_class": "link"
+      }
+    }
+{% endcomment %}
+
 {% render 'button', link: block.settings.link %}
 
 {% schema %}

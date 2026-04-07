@@ -8,6 +8,44 @@
   {% content_for 'block', type: '_carousel-slide', id: 'slide-1' %}
 {% enddoc %}
 
+{% comment %}
+  == AI DOCUMENTATION ==
+
+  ▸ PURPOSE
+  Private slide wrapper that outputs a .swiper-slide div. Has no settings
+  of its own — it is purely structural. Accepts nested @theme and @app
+  blocks for slide content.
+
+  ▸ CONTEXT
+  - Parent: ONLY carousel-block (this block is only valid inside a carousel-block)
+  - Children: any @theme or @app blocks (text, button, image, group,
+    hero-block, grid-row, etc.)
+  - The .swiper-slide class is required by Swiper.js for slide detection
+
+  ▸ KEY SCHEMA SETTINGS
+  - None. This block has an empty settings array.
+
+  ▸ USAGE EXAMPLES
+  Template JSON — slide with heading + button:
+    {
+      "type": "_carousel-slide",
+      "blocks": {
+        "heading_A1b2C3": {
+          "type": "text",
+          "settings": { "text": "<h3>Featured Item</h3>", "type_preset": "h3" }
+        },
+        "cta_D4e5F6": {
+          "type": "button",
+          "settings": { "label": "View Details", "link": "/products/example" }
+        }
+      },
+      "block_order": ["heading_A1b2C3", "cta_D4e5F6"]
+    }
+
+  Multiple slides are composed as siblings inside a carousel-block's blocks object.
+  See carousel-block.liquid AI documentation for the full composition pattern.
+{% endcomment %}
+
 {%- capture children -%}
   {% content_for 'blocks' %}
 {%- endcapture -%}

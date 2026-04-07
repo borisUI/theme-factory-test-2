@@ -9,6 +9,54 @@
   {% content_for 'block', type: 'tab-content', id: 'tab-content-1' %}
 {% enddoc %}
 
+{% comment %}
+  == AI DOCUMENTATION ==
+
+  ▸ PURPOSE
+  Tab panel container that is shown or hidden based on the active tab
+  navigation selection. Hidden by default (display:none), becomes visible
+  when tab-system.js adds the .tab-content--active class.
+
+  ▸ CONTEXT
+  - Parent: any container that accepts @theme blocks (generic-section,
+    _grid-column, group, etc.) — placed as a sibling of the tab-navigation
+    group block
+  - Children: any @theme or @app blocks (text, button, image, grid-row,
+    carousel-block, hero-block, etc.)
+  - MUST be paired with a tab-navigation block sharing the same group_id
+    and target_id
+  - JS: assets/tab-system.js listens for tab clicks and toggles
+    .tab-content--active on matching panels
+
+  ▸ KEY SCHEMA SETTINGS
+  - group_id (text): identifies which tab group this panel belongs to (default: "tabs-1")
+  - target_id (text): matches the target_id of the tab-navigation button (default: "tab-1")
+
+  ▸ USAGE EXAMPLES
+  Template JSON — tab panel with nested content:
+    {
+      "type": "tab-content",
+      "settings": { "group_id": "product-tabs", "target_id": "details" },
+      "blocks": {
+        "desc_A1b2C3": {
+          "type": "text",
+          "settings": { "text": "<p>Product details content goes here.</p>" }
+        }
+      },
+      "block_order": ["desc_A1b2C3"]
+    }
+
+  Full tab system structure (inside a generic-section):
+    generic-section
+      ├── group (horizontal, acts as tab bar)
+      │   ├── tab-navigation { group_id: "tabs-1", target_id: "tab-1", is_active: true }
+      │   └── tab-navigation { group_id: "tabs-1", target_id: "tab-2" }
+      ├── tab-content { group_id: "tabs-1", target_id: "tab-1" }
+      │   └── text / button / image / ...
+      └── tab-content { group_id: "tabs-1", target_id: "tab-2" }
+          └── text / button / image / ...
+{% endcomment %}
+
 <div
   {{ block.shopify_attributes }}
   class="tab-content"
