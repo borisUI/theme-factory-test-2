@@ -267,6 +267,21 @@
       margin-block-end: var(--carousel-mb-desktop, 0px);
     }
   }
+
+  .carousel-block .swiper-wrapper {
+    align-items: stretch;
+  }
+
+  .carousel-block .swiper-slide {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .carousel-block .swiper-slide > * {
+    flex: 1;
+    min-height: 0;
+  }
 {% endstylesheet %}
 
 {% schema %}
