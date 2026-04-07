@@ -9,535 +9,6 @@
  */
 {
   "sections": {
-    "benefits_R4s5T6": {
-      "type": "generic-section",
-      "blocks": {
-        "ben_outer_grid_A1b2C3": {
-          "type": "grid-row",
-          "settings": {
-            "vertical_alignment_mobile": "start",
-            "column_gap_mobile": 16,
-            "row_gap_mobile": 32,
-            "margin_bottom_mobile": 0,
-            "vertical_alignment_tablet": "start",
-            "column_gap_tablet": 20,
-            "row_gap_tablet": 24,
-            "margin_bottom_tablet": 0,
-            "vertical_alignment_desktop": "center",
-            "column_gap_desktop": 32,
-            "row_gap_desktop": 24,
-            "margin_bottom_desktop": 0
-          },
-          "blocks": {
-            "ben_heading_col_D4e5F6": {
-              "type": "_grid-column",
-              "settings": {
-                "column_span_mobile": "12",
-                "column_order_mobile": "1",
-                "margin_bottom_mobile": 0,
-                "column_span_tablet": "12",
-                "column_order_tablet": "1",
-                "margin_bottom_tablet": 0,
-                "column_span_desktop": "4",
-                "column_order_desktop": "1",
-                "margin_bottom_desktop": 0
-              },
-              "blocks": {
-                "ben_heading_G7h8I9": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<h2>Why Factor Form</h2>",
-                    "width": "100%",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "custom",
-                    "font": "Simplon Norm, sans-serif",
-                    "font_size": "3rem",
-                    "line_height": 1.2,
-                    "letter_spacing": 0,
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": ["ben_heading_G7h8I9"]
-            },
-            "ben_points_col_J0k1L2": {
-              "type": "_grid-column",
-              "settings": {
-                "column_span_mobile": "12",
-                "column_order_mobile": "2",
-                "margin_bottom_mobile": 0,
-                "column_span_tablet": "12",
-                "column_order_tablet": "2",
-                "margin_bottom_tablet": 0,
-                "column_span_desktop": "8",
-                "column_order_desktop": "2",
-                "margin_bottom_desktop": 0
-              },
-              "blocks": {
-                "ben_inner_grid_M3n4O5": {
-                  "type": "grid-row",
-                  "settings": {
-                    "vertical_alignment_mobile": "start",
-                    "column_gap_mobile": 16,
-                    "row_gap_mobile": 24,
-                    "margin_bottom_mobile": 0,
-                    "vertical_alignment_tablet": "start",
-                    "column_gap_tablet": 40,
-                    "row_gap_tablet": 24,
-                    "margin_bottom_tablet": 0,
-                    "vertical_alignment_desktop": "start",
-                    "column_gap_desktop": 80,
-                    "row_gap_desktop": 32,
-                    "margin_bottom_desktop": 0
-                  },
-                  "blocks": {
-                    "ben_col1_P6q7R8": {
-                      "type": "_grid-column",
-                      "settings": {
-                        "column_span_mobile": "12",
-                        "column_order_mobile": "1",
-                        "margin_bottom_mobile": 0,
-                        "column_span_tablet": "6",
-                        "column_order_tablet": "1",
-                        "margin_bottom_tablet": 0,
-                        "column_span_desktop": "6",
-                        "column_order_desktop": "1",
-                        "margin_bottom_desktop": 0
-                      },
-                      "blocks": {
-                        "ben_icon1_S9t0U1": {
-                          "type": "icon",
-                          "settings": {
-                            "icon": "none",
-                            "image_upload": "shopify://shop_images/icon-1-nutrition-all-in-one-place.svg",
-                            "width": 64,
-                            "width_mobile": 64,
-                            "margin_bottom_desktop": 16,
-                            "margin_bottom_mobile": 16,
-                            "link": "",
-                            "open_in_new_tab": false
-                          },
-                          "blocks": {}
-                        },
-                        "ben_group1_V2w3X4": {
-                          "type": "group",
-                          "settings": {
-                            "content_direction": "column",
-                            "horizontal_alignment": "flex-start",
-                            "vertical_alignment": "flex-start",
-                            "gap": 8,
-                            "width": "100%",
-                            "background": false,
-                            "background_color": "#00000026",
-                            "corner_radius": 0,
-                            "toggle_overlay": false,
-                            "padding-block-start": 0,
-                            "padding-block-end": 0,
-                            "padding-inline-start": 0,
-                            "padding-inline-end": 0
-                          },
-                          "blocks": {
-                            "ben_title1_Y5z6A7": {
-                              "type": "text",
-                              "settings": {
-                                "text": "<p>More Flexibility</p>",
-                                "width": "100%",
-                                "max_width": "normal",
-                                "alignment": "left",
-                                "type_preset": "custom",
-                                "font": "Jakarta Plus, sans-serif",
-                                "font_size": "1.125rem",
-                                "line_height": 1.55,
-                                "letter_spacing": 0,
-                                "case": "none",
-                                "wrap": "pretty",
-                                "color": "",
-                                "background": false,
-                                "background_color": "#00000026",
-                                "corner_radius": 0,
-                                "padding-block-start": 0,
-                                "padding-block-end": 0,
-                                "padding-inline-start": 0,
-                                "padding-inline-end": 0
-                              },
-                              "blocks": {}
-                            },
-                            "ben_desc1_B8c9D0": {
-                              "type": "text",
-                              "settings": {
-                                "text": "<p>Build your routine with targeted formulas for gut health, immunity, recovery and more</p>",
-                                "width": "100%",
-                                "max_width": "normal",
-                                "alignment": "left",
-                                "type_preset": "custom",
-                                "font": "Jakarta Plus, sans-serif",
-                                "font_size": "1rem",
-                                "line_height": 1.5,
-                                "letter_spacing": 0,
-                                "case": "none",
-                                "wrap": "pretty",
-                                "color": "",
-                                "background": false,
-                                "background_color": "#00000026",
-                                "corner_radius": 0,
-                                "padding-block-start": 0,
-                                "padding-block-end": 0,
-                                "padding-inline-start": 0,
-                                "padding-inline-end": 0
-                              },
-                              "blocks": {}
-                            }
-                          },
-                          "block_order": ["ben_title1_Y5z6A7", "ben_desc1_B8c9D0"]
-                        }
-                      },
-                      "block_order": ["ben_icon1_S9t0U1", "ben_group1_V2w3X4"]
-                    },
-                    "ben_col2_E1f2G3": {
-                      "type": "_grid-column",
-                      "settings": {
-                        "column_span_mobile": "12",
-                        "column_order_mobile": "2",
-                        "margin_bottom_mobile": 0,
-                        "column_span_tablet": "6",
-                        "column_order_tablet": "2",
-                        "margin_bottom_tablet": 0,
-                        "column_span_desktop": "6",
-                        "column_order_desktop": "2",
-                        "margin_bottom_desktop": 0
-                      },
-                      "blocks": {
-                        "ben_icon2_H4i5J6": {
-                          "type": "icon",
-                          "settings": {
-                            "icon": "none",
-                            "image_upload": "shopify://shop_images/icon-2-quality-ingredients.svg",
-                            "width": 64,
-                            "width_mobile": 64,
-                            "margin_bottom_desktop": 16,
-                            "margin_bottom_mobile": 16,
-                            "link": "",
-                            "open_in_new_tab": false
-                          },
-                          "blocks": {}
-                        },
-                        "ben_group2_K7l8M9": {
-                          "type": "group",
-                          "settings": {
-                            "content_direction": "column",
-                            "horizontal_alignment": "flex-start",
-                            "vertical_alignment": "flex-start",
-                            "gap": 8,
-                            "width": "100%",
-                            "background": false,
-                            "background_color": "#00000026",
-                            "corner_radius": 0,
-                            "toggle_overlay": false,
-                            "padding-block-start": 0,
-                            "padding-block-end": 0,
-                            "padding-inline-start": 0,
-                            "padding-inline-end": 0
-                          },
-                          "blocks": {
-                            "ben_title2_N0p1Q2": {
-                              "type": "text",
-                              "settings": {
-                                "text": "<p>More Quality</p>",
-                                "width": "100%",
-                                "max_width": "normal",
-                                "alignment": "left",
-                                "type_preset": "custom",
-                                "font": "Jakarta Plus, sans-serif",
-                                "font_size": "1.125rem",
-                                "line_height": 1.55,
-                                "letter_spacing": 0,
-                                "case": "none",
-                                "wrap": "pretty",
-                                "color": "",
-                                "background": false,
-                                "background_color": "#00000026",
-                                "corner_radius": 0,
-                                "padding-block-start": 0,
-                                "padding-block-end": 0,
-                                "padding-inline-start": 0,
-                                "padding-inline-end": 0
-                              },
-                              "blocks": {}
-                            },
-                            "ben_desc2_R3s4T5": {
-                              "type": "text",
-                              "settings": {
-                                "text": "<p>No added sugar\u2014keto-friendly and free of unnecessary ingredients</p>",
-                                "width": "100%",
-                                "max_width": "normal",
-                                "alignment": "left",
-                                "type_preset": "custom",
-                                "font": "Jakarta Plus, sans-serif",
-                                "font_size": "1rem",
-                                "line_height": 1.5,
-                                "letter_spacing": 0,
-                                "case": "none",
-                                "wrap": "pretty",
-                                "color": "",
-                                "background": false,
-                                "background_color": "#00000026",
-                                "corner_radius": 0,
-                                "padding-block-start": 0,
-                                "padding-block-end": 0,
-                                "padding-inline-start": 0,
-                                "padding-inline-end": 0
-                              },
-                              "blocks": {}
-                            }
-                          },
-                          "block_order": ["ben_title2_N0p1Q2", "ben_desc2_R3s4T5"]
-                        }
-                      },
-                      "block_order": ["ben_icon2_H4i5J6", "ben_group2_K7l8M9"]
-                    },
-                    "ben_col3_U6v7W8": {
-                      "type": "_grid-column",
-                      "settings": {
-                        "column_span_mobile": "12",
-                        "column_order_mobile": "3",
-                        "margin_bottom_mobile": 0,
-                        "column_span_tablet": "6",
-                        "column_order_tablet": "3",
-                        "margin_bottom_tablet": 0,
-                        "column_span_desktop": "6",
-                        "column_order_desktop": "3",
-                        "margin_bottom_desktop": 0
-                      },
-                      "blocks": {
-                        "ben_icon3_X9y0Z1": {
-                          "type": "icon",
-                          "settings": {
-                            "icon": "none",
-                            "image_upload": "shopify://shop_images/icon-3-b-food-first-nutrition.svg",
-                            "width": 64,
-                            "width_mobile": 64,
-                            "margin_bottom_desktop": 16,
-                            "margin_bottom_mobile": 16,
-                            "link": "",
-                            "open_in_new_tab": false
-                          },
-                          "blocks": {}
-                        },
-                        "ben_group3_A2b3C4": {
-                          "type": "group",
-                          "settings": {
-                            "content_direction": "column",
-                            "horizontal_alignment": "flex-start",
-                            "vertical_alignment": "flex-start",
-                            "gap": 8,
-                            "width": "100%",
-                            "background": false,
-                            "background_color": "#00000026",
-                            "corner_radius": 0,
-                            "toggle_overlay": false,
-                            "padding-block-start": 0,
-                            "padding-block-end": 0,
-                            "padding-inline-start": 0,
-                            "padding-inline-end": 0
-                          },
-                          "blocks": {
-                            "ben_title3_D5e6F7": {
-                              "type": "text",
-                              "settings": {
-                                "text": "<p>More Nutrition</p>",
-                                "width": "100%",
-                                "max_width": "normal",
-                                "alignment": "left",
-                                "type_preset": "custom",
-                                "font": "Jakarta Plus, sans-serif",
-                                "font_size": "1.125rem",
-                                "line_height": 1.55,
-                                "letter_spacing": 0,
-                                "case": "none",
-                                "wrap": "pretty",
-                                "color": "",
-                                "background": false,
-                                "background_color": "#00000026",
-                                "corner_radius": 0,
-                                "padding-block-start": 0,
-                                "padding-block-end": 0,
-                                "padding-inline-start": 0,
-                                "padding-inline-end": 0
-                              },
-                              "blocks": {}
-                            },
-                            "ben_desc3_G8h9I0": {
-                              "type": "text",
-                              "settings": {
-                                "text": "<p>Dietitian-approved formulas made with premium, nutrient-rich ingredients</p>",
-                                "width": "100%",
-                                "max_width": "normal",
-                                "alignment": "left",
-                                "type_preset": "custom",
-                                "font": "Jakarta Plus, sans-serif",
-                                "font_size": "1rem",
-                                "line_height": 1.5,
-                                "letter_spacing": 0,
-                                "case": "none",
-                                "wrap": "pretty",
-                                "color": "",
-                                "background": false,
-                                "background_color": "#00000026",
-                                "corner_radius": 0,
-                                "padding-block-start": 0,
-                                "padding-block-end": 0,
-                                "padding-inline-start": 0,
-                                "padding-inline-end": 0
-                              },
-                              "blocks": {}
-                            }
-                          },
-                          "block_order": ["ben_title3_D5e6F7", "ben_desc3_G8h9I0"]
-                        }
-                      },
-                      "block_order": ["ben_icon3_X9y0Z1", "ben_group3_A2b3C4"]
-                    },
-                    "ben_col4_J1k2L3": {
-                      "type": "_grid-column",
-                      "settings": {
-                        "column_span_mobile": "12",
-                        "column_order_mobile": "4",
-                        "margin_bottom_mobile": 0,
-                        "column_span_tablet": "6",
-                        "column_order_tablet": "4",
-                        "margin_bottom_tablet": 0,
-                        "column_span_desktop": "6",
-                        "column_order_desktop": "4",
-                        "margin_bottom_desktop": 0
-                      },
-                      "blocks": {
-                        "ben_icon4_M4n5O6": {
-                          "type": "icon",
-                          "settings": {
-                            "icon": "none",
-                            "image_upload": "shopify://shop_images/icon-4-designed-for-on-the-go.svg",
-                            "width": 64,
-                            "width_mobile": 64,
-                            "margin_bottom_desktop": 16,
-                            "margin_bottom_mobile": 16,
-                            "link": "",
-                            "open_in_new_tab": false
-                          },
-                          "blocks": {}
-                        },
-                        "ben_group4_P7q8R9": {
-                          "type": "group",
-                          "settings": {
-                            "content_direction": "column",
-                            "horizontal_alignment": "flex-start",
-                            "vertical_alignment": "flex-start",
-                            "gap": 8,
-                            "width": "100%",
-                            "background": false,
-                            "background_color": "#00000026",
-                            "corner_radius": 0,
-                            "toggle_overlay": false,
-                            "padding-block-start": 0,
-                            "padding-block-end": 0,
-                            "padding-inline-start": 0,
-                            "padding-inline-end": 0
-                          },
-                          "blocks": {
-                            "ben_title4_S0t1U2": {
-                              "type": "text",
-                              "settings": {
-                                "text": "<p>More Convenience</p>",
-                                "width": "100%",
-                                "max_width": "normal",
-                                "alignment": "left",
-                                "type_preset": "custom",
-                                "font": "Jakarta Plus, sans-serif",
-                                "font_size": "1.125rem",
-                                "line_height": 1.55,
-                                "letter_spacing": 0,
-                                "case": "none",
-                                "wrap": "pretty",
-                                "color": "",
-                                "background": false,
-                                "background_color": "#00000026",
-                                "corner_radius": 0,
-                                "padding-block-start": 0,
-                                "padding-block-end": 0,
-                                "padding-inline-start": 0,
-                                "padding-inline-end": 0
-                              },
-                              "blocks": {}
-                            },
-                            "ben_desc4_V3w4X5": {
-                              "type": "text",
-                              "settings": {
-                                "text": "<p>Grab-and-go packets designed for life on the move</p>",
-                                "width": "100%",
-                                "max_width": "normal",
-                                "alignment": "left",
-                                "type_preset": "custom",
-                                "font": "Jakarta Plus, sans-serif",
-                                "font_size": "1rem",
-                                "line_height": 1.5,
-                                "letter_spacing": 0,
-                                "case": "none",
-                                "wrap": "pretty",
-                                "color": "",
-                                "background": false,
-                                "background_color": "#00000026",
-                                "corner_radius": 0,
-                                "padding-block-start": 0,
-                                "padding-block-end": 0,
-                                "padding-inline-start": 0,
-                                "padding-inline-end": 0
-                              },
-                              "blocks": {}
-                            }
-                          },
-                          "block_order": ["ben_title4_S0t1U2", "ben_desc4_V3w4X5"]
-                        }
-                      },
-                      "block_order": ["ben_icon4_M4n5O6", "ben_group4_P7q8R9"]
-                    }
-                  },
-                  "block_order": ["ben_col1_P6q7R8", "ben_col2_E1f2G3", "ben_col3_U6v7W8", "ben_col4_J1k2L3"]
-                }
-              },
-              "block_order": ["ben_inner_grid_M3n4O5"]
-            }
-          },
-          "block_order": ["ben_heading_col_D4e5F6", "ben_points_col_J0k1L2"]
-        }
-      },
-      "block_order": ["ben_outer_grid_A1b2C3"],
-      "settings": {
-        "background_color_mobile": "#141414",
-        "text_color_mobile": "#f1f1ea",
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 40,
-        "padding_left_mobile": 20,
-        "padding_right_mobile": 20,
-        "margin_bottom_mobile": 0,
-        "background_color_desktop": "#141414",
-        "text_color_desktop": "#f1f1ea",
-        "padding_top_desktop": 80,
-        "padding_bottom_desktop": 80,
-        "padding_left_desktop": 64,
-        "padding_right_desktop": 64,
-        "margin_bottom_desktop": 0
-      }
-    },
     "hero_grid_Ab3kMx": {
       "type": "generic-section",
       "blocks": {
@@ -3674,56 +3145,50 @@
                       "blocks": {}
                     },
                     "tp1_H1k2L3": {
-                      "type": "text",
+                      "type": "text-product",
                       "settings": {
-                        "text": "<p>Superfood greens blend — 30 servings</p>",
-                        "width": "100%",
-                        "max_width": "none",
-                        "type_preset": "paragraph",
-                        "color": "var(--color-foreground)",
-                        "background": false,
-                        "background_color": "#00000026",
-                        "corner_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
+                        "product": "",
+                        "description": "<p>Superfood greens blend</p>",
+                        "price_label": "30 servings",
+                        "price_override": false,
+                        "price_override_value": "",
+                        "free_label": "",
+                        "bg_color": "",
+                        "text_color": "",
+                        "margin_bottom_mobile": 0,
+                        "margin_bottom_desktop": 0
                       },
                       "blocks": {}
                     },
                     "tp2_I2l3M4": {
-                      "type": "text",
+                      "type": "text-product",
                       "settings": {
-                        "text": "<p>Gut health support — 30 servings</p>",
-                        "width": "100%",
-                        "max_width": "none",
-                        "type_preset": "paragraph",
-                        "color": "var(--color-foreground)",
-                        "background": false,
-                        "background_color": "#00000026",
-                        "corner_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
+                        "product": "",
+                        "description": "<p>Gut health support</p>",
+                        "price_label": "30 servings",
+                        "price_override": false,
+                        "price_override_value": "",
+                        "free_label": "",
+                        "bg_color": "",
+                        "text_color": "",
+                        "margin_bottom_mobile": 0,
+                        "margin_bottom_desktop": 0
                       },
                       "blocks": {}
                     },
                     "tp3_J3m4N5": {
-                      "type": "text",
+                      "type": "text-product",
                       "settings": {
-                        "text": "<p>Energy &amp; focus formula — 30 servings</p>",
-                        "width": "100%",
-                        "max_width": "none",
-                        "type_preset": "paragraph",
-                        "color": "var(--color-foreground)",
-                        "background": false,
-                        "background_color": "#00000026",
-                        "corner_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
+                        "product": "",
+                        "description": "<p>Energy & focus formula</p>",
+                        "price_label": "30 servings",
+                        "price_override": false,
+                        "price_override_value": "",
+                        "free_label": "",
+                        "bg_color": "",
+                        "text_color": "",
+                        "margin_bottom_mobile": 0,
+                        "margin_bottom_desktop": 0
                       },
                       "blocks": {}
                     },
@@ -4081,7 +3546,6 @@
     }
   },
   "order": [
-    "benefits_R4s5T6",
     "hero_grid_Ab3kMx",
     "video_reviews_G0j1K2",
     "product_categories_nav_T3w4X5",
