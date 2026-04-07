@@ -9,6 +9,819 @@
  */
 {
   "sections": {
+    "wff_benefits_Lm2No3": {
+      "type": "generic-section",
+      "blocks": {
+        "row_main_Np3Qr4": {
+          "type": "grid-row",
+          "name": "t:names.grid_row",
+          "settings": {
+            "vertical_alignment_mobile": "start",
+            "column_gap_mobile": 0,
+            "row_gap_mobile": 32,
+            "margin_bottom_mobile": 0,
+            "vertical_alignment_tablet": "start",
+            "column_gap_tablet": 32,
+            "row_gap_tablet": 64,
+            "margin_bottom_tablet": 0,
+            "vertical_alignment_desktop": "start",
+            "column_gap_desktop": 32,
+            "row_gap_desktop": 64,
+            "margin_bottom_desktop": 0
+          },
+          "blocks": {
+            "col_heading_St5Uv6": {
+              "type": "_grid-column",
+              "name": "t:names.grid_column",
+              "settings": {
+                "column_span_mobile": "12",
+                "column_order_mobile": "1",
+                "margin_bottom_mobile": 0,
+                "column_span_tablet": "12",
+                "column_order_tablet": "1",
+                "margin_bottom_tablet": 0,
+                "column_span_desktop": "12",
+                "column_order_desktop": "1",
+                "margin_bottom_desktop": 0
+              },
+              "blocks": {
+                "heading_txt_Wx7Yz8": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "settings": {
+                    "text": "<p>Why Factor Form</p>",
+                    "width": "100%",
+                    "max_width": "none",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "Simplon Norm, sans-serif",
+                    "font_size": "3rem",
+                    "line_height": 1.2,
+                    "letter_spacing": 0,
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "heading_txt_Wx7Yz8"
+              ]
+            },
+            "col_b1_Lm2No3": {
+              "type": "_grid-column",
+              "name": "t:names.grid_column",
+              "settings": {
+                "column_span_mobile": "12",
+                "column_order_mobile": "1",
+                "margin_bottom_mobile": 0,
+                "column_span_tablet": "6",
+                "column_order_tablet": "1",
+                "margin_bottom_tablet": 0,
+                "column_span_desktop": "3",
+                "column_order_desktop": "1",
+                "margin_bottom_desktop": 0
+              },
+              "blocks": {
+                "col_b1_Lm2No3_grp": {
+                  "type": "group",
+                  "name": "t:names.group",
+                  "settings": {
+                    "content_direction": "column",
+                    "vertical_on_mobile": true,
+                    "horizontal_alignment": "center",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "center",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 16,
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "background_media": "none",
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "placeholder": "",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {
+                    "icon_b1_Qr4St5": {
+                      "type": "icon",
+                      "name": "t:names.icon",
+                      "settings": {
+                        "icon": "checkbox",
+                        "image_upload": "shopify://shop_images/ICON_1_Nutrition_all_in_one_place.svg",
+                        "width": 64,
+                        "width_mobile": 48,
+                        "margin_bottom_desktop": 0,
+                        "margin_bottom_mobile": 0,
+                        "link": "",
+                        "open_in_new_tab": false
+                      },
+                      "blocks": {}
+                    },
+                    "grp_txt_b1_Uv6Wx7": {
+                      "type": "group",
+                      "name": "t:names.group",
+                      "settings": {
+                        "content_direction": "column",
+                        "vertical_on_mobile": true,
+                        "horizontal_alignment": "center",
+                        "vertical_alignment": "center",
+                        "align_baseline": false,
+                        "horizontal_alignment_flex_direction_column": "center",
+                        "vertical_alignment_flex_direction_column": "center",
+                        "gap": 4,
+                        "width": "fill",
+                        "custom_width": 100,
+                        "width_mobile": "fill",
+                        "custom_width_mobile": 100,
+                        "height": "fit",
+                        "custom_height": 100,
+                        "inherit_color_scheme": true,
+                        "color_scheme": "",
+                        "background_media": "none",
+                        "video_position": "cover",
+                        "background_image_position": "cover",
+                        "border": "none",
+                        "border_width": 1,
+                        "border_opacity": 100,
+                        "border_radius": 0,
+                        "toggle_overlay": false,
+                        "overlay_color": "#00000026",
+                        "overlay_style": "solid",
+                        "gradient_direction": "to top",
+                        "link": "",
+                        "open_in_new_tab": false,
+                        "placeholder": "",
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {
+                        "txt_h_b1_Yz8Ab9": {
+                          "type": "text",
+                          "name": "t:names.text",
+                          "settings": {
+                            "text": "<p><strong>More Flexibility</strong></p>",
+                            "width": "100%",
+                            "max_width": "none",
+                            "alignment": "center",
+                            "type_preset": "custom",
+                            "font": "Jakarta Plus, sans-serif",
+                            "font_size": "1.125rem",
+                            "line_height": 1.6,
+                            "letter_spacing": 0,
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "background_color": "#00000026",
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        },
+                        "txt_d_b1_Cd0Ef1": {
+                          "type": "text",
+                          "name": "t:names.text",
+                          "settings": {
+                            "text": "<p>Build a personalized wellness routine with targeted formulas for gut health, immunity, recovery, and more</p>",
+                            "width": "100%",
+                            "max_width": "none",
+                            "alignment": "center",
+                            "type_preset": "custom",
+                            "font": "Jakarta Plus, sans-serif",
+                            "font_size": "1rem",
+                            "line_height": 1.5,
+                            "letter_spacing": 0,
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "background_color": "#00000026",
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "txt_h_b1_Yz8Ab9",
+                        "txt_d_b1_Cd0Ef1"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "icon_b1_Qr4St5",
+                    "grp_txt_b1_Uv6Wx7"
+                  ]
+                }
+              },
+              "block_order": [
+                "col_b1_Lm2No3_grp"
+              ]
+            },
+            "col_b2_Gh2Ij3": {
+              "type": "_grid-column",
+              "name": "t:names.grid_column",
+              "settings": {
+                "column_span_mobile": "12",
+                "column_order_mobile": "1",
+                "margin_bottom_mobile": 0,
+                "column_span_tablet": "6",
+                "column_order_tablet": "1",
+                "margin_bottom_tablet": 0,
+                "column_span_desktop": "3",
+                "column_order_desktop": "1",
+                "margin_bottom_desktop": 0
+              },
+              "blocks": {
+                "col_b2_Gh2Ij3_grp": {
+                  "type": "group",
+                  "name": "t:names.group",
+                  "settings": {
+                    "content_direction": "column",
+                    "vertical_on_mobile": true,
+                    "horizontal_alignment": "center",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "center",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 16,
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "background_media": "none",
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "placeholder": "",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {
+                    "icon_b2_Kl4Mn5": {
+                      "type": "icon",
+                      "name": "t:names.icon",
+                      "settings": {
+                        "icon": "checkbox",
+                        "image_upload": "shopify://shop_images/ICON_2_Quality_Ingredients.svg",
+                        "width": 64,
+                        "width_mobile": 48,
+                        "margin_bottom_desktop": 0,
+                        "margin_bottom_mobile": 0,
+                        "link": "",
+                        "open_in_new_tab": false
+                      },
+                      "blocks": {}
+                    },
+                    "grp_txt_b2_Op6Qr7": {
+                      "type": "group",
+                      "name": "t:names.group",
+                      "settings": {
+                        "content_direction": "column",
+                        "vertical_on_mobile": true,
+                        "horizontal_alignment": "center",
+                        "vertical_alignment": "center",
+                        "align_baseline": false,
+                        "horizontal_alignment_flex_direction_column": "center",
+                        "vertical_alignment_flex_direction_column": "center",
+                        "gap": 4,
+                        "width": "fill",
+                        "custom_width": 100,
+                        "width_mobile": "fill",
+                        "custom_width_mobile": 100,
+                        "height": "fit",
+                        "custom_height": 100,
+                        "inherit_color_scheme": true,
+                        "color_scheme": "",
+                        "background_media": "none",
+                        "video_position": "cover",
+                        "background_image_position": "cover",
+                        "border": "none",
+                        "border_width": 1,
+                        "border_opacity": 100,
+                        "border_radius": 0,
+                        "toggle_overlay": false,
+                        "overlay_color": "#00000026",
+                        "overlay_style": "solid",
+                        "gradient_direction": "to top",
+                        "link": "",
+                        "open_in_new_tab": false,
+                        "placeholder": "",
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {
+                        "txt_h_b2_St8Uv9": {
+                          "type": "text",
+                          "name": "t:names.text",
+                          "settings": {
+                            "text": "<p><strong>More Quality</strong></p>",
+                            "width": "100%",
+                            "max_width": "none",
+                            "alignment": "center",
+                            "type_preset": "custom",
+                            "font": "Jakarta Plus, sans-serif",
+                            "font_size": "1.125rem",
+                            "line_height": 1.6,
+                            "letter_spacing": 0,
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "background_color": "#00000026",
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        },
+                        "txt_d_b2_Wx0Yz1": {
+                          "type": "text",
+                          "name": "t:names.text",
+                          "settings": {
+                            "text": "<p>Made with no added sugar, our products are keto-friendly and free of unnecessary ingredients</p>",
+                            "width": "100%",
+                            "max_width": "none",
+                            "alignment": "center",
+                            "type_preset": "custom",
+                            "font": "Jakarta Plus, sans-serif",
+                            "font_size": "1rem",
+                            "line_height": 1.5,
+                            "letter_spacing": 0,
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "background_color": "#00000026",
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "txt_h_b2_St8Uv9",
+                        "txt_d_b2_Wx0Yz1"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "icon_b2_Kl4Mn5",
+                    "grp_txt_b2_Op6Qr7"
+                  ]
+                }
+              },
+              "block_order": [
+                "col_b2_Gh2Ij3_grp"
+              ]
+            },
+            "col_b3_Ab2Cd3": {
+              "type": "_grid-column",
+              "name": "t:names.grid_column",
+              "settings": {
+                "column_span_mobile": "12",
+                "column_order_mobile": "1",
+                "margin_bottom_mobile": 0,
+                "column_span_tablet": "6",
+                "column_order_tablet": "1",
+                "margin_bottom_tablet": 0,
+                "column_span_desktop": "3",
+                "column_order_desktop": "1",
+                "margin_bottom_desktop": 0
+              },
+              "blocks": {
+                "col_b3_Ab2Cd3_grp": {
+                  "type": "group",
+                  "name": "t:names.group",
+                  "settings": {
+                    "content_direction": "column",
+                    "vertical_on_mobile": true,
+                    "horizontal_alignment": "center",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "center",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 16,
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "background_media": "none",
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "placeholder": "",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {
+                    "icon_b3_Ef4Gh5": {
+                      "type": "icon",
+                      "name": "t:names.icon",
+                      "settings": {
+                        "icon": "checkbox",
+                        "image_upload": "shopify://shop_images/ICON_3_B_Food-First_Nutrition.svg",
+                        "width": 64,
+                        "width_mobile": 48,
+                        "margin_bottom_desktop": 0,
+                        "margin_bottom_mobile": 0,
+                        "link": "",
+                        "open_in_new_tab": false
+                      },
+                      "blocks": {}
+                    },
+                    "grp_txt_b3_Ij6Kl7": {
+                      "type": "group",
+                      "name": "t:names.group",
+                      "settings": {
+                        "content_direction": "column",
+                        "vertical_on_mobile": true,
+                        "horizontal_alignment": "center",
+                        "vertical_alignment": "center",
+                        "align_baseline": false,
+                        "horizontal_alignment_flex_direction_column": "center",
+                        "vertical_alignment_flex_direction_column": "center",
+                        "gap": 4,
+                        "width": "fill",
+                        "custom_width": 100,
+                        "width_mobile": "fill",
+                        "custom_width_mobile": 100,
+                        "height": "fit",
+                        "custom_height": 100,
+                        "inherit_color_scheme": true,
+                        "color_scheme": "",
+                        "background_media": "none",
+                        "video_position": "cover",
+                        "background_image_position": "cover",
+                        "border": "none",
+                        "border_width": 1,
+                        "border_opacity": 100,
+                        "border_radius": 0,
+                        "toggle_overlay": false,
+                        "overlay_color": "#00000026",
+                        "overlay_style": "solid",
+                        "gradient_direction": "to top",
+                        "link": "",
+                        "open_in_new_tab": false,
+                        "placeholder": "",
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {
+                        "txt_h_b3_Mn8Op9": {
+                          "type": "text",
+                          "name": "t:names.text",
+                          "settings": {
+                            "text": "<p><strong>More Nutrition</strong></p>",
+                            "width": "100%",
+                            "max_width": "none",
+                            "alignment": "center",
+                            "type_preset": "custom",
+                            "font": "Jakarta Plus, sans-serif",
+                            "font_size": "1.125rem",
+                            "line_height": 1.6,
+                            "letter_spacing": 0,
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "background_color": "#00000026",
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        },
+                        "txt_d_b3_Qr0St1": {
+                          "type": "text",
+                          "name": "t:names.text",
+                          "settings": {
+                            "text": "<p>Enjoy dietitian-approved formulas packed with premium, nutritional ingredients.</p>",
+                            "width": "100%",
+                            "max_width": "none",
+                            "alignment": "center",
+                            "type_preset": "custom",
+                            "font": "Jakarta Plus, sans-serif",
+                            "font_size": "1rem",
+                            "line_height": 1.5,
+                            "letter_spacing": 0,
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "background_color": "#00000026",
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "txt_h_b3_Mn8Op9",
+                        "txt_d_b3_Qr0St1"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "icon_b3_Ef4Gh5",
+                    "grp_txt_b3_Ij6Kl7"
+                  ]
+                }
+              },
+              "block_order": [
+                "col_b3_Ab2Cd3_grp"
+              ]
+            },
+            "col_b4_Uv2Wx3": {
+              "type": "_grid-column",
+              "name": "t:names.grid_column",
+              "settings": {
+                "column_span_mobile": "12",
+                "column_order_mobile": "1",
+                "margin_bottom_mobile": 0,
+                "column_span_tablet": "6",
+                "column_order_tablet": "1",
+                "margin_bottom_tablet": 0,
+                "column_span_desktop": "3",
+                "column_order_desktop": "1",
+                "margin_bottom_desktop": 0
+              },
+              "blocks": {
+                "col_b4_Uv2Wx3_grp": {
+                  "type": "group",
+                  "name": "t:names.group",
+                  "settings": {
+                    "content_direction": "column",
+                    "vertical_on_mobile": true,
+                    "horizontal_alignment": "center",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "center",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 16,
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "background_media": "none",
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "placeholder": "",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {
+                    "icon_b4_Yz4Ab5": {
+                      "type": "icon",
+                      "name": "t:names.icon",
+                      "settings": {
+                        "icon": "checkbox",
+                        "image_upload": "shopify://shop_images/ICON_4_Designed_for_on-the-go.svg",
+                        "width": 64,
+                        "width_mobile": 48,
+                        "margin_bottom_desktop": 0,
+                        "margin_bottom_mobile": 0,
+                        "link": "",
+                        "open_in_new_tab": false
+                      },
+                      "blocks": {}
+                    },
+                    "grp_txt_b4_Cd6Ef7": {
+                      "type": "group",
+                      "name": "t:names.group",
+                      "settings": {
+                        "content_direction": "column",
+                        "vertical_on_mobile": true,
+                        "horizontal_alignment": "center",
+                        "vertical_alignment": "center",
+                        "align_baseline": false,
+                        "horizontal_alignment_flex_direction_column": "center",
+                        "vertical_alignment_flex_direction_column": "center",
+                        "gap": 4,
+                        "width": "fill",
+                        "custom_width": 100,
+                        "width_mobile": "fill",
+                        "custom_width_mobile": 100,
+                        "height": "fit",
+                        "custom_height": 100,
+                        "inherit_color_scheme": true,
+                        "color_scheme": "",
+                        "background_media": "none",
+                        "video_position": "cover",
+                        "background_image_position": "cover",
+                        "border": "none",
+                        "border_width": 1,
+                        "border_opacity": 100,
+                        "border_radius": 0,
+                        "toggle_overlay": false,
+                        "overlay_color": "#00000026",
+                        "overlay_style": "solid",
+                        "gradient_direction": "to top",
+                        "link": "",
+                        "open_in_new_tab": false,
+                        "placeholder": "",
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {
+                        "txt_h_b4_Gh8Ij9": {
+                          "type": "text",
+                          "name": "t:names.text",
+                          "settings": {
+                            "text": "<p><strong>More Convenience</strong></p>",
+                            "width": "100%",
+                            "max_width": "none",
+                            "alignment": "center",
+                            "type_preset": "custom",
+                            "font": "Jakarta Plus, sans-serif",
+                            "font_size": "1.125rem",
+                            "line_height": 1.6,
+                            "letter_spacing": 0,
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "background_color": "#00000026",
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        },
+                        "txt_d_b4_Kl0Mn1": {
+                          "type": "text",
+                          "name": "t:names.text",
+                          "settings": {
+                            "text": "<p>Take your life on the go with our single-serving packets you can tuck in your bag, car, or suitcase.</p>",
+                            "width": "100%",
+                            "max_width": "none",
+                            "alignment": "center",
+                            "type_preset": "custom",
+                            "font": "Jakarta Plus, sans-serif",
+                            "font_size": "1rem",
+                            "line_height": 1.5,
+                            "letter_spacing": 0,
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "background_color": "#00000026",
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "txt_h_b4_Gh8Ij9",
+                        "txt_d_b4_Kl0Mn1"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "icon_b4_Yz4Ab5",
+                    "grp_txt_b4_Cd6Ef7"
+                  ]
+                }
+              },
+              "block_order": [
+                "col_b4_Uv2Wx3_grp"
+              ]
+            }
+          },
+          "block_order": [
+            "col_heading_St5Uv6",
+            "col_b1_Lm2No3",
+            "col_b2_Gh2Ij3",
+            "col_b3_Ab2Cd3",
+            "col_b4_Uv2Wx3"
+          ]
+        }
+      },
+      "block_order": [
+        "row_main_Np3Qr4"
+      ],
+      "settings": {
+        "background_color_mobile": "#E1F0E2",
+        "text_color_mobile": "#141414",
+        "padding_top_mobile": 48,
+        "padding_bottom_mobile": 48,
+        "padding_left_mobile": 16,
+        "padding_right_mobile": 16,
+        "margin_bottom_mobile": 0,
+        "background_color_desktop": "#E1F0E2",
+        "text_color_desktop": "#141414",
+        "padding_top_desktop": 80,
+        "padding_bottom_desktop": 80,
+        "padding_left_desktop": 64,
+        "padding_right_desktop": 64,
+        "margin_bottom_desktop": 0
+      }
+    },
     "benefits_Wf8kP2": {
       "type": "generic-section",
       "blocks": {
@@ -1799,6 +2612,7 @@
     }
   },
   "order": [
+    "wff_benefits_Lm2No3",
     "benefits_Wf8kP2",
     "generic_section_VpbhMW",
     "generic_section_yaf9Ab",
