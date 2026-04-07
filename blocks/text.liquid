@@ -1,3 +1,59 @@
+{% comment %}
+  == AI DOCUMENTATION ==
+
+  ▸ PURPOSE
+  Leaf block for rendering rich text content. Delegates rendering to
+  snippets/text.liquid. Supports typography presets (rte, paragraph, h1-h6, custom)
+  and full custom typography control when preset is "custom".
+
+  ▸ CONTEXT
+  - Parent: any container block or section that accepts @theme blocks
+    (group, grid-row > _grid-column, carousel-block > _carousel-slide,
+    hero-block, tab-content, generic-section, section.liquid, etc.)
+  - Children: none (leaf block, tag: null)
+
+  ▸ KEY SCHEMA SETTINGS
+  - text (richtext): the content to display
+  - type_preset (select): rte | paragraph | h1-h6 | custom
+  - font (select): font family (visible when preset == custom)
+  - font_size (select): size in rem (visible when preset == custom)
+  - line_height (range 0.5-5, step 0.1): visible when preset == custom
+  - letter_spacing (range -5 to 5, step 0.1, unit px): visible when preset == custom
+  - case (select): none | uppercase (visible when preset == custom)
+  - color (select): foreground | foreground-heading | primary
+  - width (select): fit-content | 100%
+  - alignment (text_alignment): visible when width == 100%
+  - background (checkbox), background_color (color), corner_radius (range 0-50)
+  - padding (4 range settings: block-start, block-end, inline-start, inline-end, 0-100px)
+
+  ▸ USAGE EXAMPLES
+  Template JSON — heading text inside a group:
+    {
+      "type": "text",
+      "settings": {
+        "text": "<h2>Shop Our Collections</h2>",
+        "type_preset": "h2",
+        "color": "var(--color-foreground-heading)",
+        "width": "100%",
+        "alignment": "center"
+      }
+    }
+
+  Template JSON — custom styled label:
+    {
+      "type": "text",
+      "settings": {
+        "text": "<p>NEW ARRIVALS</p>",
+        "type_preset": "custom",
+        "font": "var(--font-subheading--family)",
+        "font_size": "0.75rem",
+        "letter_spacing": 2,
+        "case": "uppercase",
+        "color": "var(--color-primary)"
+      }
+    }
+{% endcomment %}
+
 {% render 'text', block: block %}
 
 {% schema %}

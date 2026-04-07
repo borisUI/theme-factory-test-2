@@ -8,6 +8,54 @@
   {% content_for 'block', type: 'tab-navigation', id: 'tab-nav-1' %}
 {% enddoc %}
 
+{% comment %}
+  == AI DOCUMENTATION ==
+
+  ▸ PURPOSE
+  Tab button that controls which tab-content block is visible. Renders a
+  <button> with role="tab" and data attributes for group/target matching.
+  Styled with an underline indicator for the active state.
+
+  ▸ CONTEXT
+  - Parent: typically placed inside a group block that acts as a tab bar,
+    which sits alongside tab-content blocks in the same parent container
+  - Children: none (leaf block, tag: null)
+  - MUST be paired with one or more tab-content blocks sharing the same group_id
+  - JS: assets/tab-system.js manages activation (adds .tab-nav--active class
+    and .tab-content--active class on the matching tab-content)
+
+  ▸ KEY SCHEMA SETTINGS
+  - group_id (text): identifies which tab group this button belongs to (default: "tabs-1")
+  - target_id (text): matches the target_id of the tab-content to show (default: "tab-1")
+  - label (text): visible button text
+  - is_active (checkbox): whether this tab is active on initial page load
+
+  ▸ USAGE EXAMPLES
+  Template JSON — tab bar with 2 tabs (inside a group):
+    {
+      "type": "group",
+      "settings": { "content_direction": "horizontal", "gap": 24 },
+      "blocks": {
+        "tab1_nav_A1b2C3": {
+          "type": "tab-navigation",
+          "settings": { "group_id": "product-tabs", "target_id": "details", "label": "Details", "is_active": true }
+        },
+        "tab2_nav_D4e5F6": {
+          "type": "tab-navigation",
+          "settings": { "group_id": "product-tabs", "target_id": "reviews", "label": "Reviews", "is_active": false }
+        }
+      },
+      "block_order": ["tab1_nav_A1b2C3", "tab2_nav_D4e5F6"]
+    }
+
+  The matching tab-content blocks (siblings of the group above):
+    {
+      "type": "tab-content",
+      "settings": { "group_id": "product-tabs", "target_id": "details" },
+      "blocks": { ... }
+    }
+{% endcomment %}
+
 <button
   {{ block.shopify_attributes }}
   class="tab-nav"

@@ -7,6 +7,66 @@
   {% content_for 'block', type: 'grid-row', id: 'row-1' %}
 {% enddoc %}
 
+{% comment %}
+  == AI DOCUMENTATION ==
+
+  ▸ PURPOSE
+  12-column CSS grid container. Provides responsive column-gap, row-gap,
+  vertical alignment, and margin-bottom across three breakpoints
+  (mobile <750px, tablet 750-989px, desktop >=990px).
+
+  ▸ CONTEXT
+  - Parent: any container that accepts @theme blocks (generic-section,
+    hero-block, tab-content, _grid-column for nested grids, etc.)
+  - Children: ONLY _grid-column blocks (schema restricts to type: _grid-column)
+  - Each _grid-column child specifies how many of the 12 columns it spans
+
+  ▸ KEY SCHEMA SETTINGS
+  Per breakpoint (mobile / tablet / desktop):
+  - vertical_alignment_{bp} (select): start | center | end | stretch
+  - column_gap_{bp} (number, px): gap between columns
+  - row_gap_{bp} (number, px): gap between rows when columns wrap
+  - margin_bottom_{bp} (number, px): space below the grid row
+
+  ▸ USAGE EXAMPLES
+  Template JSON — 2-column layout (50/50 desktop, stacked mobile):
+    {
+      "type": "grid-row",
+      "settings": {
+        "column_gap_desktop": 24,
+        "row_gap_mobile": 16,
+        "vertical_alignment_desktop": "center"
+      },
+      "blocks": {
+        "col_left_A1b2C3": {
+          "type": "_grid-column",
+          "settings": { "column_span_mobile": "12", "column_span_tablet": "6", "column_span_desktop": "6" },
+          "blocks": { "text_D4e5F6": { "type": "text", "settings": { "text": "<h2>Left Column</h2>" } } },
+          "block_order": ["text_D4e5F6"]
+        },
+        "col_right_G7h8I9": {
+          "type": "_grid-column",
+          "settings": { "column_span_mobile": "12", "column_span_tablet": "6", "column_span_desktop": "6" },
+          "blocks": { "text_J0k1L2": { "type": "text", "settings": { "text": "<p>Right column content</p>" } } },
+          "block_order": ["text_J0k1L2"]
+        }
+      },
+      "block_order": ["col_left_A1b2C3", "col_right_G7h8I9"]
+    }
+
+  Template JSON — 3-column layout (4/4/4 desktop, stacked mobile):
+    {
+      "type": "grid-row",
+      "settings": { "column_gap_desktop": 24 },
+      "blocks": {
+        "col1_M3n4O5": { "type": "_grid-column", "settings": { "column_span_mobile": "12", "column_span_desktop": "4" } },
+        "col2_P6q7R8": { "type": "_grid-column", "settings": { "column_span_mobile": "12", "column_span_desktop": "4" } },
+        "col3_S9t0U1": { "type": "_grid-column", "settings": { "column_span_mobile": "12", "column_span_desktop": "4" } }
+      },
+      "block_order": ["col1_M3n4O5", "col2_P6q7R8", "col3_S9t0U1"]
+    }
+{% endcomment %}
+
 {%- capture children -%}
   {% content_for 'blocks' %}
 {%- endcapture -%}

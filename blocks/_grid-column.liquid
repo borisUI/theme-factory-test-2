@@ -8,6 +8,55 @@
   {% content_for 'block', type: '_grid-column', id: 'col-1' %}
 {% enddoc %}
 
+{% comment %}
+  == AI DOCUMENTATION ==
+
+  ▸ PURPOSE
+  Private block that spans N columns within a parent 12-column grid (grid-row).
+  Provides per-breakpoint column span (1-12), order (1-12), and margin-bottom.
+  Renders as a flex-column container for its nested child blocks.
+
+  ▸ CONTEXT
+  - Parent: ONLY grid-row (this block is only valid inside a grid-row)
+  - Children: any @theme or @app blocks (text, button, image, hero-block,
+    carousel-block, another grid-row for nested grids, etc.)
+
+  ▸ KEY SCHEMA SETTINGS
+  Per breakpoint (mobile / tablet / desktop):
+  - column_span_{bp} (select 1-12): number of grid columns to span
+    Defaults: mobile=12 (full width), tablet=6 (half), desktop=4 (third)
+  - column_order_{bp} (select 1-12): CSS order for reordering columns
+  - margin_bottom_{bp} (number, px): space below this column
+
+  ▸ USAGE EXAMPLES
+  Template JSON — responsive column (full on mobile, 4-col on desktop):
+    {
+      "type": "_grid-column",
+      "settings": {
+        "column_span_mobile": "12",
+        "column_span_tablet": "6",
+        "column_span_desktop": "4",
+        "column_order_mobile": "1",
+        "column_order_desktop": "1"
+      },
+      "blocks": {
+        "heading_A1b2C3": {
+          "type": "text",
+          "settings": { "text": "<h3>Feature Title</h3>", "type_preset": "h3" }
+        },
+        "desc_D4e5F6": {
+          "type": "text",
+          "settings": { "text": "<p>Feature description goes here.</p>" }
+        }
+      },
+      "block_order": ["heading_A1b2C3", "desc_D4e5F6"]
+    }
+
+  Reorder columns on mobile (image first on mobile, text first on desktop):
+    Column 1: settings.column_order_mobile = "2", settings.column_order_desktop = "1"
+    Column 2: settings.column_order_mobile = "1", settings.column_order_desktop = "2"
+{% endcomment %}
+
 {%- capture children -%}
   {% content_for 'blocks' %}
 {%- endcapture -%}
