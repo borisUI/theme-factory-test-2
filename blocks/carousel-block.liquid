@@ -8,6 +8,73 @@
   {% content_for 'block', type: 'carousel-block', id: 'carousel-1' %}
 {% enddoc %}
 
+{% comment %}
+  == AI DOCUMENTATION ==
+
+  ▸ PURPOSE
+  Swiper.js carousel container. Renders a <carousel-block> custom element
+  that dynamically loads Swiper 11 from CDN. Supports responsive
+  slides-per-view, gap, autoplay, navigation arrows (internal or external),
+  and pagination dots across three breakpoints (mobile/tablet/desktop).
+
+  ▸ CONTEXT
+  - Parent: any container that accepts @theme blocks (generic-section,
+    hero-block, _grid-column, tab-content, section.liquid, etc.)
+  - Children: ONLY _carousel-slide blocks (schema restricts to type: _carousel-slide)
+  - JS: assets/carousel-block.js (extends Component, auto-registers <carousel-block>)
+  - CSS: Swiper base styles loaded from CDN, custom styles in {% stylesheet %} below
+
+  ▸ KEY SCHEMA SETTINGS
+  Per breakpoint (mobile / tablet / desktop):
+  - slides_per_view_{bp} (range 1-10, step 0.1): fractional values show peek
+  - slide_gap_{bp} (number, px): space between slides
+  - autoplay_{bp} (checkbox): enable auto-rotation
+  - autoplay_delay_{bp} (number, seconds): delay between auto-advance
+  - show_arrows_{bp} (checkbox): show prev/next navigation
+  - external_arrows_{bp} (checkbox): place arrows outside the swiper container
+  - show_dots_{bp} (checkbox): show pagination dots
+  - margin_bottom_{bp} (number, px): space below carousel
+
+  ▸ USAGE EXAMPLES
+  Template JSON — 3-slide desktop carousel with arrows:
+    {
+      "type": "carousel-block",
+      "settings": {
+        "slides_per_view_mobile": 1.2,
+        "slides_per_view_tablet": 2,
+        "slides_per_view_desktop": 3,
+        "slide_gap_desktop": 24,
+        "show_arrows_desktop": true,
+        "external_arrows_desktop": true,
+        "show_dots_mobile": true
+      },
+      "blocks": {
+        "slide_1_A1b2C3": {
+          "type": "_carousel-slide",
+          "blocks": {
+            "text_D4e5F6": { "type": "text", "settings": { "text": "<h3>Slide 1</h3>" } }
+          },
+          "block_order": ["text_D4e5F6"]
+        },
+        "slide_2_G7h8I9": {
+          "type": "_carousel-slide",
+          "blocks": {
+            "text_J0k1L2": { "type": "text", "settings": { "text": "<h3>Slide 2</h3>" } }
+          },
+          "block_order": ["text_J0k1L2"]
+        },
+        "slide_3_M3n4O5": {
+          "type": "_carousel-slide",
+          "blocks": {
+            "text_P6q7R8": { "type": "text", "settings": { "text": "<h3>Slide 3</h3>" } }
+          },
+          "block_order": ["text_P6q7R8"]
+        }
+      },
+      "block_order": ["slide_1_A1b2C3", "slide_2_G7h8I9", "slide_3_M3n4O5"]
+    }
+{% endcomment %}
+
 {% liquid
   assign slides_per_view_mobile = block.settings.slides_per_view_mobile | default: 1
   assign slides_per_view_tablet = block.settings.slides_per_view_tablet | default: 2

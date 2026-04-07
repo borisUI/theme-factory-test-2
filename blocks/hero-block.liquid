@@ -9,6 +9,82 @@
   {% content_for 'block', type: 'hero-block', id: 'hero' %}
 {% enddoc %}
 
+{% comment %}
+  == AI DOCUMENTATION ==
+
+  ▸ PURPOSE
+  Full-width hero container with background media (image or video per breakpoint),
+  optional overlay (solid or gradient), configurable height (auto/full_viewport/custom),
+  9-point content positioning, and per-breakpoint padding/margin. Renders nested
+  child blocks over the background.
+
+  ▸ CONTEXT
+  - Parent: any container that accepts @theme blocks (generic-section,
+    _grid-column, tab-content, section.liquid, etc.)
+  - Children: any @theme or @app blocks (text, button, group, grid-row, etc.)
+  - Uses snippets/background-media.liquid for image/video rendering
+  - Uses snippets/overlay.liquid for overlay rendering
+
+  ▸ KEY SCHEMA SETTINGS
+  Per breakpoint (mobile / desktop):
+  - height_type_{bp} (select): auto | full_viewport | custom
+  - custom_height_{bp} (number, px): visible when height_type == custom
+  - background_media_{bp} (select): none | image | video
+  - image_{bp} (image_picker): background image
+  - image_position_{bp} (select): cover | fit
+  - video_{bp} (video): background video
+  - video_position_{bp} (select): cover | contain
+  - content_width_{bp} (select): 25% | 33.33% | 50% | 66.66% | 75% | 100%
+  - content_position_{bp} (select): 9-point grid (top-left through bottom-right)
+  - padding_top/bottom/left/right_{bp} (number, px)
+  - margin_bottom_{bp} (number, px)
+
+  Appearance:
+  - toggle_overlay (checkbox): enable/disable overlay
+  - overlay_color (color with alpha): overlay fill color
+  - overlay_style (select): solid | gradient
+  - gradient_direction (select): to top | to bottom
+
+  ▸ USAGE EXAMPLES
+  Template JSON — hero with background image and centered text:
+    {
+      "type": "hero-block",
+      "settings": {
+        "height_type_mobile": "custom",
+        "custom_height_mobile": 400,
+        "height_type_desktop": "custom",
+        "custom_height_desktop": 600,
+        "background_media_desktop": "image",
+        "background_media_mobile": "image",
+        "content_position_mobile": "center-center",
+        "content_position_desktop": "center-center",
+        "content_width_desktop": "50",
+        "toggle_overlay": true,
+        "overlay_style": "gradient",
+        "gradient_direction": "to top",
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40,
+        "padding_left_mobile": 20,
+        "padding_right_mobile": 20,
+        "padding_top_desktop": 80,
+        "padding_bottom_desktop": 80,
+        "padding_left_desktop": 60,
+        "padding_right_desktop": 60
+      },
+      "blocks": {
+        "heading_A1b2C3": {
+          "type": "text",
+          "settings": { "text": "<h1>Welcome to Our Store</h1>", "type_preset": "h1", "color": "var(--color-foreground-heading)" }
+        },
+        "cta_D4e5F6": {
+          "type": "button",
+          "settings": { "label": "Shop Now", "link": "shopify://collections/all", "style_class": "button" }
+        }
+      },
+      "block_order": ["heading_A1b2C3", "cta_D4e5F6"]
+    }
+{% endcomment %}
+
 {%- capture children -%}
   {% content_for 'blocks' %}
 {%- endcapture -%}

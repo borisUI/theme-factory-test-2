@@ -8,6 +8,87 @@
   Used via template JSON with type: "generic-section"
 {% enddoc %}
 
+{% comment %}
+  == AI DOCUMENTATION ==
+
+  ▸ PURPOSE
+  Primary building-block section for custom pages. Provides a simple styled
+  wrapper with 2-breakpoint (mobile/desktop) background color, text color,
+  padding, and margin settings. Accepts any combination of theme and app blocks.
+
+  ▸ CONTEXT
+  - Parent: template JSON (e.g., templates/index.json, templates/page.*.json)
+  - Children: any @theme or @app blocks (hero-block, grid-row, carousel-block,
+    tab-navigation, tab-content, text, button, group, image, video, etc.)
+  - Used extensively across the theme — templates/index.json contains 13+
+    instances of generic-section for homepage composition
+  - CSS class: .generic-section (with .section-wrapper from schema "class" property)
+
+  ▸ KEY SCHEMA SETTINGS
+  Per breakpoint (mobile / desktop):
+  - background_color_{bp} (color): section background
+  - text_color_{bp} (color): inheritable text color
+  - padding_top/bottom/left/right_{bp} (number, px)
+  - margin_bottom_{bp} (number, px)
+
+  ▸ USAGE EXAMPLES
+  Template JSON — section wrapping a hero + text blocks:
+    {
+      "hero_section_A1b2C3": {
+        "type": "generic-section",
+        "settings": {
+          "padding_top_mobile": 0,
+          "padding_bottom_mobile": 0,
+          "padding_top_desktop": 0,
+          "padding_bottom_desktop": 0
+        },
+        "blocks": {
+          "hero_D4e5F6": {
+            "type": "hero-block",
+            "settings": { "height_type_desktop": "custom", "custom_height_desktop": 600 },
+            "blocks": {
+              "heading_G7h8I9": { "type": "text", "settings": { "text": "<h1>Welcome</h1>" } },
+              "cta_J0k1L2": { "type": "button", "settings": { "label": "Shop", "link": "shopify://collections/all" } }
+            },
+            "block_order": ["heading_G7h8I9", "cta_J0k1L2"]
+          }
+        },
+        "block_order": ["hero_D4e5F6"]
+      }
+    }
+
+  Template JSON — section with grid layout:
+    {
+      "features_M3n4O5": {
+        "type": "generic-section",
+        "settings": {
+          "background_color_desktop": "#F5F5F5",
+          "padding_top_desktop": 80,
+          "padding_bottom_desktop": 80,
+          "padding_left_desktop": 40,
+          "padding_right_desktop": 40,
+          "padding_top_mobile": 40,
+          "padding_bottom_mobile": 40,
+          "padding_left_mobile": 16,
+          "padding_right_mobile": 16
+        },
+        "blocks": {
+          "row_P6q7R8": {
+            "type": "grid-row",
+            "settings": { "column_gap_desktop": 24 },
+            "blocks": {
+              "col1_S9t0U1": { "type": "_grid-column", "settings": { "column_span_mobile": "12", "column_span_desktop": "4" } },
+              "col2_V2w3X4": { "type": "_grid-column", "settings": { "column_span_mobile": "12", "column_span_desktop": "4" } },
+              "col3_Y5z6A7": { "type": "_grid-column", "settings": { "column_span_mobile": "12", "column_span_desktop": "4" } }
+            },
+            "block_order": ["col1_S9t0U1", "col2_V2w3X4", "col3_Y5z6A7"]
+          }
+        },
+        "block_order": ["row_P6q7R8"]
+      }
+    }
+{% endcomment %}
+
 {%- capture children -%}
   {% content_for 'blocks' %}
 {%- endcapture -%}
