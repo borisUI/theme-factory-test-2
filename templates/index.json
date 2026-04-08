@@ -66,9 +66,9 @@
                   }
                 },
                 "heading_Hd7hI8": {
-                  "type": "text",
+                  "type": "custom-liquid",
                   "settings": {
-                    "text": "<h2 style=\"font-family: var(--font-heading--family); font-weight: 300; font-size: clamp(32px, 4vw, 48px); line-height: clamp(40px, 5vw, 56px); padding: 0 16px; margin: 0;\">Built From Food,\nDesigned for Results</h2>"
+                    "custom_liquid": "<h2 style=\"font-family: var(--font-heading--family); font-weight: 300; font-size: clamp(32px, 4vw, 48px); line-height: clamp(40px, 5vw, 56px); padding: 0 16px; margin: 0;\">Built From Food,\nDesigned for Results</h2>"
                   }
                 }
               },
@@ -228,15 +228,15 @@
                       },
                       "blocks": {
                         "hero_cat_gut-health_Hc5e": {
-                          "type": "text",
+                          "type": "custom-liquid",
                           "settings": {
-                            "text": "<p style=\"font-family: var(--font-heading--family); font-weight: 500; font-size: 20px; line-height: 28px; color: #FFFFFF;\">Gut Health</p>"
+                            "custom_liquid": "<p style=\"font-family: var(--font-heading--family); font-weight: 500; font-size: 20px; line-height: 28px; color: #FFFFFF;\">Gut Health</p>"
                           }
                         },
                         "hero_desc_gut-health_Hd6f": {
-                          "type": "text",
+                          "type": "custom-liquid",
                           "settings": {
-                            "text": "<p style=\"font-family: var(--font-body--family); font-weight: 400; font-size: 16px; line-height: 24px; color: #FFFFFF;\">Superfoods and nutrients for daily digestive support</p>"
+                            "custom_liquid": "<p style=\"font-family: var(--font-body--family); font-weight: 400; font-size: 16px; line-height: 24px; color: #FFFFFF;\">Superfoods and nutrients for daily digestive support</p>"
                           }
                         },
                         "hero_btn_gut-health_Hb7g": {
@@ -515,15 +515,15 @@
                       },
                       "blocks": {
                         "hero_cat_recovery_Hc5e": {
-                          "type": "text",
+                          "type": "custom-liquid",
                           "settings": {
-                            "text": "<p style=\"font-family: var(--font-heading--family); font-weight: 500; font-size: 20px; line-height: 28px; color: #FFFFFF;\">Recovery</p>"
+                            "custom_liquid": "<p style=\"font-family: var(--font-heading--family); font-weight: 500; font-size: 20px; line-height: 28px; color: #FFFFFF;\">Recovery</p>"
                           }
                         },
                         "hero_desc_recovery_Hd6f": {
-                          "type": "text",
+                          "type": "custom-liquid",
                           "settings": {
-                            "text": "<p style=\"font-family: var(--font-body--family); font-weight: 400; font-size: 16px; line-height: 24px; color: #FFFFFF;\">Fuel your body's recovery with targeted nutrition and support</p>"
+                            "custom_liquid": "<p style=\"font-family: var(--font-body--family); font-weight: 400; font-size: 16px; line-height: 24px; color: #FFFFFF;\">Fuel your body's recovery with targeted nutrition and support</p>"
                           }
                         },
                         "hero_btn_recovery_Hb7g": {
@@ -802,15 +802,15 @@
                       },
                       "blocks": {
                         "hero_cat_immunity_Hc5e": {
-                          "type": "text",
+                          "type": "custom-liquid",
                           "settings": {
-                            "text": "<p style=\"font-family: var(--font-heading--family); font-weight: 500; font-size: 20px; line-height: 28px; color: #FFFFFF;\">Immunity</p>"
+                            "custom_liquid": "<p style=\"font-family: var(--font-heading--family); font-weight: 500; font-size: 20px; line-height: 28px; color: #FFFFFF;\">Immunity</p>"
                           }
                         },
                         "hero_desc_immunity_Hd6f": {
-                          "type": "text",
+                          "type": "custom-liquid",
                           "settings": {
-                            "text": "<p style=\"font-family: var(--font-body--family); font-weight: 400; font-size: 16px; line-height: 24px; color: #FFFFFF;\">Daily defense with probiotics, immunity vitamins and minerals</p>"
+                            "custom_liquid": "<p style=\"font-family: var(--font-body--family); font-weight: 400; font-size: 16px; line-height: 24px; color: #FFFFFF;\">Daily defense with probiotics, immunity vitamins and minerals</p>"
                           }
                         },
                         "hero_btn_immunity_Hb7g": {
@@ -1089,15 +1089,15 @@
                       },
                       "blocks": {
                         "hero_cat_energy-focus_Hc5e": {
-                          "type": "text",
+                          "type": "custom-liquid",
                           "settings": {
-                            "text": "<p style=\"font-family: var(--font-heading--family); font-weight: 500; font-size: 20px; line-height: 28px; color: #FFFFFF;\">Energy & Focus</p>"
+                            "custom_liquid": "<p style=\"font-family: var(--font-heading--family); font-weight: 500; font-size: 20px; line-height: 28px; color: #FFFFFF;\">Energy & Focus</p>"
                           }
                         },
                         "hero_desc_energy-focus_Hd6f": {
-                          "type": "text",
+                          "type": "custom-liquid",
                           "settings": {
-                            "text": "<p style=\"font-family: var(--font-body--family); font-weight: 400; font-size: 16px; line-height: 24px; color: #FFFFFF;\">Supercharge your day with clean energy and mental clarity</p>"
+                            "custom_liquid": "<p style=\"font-family: var(--font-body--family); font-weight: 400; font-size: 16px; line-height: 24px; color: #FFFFFF;\">Supercharge your day with clean energy and mental clarity</p>"
                           }
                         },
                         "hero_btn_energy-focus_Hb7g": {
