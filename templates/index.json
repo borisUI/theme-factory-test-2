@@ -45,12 +45,6 @@
                 "margin_bottom_desktop": 0
               },
               "blocks": {
-                "cl_icon_b1_Qr4St5": {
-                  "type": "custom-liquid",
-                  "settings": {
-                    "custom_liquid": "<style>.wff-icon{width:64px;height:auto;display:block;margin:0 auto 16px}@media(max-width:749px){.wff-icon{width:48px}}</style><img src=\"{{ 'icon-1-nutrition-all-in-one-place-2.svg' | asset_url }}\" class=\"wff-icon\" alt=\"\">"
-                  }
-                },
                 "txt_h_b1_Yz8Ab9": {
                   "type": "text",
                   "name": "t:names.text",
@@ -102,10 +96,23 @@
                     "padding-inline-end": 0
                   },
                   "blocks": {}
+                },
+                "icon_b1_Qr4St5": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "none",
+                    "asset_icon": "icon-1-nutrition-all-in-one-place-2.svg",
+                    "width": 64,
+                    "width_mobile": 48,
+                    "margin_bottom_desktop": 16,
+                    "margin_bottom_mobile": 16,
+                    "link": "",
+                    "open_in_new_tab": false
+                  }
                 }
               },
               "block_order": [
-                "cl_icon_b1_Qr4St5",
+                "icon_b1_Qr4St5",
                 "txt_h_b1_Yz8Ab9",
                 "txt_d_b1_Cd0Ef1"
               ]
@@ -125,12 +132,6 @@
                 "margin_bottom_desktop": 0
               },
               "blocks": {
-                "cl_icon_b2_Kl4Mn5": {
-                  "type": "custom-liquid",
-                  "settings": {
-                    "custom_liquid": "<img src=\"{{ 'icon-2-quality-ingredients-2.svg' | asset_url }}\" class=\"wff-icon\" alt=\"\">"
-                  }
-                },
                 "txt_h_b2_St8Uv9": {
                   "type": "text",
                   "name": "t:names.text",
@@ -182,10 +183,23 @@
                     "padding-inline-end": 0
                   },
                   "blocks": {}
+                },
+                "icon_b2_Kl4Mn5": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "none",
+                    "asset_icon": "icon-2-quality-ingredients-2.svg",
+                    "width": 64,
+                    "width_mobile": 48,
+                    "margin_bottom_desktop": 16,
+                    "margin_bottom_mobile": 16,
+                    "link": "",
+                    "open_in_new_tab": false
+                  }
                 }
               },
               "block_order": [
-                "cl_icon_b2_Kl4Mn5",
+                "icon_b2_Kl4Mn5",
                 "txt_h_b2_St8Uv9",
                 "txt_d_b2_Wx0Yz1"
               ]
@@ -205,12 +219,6 @@
                 "margin_bottom_desktop": 0
               },
               "blocks": {
-                "cl_icon_b3_Ef4Gh5": {
-                  "type": "custom-liquid",
-                  "settings": {
-                    "custom_liquid": "<img src=\"{{ 'icon-3-b-food-first-nutrition-2.svg' | asset_url }}\" class=\"wff-icon\" alt=\"\">"
-                  }
-                },
                 "txt_h_b3_Mn8Op9": {
                   "type": "text",
                   "name": "t:names.text",
@@ -262,10 +270,23 @@
                     "padding-inline-end": 0
                   },
                   "blocks": {}
+                },
+                "icon_b3_Ef4Gh5": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "none",
+                    "asset_icon": "icon-3-b-food-first-nutrition-2.svg",
+                    "width": 64,
+                    "width_mobile": 48,
+                    "margin_bottom_desktop": 16,
+                    "margin_bottom_mobile": 16,
+                    "link": "",
+                    "open_in_new_tab": false
+                  }
                 }
               },
               "block_order": [
-                "cl_icon_b3_Ef4Gh5",
+                "icon_b3_Ef4Gh5",
                 "txt_h_b3_Mn8Op9",
                 "txt_d_b3_Qr0St1"
               ]
@@ -285,12 +306,6 @@
                 "margin_bottom_desktop": 0
               },
               "blocks": {
-                "cl_icon_b4_Yz4Ab5": {
-                  "type": "custom-liquid",
-                  "settings": {
-                    "custom_liquid": "<img src=\"{{ 'icon-4-designed-for-on-the-go-2.svg' | asset_url }}\" class=\"wff-icon\" alt=\"\">"
-                  }
-                },
                 "txt_h_b4_Gh8Ij9": {
                   "type": "text",
                   "name": "t:names.text",
@@ -342,10 +357,23 @@
                     "padding-inline-end": 0
                   },
                   "blocks": {}
+                },
+                "icon_b4_Yz4Ab5": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "none",
+                    "asset_icon": "icon-4-designed-for-on-the-go-2.svg",
+                    "width": 64,
+                    "width_mobile": 48,
+                    "margin_bottom_desktop": 16,
+                    "margin_bottom_mobile": 16,
+                    "link": "",
+                    "open_in_new_tab": false
+                  }
                 }
               },
               "block_order": [
-                "cl_icon_b4_Yz4Ab5",
+                "icon_b4_Yz4Ab5",
                 "txt_h_b4_Gh8Ij9",
                 "txt_d_b4_Kl0Mn1"
               ]
