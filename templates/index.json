@@ -11,22 +11,6 @@
   "sections": {
     "product_tabs_nav_Rk3mP1": {
       "type": "generic-section",
-      "settings": {
-        "background_color_desktop": "#F1F1EA",
-        "background_color_mobile": "#F1F1EA",
-        "text_color_desktop": "#141414",
-        "text_color_mobile": "#141414",
-        "padding_top_desktop": 64,
-        "padding_bottom_desktop": 32,
-        "padding_left_desktop": 64,
-        "padding_right_desktop": 64,
-        "padding_top_mobile": 48,
-        "padding_bottom_mobile": 24,
-        "padding_left_mobile": 0,
-        "padding_right_mobile": 0,
-        "margin_bottom_desktop": 0,
-        "margin_bottom_mobile": 0
-      },
       "blocks": {
         "grid_nav_Gn1aB2": {
           "type": "grid-row",
@@ -144,26 +128,26 @@
       },
       "block_order": [
         "grid_nav_Gn1aB2"
-      ]
-    },
-    "product_tab_gut_Yz7aP1": {
-      "type": "generic-section",
+      ],
       "settings": {
-        "background_color_desktop": "#F1F1EA",
         "background_color_mobile": "#F1F1EA",
-        "text_color_desktop": "#141414",
         "text_color_mobile": "#141414",
-        "padding_top_desktop": 0,
+        "padding_top_mobile": 48,
+        "padding_bottom_mobile": 24,
+        "padding_left_mobile": 0,
+        "padding_right_mobile": 0,
+        "margin_bottom_mobile": 0,
+        "background_color_desktop": "#F1F1EA",
+        "text_color_desktop": "#141414",
+        "padding_top_desktop": 64,
         "padding_bottom_desktop": 32,
         "padding_left_desktop": 64,
         "padding_right_desktop": 64,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0,
-        "padding_left_mobile": 0,
-        "padding_right_mobile": 0,
-        "margin_bottom_desktop": 0,
-        "margin_bottom_mobile": 0
-      },
+        "margin_bottom_desktop": 0
+      }
+    },
+    "product_tab_gut_Yz7aP1": {
+      "type": "generic-section",
       "blocks": {
         "tab_content_gut-health_Tc1a": {
           "type": "tab-content",
@@ -177,24 +161,25 @@
               "settings": {
                 "slides_per_view_mobile": 2.1,
                 "slide_gap_mobile": 16,
+                "autoplay_mobile": false,
                 "show_arrows_mobile": false,
                 "show_dots_mobile": false,
-                "autoplay_mobile": false,
                 "slides_per_view_tablet": 3,
                 "slide_gap_tablet": 24,
+                "autoplay_tablet": false,
                 "show_arrows_tablet": false,
                 "show_dots_tablet": false,
-                "autoplay_tablet": false,
                 "slides_per_view_desktop": 4.2,
                 "slide_gap_desktop": 32,
+                "autoplay_desktop": false,
                 "show_arrows_desktop": true,
                 "external_arrows_desktop": true,
-                "show_dots_desktop": false,
-                "autoplay_desktop": false
+                "show_dots_desktop": false
               },
               "blocks": {
                 "slide_hero_gut-health_Sh3c": {
                   "type": "_carousel-slide",
+                  "settings": {},
                   "blocks": {
                     "hero_gut-health_Hr4d": {
                       "type": "hero-block",
@@ -204,8 +189,8 @@
                         "background_media_mobile": "image",
                         "image_mobile": "shopify://shop_images/agile-support-1-desktop-112594318.png",
                         "image_position_mobile": "cover",
-                        "content_position_mobile": "bottom-left",
                         "content_width_mobile": "100",
+                        "content_position_mobile": "bottom-left",
                         "padding_top_mobile": 0,
                         "padding_bottom_mobile": 16,
                         "padding_left_mobile": 12,
@@ -215,8 +200,8 @@
                         "background_media_desktop": "image",
                         "image_desktop": "shopify://shop_images/agile-support-1-desktop-112594318.png",
                         "image_position_desktop": "cover",
-                        "content_position_desktop": "bottom-left",
                         "content_width_desktop": "100",
+                        "content_position_desktop": "bottom-left",
                         "padding_top_desktop": 0,
                         "padding_bottom_desktop": 24,
                         "padding_left_desktop": 24,
@@ -260,6 +245,7 @@
                 },
                 "slide_pc1_gut-health_Sp1h": {
                   "type": "_carousel-slide",
+                  "settings": {},
                   "blocks": {
                     "pc_1_gut-health_Pc1j": {
                       "type": "product-card",
@@ -291,6 +277,7 @@
                 },
                 "slide_pc2_gut-health_Sp2h": {
                   "type": "_carousel-slide",
+                  "settings": {},
                   "blocks": {
                     "pc_2_gut-health_Pc2j": {
                       "type": "product-card",
@@ -322,6 +309,7 @@
                 },
                 "slide_pc3_gut-health_Sp3h": {
                   "type": "_carousel-slide",
+                  "settings": {},
                   "blocks": {
                     "pc_3_gut-health_Pc3j": {
                       "type": "product-card",
@@ -353,6 +341,7 @@
                 },
                 "slide_pc4_gut-health_Sp4h": {
                   "type": "_carousel-slide",
+                  "settings": {},
                   "blocks": {
                     "pc_4_gut-health_Pc4j": {
                       "type": "product-card",
@@ -384,6 +373,7 @@
                 },
                 "slide_pc5_gut-health_Sp5h": {
                   "type": "_carousel-slide",
+                  "settings": {},
                   "blocks": {
                     "pc_5_gut-health_Pc5j": {
                       "type": "product-card",
@@ -431,26 +421,26 @@
       },
       "block_order": [
         "tab_content_gut-health_Tc1a"
-      ]
-    },
-    "product_tab_rec_Bc8dQ2": {
-      "type": "generic-section",
+      ],
       "settings": {
-        "background_color_desktop": "#F1F1EA",
         "background_color_mobile": "#F1F1EA",
-        "text_color_desktop": "#141414",
         "text_color_mobile": "#141414",
-        "padding_top_desktop": 0,
-        "padding_bottom_desktop": 32,
-        "padding_left_desktop": 64,
-        "padding_right_desktop": 64,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0,
         "padding_left_mobile": 0,
         "padding_right_mobile": 0,
-        "margin_bottom_desktop": 0,
-        "margin_bottom_mobile": 0
-      },
+        "margin_bottom_mobile": 0,
+        "background_color_desktop": "#F1F1EA",
+        "text_color_desktop": "#141414",
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 32,
+        "padding_left_desktop": 64,
+        "padding_right_desktop": 64,
+        "margin_bottom_desktop": 0
+      }
+    },
+    "product_tab_rec_Bc8dQ2": {
+      "type": "generic-section",
       "blocks": {
         "tab_content_recovery_Tc1a": {
           "type": "tab-content",
@@ -464,24 +454,25 @@
               "settings": {
                 "slides_per_view_mobile": 2.1,
                 "slide_gap_mobile": 16,
+                "autoplay_mobile": false,
                 "show_arrows_mobile": false,
                 "show_dots_mobile": false,
-                "autoplay_mobile": false,
                 "slides_per_view_tablet": 3,
                 "slide_gap_tablet": 24,
+                "autoplay_tablet": false,
                 "show_arrows_tablet": false,
                 "show_dots_tablet": false,
-                "autoplay_tablet": false,
                 "slides_per_view_desktop": 4.2,
                 "slide_gap_desktop": 32,
+                "autoplay_desktop": false,
                 "show_arrows_desktop": true,
                 "external_arrows_desktop": true,
-                "show_dots_desktop": false,
-                "autoplay_desktop": false
+                "show_dots_desktop": false
               },
               "blocks": {
                 "slide_hero_recovery_Sh3c": {
                   "type": "_carousel-slide",
+                  "settings": {},
                   "blocks": {
                     "hero_recovery_Hr4d": {
                       "type": "hero-block",
@@ -491,8 +482,8 @@
                         "background_media_mobile": "image",
                         "image_mobile": "shopify://shop_images/agile-support-1-desktop-112594318.png",
                         "image_position_mobile": "cover",
-                        "content_position_mobile": "bottom-left",
                         "content_width_mobile": "100",
+                        "content_position_mobile": "bottom-left",
                         "padding_top_mobile": 0,
                         "padding_bottom_mobile": 16,
                         "padding_left_mobile": 12,
@@ -502,8 +493,8 @@
                         "background_media_desktop": "image",
                         "image_desktop": "shopify://shop_images/agile-support-1-desktop-112594318.png",
                         "image_position_desktop": "cover",
-                        "content_position_desktop": "bottom-left",
                         "content_width_desktop": "100",
+                        "content_position_desktop": "bottom-left",
                         "padding_top_desktop": 0,
                         "padding_bottom_desktop": 24,
                         "padding_left_desktop": 24,
@@ -547,6 +538,7 @@
                 },
                 "slide_pc1_recovery_Sp1h": {
                   "type": "_carousel-slide",
+                  "settings": {},
                   "blocks": {
                     "pc_1_recovery_Pc1j": {
                       "type": "product-card",
@@ -578,6 +570,7 @@
                 },
                 "slide_pc2_recovery_Sp2h": {
                   "type": "_carousel-slide",
+                  "settings": {},
                   "blocks": {
                     "pc_2_recovery_Pc2j": {
                       "type": "product-card",
@@ -609,6 +602,7 @@
                 },
                 "slide_pc3_recovery_Sp3h": {
                   "type": "_carousel-slide",
+                  "settings": {},
                   "blocks": {
                     "pc_3_recovery_Pc3j": {
                       "type": "product-card",
@@ -640,6 +634,7 @@
                 },
                 "slide_pc4_recovery_Sp4h": {
                   "type": "_carousel-slide",
+                  "settings": {},
                   "blocks": {
                     "pc_4_recovery_Pc4j": {
                       "type": "product-card",
@@ -671,6 +666,7 @@
                 },
                 "slide_pc5_recovery_Sp5h": {
                   "type": "_carousel-slide",
+                  "settings": {},
                   "blocks": {
                     "pc_5_recovery_Pc5j": {
                       "type": "product-card",
@@ -718,26 +714,26 @@
       },
       "block_order": [
         "tab_content_recovery_Tc1a"
-      ]
-    },
-    "product_tab_imm_Ef9gR3": {
-      "type": "generic-section",
+      ],
       "settings": {
-        "background_color_desktop": "#F1F1EA",
         "background_color_mobile": "#F1F1EA",
-        "text_color_desktop": "#141414",
         "text_color_mobile": "#141414",
-        "padding_top_desktop": 0,
-        "padding_bottom_desktop": 32,
-        "padding_left_desktop": 64,
-        "padding_right_desktop": 64,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0,
         "padding_left_mobile": 0,
         "padding_right_mobile": 0,
-        "margin_bottom_desktop": 0,
-        "margin_bottom_mobile": 0
-      },
+        "margin_bottom_mobile": 0,
+        "background_color_desktop": "#F1F1EA",
+        "text_color_desktop": "#141414",
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 32,
+        "padding_left_desktop": 64,
+        "padding_right_desktop": 64,
+        "margin_bottom_desktop": 0
+      }
+    },
+    "product_tab_imm_Ef9gR3": {
+      "type": "generic-section",
       "blocks": {
         "tab_content_immunity_Tc1a": {
           "type": "tab-content",
@@ -751,24 +747,25 @@
               "settings": {
                 "slides_per_view_mobile": 2.1,
                 "slide_gap_mobile": 16,
+                "autoplay_mobile": false,
                 "show_arrows_mobile": false,
                 "show_dots_mobile": false,
-                "autoplay_mobile": false,
                 "slides_per_view_tablet": 3,
                 "slide_gap_tablet": 24,
+                "autoplay_tablet": false,
                 "show_arrows_tablet": false,
                 "show_dots_tablet": false,
-                "autoplay_tablet": false,
                 "slides_per_view_desktop": 4.2,
                 "slide_gap_desktop": 32,
+                "autoplay_desktop": false,
                 "show_arrows_desktop": true,
                 "external_arrows_desktop": true,
-                "show_dots_desktop": false,
-                "autoplay_desktop": false
+                "show_dots_desktop": false
               },
               "blocks": {
                 "slide_hero_immunity_Sh3c": {
                   "type": "_carousel-slide",
+                  "settings": {},
                   "blocks": {
                     "hero_immunity_Hr4d": {
                       "type": "hero-block",
@@ -778,8 +775,8 @@
                         "background_media_mobile": "image",
                         "image_mobile": "shopify://shop_images/agile-support-1-desktop-112594318.png",
                         "image_position_mobile": "cover",
-                        "content_position_mobile": "bottom-left",
                         "content_width_mobile": "100",
+                        "content_position_mobile": "bottom-left",
                         "padding_top_mobile": 0,
                         "padding_bottom_mobile": 16,
                         "padding_left_mobile": 12,
@@ -789,8 +786,8 @@
                         "background_media_desktop": "image",
                         "image_desktop": "shopify://shop_images/agile-support-1-desktop-112594318.png",
                         "image_position_desktop": "cover",
-                        "content_position_desktop": "bottom-left",
                         "content_width_desktop": "100",
+                        "content_position_desktop": "bottom-left",
                         "padding_top_desktop": 0,
                         "padding_bottom_desktop": 24,
                         "padding_left_desktop": 24,
@@ -834,6 +831,7 @@
                 },
                 "slide_pc1_immunity_Sp1h": {
                   "type": "_carousel-slide",
+                  "settings": {},
                   "blocks": {
                     "pc_1_immunity_Pc1j": {
                       "type": "product-card",
@@ -865,6 +863,7 @@
                 },
                 "slide_pc2_immunity_Sp2h": {
                   "type": "_carousel-slide",
+                  "settings": {},
                   "blocks": {
                     "pc_2_immunity_Pc2j": {
                       "type": "product-card",
@@ -896,6 +895,7 @@
                 },
                 "slide_pc3_immunity_Sp3h": {
                   "type": "_carousel-slide",
+                  "settings": {},
                   "blocks": {
                     "pc_3_immunity_Pc3j": {
                       "type": "product-card",
@@ -927,6 +927,7 @@
                 },
                 "slide_pc4_immunity_Sp4h": {
                   "type": "_carousel-slide",
+                  "settings": {},
                   "blocks": {
                     "pc_4_immunity_Pc4j": {
                       "type": "product-card",
@@ -958,6 +959,7 @@
                 },
                 "slide_pc5_immunity_Sp5h": {
                   "type": "_carousel-slide",
+                  "settings": {},
                   "blocks": {
                     "pc_5_immunity_Pc5j": {
                       "type": "product-card",
@@ -1005,26 +1007,26 @@
       },
       "block_order": [
         "tab_content_immunity_Tc1a"
-      ]
-    },
-    "product_tab_enr_Hj0kS4": {
-      "type": "generic-section",
+      ],
       "settings": {
-        "background_color_desktop": "#F1F1EA",
         "background_color_mobile": "#F1F1EA",
-        "text_color_desktop": "#141414",
         "text_color_mobile": "#141414",
-        "padding_top_desktop": 0,
-        "padding_bottom_desktop": 32,
-        "padding_left_desktop": 64,
-        "padding_right_desktop": 64,
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 0,
         "padding_left_mobile": 0,
         "padding_right_mobile": 0,
-        "margin_bottom_desktop": 0,
-        "margin_bottom_mobile": 0
-      },
+        "margin_bottom_mobile": 0,
+        "background_color_desktop": "#F1F1EA",
+        "text_color_desktop": "#141414",
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 32,
+        "padding_left_desktop": 64,
+        "padding_right_desktop": 64,
+        "margin_bottom_desktop": 0
+      }
+    },
+    "product_tab_enr_Hj0kS4": {
+      "type": "generic-section",
       "blocks": {
         "tab_content_energy-focus_Tc1a": {
           "type": "tab-content",
@@ -1038,24 +1040,25 @@
               "settings": {
                 "slides_per_view_mobile": 2.1,
                 "slide_gap_mobile": 16,
+                "autoplay_mobile": false,
                 "show_arrows_mobile": false,
                 "show_dots_mobile": false,
-                "autoplay_mobile": false,
                 "slides_per_view_tablet": 3,
                 "slide_gap_tablet": 24,
+                "autoplay_tablet": false,
                 "show_arrows_tablet": false,
                 "show_dots_tablet": false,
-                "autoplay_tablet": false,
                 "slides_per_view_desktop": 4.2,
                 "slide_gap_desktop": 32,
+                "autoplay_desktop": false,
                 "show_arrows_desktop": true,
                 "external_arrows_desktop": true,
-                "show_dots_desktop": false,
-                "autoplay_desktop": false
+                "show_dots_desktop": false
               },
               "blocks": {
                 "slide_hero_energy-focus_Sh3c": {
                   "type": "_carousel-slide",
+                  "settings": {},
                   "blocks": {
                     "hero_energy-focus_Hr4d": {
                       "type": "hero-block",
@@ -1065,8 +1068,8 @@
                         "background_media_mobile": "image",
                         "image_mobile": "shopify://shop_images/agile-support-1-desktop-112594318.png",
                         "image_position_mobile": "cover",
-                        "content_position_mobile": "bottom-left",
                         "content_width_mobile": "100",
+                        "content_position_mobile": "bottom-left",
                         "padding_top_mobile": 0,
                         "padding_bottom_mobile": 16,
                         "padding_left_mobile": 12,
@@ -1076,8 +1079,8 @@
                         "background_media_desktop": "image",
                         "image_desktop": "shopify://shop_images/agile-support-1-desktop-112594318.png",
                         "image_position_desktop": "cover",
-                        "content_position_desktop": "bottom-left",
                         "content_width_desktop": "100",
+                        "content_position_desktop": "bottom-left",
                         "padding_top_desktop": 0,
                         "padding_bottom_desktop": 24,
                         "padding_left_desktop": 24,
@@ -1121,6 +1124,7 @@
                 },
                 "slide_pc1_energy-focus_Sp1h": {
                   "type": "_carousel-slide",
+                  "settings": {},
                   "blocks": {
                     "pc_1_energy-focus_Pc1j": {
                       "type": "product-card",
@@ -1152,6 +1156,7 @@
                 },
                 "slide_pc2_energy-focus_Sp2h": {
                   "type": "_carousel-slide",
+                  "settings": {},
                   "blocks": {
                     "pc_2_energy-focus_Pc2j": {
                       "type": "product-card",
@@ -1183,6 +1188,7 @@
                 },
                 "slide_pc3_energy-focus_Sp3h": {
                   "type": "_carousel-slide",
+                  "settings": {},
                   "blocks": {
                     "pc_3_energy-focus_Pc3j": {
                       "type": "product-card",
@@ -1214,6 +1220,7 @@
                 },
                 "slide_pc4_energy-focus_Sp4h": {
                   "type": "_carousel-slide",
+                  "settings": {},
                   "blocks": {
                     "pc_4_energy-focus_Pc4j": {
                       "type": "product-card",
@@ -1245,6 +1252,7 @@
                 },
                 "slide_pc5_energy-focus_Sp5h": {
                   "type": "_carousel-slide",
+                  "settings": {},
                   "blocks": {
                     "pc_5_energy-focus_Pc5j": {
                       "type": "product-card",
@@ -1292,7 +1300,23 @@
       },
       "block_order": [
         "tab_content_energy-focus_Tc1a"
-      ]
+      ],
+      "settings": {
+        "background_color_mobile": "#F1F1EA",
+        "text_color_mobile": "#141414",
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "padding_left_mobile": 0,
+        "padding_right_mobile": 0,
+        "margin_bottom_mobile": 0,
+        "background_color_desktop": "#F1F1EA",
+        "text_color_desktop": "#141414",
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 32,
+        "padding_left_desktop": 64,
+        "padding_right_desktop": 64,
+        "margin_bottom_desktop": 0
+      }
     },
     "wff_benefits_Lm2No3": {
       "type": "generic-section",
