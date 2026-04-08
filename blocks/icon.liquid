@@ -2,22 +2,13 @@
 {% assign icon_block_class = 'icon-block__media icon-block-' | append: block.id %}
 
 {% capture icon %}
-  {% if block_settings.asset_icon != blank and block_settings.image_upload == blank %}
-    <img
-      src="{{ block_settings.asset_icon | asset_url }}"
-      class="{{ icon_block_class }}"
-      alt=""
-      {{ block.shopify_attributes }}
-    >
-  {% else %}
-    {% render 'icon-or-image',
-      icon: block_settings.icon,
-      image_upload: block_settings.image_upload,
-      width: block_settings.width,
-      class_name: icon_block_class,
-      attributes: block.shopify_attributes
-    %}
-  {% endif %}
+  {% render 'icon-or-image',
+    icon: block_settings.icon,
+    image_upload: block_settings.image_upload,
+    width: block_settings.width,
+    class_name: icon_block_class,
+    attributes: block.shopify_attributes
+  %}
 {% endcapture %}
 
 <div
@@ -327,12 +318,6 @@
       "type": "image_picker",
       "id": "image_upload",
       "label": "t:settings.image_icon"
-    },
-    {
-      "type": "text",
-      "id": "asset_icon",
-      "label": "Asset icon filename",
-      "info": "Filename of an SVG in assets/ (e.g. my-icon.svg). Used when image upload is empty."
     },
     {
       "type": "range",

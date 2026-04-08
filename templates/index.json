@@ -100,8 +100,8 @@
                 "icon_b1_Qr4St5": {
                   "type": "icon",
                   "settings": {
-                    "icon": "none",
-                    "asset_icon": "icon-1-nutrition-all-in-one-place-2.svg",
+                    "icon": "checkbox",
+                    "image_upload": "shopify://shop_images/icon-1-nutrition-all-in-one-place-2.png",
                     "width": 64,
                     "width_mobile": 48,
                     "margin_bottom_desktop": 16,
@@ -187,8 +187,8 @@
                 "icon_b2_Kl4Mn5": {
                   "type": "icon",
                   "settings": {
-                    "icon": "none",
-                    "asset_icon": "icon-2-quality-ingredients-2.svg",
+                    "icon": "checkbox",
+                    "image_upload": "shopify://shop_images/icon-2-quality-ingredients-2.png",
                     "width": 64,
                     "width_mobile": 48,
                     "margin_bottom_desktop": 16,
@@ -274,8 +274,8 @@
                 "icon_b3_Ef4Gh5": {
                   "type": "icon",
                   "settings": {
-                    "icon": "none",
-                    "asset_icon": "icon-3-b-food-first-nutrition-2.svg",
+                    "icon": "checkbox",
+                    "image_upload": "shopify://shop_images/icon-3-b-food-first-nutrition-2.png",
                     "width": 64,
                     "width_mobile": 48,
                     "margin_bottom_desktop": 16,
@@ -361,8 +361,8 @@
                 "icon_b4_Yz4Ab5": {
                   "type": "icon",
                   "settings": {
-                    "icon": "none",
-                    "asset_icon": "icon-4-designed-for-on-the-go-2.svg",
+                    "icon": "checkbox",
+                    "image_upload": "shopify://shop_images/icon-4-designed-for-on-the-go-2.png",
                     "width": 64,
                     "width_mobile": 48,
                     "margin_bottom_desktop": 16,
