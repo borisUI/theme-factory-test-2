@@ -97,22 +97,66 @@
                   },
                   "blocks": {}
                 },
-                "icon_b1_Qr4St5": {
-                  "type": "icon",
+                "grp_icon_b1_Qr4St5": {
+                  "type": "group",
                   "settings": {
-                    "icon": "checkbox",
-                    "image_upload": "shopify://shop_images/icon-1-nutrition-all-in-one-place-2.png",
-                    "width": 64,
-                    "width_mobile": 48,
-                    "margin_bottom_desktop": 16,
-                    "margin_bottom_mobile": 16,
+                    "content_direction": "row",
+                    "vertical_on_mobile": false,
+                    "horizontal_alignment": "center",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "center",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 0,
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "background_media": "none",
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
                     "link": "",
-                    "open_in_new_tab": false
-                  }
+                    "open_in_new_tab": false,
+                    "placeholder": "",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {
+                    "icon_b1_Qr4St5": {
+                      "type": "icon",
+                      "settings": {
+                        "icon": "checkbox",
+                        "image_upload": "shopify://shop_images/icon-1-nutrition-all-in-one-place-2.png",
+                        "width": 64,
+                        "width_mobile": 48,
+                        "margin_bottom_desktop": 16,
+                        "margin_bottom_mobile": 16,
+                        "link": "",
+                        "open_in_new_tab": false
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "icon_b1_Qr4St5"
+                  ]
                 }
               },
               "block_order": [
-                "icon_b1_Qr4St5",
+                "grp_icon_b1_Qr4St5",
                 "txt_h_b1_Yz8Ab9",
                 "txt_d_b1_Cd0Ef1"
               ]
@@ -184,22 +228,66 @@
                   },
                   "blocks": {}
                 },
-                "icon_b2_Kl4Mn5": {
-                  "type": "icon",
+                "grp_icon_b2_Kl4Mn5": {
+                  "type": "group",
                   "settings": {
-                    "icon": "checkbox",
-                    "image_upload": "shopify://shop_images/icon-2-quality-ingredients-2.png",
-                    "width": 64,
-                    "width_mobile": 48,
-                    "margin_bottom_desktop": 16,
-                    "margin_bottom_mobile": 16,
+                    "content_direction": "row",
+                    "vertical_on_mobile": false,
+                    "horizontal_alignment": "center",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "center",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 0,
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "background_media": "none",
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
                     "link": "",
-                    "open_in_new_tab": false
-                  }
+                    "open_in_new_tab": false,
+                    "placeholder": "",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {
+                    "icon_b2_Kl4Mn5": {
+                      "type": "icon",
+                      "settings": {
+                        "icon": "checkbox",
+                        "image_upload": "shopify://shop_images/icon-2-quality-ingredients-2.png",
+                        "width": 64,
+                        "width_mobile": 48,
+                        "margin_bottom_desktop": 16,
+                        "margin_bottom_mobile": 16,
+                        "link": "",
+                        "open_in_new_tab": false
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "icon_b2_Kl4Mn5"
+                  ]
                 }
               },
               "block_order": [
-                "icon_b2_Kl4Mn5",
+                "grp_icon_b2_Kl4Mn5",
                 "txt_h_b2_St8Uv9",
                 "txt_d_b2_Wx0Yz1"
               ]
@@ -271,22 +359,66 @@
                   },
                   "blocks": {}
                 },
-                "icon_b3_Ef4Gh5": {
-                  "type": "icon",
+                "grp_icon_b3_Ef4Gh5": {
+                  "type": "group",
                   "settings": {
-                    "icon": "checkbox",
-                    "image_upload": "shopify://shop_images/icon-3-b-food-first-nutrition-2.png",
-                    "width": 64,
-                    "width_mobile": 48,
-                    "margin_bottom_desktop": 16,
-                    "margin_bottom_mobile": 16,
+                    "content_direction": "row",
+                    "vertical_on_mobile": false,
+                    "horizontal_alignment": "center",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "center",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 0,
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "background_media": "none",
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
                     "link": "",
-                    "open_in_new_tab": false
-                  }
+                    "open_in_new_tab": false,
+                    "placeholder": "",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {
+                    "icon_b3_Ef4Gh5": {
+                      "type": "icon",
+                      "settings": {
+                        "icon": "checkbox",
+                        "image_upload": "shopify://shop_images/icon-3-b-food-first-nutrition-2.png",
+                        "width": 64,
+                        "width_mobile": 48,
+                        "margin_bottom_desktop": 16,
+                        "margin_bottom_mobile": 16,
+                        "link": "",
+                        "open_in_new_tab": false
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "icon_b3_Ef4Gh5"
+                  ]
                 }
               },
               "block_order": [
-                "icon_b3_Ef4Gh5",
+                "grp_icon_b3_Ef4Gh5",
                 "txt_h_b3_Mn8Op9",
                 "txt_d_b3_Qr0St1"
               ]
@@ -358,22 +490,66 @@
                   },
                   "blocks": {}
                 },
-                "icon_b4_Yz4Ab5": {
-                  "type": "icon",
+                "grp_icon_b4_Yz4Ab5": {
+                  "type": "group",
                   "settings": {
-                    "icon": "checkbox",
-                    "image_upload": "shopify://shop_images/icon-4-designed-for-on-the-go-2.png",
-                    "width": 64,
-                    "width_mobile": 48,
-                    "margin_bottom_desktop": 16,
-                    "margin_bottom_mobile": 16,
+                    "content_direction": "row",
+                    "vertical_on_mobile": false,
+                    "horizontal_alignment": "center",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "center",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 0,
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "background_media": "none",
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
                     "link": "",
-                    "open_in_new_tab": false
-                  }
+                    "open_in_new_tab": false,
+                    "placeholder": "",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {
+                    "icon_b4_Yz4Ab5": {
+                      "type": "icon",
+                      "settings": {
+                        "icon": "checkbox",
+                        "image_upload": "shopify://shop_images/icon-4-designed-for-on-the-go-2.png",
+                        "width": 64,
+                        "width_mobile": 48,
+                        "margin_bottom_desktop": 16,
+                        "margin_bottom_mobile": 16,
+                        "link": "",
+                        "open_in_new_tab": false
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "icon_b4_Yz4Ab5"
+                  ]
                 }
               },
               "block_order": [
-                "icon_b4_Yz4Ab5",
+                "grp_icon_b4_Yz4Ab5",
                 "txt_h_b4_Gh8Ij9",
                 "txt_d_b4_Kl0Mn1"
               ]
