@@ -461,7 +461,8 @@
     "video_testimonial": "Video Testimonial",
     "custom_product_card": "Custom Product Card",
     "testimonial_card": "Testimonial Card",
-    "text_product": "Text Product"
+    "text_product": "Text Product",
+    "textual_product": "Textual Product"
   },
   "options": {
     "above_carousel": "Above carousel",
@@ -883,6 +884,7 @@
     "custom_mobile_size": "Custom mobile size",
     "custom_mobile_width": "Custom mobile width",
     "custom_width": "Custom width",
+    "custom_description": "Description",
     "custom_liquid": "Liquid code",
     // Primary color scheme option, not specialized variants
     "default": "Default",
@@ -1190,6 +1192,7 @@
     // Pixel width setting for borders, dividers, or lines
     "thickness": "Thickness",
     "title": "Title",
+    "title_override": "Title override",
     // Label for range input controlling top spacing/margin
     "top": "Top",
     "top_level_size": "Top level size",

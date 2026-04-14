@@ -9,6 +9,1674 @@
  */
 {
   "sections": {
+    "welcome_kit_Xk9mQ2": {
+      "type": "generic-section",
+      "blocks": {
+        "grid_row_Wk4nR3": {
+          "type": "grid-row",
+          "settings": {
+            "vertical_alignment_mobile": "start",
+            "column_gap_mobile": 0,
+            "row_gap_mobile": 0,
+            "margin_bottom_mobile": 0,
+            "vertical_alignment_tablet": "center",
+            "column_gap_tablet": 0,
+            "row_gap_tablet": 0,
+            "margin_bottom_tablet": 0,
+            "vertical_alignment_desktop": "center",
+            "column_gap_desktop": 0,
+            "row_gap_desktop": 0,
+            "margin_bottom_desktop": 0
+          },
+          "blocks": {
+            "col_left_Yl5oS4": {
+              "type": "_grid-column",
+              "settings": {
+                "column_span_mobile": "12",
+                "column_order_mobile": "1",
+                "margin_bottom_mobile": 0,
+                "column_span_tablet": "6",
+                "column_order_tablet": "1",
+                "margin_bottom_tablet": 0,
+                "column_span_desktop": "6",
+                "column_order_desktop": "1",
+                "margin_bottom_desktop": 0
+              },
+              "blocks": {
+                "hero_Zm6pT5": {
+                  "type": "hero-block",
+                  "settings": {
+                    "height_type_mobile": "custom",
+                    "custom_height_mobile": 260,
+                    "background_media_mobile": "image",
+                    "image_mobile": "shopify://shop_images/daily-nouri-d37stewmyqy-unsplash-3-mobile-110526574.png",
+                    "image_position_mobile": "cover",
+                    "content_width_mobile": "100",
+                    "content_position_mobile": "top-left",
+                    "padding_top_mobile": 8,
+                    "padding_bottom_mobile": 0,
+                    "padding_left_mobile": 8,
+                    "padding_right_mobile": 0,
+                    "margin_bottom_mobile": 0,
+                    "height_type_desktop": "custom",
+                    "custom_height_desktop": 614,
+                    "background_media_desktop": "image",
+                    "image_desktop": "shopify://shop_images/daily-nouri-d37stewmyqy-unsplash-3-desktop-110525076.png",
+                    "image_position_desktop": "cover",
+                    "content_width_desktop": "100",
+                    "content_position_desktop": "top-left",
+                    "padding_top_desktop": 12,
+                    "padding_bottom_desktop": 0,
+                    "padding_left_desktop": 12,
+                    "padding_right_desktop": 0,
+                    "margin_bottom_desktop": 0,
+                    "toggle_overlay": false
+                  },
+                  "blocks": {
+                    "badge_An7qU6": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>FREE WELCOME KIT</p>",
+                        "width": "fit-content",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "custom",
+                        "font": "Simplon Norm, sans-serif",
+                        "font_size": "0.75rem",
+                        "line_height": 1.0,
+                        "letter_spacing": 0.6,
+                        "case": "uppercase",
+                        "wrap": "nowrap",
+                        "color": "var(--color-foreground)",
+                        "background": true,
+                        "background_color": "#141414",
+                        "corner_radius": 2,
+                        "padding-block-start": 6,
+                        "padding-block-end": 6,
+                        "padding-inline-start": 12,
+                        "padding-inline-end": 12
+                      }
+                    }
+                  },
+                  "block_order": ["badge_An7qU6"]
+                }
+              },
+              "block_order": ["hero_Zm6pT5"]
+            },
+            "col_right_Bo8rV7": {
+              "type": "_grid-column",
+              "settings": {
+                "column_span_mobile": "12",
+                "column_order_mobile": "2",
+                "margin_bottom_mobile": 0,
+                "column_span_tablet": "6",
+                "column_order_tablet": "2",
+                "margin_bottom_tablet": 0,
+                "column_span_desktop": "6",
+                "column_order_desktop": "2",
+                "margin_bottom_desktop": 0
+              },
+              "blocks": {
+                "content_group_Cp9sW8": {
+                  "type": "group",
+                  "settings": {
+                    "content_direction": "column",
+                    "vertical_on_mobile": true,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 32,
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fill",
+                    "custom_height": 100,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "background_media": "none",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "toggle_overlay": false,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 16,
+                    "padding-inline-end": 16
+                  },
+                  "blocks": {
+                    "heading_group_Dq0tX9": {
+                      "type": "group",
+                      "settings": {
+                        "content_direction": "column",
+                        "vertical_on_mobile": true,
+                        "horizontal_alignment": "flex-start",
+                        "vertical_alignment": "flex-start",
+                        "horizontal_alignment_flex_direction_column": "flex-start",
+                        "vertical_alignment_flex_direction_column": "flex-start",
+                        "gap": 12,
+                        "width": "fill",
+                        "custom_width": 100,
+                        "width_mobile": "fill",
+                        "custom_width_mobile": 100,
+                        "height": "fit",
+                        "inherit_color_scheme": true,
+                        "color_scheme": "",
+                        "background_media": "none",
+                        "border": "none",
+                        "border_width": 1,
+                        "border_opacity": 100,
+                        "border_radius": 0,
+                        "toggle_overlay": false,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {
+                        "heading_Er1uY0": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>FREE Daily Greens Welcome Kit worth $36</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "custom",
+                            "font": "Simplon Norm, sans-serif",
+                            "font_size": "3rem",
+                            "line_height": 1.17,
+                            "letter_spacing": 0,
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground-heading)",
+                            "background": false,
+                            "background_color": "#00000026",
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          }
+                        },
+                        "description_Fs2vZ1": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>Turn your daily habit into a delicious ritual with a kit full of greens essentials. Free welcome kit with first time purchase of Daily Greens.</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "custom",
+                            "font": "Jakarta Plus, sans-serif",
+                            "font_size": "1.125rem",
+                            "line_height": 1.56,
+                            "letter_spacing": 0,
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "background_color": "#00000026",
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          }
+                        }
+                      },
+                      "block_order": ["heading_Er1uY0", "description_Fs2vZ1"]
+                    },
+                    "products_group_Gt3wA2": {
+                      "type": "group",
+                      "settings": {
+                        "content_direction": "column",
+                        "vertical_on_mobile": true,
+                        "horizontal_alignment": "flex-start",
+                        "vertical_alignment": "flex-start",
+                        "horizontal_alignment_flex_direction_column": "flex-start",
+                        "vertical_alignment_flex_direction_column": "flex-start",
+                        "gap": 16,
+                        "width": "fill",
+                        "custom_width": 100,
+                        "width_mobile": "fill",
+                        "custom_width_mobile": 100,
+                        "height": "fit",
+                        "inherit_color_scheme": true,
+                        "color_scheme": "",
+                        "background_media": "none",
+                        "border": "none",
+                        "border_width": 1,
+                        "border_opacity": 100,
+                        "border_radius": 0,
+                        "toggle_overlay": false,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {
+                        "tp_shaker_Hu4xB3": {
+                          "type": "textual-product",
+                          "settings": {
+                            "title_override": "Shaker bottle",
+                            "custom_description": "Premium bottle to mix and carry your greens",
+                            "price_override": "$20.00",
+                            "free_label": "FREE"
+                          }
+                        },
+                        "tp_samples_Iv5yC4": {
+                          "type": "textual-product",
+                          "settings": {
+                            "title_override": "Full-size samples (3)",
+                            "custom_description": "3 product samples free with every first order",
+                            "price_override": "$10.00",
+                            "free_label": "FREE"
+                          }
+                        },
+                        "tp_shipping_Jw6zD5": {
+                          "type": "textual-product",
+                          "settings": {
+                            "title_override": "Shipping",
+                            "custom_description": "Free shipping on orders above $50",
+                            "price_override": "$5.99",
+                            "free_label": "FREE"
+                          }
+                        }
+                      },
+                      "block_order": ["tp_shaker_Hu4xB3", "tp_samples_Iv5yC4", "tp_shipping_Jw6zD5"]
+                    },
+                    "cta_button_Kx7aE6": {
+                      "type": "custom-button",
+                      "settings": {
+                        "label": "SHOP DAILY GREENS",
+                        "open_in_new_tab": false,
+                        "min_width_desktop": 0,
+                        "min_width_mobile": 0,
+                        "width_desktop": "full_width",
+                        "width_mobile": "full_width",
+                        "background_color": "#141414",
+                        "text_color": "#ffffff",
+                        "font_desktop": "Jakarta Plus, sans-serif",
+                        "font_size_desktop": "0.875rem",
+                        "font_weight_desktop": "600",
+                        "letter_spacing_desktop": 1.5,
+                        "line_height_desktop": 1.4,
+                        "case_desktop": "uppercase",
+                        "font_mobile": "Jakarta Plus, sans-serif",
+                        "font_size_mobile": "0.875rem",
+                        "font_weight_mobile": "600",
+                        "letter_spacing_mobile": 1.5,
+                        "line_height_mobile": 1.4,
+                        "case_mobile": "uppercase",
+                        "padding_top_desktop": 20,
+                        "padding_bottom_desktop": 20,
+                        "padding_left_desktop": 24,
+                        "padding_right_desktop": 24,
+                        "padding_top_mobile": 18,
+                        "padding_bottom_mobile": 18,
+                        "padding_left_mobile": 20,
+                        "padding_right_mobile": 20,
+                        "border_radius": 50,
+                        "border_color": "#141414",
+                        "border_width": 0
+                      }
+                    }
+                  },
+                  "block_order": ["heading_group_Dq0tX9", "products_group_Gt3wA2", "cta_button_Kx7aE6"]
+                }
+              },
+              "block_order": ["content_group_Cp9sW8"]
+            }
+          },
+          "block_order": ["col_left_Yl5oS4", "col_right_Bo8rV7"]
+        }
+      },
+      "block_order": ["grid_row_Wk4nR3"],
+      "settings": {
+        "background_color_mobile": "#e1f0e2",
+        "text_color_mobile": "",
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 48,
+        "padding_left_mobile": 0,
+        "padding_right_mobile": 0,
+        "margin_bottom_mobile": 0,
+        "background_color_desktop": "#e1f0e2",
+        "text_color_desktop": "",
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 0,
+        "padding_left_desktop": 0,
+        "padding_right_desktop": 0,
+        "margin_bottom_desktop": 0
+      }
+    },
+    "product_tabs_nav_Rk3mP1": {
+      "type": "generic-section",
+      "blocks": {
+        "grid_nav_Gn1aB2": {
+          "type": "grid-row",
+          "settings": {
+            "vertical_alignment_mobile": "start",
+            "column_gap_mobile": 0,
+            "row_gap_mobile": 24,
+            "margin_bottom_mobile": 0,
+            "vertical_alignment_tablet": "end",
+            "column_gap_tablet": 32,
+            "row_gap_tablet": 0,
+            "margin_bottom_tablet": 0,
+            "vertical_alignment_desktop": "end",
+            "column_gap_desktop": 32,
+            "row_gap_desktop": 0,
+            "margin_bottom_desktop": 0
+          },
+          "blocks": {
+            "col_left_Cl3dE4": {
+              "type": "_grid-column",
+              "settings": {
+                "column_span_mobile": "12",
+                "column_order_mobile": "1",
+                "margin_bottom_mobile": 0,
+                "column_span_tablet": "5",
+                "column_order_tablet": "1",
+                "margin_bottom_tablet": 0,
+                "column_span_desktop": "5",
+                "column_order_desktop": "1",
+                "margin_bottom_desktop": 0
+              },
+              "blocks": {
+                "brought_by_Bb5fG6": {
+                  "type": "custom-liquid",
+                  "settings": {
+                    "custom_liquid": "<div style=\"display: flex; align-items: center; gap: 6px; padding: 0 16px;\"><span style=\"font-family: var(--font-body--family); font-weight: 400; font-size: clamp(14px, 2vw, 18px); line-height: 1; color: #2A523F;\">brought to you by</span><img src=\"{{ 'logo-factor-2.svg' | asset_url }}\" alt=\"Factor\" width=\"130\" height=\"18\" style=\"display: block; width: clamp(87px, 12vw, 130px); height: auto;\" /></div>"
+                  }
+                },
+                "heading_Hd7hI8": {
+                  "type": "custom-liquid",
+                  "settings": {
+                    "custom_liquid": "<h2 style=\"font-family: var(--font-heading--family); font-weight: 300; font-size: clamp(32px, 4vw, 48px); line-height: clamp(40px, 5vw, 56px); padding: 0 16px; margin: 0;\">Built From Food,\nDesigned for Results</h2>"
+                  }
+                }
+              },
+              "block_order": [
+                "brought_by_Bb5fG6",
+                "heading_Hd7hI8"
+              ]
+            },
+            "col_right_Cr9jK0": {
+              "type": "_grid-column",
+              "settings": {
+                "column_span_mobile": "12",
+                "column_order_mobile": "2",
+                "margin_bottom_mobile": 0,
+                "column_span_tablet": "7",
+                "column_order_tablet": "2",
+                "margin_bottom_tablet": 0,
+                "column_span_desktop": "7",
+                "column_order_desktop": "2",
+                "margin_bottom_desktop": 0
+              },
+              "blocks": {
+                "tab_group_Gp1aB2": {
+                  "type": "group",
+                  "settings": {
+                    "content_direction": "row",
+                    "vertical_on_mobile": false,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "flex-end",
+                    "gap": 32,
+                    "width": "fill",
+                    "height": "fit",
+                    "inherit_color_scheme": true
+                  },
+                  "blocks": {
+                    "tab_gut_Tg1aB2": {
+                      "type": "tab-navigation",
+                      "settings": {
+                        "group_id": "product-carousel",
+                        "target_id": "gut-health",
+                        "label": "Gut Health",
+                        "is_active": true
+                      }
+                    },
+                    "tab_rec_Tr3cD4": {
+                      "type": "tab-navigation",
+                      "settings": {
+                        "group_id": "product-carousel",
+                        "target_id": "recovery",
+                        "label": "Recovery",
+                        "is_active": false
+                      }
+                    },
+                    "tab_imm_Ti5eF6": {
+                      "type": "tab-navigation",
+                      "settings": {
+                        "group_id": "product-carousel",
+                        "target_id": "immunity",
+                        "label": "Immunity",
+                        "is_active": false
+                      }
+                    },
+                    "tab_enr_Te7gH8": {
+                      "type": "tab-navigation",
+                      "settings": {
+                        "group_id": "product-carousel",
+                        "target_id": "energy-focus",
+                        "label": "Energy & Focus",
+                        "is_active": false
+                      }
+                    }
+                  },
+                  "block_order": [
+                    "tab_gut_Tg1aB2",
+                    "tab_rec_Tr3cD4",
+                    "tab_imm_Ti5eF6",
+                    "tab_enr_Te7gH8"
+                  ]
+                }
+              },
+              "block_order": [
+                "tab_group_Gp1aB2"
+              ]
+            }
+          },
+          "block_order": [
+            "col_left_Cl3dE4",
+            "col_right_Cr9jK0"
+          ]
+        }
+      },
+      "block_order": [
+        "grid_nav_Gn1aB2"
+      ],
+      "settings": {
+        "background_color_mobile": "#F1F1EA",
+        "text_color_mobile": "#141414",
+        "padding_top_mobile": 48,
+        "padding_bottom_mobile": 24,
+        "padding_left_mobile": 0,
+        "padding_right_mobile": 0,
+        "margin_bottom_mobile": 0,
+        "background_color_desktop": "#F1F1EA",
+        "text_color_desktop": "#141414",
+        "padding_top_desktop": 64,
+        "padding_bottom_desktop": 32,
+        "padding_left_desktop": 64,
+        "padding_right_desktop": 64,
+        "margin_bottom_desktop": 0
+      }
+    },
+    "product_tab_gut_Yz7aP1": {
+      "type": "generic-section",
+      "blocks": {
+        "tab_content_gut-health_Tc1a": {
+          "type": "tab-content",
+          "settings": {
+            "group_id": "product-carousel",
+            "target_id": "gut-health"
+          },
+          "blocks": {
+            "carousel_gut-health_Cr2b": {
+              "type": "carousel-block",
+              "settings": {
+                "slides_per_view_mobile": 2.1,
+                "slide_gap_mobile": 16,
+                "autoplay_mobile": false,
+                "show_arrows_mobile": false,
+                "show_dots_mobile": false,
+                "slides_per_view_tablet": 3,
+                "slide_gap_tablet": 24,
+                "autoplay_tablet": false,
+                "show_arrows_tablet": false,
+                "show_dots_tablet": false,
+                "slides_per_view_desktop": 4.2,
+                "slide_gap_desktop": 32,
+                "autoplay_desktop": false,
+                "show_arrows_desktop": true,
+                "external_arrows_desktop": true,
+                "show_dots_desktop": false
+              },
+              "blocks": {
+                "slide_hero_gut-health_Sh3c": {
+                  "type": "_carousel-slide",
+                  "settings": {},
+                  "blocks": {
+                    "hero_gut-health_Hr4d": {
+                      "type": "hero-block",
+                      "settings": {
+                        "height_type_mobile": "custom",
+                        "custom_height_mobile": 334,
+                        "background_media_mobile": "image",
+                        "image_mobile": "shopify://shop_images/agile-support-1-desktop-112594318.png",
+                        "image_position_mobile": "cover",
+                        "content_width_mobile": "100",
+                        "content_position_mobile": "bottom-left",
+                        "padding_top_mobile": 0,
+                        "padding_bottom_mobile": 16,
+                        "padding_left_mobile": 12,
+                        "padding_right_mobile": 12,
+                        "height_type_desktop": "custom",
+                        "custom_height_desktop": 492,
+                        "background_media_desktop": "image",
+                        "image_desktop": "shopify://shop_images/agile-support-1-desktop-112594318.png",
+                        "image_position_desktop": "cover",
+                        "content_width_desktop": "100",
+                        "content_position_desktop": "bottom-left",
+                        "padding_top_desktop": 0,
+                        "padding_bottom_desktop": 24,
+                        "padding_left_desktop": 24,
+                        "padding_right_desktop": 24,
+                        "toggle_overlay": true,
+                        "overlay_color": "#141414",
+                        "overlay_style": "gradient",
+                        "gradient_direction": "to bottom"
+                      },
+                      "blocks": {
+                        "hero_cat_gut-health_Hc5e": {
+                          "type": "custom-liquid",
+                          "settings": {
+                            "custom_liquid": "<p style=\"font-family: var(--font-heading--family); font-weight: 500; font-size: 20px; line-height: 28px; color: #FFFFFF;\">Gut Health</p>"
+                          }
+                        },
+                        "hero_desc_gut-health_Hd6f": {
+                          "type": "custom-liquid",
+                          "settings": {
+                            "custom_liquid": "<p style=\"font-family: var(--font-body--family); font-weight: 400; font-size: 16px; line-height: 24px; color: #FFFFFF;\">Superfoods and nutrients for daily digestive support</p>"
+                          }
+                        },
+                        "hero_btn_gut-health_Hb7g": {
+                          "type": "button",
+                          "settings": {
+                            "label": "VIEW ALL GUT HEALTH",
+                            "style_class": "link"
+                          }
+                        }
+                      },
+                      "block_order": [
+                        "hero_cat_gut-health_Hc5e",
+                        "hero_desc_gut-health_Hd6f",
+                        "hero_btn_gut-health_Hb7g"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "hero_gut-health_Hr4d"
+                  ]
+                },
+                "slide_pc1_gut-health_Sp1h": {
+                  "type": "_carousel-slide",
+                  "settings": {},
+                  "blocks": {
+                    "pc_1_gut-health_Pc1j": {
+                      "type": "product-card",
+                      "settings": {},
+                      "blocks": {
+                        "gallery_1_gut-health_Gl1k": {
+                          "type": "_product-card-gallery",
+                          "settings": {}
+                        },
+                        "ptitle_1_gut-health_Pt1m": {
+                          "type": "product-title",
+                          "settings": {}
+                        },
+                        "price_1_gut-health_Pr1n": {
+                          "type": "price",
+                          "settings": {}
+                        }
+                      },
+                      "block_order": [
+                        "gallery_1_gut-health_Gl1k",
+                        "ptitle_1_gut-health_Pt1m",
+                        "price_1_gut-health_Pr1n"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "pc_1_gut-health_Pc1j"
+                  ]
+                },
+                "slide_pc2_gut-health_Sp2h": {
+                  "type": "_carousel-slide",
+                  "settings": {},
+                  "blocks": {
+                    "pc_2_gut-health_Pc2j": {
+                      "type": "product-card",
+                      "settings": {},
+                      "blocks": {
+                        "gallery_2_gut-health_Gl2k": {
+                          "type": "_product-card-gallery",
+                          "settings": {}
+                        },
+                        "ptitle_2_gut-health_Pt2m": {
+                          "type": "product-title",
+                          "settings": {}
+                        },
+                        "price_2_gut-health_Pr2n": {
+                          "type": "price",
+                          "settings": {}
+                        }
+                      },
+                      "block_order": [
+                        "gallery_2_gut-health_Gl2k",
+                        "ptitle_2_gut-health_Pt2m",
+                        "price_2_gut-health_Pr2n"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "pc_2_gut-health_Pc2j"
+                  ]
+                },
+                "slide_pc3_gut-health_Sp3h": {
+                  "type": "_carousel-slide",
+                  "settings": {},
+                  "blocks": {
+                    "pc_3_gut-health_Pc3j": {
+                      "type": "product-card",
+                      "settings": {},
+                      "blocks": {
+                        "gallery_3_gut-health_Gl3k": {
+                          "type": "_product-card-gallery",
+                          "settings": {}
+                        },
+                        "ptitle_3_gut-health_Pt3m": {
+                          "type": "product-title",
+                          "settings": {}
+                        },
+                        "price_3_gut-health_Pr3n": {
+                          "type": "price",
+                          "settings": {}
+                        }
+                      },
+                      "block_order": [
+                        "gallery_3_gut-health_Gl3k",
+                        "ptitle_3_gut-health_Pt3m",
+                        "price_3_gut-health_Pr3n"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "pc_3_gut-health_Pc3j"
+                  ]
+                },
+                "slide_pc4_gut-health_Sp4h": {
+                  "type": "_carousel-slide",
+                  "settings": {},
+                  "blocks": {
+                    "pc_4_gut-health_Pc4j": {
+                      "type": "product-card",
+                      "settings": {},
+                      "blocks": {
+                        "gallery_4_gut-health_Gl4k": {
+                          "type": "_product-card-gallery",
+                          "settings": {}
+                        },
+                        "ptitle_4_gut-health_Pt4m": {
+                          "type": "product-title",
+                          "settings": {}
+                        },
+                        "price_4_gut-health_Pr4n": {
+                          "type": "price",
+                          "settings": {}
+                        }
+                      },
+                      "block_order": [
+                        "gallery_4_gut-health_Gl4k",
+                        "ptitle_4_gut-health_Pt4m",
+                        "price_4_gut-health_Pr4n"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "pc_4_gut-health_Pc4j"
+                  ]
+                },
+                "slide_pc5_gut-health_Sp5h": {
+                  "type": "_carousel-slide",
+                  "settings": {},
+                  "blocks": {
+                    "pc_5_gut-health_Pc5j": {
+                      "type": "product-card",
+                      "settings": {},
+                      "blocks": {
+                        "gallery_5_gut-health_Gl5k": {
+                          "type": "_product-card-gallery",
+                          "settings": {}
+                        },
+                        "ptitle_5_gut-health_Pt5m": {
+                          "type": "product-title",
+                          "settings": {}
+                        },
+                        "price_5_gut-health_Pr5n": {
+                          "type": "price",
+                          "settings": {}
+                        }
+                      },
+                      "block_order": [
+                        "gallery_5_gut-health_Gl5k",
+                        "ptitle_5_gut-health_Pt5m",
+                        "price_5_gut-health_Pr5n"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "pc_5_gut-health_Pc5j"
+                  ]
+                }
+              },
+              "block_order": [
+                "slide_hero_gut-health_Sh3c",
+                "slide_pc1_gut-health_Sp1h",
+                "slide_pc2_gut-health_Sp2h",
+                "slide_pc3_gut-health_Sp3h",
+                "slide_pc4_gut-health_Sp4h",
+                "slide_pc5_gut-health_Sp5h"
+              ]
+            }
+          },
+          "block_order": [
+            "carousel_gut-health_Cr2b"
+          ]
+        }
+      },
+      "block_order": [
+        "tab_content_gut-health_Tc1a"
+      ],
+      "settings": {
+        "background_color_mobile": "#F1F1EA",
+        "text_color_mobile": "#141414",
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "padding_left_mobile": 0,
+        "padding_right_mobile": 0,
+        "margin_bottom_mobile": 0,
+        "background_color_desktop": "#F1F1EA",
+        "text_color_desktop": "#141414",
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 0,
+        "padding_left_desktop": 64,
+        "padding_right_desktop": 64,
+        "margin_bottom_desktop": 0
+      }
+    },
+    "product_tab_rec_Bc8dQ2": {
+      "type": "generic-section",
+      "blocks": {
+        "tab_content_recovery_Tc1a": {
+          "type": "tab-content",
+          "settings": {
+            "group_id": "product-carousel",
+            "target_id": "recovery"
+          },
+          "blocks": {
+            "carousel_recovery_Cr2b": {
+              "type": "carousel-block",
+              "settings": {
+                "slides_per_view_mobile": 2.1,
+                "slide_gap_mobile": 16,
+                "autoplay_mobile": false,
+                "show_arrows_mobile": false,
+                "show_dots_mobile": false,
+                "slides_per_view_tablet": 3,
+                "slide_gap_tablet": 24,
+                "autoplay_tablet": false,
+                "show_arrows_tablet": false,
+                "show_dots_tablet": false,
+                "slides_per_view_desktop": 4.2,
+                "slide_gap_desktop": 32,
+                "autoplay_desktop": false,
+                "show_arrows_desktop": true,
+                "external_arrows_desktop": true,
+                "show_dots_desktop": false
+              },
+              "blocks": {
+                "slide_hero_recovery_Sh3c": {
+                  "type": "_carousel-slide",
+                  "settings": {},
+                  "blocks": {
+                    "hero_recovery_Hr4d": {
+                      "type": "hero-block",
+                      "settings": {
+                        "height_type_mobile": "custom",
+                        "custom_height_mobile": 334,
+                        "background_media_mobile": "image",
+                        "image_mobile": "shopify://shop_images/agile-support-1-desktop-112594318.png",
+                        "image_position_mobile": "cover",
+                        "content_width_mobile": "100",
+                        "content_position_mobile": "bottom-left",
+                        "padding_top_mobile": 0,
+                        "padding_bottom_mobile": 16,
+                        "padding_left_mobile": 12,
+                        "padding_right_mobile": 12,
+                        "height_type_desktop": "custom",
+                        "custom_height_desktop": 492,
+                        "background_media_desktop": "image",
+                        "image_desktop": "shopify://shop_images/agile-support-1-desktop-112594318.png",
+                        "image_position_desktop": "cover",
+                        "content_width_desktop": "100",
+                        "content_position_desktop": "bottom-left",
+                        "padding_top_desktop": 0,
+                        "padding_bottom_desktop": 24,
+                        "padding_left_desktop": 24,
+                        "padding_right_desktop": 24,
+                        "toggle_overlay": true,
+                        "overlay_color": "#141414",
+                        "overlay_style": "gradient",
+                        "gradient_direction": "to bottom"
+                      },
+                      "blocks": {
+                        "hero_cat_recovery_Hc5e": {
+                          "type": "custom-liquid",
+                          "settings": {
+                            "custom_liquid": "<p style=\"font-family: var(--font-heading--family); font-weight: 500; font-size: 20px; line-height: 28px; color: #FFFFFF;\">Recovery</p>"
+                          }
+                        },
+                        "hero_desc_recovery_Hd6f": {
+                          "type": "custom-liquid",
+                          "settings": {
+                            "custom_liquid": "<p style=\"font-family: var(--font-body--family); font-weight: 400; font-size: 16px; line-height: 24px; color: #FFFFFF;\">Fuel your body's recovery with targeted nutrition and support</p>"
+                          }
+                        },
+                        "hero_btn_recovery_Hb7g": {
+                          "type": "button",
+                          "settings": {
+                            "label": "VIEW ALL RECOVERY",
+                            "style_class": "link"
+                          }
+                        }
+                      },
+                      "block_order": [
+                        "hero_cat_recovery_Hc5e",
+                        "hero_desc_recovery_Hd6f",
+                        "hero_btn_recovery_Hb7g"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "hero_recovery_Hr4d"
+                  ]
+                },
+                "slide_pc1_recovery_Sp1h": {
+                  "type": "_carousel-slide",
+                  "settings": {},
+                  "blocks": {
+                    "pc_1_recovery_Pc1j": {
+                      "type": "product-card",
+                      "settings": {},
+                      "blocks": {
+                        "gallery_1_recovery_Gl1k": {
+                          "type": "_product-card-gallery",
+                          "settings": {}
+                        },
+                        "ptitle_1_recovery_Pt1m": {
+                          "type": "product-title",
+                          "settings": {}
+                        },
+                        "price_1_recovery_Pr1n": {
+                          "type": "price",
+                          "settings": {}
+                        }
+                      },
+                      "block_order": [
+                        "gallery_1_recovery_Gl1k",
+                        "ptitle_1_recovery_Pt1m",
+                        "price_1_recovery_Pr1n"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "pc_1_recovery_Pc1j"
+                  ]
+                },
+                "slide_pc2_recovery_Sp2h": {
+                  "type": "_carousel-slide",
+                  "settings": {},
+                  "blocks": {
+                    "pc_2_recovery_Pc2j": {
+                      "type": "product-card",
+                      "settings": {},
+                      "blocks": {
+                        "gallery_2_recovery_Gl2k": {
+                          "type": "_product-card-gallery",
+                          "settings": {}
+                        },
+                        "ptitle_2_recovery_Pt2m": {
+                          "type": "product-title",
+                          "settings": {}
+                        },
+                        "price_2_recovery_Pr2n": {
+                          "type": "price",
+                          "settings": {}
+                        }
+                      },
+                      "block_order": [
+                        "gallery_2_recovery_Gl2k",
+                        "ptitle_2_recovery_Pt2m",
+                        "price_2_recovery_Pr2n"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "pc_2_recovery_Pc2j"
+                  ]
+                },
+                "slide_pc3_recovery_Sp3h": {
+                  "type": "_carousel-slide",
+                  "settings": {},
+                  "blocks": {
+                    "pc_3_recovery_Pc3j": {
+                      "type": "product-card",
+                      "settings": {},
+                      "blocks": {
+                        "gallery_3_recovery_Gl3k": {
+                          "type": "_product-card-gallery",
+                          "settings": {}
+                        },
+                        "ptitle_3_recovery_Pt3m": {
+                          "type": "product-title",
+                          "settings": {}
+                        },
+                        "price_3_recovery_Pr3n": {
+                          "type": "price",
+                          "settings": {}
+                        }
+                      },
+                      "block_order": [
+                        "gallery_3_recovery_Gl3k",
+                        "ptitle_3_recovery_Pt3m",
+                        "price_3_recovery_Pr3n"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "pc_3_recovery_Pc3j"
+                  ]
+                },
+                "slide_pc4_recovery_Sp4h": {
+                  "type": "_carousel-slide",
+                  "settings": {},
+                  "blocks": {
+                    "pc_4_recovery_Pc4j": {
+                      "type": "product-card",
+                      "settings": {},
+                      "blocks": {
+                        "gallery_4_recovery_Gl4k": {
+                          "type": "_product-card-gallery",
+                          "settings": {}
+                        },
+                        "ptitle_4_recovery_Pt4m": {
+                          "type": "product-title",
+                          "settings": {}
+                        },
+                        "price_4_recovery_Pr4n": {
+                          "type": "price",
+                          "settings": {}
+                        }
+                      },
+                      "block_order": [
+                        "gallery_4_recovery_Gl4k",
+                        "ptitle_4_recovery_Pt4m",
+                        "price_4_recovery_Pr4n"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "pc_4_recovery_Pc4j"
+                  ]
+                },
+                "slide_pc5_recovery_Sp5h": {
+                  "type": "_carousel-slide",
+                  "settings": {},
+                  "blocks": {
+                    "pc_5_recovery_Pc5j": {
+                      "type": "product-card",
+                      "settings": {},
+                      "blocks": {
+                        "gallery_5_recovery_Gl5k": {
+                          "type": "_product-card-gallery",
+                          "settings": {}
+                        },
+                        "ptitle_5_recovery_Pt5m": {
+                          "type": "product-title",
+                          "settings": {}
+                        },
+                        "price_5_recovery_Pr5n": {
+                          "type": "price",
+                          "settings": {}
+                        }
+                      },
+                      "block_order": [
+                        "gallery_5_recovery_Gl5k",
+                        "ptitle_5_recovery_Pt5m",
+                        "price_5_recovery_Pr5n"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "pc_5_recovery_Pc5j"
+                  ]
+                }
+              },
+              "block_order": [
+                "slide_hero_recovery_Sh3c",
+                "slide_pc1_recovery_Sp1h",
+                "slide_pc2_recovery_Sp2h",
+                "slide_pc3_recovery_Sp3h",
+                "slide_pc4_recovery_Sp4h",
+                "slide_pc5_recovery_Sp5h"
+              ]
+            }
+          },
+          "block_order": [
+            "carousel_recovery_Cr2b"
+          ]
+        }
+      },
+      "block_order": [
+        "tab_content_recovery_Tc1a"
+      ],
+      "settings": {
+        "background_color_mobile": "#F1F1EA",
+        "text_color_mobile": "#141414",
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "padding_left_mobile": 0,
+        "padding_right_mobile": 0,
+        "margin_bottom_mobile": 0,
+        "background_color_desktop": "#F1F1EA",
+        "text_color_desktop": "#141414",
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 0,
+        "padding_left_desktop": 64,
+        "padding_right_desktop": 64,
+        "margin_bottom_desktop": 0
+      }
+    },
+    "product_tab_imm_Ef9gR3": {
+      "type": "generic-section",
+      "blocks": {
+        "tab_content_immunity_Tc1a": {
+          "type": "tab-content",
+          "settings": {
+            "group_id": "product-carousel",
+            "target_id": "immunity"
+          },
+          "blocks": {
+            "carousel_immunity_Cr2b": {
+              "type": "carousel-block",
+              "settings": {
+                "slides_per_view_mobile": 2.1,
+                "slide_gap_mobile": 16,
+                "autoplay_mobile": false,
+                "show_arrows_mobile": false,
+                "show_dots_mobile": false,
+                "slides_per_view_tablet": 3,
+                "slide_gap_tablet": 24,
+                "autoplay_tablet": false,
+                "show_arrows_tablet": false,
+                "show_dots_tablet": false,
+                "slides_per_view_desktop": 4.2,
+                "slide_gap_desktop": 32,
+                "autoplay_desktop": false,
+                "show_arrows_desktop": true,
+                "external_arrows_desktop": true,
+                "show_dots_desktop": false
+              },
+              "blocks": {
+                "slide_hero_immunity_Sh3c": {
+                  "type": "_carousel-slide",
+                  "settings": {},
+                  "blocks": {
+                    "hero_immunity_Hr4d": {
+                      "type": "hero-block",
+                      "settings": {
+                        "height_type_mobile": "custom",
+                        "custom_height_mobile": 334,
+                        "background_media_mobile": "image",
+                        "image_mobile": "shopify://shop_images/agile-support-1-desktop-112594318.png",
+                        "image_position_mobile": "cover",
+                        "content_width_mobile": "100",
+                        "content_position_mobile": "bottom-left",
+                        "padding_top_mobile": 0,
+                        "padding_bottom_mobile": 16,
+                        "padding_left_mobile": 12,
+                        "padding_right_mobile": 12,
+                        "height_type_desktop": "custom",
+                        "custom_height_desktop": 492,
+                        "background_media_desktop": "image",
+                        "image_desktop": "shopify://shop_images/agile-support-1-desktop-112594318.png",
+                        "image_position_desktop": "cover",
+                        "content_width_desktop": "100",
+                        "content_position_desktop": "bottom-left",
+                        "padding_top_desktop": 0,
+                        "padding_bottom_desktop": 24,
+                        "padding_left_desktop": 24,
+                        "padding_right_desktop": 24,
+                        "toggle_overlay": true,
+                        "overlay_color": "#141414",
+                        "overlay_style": "gradient",
+                        "gradient_direction": "to bottom"
+                      },
+                      "blocks": {
+                        "hero_cat_immunity_Hc5e": {
+                          "type": "custom-liquid",
+                          "settings": {
+                            "custom_liquid": "<p style=\"font-family: var(--font-heading--family); font-weight: 500; font-size: 20px; line-height: 28px; color: #FFFFFF;\">Immunity</p>"
+                          }
+                        },
+                        "hero_desc_immunity_Hd6f": {
+                          "type": "custom-liquid",
+                          "settings": {
+                            "custom_liquid": "<p style=\"font-family: var(--font-body--family); font-weight: 400; font-size: 16px; line-height: 24px; color: #FFFFFF;\">Daily defense with probiotics, immunity vitamins and minerals</p>"
+                          }
+                        },
+                        "hero_btn_immunity_Hb7g": {
+                          "type": "button",
+                          "settings": {
+                            "label": "VIEW ALL IMMUNITY",
+                            "style_class": "link"
+                          }
+                        }
+                      },
+                      "block_order": [
+                        "hero_cat_immunity_Hc5e",
+                        "hero_desc_immunity_Hd6f",
+                        "hero_btn_immunity_Hb7g"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "hero_immunity_Hr4d"
+                  ]
+                },
+                "slide_pc1_immunity_Sp1h": {
+                  "type": "_carousel-slide",
+                  "settings": {},
+                  "blocks": {
+                    "pc_1_immunity_Pc1j": {
+                      "type": "product-card",
+                      "settings": {},
+                      "blocks": {
+                        "gallery_1_immunity_Gl1k": {
+                          "type": "_product-card-gallery",
+                          "settings": {}
+                        },
+                        "ptitle_1_immunity_Pt1m": {
+                          "type": "product-title",
+                          "settings": {}
+                        },
+                        "price_1_immunity_Pr1n": {
+                          "type": "price",
+                          "settings": {}
+                        }
+                      },
+                      "block_order": [
+                        "gallery_1_immunity_Gl1k",
+                        "ptitle_1_immunity_Pt1m",
+                        "price_1_immunity_Pr1n"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "pc_1_immunity_Pc1j"
+                  ]
+                },
+                "slide_pc2_immunity_Sp2h": {
+                  "type": "_carousel-slide",
+                  "settings": {},
+                  "blocks": {
+                    "pc_2_immunity_Pc2j": {
+                      "type": "product-card",
+                      "settings": {},
+                      "blocks": {
+                        "gallery_2_immunity_Gl2k": {
+                          "type": "_product-card-gallery",
+                          "settings": {}
+                        },
+                        "ptitle_2_immunity_Pt2m": {
+                          "type": "product-title",
+                          "settings": {}
+                        },
+                        "price_2_immunity_Pr2n": {
+                          "type": "price",
+                          "settings": {}
+                        }
+                      },
+                      "block_order": [
+                        "gallery_2_immunity_Gl2k",
+                        "ptitle_2_immunity_Pt2m",
+                        "price_2_immunity_Pr2n"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "pc_2_immunity_Pc2j"
+                  ]
+                },
+                "slide_pc3_immunity_Sp3h": {
+                  "type": "_carousel-slide",
+                  "settings": {},
+                  "blocks": {
+                    "pc_3_immunity_Pc3j": {
+                      "type": "product-card",
+                      "settings": {},
+                      "blocks": {
+                        "gallery_3_immunity_Gl3k": {
+                          "type": "_product-card-gallery",
+                          "settings": {}
+                        },
+                        "ptitle_3_immunity_Pt3m": {
+                          "type": "product-title",
+                          "settings": {}
+                        },
+                        "price_3_immunity_Pr3n": {
+                          "type": "price",
+                          "settings": {}
+                        }
+                      },
+                      "block_order": [
+                        "gallery_3_immunity_Gl3k",
+                        "ptitle_3_immunity_Pt3m",
+                        "price_3_immunity_Pr3n"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "pc_3_immunity_Pc3j"
+                  ]
+                },
+                "slide_pc4_immunity_Sp4h": {
+                  "type": "_carousel-slide",
+                  "settings": {},
+                  "blocks": {
+                    "pc_4_immunity_Pc4j": {
+                      "type": "product-card",
+                      "settings": {},
+                      "blocks": {
+                        "gallery_4_immunity_Gl4k": {
+                          "type": "_product-card-gallery",
+                          "settings": {}
+                        },
+                        "ptitle_4_immunity_Pt4m": {
+                          "type": "product-title",
+                          "settings": {}
+                        },
+                        "price_4_immunity_Pr4n": {
+                          "type": "price",
+                          "settings": {}
+                        }
+                      },
+                      "block_order": [
+                        "gallery_4_immunity_Gl4k",
+                        "ptitle_4_immunity_Pt4m",
+                        "price_4_immunity_Pr4n"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "pc_4_immunity_Pc4j"
+                  ]
+                },
+                "slide_pc5_immunity_Sp5h": {
+                  "type": "_carousel-slide",
+                  "settings": {},
+                  "blocks": {
+                    "pc_5_immunity_Pc5j": {
+                      "type": "product-card",
+                      "settings": {},
+                      "blocks": {
+                        "gallery_5_immunity_Gl5k": {
+                          "type": "_product-card-gallery",
+                          "settings": {}
+                        },
+                        "ptitle_5_immunity_Pt5m": {
+                          "type": "product-title",
+                          "settings": {}
+                        },
+                        "price_5_immunity_Pr5n": {
+                          "type": "price",
+                          "settings": {}
+                        }
+                      },
+                      "block_order": [
+                        "gallery_5_immunity_Gl5k",
+                        "ptitle_5_immunity_Pt5m",
+                        "price_5_immunity_Pr5n"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "pc_5_immunity_Pc5j"
+                  ]
+                }
+              },
+              "block_order": [
+                "slide_hero_immunity_Sh3c",
+                "slide_pc1_immunity_Sp1h",
+                "slide_pc2_immunity_Sp2h",
+                "slide_pc3_immunity_Sp3h",
+                "slide_pc4_immunity_Sp4h",
+                "slide_pc5_immunity_Sp5h"
+              ]
+            }
+          },
+          "block_order": [
+            "carousel_immunity_Cr2b"
+          ]
+        }
+      },
+      "block_order": [
+        "tab_content_immunity_Tc1a"
+      ],
+      "settings": {
+        "background_color_mobile": "#F1F1EA",
+        "text_color_mobile": "#141414",
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "padding_left_mobile": 0,
+        "padding_right_mobile": 0,
+        "margin_bottom_mobile": 0,
+        "background_color_desktop": "#F1F1EA",
+        "text_color_desktop": "#141414",
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 0,
+        "padding_left_desktop": 64,
+        "padding_right_desktop": 64,
+        "margin_bottom_desktop": 0
+      }
+    },
+    "product_tab_enr_Hj0kS4": {
+      "type": "generic-section",
+      "blocks": {
+        "tab_content_energy-focus_Tc1a": {
+          "type": "tab-content",
+          "settings": {
+            "group_id": "product-carousel",
+            "target_id": "energy-focus"
+          },
+          "blocks": {
+            "carousel_energy-focus_Cr2b": {
+              "type": "carousel-block",
+              "settings": {
+                "slides_per_view_mobile": 2.1,
+                "slide_gap_mobile": 16,
+                "autoplay_mobile": false,
+                "show_arrows_mobile": false,
+                "show_dots_mobile": false,
+                "slides_per_view_tablet": 3,
+                "slide_gap_tablet": 24,
+                "autoplay_tablet": false,
+                "show_arrows_tablet": false,
+                "show_dots_tablet": false,
+                "slides_per_view_desktop": 4.2,
+                "slide_gap_desktop": 32,
+                "autoplay_desktop": false,
+                "show_arrows_desktop": true,
+                "external_arrows_desktop": true,
+                "show_dots_desktop": false
+              },
+              "blocks": {
+                "slide_hero_energy-focus_Sh3c": {
+                  "type": "_carousel-slide",
+                  "settings": {},
+                  "blocks": {
+                    "hero_energy-focus_Hr4d": {
+                      "type": "hero-block",
+                      "settings": {
+                        "height_type_mobile": "custom",
+                        "custom_height_mobile": 334,
+                        "background_media_mobile": "image",
+                        "image_mobile": "shopify://shop_images/agile-support-1-desktop-112594318.png",
+                        "image_position_mobile": "cover",
+                        "content_width_mobile": "100",
+                        "content_position_mobile": "bottom-left",
+                        "padding_top_mobile": 0,
+                        "padding_bottom_mobile": 16,
+                        "padding_left_mobile": 12,
+                        "padding_right_mobile": 12,
+                        "height_type_desktop": "custom",
+                        "custom_height_desktop": 492,
+                        "background_media_desktop": "image",
+                        "image_desktop": "shopify://shop_images/agile-support-1-desktop-112594318.png",
+                        "image_position_desktop": "cover",
+                        "content_width_desktop": "100",
+                        "content_position_desktop": "bottom-left",
+                        "padding_top_desktop": 0,
+                        "padding_bottom_desktop": 24,
+                        "padding_left_desktop": 24,
+                        "padding_right_desktop": 24,
+                        "toggle_overlay": true,
+                        "overlay_color": "#141414",
+                        "overlay_style": "gradient",
+                        "gradient_direction": "to bottom"
+                      },
+                      "blocks": {
+                        "hero_cat_energy-focus_Hc5e": {
+                          "type": "custom-liquid",
+                          "settings": {
+                            "custom_liquid": "<p style=\"font-family: var(--font-heading--family); font-weight: 500; font-size: 20px; line-height: 28px; color: #FFFFFF;\">Energy & Focus</p>"
+                          }
+                        },
+                        "hero_desc_energy-focus_Hd6f": {
+                          "type": "custom-liquid",
+                          "settings": {
+                            "custom_liquid": "<p style=\"font-family: var(--font-body--family); font-weight: 400; font-size: 16px; line-height: 24px; color: #FFFFFF;\">Supercharge your day with clean energy and mental clarity</p>"
+                          }
+                        },
+                        "hero_btn_energy-focus_Hb7g": {
+                          "type": "button",
+                          "settings": {
+                            "label": "VIEW ALL ENERGY & FOCUS",
+                            "style_class": "link"
+                          }
+                        }
+                      },
+                      "block_order": [
+                        "hero_cat_energy-focus_Hc5e",
+                        "hero_desc_energy-focus_Hd6f",
+                        "hero_btn_energy-focus_Hb7g"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "hero_energy-focus_Hr4d"
+                  ]
+                },
+                "slide_pc1_energy-focus_Sp1h": {
+                  "type": "_carousel-slide",
+                  "settings": {},
+                  "blocks": {
+                    "pc_1_energy-focus_Pc1j": {
+                      "type": "product-card",
+                      "settings": {},
+                      "blocks": {
+                        "gallery_1_energy-focus_Gl1k": {
+                          "type": "_product-card-gallery",
+                          "settings": {}
+                        },
+                        "ptitle_1_energy-focus_Pt1m": {
+                          "type": "product-title",
+                          "settings": {}
+                        },
+                        "price_1_energy-focus_Pr1n": {
+                          "type": "price",
+                          "settings": {}
+                        }
+                      },
+                      "block_order": [
+                        "gallery_1_energy-focus_Gl1k",
+                        "ptitle_1_energy-focus_Pt1m",
+                        "price_1_energy-focus_Pr1n"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "pc_1_energy-focus_Pc1j"
+                  ]
+                },
+                "slide_pc2_energy-focus_Sp2h": {
+                  "type": "_carousel-slide",
+                  "settings": {},
+                  "blocks": {
+                    "pc_2_energy-focus_Pc2j": {
+                      "type": "product-card",
+                      "settings": {},
+                      "blocks": {
+                        "gallery_2_energy-focus_Gl2k": {
+                          "type": "_product-card-gallery",
+                          "settings": {}
+                        },
+                        "ptitle_2_energy-focus_Pt2m": {
+                          "type": "product-title",
+                          "settings": {}
+                        },
+                        "price_2_energy-focus_Pr2n": {
+                          "type": "price",
+                          "settings": {}
+                        }
+                      },
+                      "block_order": [
+                        "gallery_2_energy-focus_Gl2k",
+                        "ptitle_2_energy-focus_Pt2m",
+                        "price_2_energy-focus_Pr2n"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "pc_2_energy-focus_Pc2j"
+                  ]
+                },
+                "slide_pc3_energy-focus_Sp3h": {
+                  "type": "_carousel-slide",
+                  "settings": {},
+                  "blocks": {
+                    "pc_3_energy-focus_Pc3j": {
+                      "type": "product-card",
+                      "settings": {},
+                      "blocks": {
+                        "gallery_3_energy-focus_Gl3k": {
+                          "type": "_product-card-gallery",
+                          "settings": {}
+                        },
+                        "ptitle_3_energy-focus_Pt3m": {
+                          "type": "product-title",
+                          "settings": {}
+                        },
+                        "price_3_energy-focus_Pr3n": {
+                          "type": "price",
+                          "settings": {}
+                        }
+                      },
+                      "block_order": [
+                        "gallery_3_energy-focus_Gl3k",
+                        "ptitle_3_energy-focus_Pt3m",
+                        "price_3_energy-focus_Pr3n"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "pc_3_energy-focus_Pc3j"
+                  ]
+                },
+                "slide_pc4_energy-focus_Sp4h": {
+                  "type": "_carousel-slide",
+                  "settings": {},
+                  "blocks": {
+                    "pc_4_energy-focus_Pc4j": {
+                      "type": "product-card",
+                      "settings": {},
+                      "blocks": {
+                        "gallery_4_energy-focus_Gl4k": {
+                          "type": "_product-card-gallery",
+                          "settings": {}
+                        },
+                        "ptitle_4_energy-focus_Pt4m": {
+                          "type": "product-title",
+                          "settings": {}
+                        },
+                        "price_4_energy-focus_Pr4n": {
+                          "type": "price",
+                          "settings": {}
+                        }
+                      },
+                      "block_order": [
+                        "gallery_4_energy-focus_Gl4k",
+                        "ptitle_4_energy-focus_Pt4m",
+                        "price_4_energy-focus_Pr4n"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "pc_4_energy-focus_Pc4j"
+                  ]
+                },
+                "slide_pc5_energy-focus_Sp5h": {
+                  "type": "_carousel-slide",
+                  "settings": {},
+                  "blocks": {
+                    "pc_5_energy-focus_Pc5j": {
+                      "type": "product-card",
+                      "settings": {},
+                      "blocks": {
+                        "gallery_5_energy-focus_Gl5k": {
+                          "type": "_product-card-gallery",
+                          "settings": {}
+                        },
+                        "ptitle_5_energy-focus_Pt5m": {
+                          "type": "product-title",
+                          "settings": {}
+                        },
+                        "price_5_energy-focus_Pr5n": {
+                          "type": "price",
+                          "settings": {}
+                        }
+                      },
+                      "block_order": [
+                        "gallery_5_energy-focus_Gl5k",
+                        "ptitle_5_energy-focus_Pt5m",
+                        "price_5_energy-focus_Pr5n"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "pc_5_energy-focus_Pc5j"
+                  ]
+                }
+              },
+              "block_order": [
+                "slide_hero_energy-focus_Sh3c",
+                "slide_pc1_energy-focus_Sp1h",
+                "slide_pc2_energy-focus_Sp2h",
+                "slide_pc3_energy-focus_Sp3h",
+                "slide_pc4_energy-focus_Sp4h",
+                "slide_pc5_energy-focus_Sp5h"
+              ]
+            }
+          },
+          "block_order": [
+            "carousel_energy-focus_Cr2b"
+          ]
+        }
+      },
+      "block_order": [
+        "tab_content_energy-focus_Tc1a"
+      ],
+      "settings": {
+        "background_color_mobile": "#F1F1EA",
+        "text_color_mobile": "#141414",
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "padding_left_mobile": 0,
+        "padding_right_mobile": 0,
+        "margin_bottom_mobile": 0,
+        "background_color_desktop": "#F1F1EA",
+        "text_color_desktop": "#141414",
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 0,
+        "padding_left_desktop": 64,
+        "padding_right_desktop": 64,
+        "margin_bottom_desktop": 0
+      }
+    },
     "wff_benefits_Lm2No3": {
       "type": "generic-section",
       "blocks": {
@@ -2400,6 +4068,12 @@
     }
   },
   "order": [
+    "welcome_kit_Xk9mQ2",
+    "product_tabs_nav_Rk3mP1",
+    "product_tab_gut_Yz7aP1",
+    "product_tab_rec_Bc8dQ2",
+    "product_tab_imm_Ef9gR3",
+    "product_tab_enr_Hj0kS4",
     "wff_benefits_Lm2No3",
     "benefits_Wf8kP2",
     "generic_section_VpbhMW",

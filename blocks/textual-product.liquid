@@ -1,0 +1,156 @@
+{% doc %}
+  Textual Product Block
+
+  Renders a product in a text-only format with two rows:
+  Row 1: Product title (or override) + FREE label
+  Row 2: Custom description + strikethrough original price
+
+  @param {object} block - The block object with settings
+  @example
+  {% content_for 'block', type: 'textual-product', id: 'tp-1' %}
+{% enddoc %}
+
+{% liquid
+  assign tp_product = block.settings.product
+  assign title = block.settings.title_override
+  if title == blank and tp_product != blank
+    assign title = tp_product.title
+  endif
+  if title == blank
+    assign title = 'Select a product'
+  endif
+  assign description = block.settings.custom_description
+  if description == blank and tp_product != blank
+    assign description = tp_product.description | strip_html | truncate: 200
+  endif
+  assign price = block.settings.price_override
+  if price == blank and tp_product != blank
+    assign price = tp_product.price | money
+  endif
+  assign free_text = block.settings.free_label | default: 'FREE'
+%}
+
+<div {{ block.shopify_attributes }} class="textual-product">
+  <div class="textual-product__row">
+    <span class="textual-product__title">{{ title | escape }}</span>
+    <span class="textual-product__free">{{ free_text | escape }}</span>
+  </div>
+  {% if description != blank or price != blank %}
+    <div class="textual-product__row">
+      {% if description != blank %}
+        <span class="textual-product__description">{{ description | escape }}</span>
+      {% endif %}
+      {% if price != blank %}
+        <span class="textual-product__price">{{ price | escape }}</span>
+      {% endif %}
+    </div>
+  {% endif %}
+</div>
+
+{% stylesheet %}
+.textual-product {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.textual-product__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.textual-product__title {
+  font-family: 'Jakarta Plus', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: #141414;
+}
+
+.textual-product__free {
+  font-family: 'Jakarta Plus', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: #141414;
+  flex-shrink: 0;
+  text-align: end;
+}
+
+.textual-product__description {
+  font-family: 'Jakarta Plus', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #141414;
+}
+
+.textual-product__price {
+  font-family: 'Jakarta Plus', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #80806f;
+  text-decoration: line-through;
+  flex-shrink: 0;
+  text-align: end;
+}
+
+@media screen and (max-width: 749px) {
+  .textual-product__title,
+  .textual-product__free {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .textual-product__description,
+  .textual-product__price {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.textual_product",
+  "tag": null,
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "t:settings.product"
+    },
+    {
+      "type": "text",
+      "id": "title_override",
+      "label": "t:settings.title_override"
+    },
+    {
+      "type": "textarea",
+      "id": "custom_description",
+      "label": "t:settings.custom_description"
+    },
+    {
+      "type": "text",
+      "id": "price_override",
+      "label": "t:settings.price_override"
+    },
+    {
+      "type": "text",
+      "id": "free_label",
+      "label": "t:settings.free_label",
+      "default": "FREE"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.textual_product",
+      "category": "t:categories.product"
+    }
+  ]
+}
+{% endschema %}
