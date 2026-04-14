@@ -94,7 +94,7 @@
                 "hero_sub_Ii9jJ0": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Power lights, fans, and everyday essentials — all from a single portable station. No outlets needed.</p>",
+                    "text": "<p>Better taste. Better routine. Better you.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -252,8 +252,9 @@
                 "vt_1_Ww3xX4": {
                   "type": "video-testimonial",
                   "settings": {
-                    "quote_text": "Factor has completely changed my morning routine. I feel more energized throughout the day.",
-                    "attribution_text": "— Sarah M.",
+                    "thumbnail_image": "shopify://shop_images/greens-nicole-b-1-desktop-112593884.png",
+                    "quote_text": "Best tasting greens I've ever had!",
+                    "attribution_text": "— Nicole B.",
                     "quote_color": "#FFFFFF",
                     "attribution_color": "#B5B5A0",
                     "divider_color": "#B5B5A0"
@@ -271,8 +272,9 @@
                 "vt_2_Aa7bB8": {
                   "type": "video-testimonial",
                   "settings": {
-                    "quote_text": "The taste is incredible. I actually look forward to my greens now!",
-                    "attribution_text": "— James K.",
+                    "thumbnail_image": "shopify://shop_images/greens-nicole-b-1-desktop-112593894.png",
+                    "quote_text": "I feel so much better since I started taking these daily.",
+                    "attribution_text": "— Brian L.",
                     "quote_color": "#FFFFFF",
                     "attribution_color": "#B5B5A0",
                     "divider_color": "#B5B5A0"
@@ -290,8 +292,9 @@
                 "vt_3_Ee1fF2": {
                   "type": "video-testimonial",
                   "settings": {
-                    "quote_text": "As a nutritionist, I finally found a greens supplement I can recommend to my clients.",
-                    "attribution_text": "— Dr. Emily R.",
+                    "thumbnail_image": "shopify://shop_images/greens-nicole-b-1-desktop-112593904.png",
+                    "quote_text": "Finally a greens powder that actually tastes good.",
+                    "attribution_text": "— Omni P.",
                     "quote_color": "#FFFFFF",
                     "attribution_color": "#B5B5A0",
                     "divider_color": "#B5B5A0"
@@ -309,8 +312,9 @@
                 "vt_4_Ii5jJ6": {
                   "type": "video-testimonial",
                   "settings": {
-                    "quote_text": "Two months in and my digestion has never been better. This stuff really works.",
-                    "attribution_text": "— Michael T.",
+                    "thumbnail_image": "shopify://shop_images/greens-nicole-b-1-desktop-112593914.png",
+                    "quote_text": "My morning routine isn't complete without this.",
+                    "attribution_text": "— Zack S.",
                     "quote_color": "#FFFFFF",
                     "attribution_color": "#B5B5A0",
                     "divider_color": "#B5B5A0"
@@ -335,14 +339,14 @@
         "reviews_carousel_Ss9tT0"
       ],
       "settings": {
-        "background_color_mobile": "#1A1A1A",
+        "background_color_mobile": "#141414",
         "text_color_mobile": "#FFFFFF",
         "padding_top_mobile": 48,
         "padding_bottom_mobile": 48,
         "padding_left_mobile": 16,
         "padding_right_mobile": 16,
         "margin_bottom_mobile": 0,
-        "background_color_desktop": "#1A1A1A",
+        "background_color_desktop": "#141414",
         "text_color_desktop": "#FFFFFF",
         "padding_top_desktop": 80,
         "padding_bottom_desktop": 80,
@@ -1077,7 +1081,7 @@
         "trust_2_Kk1": {
           "type": "text",
           "settings": {
-            "text": "<p>CLINICALLY STUDIED INGREDIENTS</p>",
+            "text": "<p>HIGH QUALITY INGREDIENTS</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "left",
@@ -1101,7 +1105,7 @@
         "trust_3_Kk2": {
           "type": "text",
           "settings": {
-            "text": "<p>3RD PARTY TESTED</p>",
+            "text": "<p>FLAVORFUL NUTRITION</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "left",
@@ -1125,7 +1129,7 @@
         "trust_4_Kk3": {
           "type": "text",
           "settings": {
-            "text": "<p>MADE IN THE USA</p>",
+            "text": "<p>DIETITIAN APPROVED</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "left",
@@ -1149,7 +1153,7 @@
         "trust_5_Kk4": {
           "type": "text",
           "settings": {
-            "text": "<p>NO ARTIFICIAL SWEETENERS</p>",
+            "text": "<p>NO ADDED SUGAR</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "left",
@@ -1173,7 +1177,7 @@
         "trust_6_Kk5": {
           "type": "text",
           "settings": {
-            "text": "<p>DOCTOR FORMULATED</p>",
+            "text": "<p>KETO FRIENDLY</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "left",
@@ -1217,7 +1221,7 @@
         "wff_heading_Vv3wW4": {
           "type": "text",
           "settings": {
-            "text": "<p>Why Factor Formula?</p>",
+            "text": "<p>Why Factor Form</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -1275,6 +1279,7 @@
                   "type": "icon",
                   "settings": {
                     "icon": "none",
+                    "image_upload": "shopify://shop_images/icon-1-nutrition-all-in-one-place-2.svg",
                     "width": 48,
                     "width_mobile": 40,
                     "margin_bottom_desktop": 16,
@@ -1284,18 +1289,44 @@
                 "txt_b1_Rr9sS0": {
                   "type": "text",
                   "settings": {
-                    "text": "<p><strong>Nutrition All In One Place</strong></p>",
+                    "text": "<p><strong>More Flexibility</strong></p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "Simplon Norm, sans-serif",
+                    "font_size": "1.125rem",
+                    "line_height": 1.3,
+                    "letter_spacing": 0,
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "#141414",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0,
+                    "margin_bottom_desktop": 8,
+                    "margin_bottom_mobile": 4
+                  }
+                },
+                "desc_b1_Ss1tT2": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Mix, match, and customize your nutrition to fit your lifestyle — not the other way around.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
                     "type_preset": "custom",
                     "font": "Jakarta Plus, sans-serif",
-                    "font_size": "1rem",
-                    "line_height": 1.4,
+                    "font_size": "0.875rem",
+                    "line_height": 1.56,
                     "letter_spacing": 0,
                     "case": "none",
                     "wrap": "pretty",
-                    "color": "#141414",
+                    "color": "#141414CC",
                     "background": false,
                     "background_color": "#00000026",
                     "corner_radius": 0,
@@ -1308,7 +1339,8 @@
               },
               "block_order": [
                 "icon_b1_Pp7qQ8",
-                "txt_b1_Rr9sS0"
+                "txt_b1_Rr9sS0",
+                "desc_b1_Ss1tT2"
               ]
             },
             "col_b2_Nn5oO6": {
@@ -1329,6 +1361,7 @@
                   "type": "icon",
                   "settings": {
                     "icon": "none",
+                    "image_upload": "shopify://shop_images/icon-2-quality-ingredients-2.svg",
                     "width": 48,
                     "width_mobile": 40,
                     "margin_bottom_desktop": 16,
@@ -1338,18 +1371,44 @@
                 "txt_b2_Rr9sS0": {
                   "type": "text",
                   "settings": {
-                    "text": "<p><strong>Quality Ingredients</strong></p>",
+                    "text": "<p><strong>More Quality</strong></p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "Simplon Norm, sans-serif",
+                    "font_size": "1.125rem",
+                    "line_height": 1.3,
+                    "letter_spacing": 0,
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "#141414",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0,
+                    "margin_bottom_desktop": 8,
+                    "margin_bottom_mobile": 4
+                  }
+                },
+                "desc_b2_Ss1tT2": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Premium, clinically studied ingredients sourced for purity and potency.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
                     "type_preset": "custom",
                     "font": "Jakarta Plus, sans-serif",
-                    "font_size": "1rem",
-                    "line_height": 1.4,
+                    "font_size": "0.875rem",
+                    "line_height": 1.56,
                     "letter_spacing": 0,
                     "case": "none",
                     "wrap": "pretty",
-                    "color": "#141414",
+                    "color": "#141414CC",
                     "background": false,
                     "background_color": "#00000026",
                     "corner_radius": 0,
@@ -1362,7 +1421,8 @@
               },
               "block_order": [
                 "icon_b2_Pp7qQ8",
-                "txt_b2_Rr9sS0"
+                "txt_b2_Rr9sS0",
+                "desc_b2_Ss1tT2"
               ]
             },
             "col_b3_Nn5oO6": {
@@ -1383,6 +1443,7 @@
                   "type": "icon",
                   "settings": {
                     "icon": "none",
+                    "image_upload": "shopify://shop_images/icon-3-b-food-first-nutrition-2.svg",
                     "width": 48,
                     "width_mobile": 40,
                     "margin_bottom_desktop": 16,
@@ -1392,18 +1453,44 @@
                 "txt_b3_Rr9sS0": {
                   "type": "text",
                   "settings": {
-                    "text": "<p><strong>Food-First Nutrition</strong></p>",
+                    "text": "<p><strong>More Nutrition</strong></p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "Simplon Norm, sans-serif",
+                    "font_size": "1.125rem",
+                    "line_height": 1.3,
+                    "letter_spacing": 0,
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "#141414",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0,
+                    "margin_bottom_desktop": 8,
+                    "margin_bottom_mobile": 4
+                  }
+                },
+                "desc_b3_Ss1tT2": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Packed with real-food nutrients your body actually recognizes and absorbs.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
                     "type_preset": "custom",
                     "font": "Jakarta Plus, sans-serif",
-                    "font_size": "1rem",
-                    "line_height": 1.4,
+                    "font_size": "0.875rem",
+                    "line_height": 1.56,
                     "letter_spacing": 0,
                     "case": "none",
                     "wrap": "pretty",
-                    "color": "#141414",
+                    "color": "#141414CC",
                     "background": false,
                     "background_color": "#00000026",
                     "corner_radius": 0,
@@ -1416,7 +1503,8 @@
               },
               "block_order": [
                 "icon_b3_Pp7qQ8",
-                "txt_b3_Rr9sS0"
+                "txt_b3_Rr9sS0",
+                "desc_b3_Ss1tT2"
               ]
             },
             "col_b4_Nn5oO6": {
@@ -1437,6 +1525,7 @@
                   "type": "icon",
                   "settings": {
                     "icon": "none",
+                    "image_upload": "shopify://shop_images/icon-4-designed-for-on-the-go-2.svg",
                     "width": 48,
                     "width_mobile": 40,
                     "margin_bottom_desktop": 16,
@@ -1446,18 +1535,44 @@
                 "txt_b4_Rr9sS0": {
                   "type": "text",
                   "settings": {
-                    "text": "<p><strong>Designed For On-The-Go</strong></p>",
+                    "text": "<p><strong>More Convenience</strong></p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "Simplon Norm, sans-serif",
+                    "font_size": "1.125rem",
+                    "line_height": 1.3,
+                    "letter_spacing": 0,
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "#141414",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0,
+                    "margin_bottom_desktop": 8,
+                    "margin_bottom_mobile": 4
+                  }
+                },
+                "desc_b4_Ss1tT2": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Single-serve packets that go wherever you do — just add water and shake.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "center",
                     "type_preset": "custom",
                     "font": "Jakarta Plus, sans-serif",
-                    "font_size": "1rem",
-                    "line_height": 1.4,
+                    "font_size": "0.875rem",
+                    "line_height": 1.56,
                     "letter_spacing": 0,
                     "case": "none",
                     "wrap": "pretty",
-                    "color": "#141414",
+                    "color": "#141414CC",
                     "background": false,
                     "background_color": "#00000026",
                     "corner_radius": 0,
@@ -1470,7 +1585,8 @@
               },
               "block_order": [
                 "icon_b4_Pp7qQ8",
-                "txt_b4_Rr9sS0"
+                "txt_b4_Rr9sS0",
+                "desc_b4_Ss1tT2"
               ]
             }
           },
@@ -1566,7 +1682,7 @@
                 "img_s1_Bb9cC0": {
                   "type": "image",
                   "settings": {
-                    "image": "shopify://shop_images/image-59-desktop-112549108.png",
+                    "image": "shopify://shop_images/image-59-desktop-118265446.png",
                     "image_ratio": "landscape",
                     "width": "fill",
                     "width_mobile": "fill",
@@ -1649,7 +1765,7 @@
                 "img_s2_Bb9cC0": {
                   "type": "image",
                   "settings": {
-                    "image": "shopify://shop_images/image-58-desktop-112549109.png",
+                    "image": "shopify://shop_images/image-58-desktop-118265436.png",
                     "image_ratio": "landscape",
                     "width": "fill",
                     "width_mobile": "fill",
@@ -1732,7 +1848,7 @@
                 "img_s3_Bb9cC0": {
                   "type": "image",
                   "settings": {
-                    "image": "shopify://shop_images/image-60-desktop-112549069.png",
+                    "image": "shopify://shop_images/image-60-desktop-118265426.png",
                     "image_ratio": "landscape",
                     "width": "fill",
                     "width_mobile": "fill",
@@ -1915,10 +2031,11 @@
                 "card_d1_Pp3qQ4": {
                   "type": "testimonial-card",
                   "settings": {
-                    "testimonial_title": "Dr. Sarah Chen",
-                    "testimonial_description": "Factor's commitment to food-first nutrition aligns perfectly with evidence-based dietary science. The bioavailability of their greens formula is exceptional.",
-                    "testimonial_name": "Dr. Sarah Chen",
-                    "testimonial_role": "Clinical Nutritionist",
+                    "image": "shopify://shop_images/image-61-desktop-118265456.png",
+                    "testimonial_title": "Kara Kash",
+                    "testimonial_description": "Factor's greens are formulated with clinically studied ingredients at effective doses — not just fairy-dusted for the label.",
+                    "testimonial_name": "Kara Kash",
+                    "testimonial_role": "R&D",
                     "bg_color": "#FFFFFF",
                     "text_color": "#141414"
                   }
@@ -1945,10 +2062,11 @@
                 "card_d2_Pp3qQ4": {
                   "type": "testimonial-card",
                   "settings": {
-                    "testimonial_title": "Dr. Michael Brooks",
-                    "testimonial_description": "I recommend Factor to all my athletes. The comprehensive nutrient profile supports recovery and performance like nothing else on the market.",
-                    "testimonial_name": "Dr. Michael Brooks",
-                    "testimonial_role": "Sports Dietitian",
+                    "image": "shopify://shop_images/image-62-desktop-118265466.png",
+                    "testimonial_title": "Carlie Williams",
+                    "testimonial_description": "I love that Factor prioritizes food-first nutrition. It's what I recommend to all my clients who want real results.",
+                    "testimonial_name": "Carlie Williams",
+                    "testimonial_role": "Dietitian + PT",
                     "bg_color": "#FFFFFF",
                     "text_color": "#141414"
                   }
@@ -1975,10 +2093,11 @@
                 "card_d3_Pp3qQ4": {
                   "type": "testimonial-card",
                   "settings": {
-                    "testimonial_title": "Dr. Emily Watson",
-                    "testimonial_description": "What sets Factor apart is their transparency and third-party testing. Every ingredient is dosed at clinically effective levels.",
-                    "testimonial_name": "Dr. Emily Watson",
-                    "testimonial_role": "Integrative Medicine",
+                    "image": "shopify://shop_images/image-63-desktop-118265476.png",
+                    "testimonial_title": "Olivia Hamilton",
+                    "testimonial_description": "The transparency in sourcing and third-party testing gives me confidence to stand behind every product.",
+                    "testimonial_name": "Olivia Hamilton",
+                    "testimonial_role": "Dietitian",
                     "bg_color": "#FFFFFF",
                     "text_color": "#141414"
                   }
@@ -2424,14 +2543,14 @@
             "faq_row_1_Dd0": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "What ingredients are in Daily Greens?",
+                "heading": "What makes Factor greens different from other greens powders?",
                 "open_by_default": true
               },
               "blocks": {
                 "faq_answer_1_Ee0": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Please refer to our product page for detailed information about this topic.</p>",
+                    "text": "<p>Factor greens are formulated with science-backed ingredients at clinically effective doses. Unlike many greens powders that use proprietary blends, we're fully transparent about what's inside and how much of each ingredient you're getting. Every batch is third-party tested for purity and potency.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2460,13 +2579,13 @@
             "faq_row_2_Dd1": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "How do I use Daily Greens?"
+                "heading": "How should I take Factor greens?"
               },
               "blocks": {
                 "faq_answer_2_Ee1": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Please refer to our product page for detailed information about this topic.</p>",
+                    "text": "<p>Simply mix one packet with 8–12 oz of cold water and shake or stir. Take it any time of day — morning, afternoon, or whenever fits your routine best.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2495,13 +2614,13 @@
             "faq_row_3_Dd2": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "Is Factor Daily Greens third-party tested?"
+                "heading": "Are Factor greens third-party tested?"
               },
               "blocks": {
                 "faq_answer_3_Ee2": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Please refer to our product page for detailed information about this topic.</p>",
+                    "text": "<p>Yes. Every batch of Factor greens is tested by independent, third-party labs for purity, potency, and safety — so you know exactly what you're getting.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2530,13 +2649,13 @@
             "faq_row_4_Dd3": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "Can I take Daily Greens with other supplements?"
+                "heading": "Can I take Factor greens with other supplements?"
               },
               "blocks": {
                 "faq_answer_4_Ee3": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Please refer to our product page for detailed information about this topic.</p>",
+                    "text": "<p>Factor greens can be taken alongside most supplements. However, if you are on medication or have specific health conditions, we recommend consulting with your healthcare provider first.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2565,13 +2684,13 @@
             "faq_row_5_Dd4": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "What is Factor's return policy?"
+                "heading": "What is your return and refund policy?"
               },
               "blocks": {
                 "faq_answer_5_Ee4": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Please refer to our product page for detailed information about this topic.</p>",
+                    "text": "<p>We offer a 30-day satisfaction guarantee. If you're not happy with your purchase, contact our support team for a full refund — no questions asked.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
