@@ -9,6 +9,324 @@
  */
 {
   "sections": {
+    "welcome_kit_Xk9mQ2": {
+      "type": "generic-section",
+      "blocks": {
+        "grid_row_Wk4nR3": {
+          "type": "grid-row",
+          "settings": {
+            "vertical_alignment_mobile": "start",
+            "column_gap_mobile": 0,
+            "row_gap_mobile": 0,
+            "margin_bottom_mobile": 0,
+            "vertical_alignment_tablet": "center",
+            "column_gap_tablet": 0,
+            "row_gap_tablet": 0,
+            "margin_bottom_tablet": 0,
+            "vertical_alignment_desktop": "center",
+            "column_gap_desktop": 0,
+            "row_gap_desktop": 0,
+            "margin_bottom_desktop": 0
+          },
+          "blocks": {
+            "col_left_Yl5oS4": {
+              "type": "_grid-column",
+              "settings": {
+                "column_span_mobile": "12",
+                "column_order_mobile": "1",
+                "margin_bottom_mobile": 0,
+                "column_span_tablet": "6",
+                "column_order_tablet": "1",
+                "margin_bottom_tablet": 0,
+                "column_span_desktop": "6",
+                "column_order_desktop": "1",
+                "margin_bottom_desktop": 0
+              },
+              "blocks": {
+                "hero_Zm6pT5": {
+                  "type": "hero-block",
+                  "settings": {
+                    "height_type_mobile": "custom",
+                    "custom_height_mobile": 260,
+                    "background_media_mobile": "image",
+                    "image_mobile": "shopify://shop_images/daily-nouri-d37stewmyqy-unsplash-3-mobile-110526574.png",
+                    "image_position_mobile": "cover",
+                    "content_width_mobile": "100",
+                    "content_position_mobile": "top-left",
+                    "padding_top_mobile": 8,
+                    "padding_bottom_mobile": 0,
+                    "padding_left_mobile": 8,
+                    "padding_right_mobile": 0,
+                    "margin_bottom_mobile": 0,
+                    "height_type_desktop": "custom",
+                    "custom_height_desktop": 614,
+                    "background_media_desktop": "image",
+                    "image_desktop": "shopify://shop_images/daily-nouri-d37stewmyqy-unsplash-3-desktop-110525076.png",
+                    "image_position_desktop": "cover",
+                    "content_width_desktop": "100",
+                    "content_position_desktop": "top-left",
+                    "padding_top_desktop": 12,
+                    "padding_bottom_desktop": 0,
+                    "padding_left_desktop": 12,
+                    "padding_right_desktop": 0,
+                    "margin_bottom_desktop": 0,
+                    "toggle_overlay": false
+                  },
+                  "blocks": {
+                    "badge_An7qU6": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>FREE WELCOME KIT</p>",
+                        "width": "fit-content",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "custom",
+                        "font": "Simplon Norm, sans-serif",
+                        "font_size": "0.75rem",
+                        "line_height": 1.0,
+                        "letter_spacing": 0.6,
+                        "case": "uppercase",
+                        "wrap": "nowrap",
+                        "color": "var(--color-foreground)",
+                        "background": true,
+                        "background_color": "#141414",
+                        "corner_radius": 2,
+                        "padding-block-start": 6,
+                        "padding-block-end": 6,
+                        "padding-inline-start": 12,
+                        "padding-inline-end": 12
+                      }
+                    }
+                  },
+                  "block_order": ["badge_An7qU6"]
+                }
+              },
+              "block_order": ["hero_Zm6pT5"]
+            },
+            "col_right_Bo8rV7": {
+              "type": "_grid-column",
+              "settings": {
+                "column_span_mobile": "12",
+                "column_order_mobile": "2",
+                "margin_bottom_mobile": 0,
+                "column_span_tablet": "6",
+                "column_order_tablet": "2",
+                "margin_bottom_tablet": 0,
+                "column_span_desktop": "6",
+                "column_order_desktop": "2",
+                "margin_bottom_desktop": 0
+              },
+              "blocks": {
+                "content_group_Cp9sW8": {
+                  "type": "group",
+                  "settings": {
+                    "content_direction": "column",
+                    "vertical_on_mobile": true,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 32,
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fill",
+                    "custom_height": 100,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "background_media": "none",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "toggle_overlay": false,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 16,
+                    "padding-inline-end": 16
+                  },
+                  "blocks": {
+                    "heading_group_Dq0tX9": {
+                      "type": "group",
+                      "settings": {
+                        "content_direction": "column",
+                        "vertical_on_mobile": true,
+                        "horizontal_alignment": "flex-start",
+                        "vertical_alignment": "flex-start",
+                        "horizontal_alignment_flex_direction_column": "flex-start",
+                        "vertical_alignment_flex_direction_column": "flex-start",
+                        "gap": 12,
+                        "width": "fill",
+                        "custom_width": 100,
+                        "width_mobile": "fill",
+                        "custom_width_mobile": 100,
+                        "height": "fit",
+                        "inherit_color_scheme": true,
+                        "color_scheme": "",
+                        "background_media": "none",
+                        "border": "none",
+                        "border_width": 1,
+                        "border_opacity": 100,
+                        "border_radius": 0,
+                        "toggle_overlay": false,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {
+                        "heading_Er1uY0": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>FREE Daily Greens Welcome Kit worth $36</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "custom",
+                            "font": "Simplon Norm, sans-serif",
+                            "font_size": "3rem",
+                            "line_height": 1.17,
+                            "letter_spacing": 0,
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground-heading)",
+                            "background": false,
+                            "background_color": "#00000026",
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          }
+                        },
+                        "description_Fs2vZ1": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>Turn your daily habit into a delicious ritual with a kit full of greens essentials. Free welcome kit with first time purchase of Daily Greens.</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "custom",
+                            "font": "Jakarta Plus, sans-serif",
+                            "font_size": "1.125rem",
+                            "line_height": 1.56,
+                            "letter_spacing": 0,
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "background_color": "#00000026",
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          }
+                        }
+                      },
+                      "block_order": ["heading_Er1uY0", "description_Fs2vZ1"]
+                    },
+                    "products_group_Gt3wA2": {
+                      "type": "group",
+                      "settings": {
+                        "content_direction": "column",
+                        "vertical_on_mobile": true,
+                        "horizontal_alignment": "flex-start",
+                        "vertical_alignment": "flex-start",
+                        "horizontal_alignment_flex_direction_column": "flex-start",
+                        "vertical_alignment_flex_direction_column": "flex-start",
+                        "gap": 16,
+                        "width": "fill",
+                        "custom_width": 100,
+                        "width_mobile": "fill",
+                        "custom_width_mobile": 100,
+                        "height": "fit",
+                        "inherit_color_scheme": true,
+                        "color_scheme": "",
+                        "background_media": "none",
+                        "border": "none",
+                        "border_width": 1,
+                        "border_opacity": 100,
+                        "border_radius": 0,
+                        "toggle_overlay": false,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {
+                        "tp_shaker_Hu4xB3": {
+                          "type": "textual-product",
+                          "settings": {
+                            "title_override": "Shaker bottle",
+                            "custom_description": "Premium bottle to mix and carry your greens",
+                            "price_override": "$20.00",
+                            "free_label": "FREE"
+                          }
+                        },
+                        "tp_samples_Iv5yC4": {
+                          "type": "textual-product",
+                          "settings": {
+                            "title_override": "Full-size samples (3)",
+                            "custom_description": "3 product samples free with every first order",
+                            "price_override": "$10.00",
+                            "free_label": "FREE"
+                          }
+                        },
+                        "tp_shipping_Jw6zD5": {
+                          "type": "textual-product",
+                          "settings": {
+                            "title_override": "Shipping",
+                            "custom_description": "Free shipping on orders above $50",
+                            "price_override": "$5.99",
+                            "free_label": "FREE"
+                          }
+                        }
+                      },
+                      "block_order": ["tp_shaker_Hu4xB3", "tp_samples_Iv5yC4", "tp_shipping_Jw6zD5"]
+                    },
+                    "cta_button_Kx7aE6": {
+                      "type": "button",
+                      "settings": {
+                        "label": "SHOP DAILY GREENS",
+                        "link": "",
+                        "open_in_new_tab": false,
+                        "style_class": "button",
+                        "width": "100%",
+                        "custom_width": 100,
+                        "width_mobile": "100%",
+                        "custom_width_mobile": 100
+                      }
+                    }
+                  },
+                  "block_order": ["heading_group_Dq0tX9", "products_group_Gt3wA2", "cta_button_Kx7aE6"]
+                }
+              },
+              "block_order": ["content_group_Cp9sW8"]
+            }
+          },
+          "block_order": ["col_left_Yl5oS4", "col_right_Bo8rV7"]
+        }
+      },
+      "block_order": ["grid_row_Wk4nR3"],
+      "settings": {
+        "background_color_mobile": "#e1f0e2",
+        "text_color_mobile": "",
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 48,
+        "padding_left_mobile": 0,
+        "padding_right_mobile": 0,
+        "margin_bottom_mobile": 0,
+        "background_color_desktop": "#e1f0e2",
+        "text_color_desktop": "",
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 0,
+        "padding_left_desktop": 0,
+        "padding_right_desktop": 0,
+        "margin_bottom_desktop": 0
+      }
+    },
     "product_tabs_nav_Rk3mP1": {
       "type": "generic-section",
       "blocks": {
@@ -3727,6 +4045,7 @@
     }
   },
   "order": [
+    "welcome_kit_Xk9mQ2",
     "product_tabs_nav_Rk3mP1",
     "product_tab_gut_Yz7aP1",
     "product_tab_rec_Bc8dQ2",
