@@ -20,7 +20,13 @@
     assign title = 'Select a product'
   endif
   assign description = block.settings.custom_description
+  if description == blank and tp_product != blank
+    assign description = tp_product.description | strip_html | truncate: 200
+  endif
   assign price = block.settings.price_override
+  if price == blank and tp_product != blank
+    assign price = tp_product.price | money
+  endif
   assign free_text = block.settings.free_label | default: 'FREE'
 %}
 
@@ -46,6 +52,7 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
+  width: 100%;
 }
 
 .textual-product__row {
@@ -123,7 +130,7 @@
       "label": "t:settings.title_override"
     },
     {
-      "type": "text",
+      "type": "textarea",
       "id": "custom_description",
       "label": "t:settings.custom_description"
     },
