@@ -1,0 +1,80 @@
+{% doc %}
+  SHOP.COM Menu Icon
+
+  Renders an inline SVG icon for use in the mega menu Account and Features sections.
+
+  @param {string} icon - Icon name (required). One of: account, track-orders, reorder, help, shopping-list, list-manager, egifts, price-alerts, shopbuddy, deals, nutri-physical
+  @param {string} [class] - Additional CSS classes
+
+  @example
+  {% render 'shopcom-menu-icons', icon: 'account' %}
+{% enddoc %}
+
+{% liquid
+  assign icon = icon | default: ''
+  assign class = class | default: ''
+
+  unless icon != blank
+    break
+  endunless
+%}
+
+{%- case icon -%}
+  {%- when 'account' -%}
+    <svg class="shopcom-menu-icon {{ class }}" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M10 10C12.21 10 14 8.21 14 6C14 3.79 12.21 2 10 2C7.79 2 6 3.79 6 6C6 8.21 7.79 10 10 10ZM10 12C7.33 12 2 13.34 2 16V17C2 17.55 2.45 18 3 18H17C17.55 18 18 17.55 18 17V16C18 13.34 12.67 12 10 12Z" fill="currentColor"/>
+    </svg>
+
+  {%- when 'track-orders' -%}
+    <svg class="shopcom-menu-icon {{ class }}" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M16.5 6H14V4C14 2.9 13.1 2 12 2H8C6.9 2 6 2.9 6 4V6H3.5C2.67 6 2 6.67 2 7.5V16.5C2 17.33 2.67 18 3.5 18H16.5C17.33 18 18 17.33 18 16.5V7.5C18 6.67 17.33 6 16.5 6ZM8 4H12V6H8V4ZM10 15L6 11L7.41 9.59L10 12.17L14.59 7.58L16 9L10 15Z" fill="currentColor"/>
+    </svg>
+
+  {%- when 'reorder' -%}
+    <svg class="shopcom-menu-icon {{ class }}" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M10 3C6.13 3 3 6.13 3 10H1L3.89 12.89L3.96 13.03L7 10H5C5 7.24 7.24 5 10 5C12.76 5 15 7.24 15 10C15 12.76 12.76 15 10 15C8.62 15 7.38 14.44 6.49 13.54L5.07 14.96C6.28 16.18 7.95 17 10 17C13.87 17 17 13.87 17 10C17 6.13 13.87 3 10 3Z" fill="currentColor"/>
+    </svg>
+
+  {%- when 'help' -%}
+    <svg class="shopcom-menu-icon {{ class }}" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M10 2C5.59 2 2 5.59 2 10C2 14.41 5.59 18 10 18C14.41 18 18 14.41 18 10C18 5.59 14.41 2 10 2ZM11 16H9V14H11V16ZM13.07 9.25L12.17 10.17C11.45 10.9 11 11.5 11 13H9V12.5C9 11.4 9.45 10.4 10.17 9.67L11.41 8.41C11.78 8.05 12 7.55 12 7C12 5.9 11.1 5 10 5C8.9 5 8 5.9 8 7H6C6 4.79 7.79 3 10 3C12.21 3 14 4.79 14 7C14 7.88 13.64 8.68 13.07 9.25Z" fill="currentColor"/>
+    </svg>
+
+  {%- when 'shopping-list' -%}
+    <svg class="shopcom-menu-icon {{ class }}" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M15 2H5C3.9 2 3 2.9 3 4V16C3 17.1 3.9 18 5 18H15C16.1 18 17 17.1 17 16V4C17 2.9 16.1 2 15 2ZM8 16H6V14H8V16ZM8 13H6V11H8V13ZM8 10H6V8H8V10ZM14 16H9V14H14V16ZM14 13H9V11H14V13ZM14 10H9V8H14V10Z" fill="currentColor"/>
+    </svg>
+
+  {%- when 'list-manager' -%}
+    <svg class="shopcom-menu-icon {{ class }}" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M3 5H5V7H3V5ZM3 9H5V11H3V9ZM3 13H5V15H3V13ZM7 5H17V7H7V5ZM7 9H17V11H7V9ZM7 13H17V15H7V13Z" fill="currentColor"/>
+    </svg>
+
+  {%- when 'egifts' -%}
+    <svg class="shopcom-menu-icon {{ class }}" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M18 6H14.82C14.93 5.69 15 5.35 15 5C15 3.34 13.66 2 12 2C11.13 2 10.36 2.39 9.83 3L10 3.18L10.17 3C9.64 2.39 8.87 2 8 2C6.34 2 5 3.34 5 5C5 5.35 5.07 5.69 5.18 6H2V9H3V17C3 17.55 3.45 18 4 18H16C16.55 18 17 17.55 17 17V9H18V6ZM12 4C12.55 4 13 4.45 13 5C13 5.55 12.55 6 12 6C11.45 6 11 5.55 11 5C11 4.45 11.45 4 12 4ZM8 4C8.55 4 9 4.45 9 5C9 5.55 8.55 6 8 6C7.45 6 7 5.55 7 5C7 4.45 7.45 4 8 4ZM15 16H5V9H15V16Z" fill="currentColor"/>
+    </svg>
+
+  {%- when 'price-alerts' -%}
+    <svg class="shopcom-menu-icon {{ class }}" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M10 2C5.58 2 2 5.58 2 10C2 14.42 5.58 18 10 18C14.42 18 18 14.42 18 10C18 5.58 14.42 2 10 2ZM10.75 14.5H9.25V13H10.75V14.5ZM10.75 11.75H9.25V5.5H10.75V11.75Z" fill="currentColor"/>
+      <path d="M10.5 6.5H9.5V8.5H10.5V6.5Z" fill="currentColor"/>
+      <text x="10" y="13" text-anchor="middle" font-size="8" font-weight="bold" fill="currentColor" font-family="sans-serif">$</text>
+    </svg>
+
+  {%- when 'shopbuddy' -%}
+    <svg class="shopcom-menu-icon {{ class }}" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M10 2L12.09 7.26L18 8L13.64 12.14L14.82 18L10 15.27L5.18 18L6.36 12.14L2 8L7.91 7.26L10 2Z" fill="currentColor"/>
+    </svg>
+
+  {%- when 'deals' -%}
+    <svg class="shopcom-menu-icon {{ class }}" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M11.11 2L18 8.89V2H11.11ZM2.39 8.26L11.74 17.61C12.13 18 12.76 18 13.15 17.61L17.61 13.15C18 12.76 18 12.13 17.61 11.74L8.26 2.39C8.07 2.2 7.81 2.1 7.55 2.1H3.1C2.57 2.1 2.1 2.57 2.1 3.1V7.55C2.1 7.81 2.2 8.07 2.39 8.26ZM4.5 4C5.05 4 5.5 4.45 5.5 5C5.5 5.55 5.05 6 4.5 6C3.95 6 3.5 5.55 3.5 5C3.5 4.45 3.95 4 4.5 4Z" fill="currentColor"/>
+    </svg>
+
+  {%- when 'nutri-physical' -%}
+    <svg class="shopcom-menu-icon {{ class }}" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M10 2C7.79 2 6 3.79 6 6C6 7.48 6.81 8.77 8.01 9.44C5.17 10.36 3 12.94 3 16V17C3 17.55 3.45 18 4 18H16C16.55 18 17 17.55 17 17V16C17 12.94 14.83 10.36 11.99 9.44C13.19 8.77 14 7.48 14 6C14 3.79 12.21 2 10 2ZM10 4C11.1 4 12 4.9 12 6C12 7.1 11.1 8 10 8C8.9 8 8 7.1 8 6C8 4.9 8.9 4 10 4Z" fill="currentColor"/>
+    </svg>
+
+{%- endcase -%}

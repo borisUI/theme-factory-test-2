@@ -1,0 +1,149 @@
+{% doc %}
+  Sub-header navigation
+
+  Renders a horizontal brand/category navigation bar below the main header.
+  Displays brand logos or text links in a scrollable row.
+
+  @example
+  Used via header-group.json as part of the header section group.
+{% enddoc %}
+
+<div class="section-background color-{{ section.settings.color_scheme }}"></div>
+<nav
+  class="sub-header-nav section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }}"
+  style="{% render 'spacing-padding', settings: section.settings %}"
+  aria-label="{{ 'accessibility.sub_navigation' | t | default: 'Secondary navigation' }}"
+>
+  <div class="sub-header-nav__inner">
+    {% content_for 'blocks' %}
+  </div>
+</nav>
+
+{% stylesheet %}
+  .sub-header-nav {
+    --sub-header-bg: #F0F0F0;
+
+    border-block-end: 1px solid rgb(var(--color-border));
+  }
+
+  .sub-header-nav__inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-md, 1.5rem);
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+
+    @media screen and (max-width: 749px) {
+      justify-content: flex-start;
+      gap: var(--gap-sm, 1rem);
+      padding-inline: var(--padding-sm, 0.5rem);
+    }
+  }
+
+  .sub-header-nav__inner::-webkit-scrollbar {
+    display: none;
+  }
+
+  .sub-header-nav__inner > * {
+    flex-shrink: 0;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.sub_header_nav",
+  "tag": "div",
+  "class": "sub-header-nav-section",
+  "blocks": [
+    { "type": "@theme" },
+    { "type": "@app" }
+  ],
+  "enabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:content.appearance"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "t:settings.section_width",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "t:options.page"
+        },
+        {
+          "value": "full-width",
+          "label": "t:options.full"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "scheme-2",
+      "label": "t:settings.color_scheme"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 8
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.sub_header_nav",
+      "blocks": {
+        "brand_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>MA Vitamins</p>",
+            "type_preset": "caption"
+          }
+        },
+        "brand_2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>TLS Weight Management</p>",
+            "type_preset": "caption"
+          }
+        },
+        "brand_3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Isotonix</p>",
+            "type_preset": "caption"
+          }
+        }
+      },
+      "block_order": ["brand_1", "brand_2", "brand_3"]
+    }
+  ]
+}
+{% endschema %}

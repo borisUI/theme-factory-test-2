@@ -1,0 +1,780 @@
+{% liquid
+  assign logo = section.settings.logo
+  assign search_placeholder = section.settings.search_placeholder | default: 'Search for products, brands...'
+  assign nav_menu = section.settings.nav_menu
+  assign take_quiz_text = section.settings.take_quiz_text | default: 'Take Quiz'
+  assign take_quiz_url = section.settings.take_quiz_url | default: '#'
+  assign cashback_text = section.settings.cashback_text | default: 'Get up to 50% Cashback when you shop!'
+  assign cashback_link_text = section.settings.cashback_link_text | default: 'Learn More'
+  assign cashback_link_url = section.settings.cashback_link_url | default: '#'
+  assign promo_text = section.settings.promo_text | default: 'Verified Internet-Fed & Tested'
+  assign promo_url = section.settings.promo_url | default: '#'
+  assign promo_image = section.settings.promo_image
+  assign enable_sticky = section.settings.enable_sticky
+%}
+
+<shopcom-header-component
+  class="shopcom-header{% if enable_sticky %} shopcom-header--sticky-enabled{% endif %}"
+  {% if enable_sticky %}data-sticky{% endif %}
+>
+  {%- comment -%} Sentinel for IntersectionObserver sticky detection {%- endcomment -%}
+  {% if enable_sticky %}
+    <div ref="sentinel" class="shopcom-header__sentinel"></div>
+  {% endif %}
+
+  {%- comment -%} ============ ROW 1: Logo / Search / Actions ============ {%- endcomment -%}
+  <div class="shopcom-header__row-1" ref="headerMain">
+    <div class="shopcom-header__row-1-inner">
+      {%- comment -%} Mobile hamburger (visible < 750px) {%- endcomment -%}
+      <button
+        class="shopcom-header__menu-toggle shopcom-header__mobile-only"
+        ref="menuToggle"
+        on:click="/handleMenuOpen"
+        aria-label="{{ 'accessibility.navigation' | t }}"
+        type="button"
+      >
+        {{ 'icon-menu.svg' | inline_asset_content }}
+      </button>
+
+      {%- comment -%} Logo {%- endcomment -%}
+      <a href="/" class="shopcom-header__logo" aria-label="{{ shop.name }}">
+        {% if logo != blank %}
+          {{
+            logo
+            | image_url: width: logo.width
+            | image_tag:
+              widths: '120,180,240',
+              sizes: '120px',
+              loading: 'eager',
+              fetchpriority: 'high',
+              class: 'shopcom-header__logo-img',
+              alt: shop.name
+          }}
+        {% else %}
+          {{ 'shop-logo.svg' | inline_asset_content }}
+        {% endif %}
+      </a>
+
+      {%- comment -%} Search bar — desktop only {%- endcomment -%}
+      <form action="{{ routes.search_url }}" method="get" class="shopcom-header__search shopcom-header__desktop-only" role="search">
+        <input
+          type="search"
+          name="q"
+          placeholder="{{ search_placeholder }}"
+          class="shopcom-header__search-input"
+          aria-label="{{ search_placeholder }}"
+          autocomplete="off"
+        >
+        <button type="submit" class="shopcom-header__search-btn" aria-label="{{ 'general.search.search' | t }}">
+          {{ 'icon-search.svg' | inline_asset_content }}
+        </button>
+      </form>
+
+      {%- comment -%} Actions {%- endcomment -%}
+      <div class="shopcom-header__actions">
+        {%- comment -%} Take Quiz CTA — desktop only {%- endcomment -%}
+        <a href="{{ take_quiz_url }}" class="shopcom-header__cta shopcom-header__desktop-only">
+          {{ take_quiz_text }}
+        </a>
+
+        {%- comment -%} US Flag — desktop only {%- endcomment -%}
+        <button type="button" class="shopcom-header__flag shopcom-header__desktop-only" aria-label="Country selector">
+          {{ 'us-united-states-streamline-flagpack.svg' | inline_asset_content }}
+        </button>
+
+        {%- comment -%} Sign In — desktop shows text + icon, mobile shows icon only {%- endcomment -%}
+        <a href="{{ routes.account_url }}" class="shopcom-header__account" aria-label="{{ 'customer.log_in' | t }}">
+          {{ 'icon-account.svg' | inline_asset_content }}
+          <span class="shopcom-header__desktop-only">{{ 'customer.log_in' | t }}</span>
+        </a>
+
+        {%- comment -%} Cart {%- endcomment -%}
+        <a href="{{ routes.cart_url }}" class="shopcom-header__cart" aria-label="{{ 'sections.cart.title' | t }}">
+          {{ 'icon-cart.svg' | inline_asset_content }}
+          {% if cart.item_count > 0 %}
+            <span class="shopcom-header__cart-count">{{ cart.item_count }}</span>
+          {% endif %}
+        </a>
+      </div>
+    </div>
+  </div>
+
+  {%- comment -%} ============ ROW 2: Nav / Cashback / Promo ============ {%- endcomment -%}
+  <div class="shopcom-header__row-2">
+    <div class="shopcom-header__row-2-inner">
+      {%- comment -%} Left: Hamburger (desktop) + Nav links {%- endcomment -%}
+      <div class="shopcom-header__nav-group shopcom-header__desktop-only">
+        <button
+          class="shopcom-header__menu-toggle"
+          on:click="/handleMenuOpen"
+          aria-label="{{ 'accessibility.navigation' | t }}"
+          type="button"
+        >
+          {{ 'icon-menu.svg' | inline_asset_content }}
+        </button>
+
+        {% if nav_menu != blank %}
+          <nav class="shopcom-header__nav" aria-label="{{ 'accessibility.navigation' | t }}">
+            <ul class="shopcom-header__nav-list">
+              {% for link in nav_menu.links %}
+                <li class="shopcom-header__nav-item">
+                  <a href="{{ link.url }}" class="shopcom-header__nav-link"{% if link.active %} aria-current="page"{% endif %}>
+                    {{ link.title }}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </nav>
+        {% endif %}
+      </div>
+
+      {%- comment -%} Center: Cashback text — desktop only {%- endcomment -%}
+      <div class="shopcom-header__cashback shopcom-header__desktop-only">
+        <span class="shopcom-header__cashback-text">{{ cashback_text }}</span>
+        {% if cashback_link_url != blank %}
+          <a href="{{ cashback_link_url }}" class="shopcom-header__cashback-link">{{ cashback_link_text }}</a>
+        {% endif %}
+      </div>
+
+      {%- comment -%} Right: Promo CTA with VIFT badge — desktop only {%- endcomment -%}
+      {% if promo_url != blank %}
+        <a href="{{ promo_url }}" class="shopcom-header__promo shopcom-header__desktop-only">
+          {% if promo_image != blank %}
+            {{
+              promo_image
+              | image_url: width: promo_image.width
+              | image_tag:
+                widths: '80,120,160',
+                sizes: '80px',
+                loading: 'eager',
+                class: 'shopcom-header__promo-img',
+                alt: promo_text
+            }}
+          {% else %}
+            {{ 'frame-663.svg' | inline_asset_content }}
+          {% endif %}
+          <span class="shopcom-header__promo-text">{{ promo_text }}</span>
+        </a>
+      {% endif %}
+
+      {%- comment -%} Mobile: full-width search + VIFT badge {%- endcomment -%}
+      <div class="shopcom-header__mobile-row-2 shopcom-header__mobile-only">
+        <form action="{{ routes.search_url }}" method="get" class="shopcom-header__search shopcom-header__search--mobile" role="search">
+          <input
+            type="search"
+            name="q"
+            placeholder="{{ search_placeholder }}"
+            class="shopcom-header__search-input"
+            aria-label="{{ search_placeholder }}"
+            autocomplete="off"
+          >
+          <button type="submit" class="shopcom-header__search-btn" aria-label="{{ 'general.search.search' | t }}">
+            {{ 'icon-search.svg' | inline_asset_content }}
+          </button>
+        </form>
+        {% if promo_url != blank %}
+          <a href="{{ promo_url }}" class="shopcom-header__promo-mobile">
+            {% if promo_image != blank %}
+              {{
+                promo_image
+                | image_url: width: promo_image.width
+                | image_tag:
+                  widths: '60,80',
+                  sizes: '60px',
+                  loading: 'eager',
+                  class: 'shopcom-header__promo-img--mobile',
+                  alt: promo_text
+              }}
+            {% else %}
+              {{ 'frame-663.svg' | inline_asset_content }}
+            {% endif %}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  {%- comment -%} Mega Menu (rendered inside the web component for event binding) {%- endcomment -%}
+  {% render 'shopcom-mega-menu', section: section %}
+</shopcom-header-component>
+
+{% stylesheet %}
+  /* ============================================================
+   * SHOPCOM Header
+   * ============================================================ */
+
+  .shopcom-header {
+    position: relative;
+    z-index: 10;
+    font-family: 'DM Sans', var(--font-body--family), sans-serif;
+  }
+
+  .shopcom-header--sticky-enabled.is-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .shopcom-header__sentinel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    pointer-events: none;
+  }
+
+  /* ---- Row 1 ---- */
+  .shopcom-header__row-1 {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #E5E5E5;
+  }
+
+  .shopcom-header__row-1-inner {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    max-width: var(--narrow-page-width, 90rem);
+    margin-inline: auto;
+    padding-inline: var(--padding-md, 1rem);
+    padding-block: 12px;
+  }
+
+  /* Logo */
+  .shopcom-header__logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    text-decoration: none;
+  }
+
+  .shopcom-header__logo svg,
+  .shopcom-header__logo-img {
+    height: 28px;
+    width: auto;
+  }
+
+  /* Search */
+  .shopcom-header__search {
+    position: relative;
+    flex: 1;
+    max-width: 520px;
+  }
+
+  .shopcom-header__search-input {
+    width: 100%;
+    padding: 10px 44px 10px 16px;
+    border: 1px solid #D9D9D9;
+    border-radius: 24px;
+    font-size: 0.875rem;
+    font-family: inherit;
+    background-color: #F5F5F5;
+    color: #141414;
+    outline: none;
+    transition: border-color 0.15s ease;
+  }
+
+  .shopcom-header__search-input::placeholder {
+    color: #999999;
+  }
+
+  .shopcom-header__search-input:focus {
+    border-color: #207D94;
+  }
+
+  .shopcom-header__search-btn {
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666666;
+  }
+
+  .shopcom-header__search-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .shopcom-header__search-btn:focus-visible {
+    outline: 2px solid #207D94;
+    outline-offset: 2px;
+    border-radius: 50%;
+  }
+
+  /* Actions */
+  .shopcom-header__actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
+  }
+
+  .shopcom-header__cta {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    border: 1px solid #141414;
+    border-radius: 24px;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: #141414;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+
+  .shopcom-header__cta:hover {
+    background-color: #141414;
+    color: #FFFFFF;
+  }
+
+  .shopcom-header__cta:focus-visible {
+    outline: 2px solid #207D94;
+    outline-offset: 2px;
+  }
+
+  .shopcom-header__flag {
+    background: none;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  .shopcom-header__flag svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .shopcom-header__flag:focus-visible {
+    outline: 2px solid #207D94;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  .shopcom-header__account {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    color: #141414;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  .shopcom-header__account svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .shopcom-header__account:hover {
+    opacity: 0.7;
+  }
+
+  .shopcom-header__account:focus-visible {
+    outline: 2px solid #207D94;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  .shopcom-header__cart {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #141414;
+  }
+
+  .shopcom-header__cart svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .shopcom-header__cart:hover {
+    opacity: 0.7;
+  }
+
+  .shopcom-header__cart:focus-visible {
+    outline: 2px solid #207D94;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  .shopcom-header__cart-count {
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    background-color: #207D94;
+    color: #FFFFFF;
+    font-size: 0.625rem;
+    font-weight: 600;
+    min-width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+  }
+
+  .shopcom-header__menu-toggle {
+    background: none;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #141414;
+  }
+
+  .shopcom-header__menu-toggle svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .shopcom-header__menu-toggle:focus-visible {
+    outline: 2px solid #207D94;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* ---- Row 2 ---- */
+  .shopcom-header__row-2 {
+    background-color: #F0F0F0;
+  }
+
+  .shopcom-header__row-2-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: var(--narrow-page-width, 90rem);
+    margin-inline: auto;
+    padding-inline: var(--padding-md, 1rem);
+    padding-block: 8px;
+    gap: 16px;
+  }
+
+  .shopcom-header__nav-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+
+  .shopcom-header__nav-list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .shopcom-header__nav-link {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: #141414;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .shopcom-header__nav-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .shopcom-header__nav-link[aria-current="page"] {
+    font-weight: 600;
+  }
+
+  .shopcom-header__nav-link:focus-visible {
+    outline: 2px solid #207D94;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  /* Cashback */
+  .shopcom-header__cashback {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8125rem;
+    color: #141414;
+    white-space: nowrap;
+  }
+
+  .shopcom-header__cashback-link {
+    color: #207D94;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    font-weight: 500;
+  }
+
+  .shopcom-header__cashback-link:focus-visible {
+    outline: 2px solid #207D94;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  /* Promo */
+  .shopcom-header__promo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #141414;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+    background: linear-gradient(135deg, #EEF7F9, #E8F0E8);
+    padding: 6px 12px;
+    border-radius: 20px;
+    flex-shrink: 0;
+  }
+
+  .shopcom-header__promo:hover {
+    opacity: 0.85;
+  }
+
+  .shopcom-header__promo:focus-visible {
+    outline: 2px solid #207D94;
+    outline-offset: 2px;
+  }
+
+  .shopcom-header__promo-img {
+    height: 24px;
+    width: auto;
+  }
+
+  /* ---- Responsive: Desktop / Mobile helpers ---- */
+  .shopcom-header__desktop-only {
+    display: flex;
+  }
+
+  .shopcom-header__mobile-only {
+    display: none;
+  }
+
+  /* ---- Mobile (< 750px) ---- */
+  @media screen and (max-width: 749px) {
+    .shopcom-header__desktop-only {
+      display: none !important;
+    }
+
+    .shopcom-header__mobile-only {
+      display: flex;
+    }
+
+    /* Row 1 mobile: hamburger | logo (centered) | account | cart */
+    .shopcom-header__row-1-inner {
+      gap: 12px;
+      padding-block: 10px;
+    }
+
+    .shopcom-header__logo {
+      flex: 1;
+      justify-content: center;
+    }
+
+    .shopcom-header__logo svg,
+    .shopcom-header__logo-img {
+      height: 24px;
+    }
+
+    .shopcom-header__actions {
+      gap: 12px;
+    }
+
+    /* Row 2 mobile: search + VIFT badge */
+    .shopcom-header__row-2-inner {
+      padding-block: 8px;
+    }
+
+    .shopcom-header__mobile-row-2 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .shopcom-header__search--mobile {
+      flex: 1;
+      max-width: none;
+    }
+
+    .shopcom-header__search--mobile .shopcom-header__search-input {
+      padding: 8px 40px 8px 14px;
+      font-size: 0.8125rem;
+    }
+
+    .shopcom-header__promo-mobile {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .shopcom-header__promo-img--mobile {
+      height: 32px;
+      width: auto;
+    }
+  }
+{% endstylesheet %}
+
+{% javascript %}
+  /* shopcom-header.js is loaded as an asset via importmap */
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "t:names.shopcom_header",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:content.branding"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "text",
+      "id": "search_placeholder",
+      "label": "Search placeholder",
+      "default": "Search for products, brands..."
+    },
+    {
+      "type": "header",
+      "content": "t:content.menus"
+    },
+    {
+      "type": "link_list",
+      "id": "nav_menu",
+      "label": "t:content.sub_nav_menu",
+      "default": "main-menu"
+    },
+    {
+      "type": "link_list",
+      "id": "shop_menu",
+      "label": "t:content.shop_menu"
+    },
+    {
+      "type": "link_list",
+      "id": "account_menu",
+      "label": "t:content.account_menu"
+    },
+    {
+      "type": "link_list",
+      "id": "features_menu",
+      "label": "t:content.features_menu"
+    },
+    {
+      "type": "header",
+      "content": "Take Quiz"
+    },
+    {
+      "type": "text",
+      "id": "take_quiz_text",
+      "label": "Button text",
+      "default": "Take Quiz"
+    },
+    {
+      "type": "url",
+      "id": "take_quiz_url",
+      "label": "Button link"
+    },
+    {
+      "type": "header",
+      "content": "Cashback promo"
+    },
+    {
+      "type": "text",
+      "id": "cashback_text",
+      "label": "Cashback text",
+      "default": "Get up to 50% Cashback when you shop!"
+    },
+    {
+      "type": "text",
+      "id": "cashback_link_text",
+      "label": "Link text",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "cashback_link_url",
+      "label": "Link URL"
+    },
+    {
+      "type": "header",
+      "content": "Promo badge"
+    },
+    {
+      "type": "text",
+      "id": "promo_text",
+      "label": "Promo text",
+      "default": "Verified Internet-Fed & Tested"
+    },
+    {
+      "type": "image_picker",
+      "id": "promo_image",
+      "label": "Promo image"
+    },
+    {
+      "type": "url",
+      "id": "promo_url",
+      "label": "Promo link"
+    },
+    {
+      "type": "header",
+      "content": "t:content.mega_menu_shop_by_category"
+    },
+    {
+      "type": "image_picker",
+      "id": "category_promo_image",
+      "label": "t:content.category_promo_image"
+    },
+    {
+      "type": "header",
+      "content": "Behavior"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sticky",
+      "label": "Enable sticky header",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "brand-logo",
+      "name": "t:content.brand_logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Logo image"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "t:content.brand_link"
+        }
+      ]
+    }
+  ],
+  "enabled_on": {
+    "groups": ["header"]
+  }
+}
+{% endschema %}
