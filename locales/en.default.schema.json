@@ -195,7 +195,22 @@
     "accent_color": "Accent color",
     "border_color": "Border color",
     "menus": "Menus",
-    "branding": "Branding"
+    "branding": "Branding",
+    "sub_header_links": "Sub-header links",
+    "sub_header_menu": "Sub-header menu",
+    "sub_header_background": "Sub-header background",
+    "cart_drawer_heading": "Cart drawer heading",
+    "cart_drawer_empty_text": "Empty cart text",
+    "cart_drawer_free_shipping_threshold": "Free shipping threshold",
+    "show_free_shipping_bar": "Show free shipping bar",
+    "account_heading": "Account heading",
+    "show_account_drawer": "Show account drawer",
+    "announcement_gradient_start": "Gradient start",
+    "announcement_gradient_end": "Gradient end",
+    "mega_menu_collection": "Mega menu collection",
+    "mega_menu_promo_heading": "Promo heading",
+    "mega_menu_promo_text": "Promo text",
+    "mega_menu_promo_image": "Promo image"
   },
   "html_defaults": {
     "join_our_email_list": "<h2>Join our email list</h2>",
@@ -495,7 +510,11 @@
     "text_product": "Text Product",
     "textual_product": "Textual Product",
     "shopcom_header": "SHOP.COM Header",
-    "shopcom_footer": "SHOP.COM Footer"
+    "shopcom_footer": "SHOP.COM Footer",
+    "shopcom_announcement_bar": "SHOP.COM Announcement Bar",
+    "sub_header_nav": "Sub-header navigation",
+    "cart_drawer": "Cart drawer",
+    "account_drawer": "Account drawer"
   },
   "options": {
     "above_carousel": "Above carousel",

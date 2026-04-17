@@ -340,6 +340,36 @@
     "blog_post_date": "Date",
     "blog_post_description": "An excerpt of your blog post's content"
   },
+  "cart_drawer": {
+    "title": "Your Cart",
+    "empty_title": "Your cart is empty",
+    "empty_text": "Looks like you haven't added anything to your cart yet.",
+    "continue_shopping": "Continue shopping",
+    "subtotal": "Subtotal",
+    "shipping_note": "Shipping & taxes calculated at checkout",
+    "checkout": "Check out",
+    "free_shipping_qualified": "You qualify for free shipping!",
+    "free_shipping_remaining": "You're {{ amount }} away from free shipping",
+    "remove_item": "Remove",
+    "view_cart": "View cart"
+  },
+  "account_drawer": {
+    "title": "My Account",
+    "sign_in": "Sign in",
+    "create_account": "Create account",
+    "or": "or",
+    "welcome": "Welcome back",
+    "orders": "Orders",
+    "profile": "Profile",
+    "addresses": "Addresses",
+    "sign_out": "Sign out",
+    "guest_title": "Account",
+    "guest_text": "Sign in to access your account, track orders, and more."
+  },
+  "sub_header": {
+    "all_brands": "All Brands",
+    "shop_menu_label": "Shop by category"
+  },
   "products": {
     "product": {
       "add_to_cart": "Add to cart",

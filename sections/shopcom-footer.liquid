@@ -1,0 +1,819 @@
+{% liquid
+  assign bg_color = section.settings.background_color | default: '#262626'
+  assign txt_color = section.settings.text_color | default: '#FFFFFF'
+  assign subscribe_btn_color = section.settings.subscribe_button_color | default: '#207D94'
+  assign shop_menu = section.settings.shop_menu
+  assign features_menu = section.settings.features_menu
+  assign learn_menu = section.settings.learn_menu
+  assign support_menu = section.settings.support_menu
+  assign newsletter_heading = section.settings.newsletter_heading | default: 'STAY IN THE KNOW'
+  assign newsletter_disclaimer = section.settings.newsletter_disclaimer
+  assign show_language = section.settings.show_language_selector
+  assign show_country = section.settings.show_country_selector
+  assign show_newsletter = section.settings.show_newsletter
+  assign show_social = section.settings.show_social_icons
+  assign show_payment = section.settings.show_payment_icons
+%}
+
+<shopcom-footer-component
+  class="shopcom-footer"
+  style="
+    --footer-bg: {{ bg_color }};
+    --footer-text: {{ txt_color }};
+    --footer-subscribe-btn: {{ subscribe_btn_color }};
+  "
+>
+  <div class="shopcom-footer__inner">
+
+    {%- comment -%} ============ TOP ROW: Language/Country + Newsletter ============ {%- endcomment -%}
+    {% if show_language or show_country or show_newsletter %}
+      <div class="shopcom-footer__top-row">
+        {% if show_language or show_country %}
+          <div class="shopcom-footer__selectors">
+            {% if show_language %}
+              {%- form 'localization', id: 'FooterLanguageForm', class: 'shopcom-footer__locale-form' -%}
+                <label for="FooterLanguageSelect" class="shopcom-footer__select-label">Language</label>
+                <select id="FooterLanguageSelect" name="locale_code" class="shopcom-footer__select" onchange="this.form.submit()">
+                  {%- for locale in localization.available_languages -%}
+                    <option value="{{ locale.iso_code }}"{% if locale.iso_code == localization.language.iso_code %} selected{% endif %}>
+                      {{ locale.endonym_name | capitalize }}
+                    </option>
+                  {%- endfor -%}
+                </select>
+              {%- endform -%}
+            {% endif %}
+
+            {% if show_country %}
+              {%- form 'localization', id: 'FooterCountryForm', class: 'shopcom-footer__locale-form' -%}
+                <label for="FooterCountrySelect" class="shopcom-footer__select-label">Country/Region</label>
+                <select id="FooterCountrySelect" name="country_code" class="shopcom-footer__select" onchange="this.form.submit()">
+                  {%- for country in localization.available_countries -%}
+                    <option value="{{ country.iso_code }}"{% if country.iso_code == localization.country.iso_code %} selected{% endif %}>
+                      {{ country.name }} ({{ country.currency.iso_code }} {{ country.currency.symbol }})
+                    </option>
+                  {%- endfor -%}
+                </select>
+              {%- endform -%}
+            {% endif %}
+          </div>
+        {% endif %}
+
+        {% if show_newsletter %}
+          <div class="shopcom-footer__newsletter">
+            <h2 class="shopcom-footer__newsletter-heading">{{ newsletter_heading }}</h2>
+            {%- form 'customer', id: 'FooterNewsletterForm', class: 'shopcom-footer__newsletter-form' -%}
+              <input type="hidden" name="contact[tags]" value="newsletter">
+              <div class="shopcom-footer__newsletter-field">
+                <label for="FooterNewsletterEmail" class="sr-only">{{ 'general.email_signup.label' | t }}</label>
+                <input
+                  type="email"
+                  id="FooterNewsletterEmail"
+                  name="contact[email]"
+                  class="shopcom-footer__newsletter-input"
+                  placeholder="{{ 'general.email_signup.placeholder' | t }}"
+                  required
+                  autocomplete="email"
+                  aria-label="{{ 'general.email_signup.label' | t }}"
+                >
+                <button type="submit" class="shopcom-footer__newsletter-btn">
+                  Subscribe
+                </button>
+              </div>
+            {%- endform -%}
+            {% if newsletter_disclaimer != blank %}
+              <div class="shopcom-footer__newsletter-disclaimer">
+                {{ newsletter_disclaimer }}
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {%- comment -%} ============ LINK COLUMNS (Desktop grid / Mobile accordions) ============ {%- endcomment -%}
+    <div class="shopcom-footer__columns">
+      {% if shop_menu != blank and shop_menu.links.size > 0 %}
+        <div class="shopcom-footer__column" data-footer-accordion data-expanded-default>
+          <h3 class="shopcom-footer__column-heading" id="FooterShopHeading-{{ section.id }}">
+            <button
+              type="button"
+              class="shopcom-footer__accordion-toggle"
+              data-footer-accordion-toggle
+              ref="accordionToggle[]"
+              on:click="/handleAccordionToggle"
+              aria-expanded="true"
+              aria-controls="FooterShopContent-{{ section.id }}"
+            >
+              {{ shop_menu.title }}
+              <span class="shopcom-footer__chevron" aria-hidden="true">
+                {{ 'chevron-down.svg' | inline_asset_content }}
+              </span>
+            </button>
+          </h3>
+          <ul
+            id="FooterShopContent-{{ section.id }}"
+            class="shopcom-footer__link-list"
+            data-footer-accordion-content
+            aria-labelledby="FooterShopHeading-{{ section.id }}"
+          >
+            {%- for link in shop_menu.links -%}
+              <li><a href="{{ link.url }}" class="shopcom-footer__link">{{ link.title }}</a></li>
+            {%- endfor -%}
+          </ul>
+        </div>
+      {% endif %}
+
+      {% if features_menu != blank and features_menu.links.size > 0 %}
+        <div class="shopcom-footer__column" data-footer-accordion>
+          <h3 class="shopcom-footer__column-heading" id="FooterFeaturesHeading-{{ section.id }}">
+            <button
+              type="button"
+              class="shopcom-footer__accordion-toggle"
+              data-footer-accordion-toggle
+              ref="accordionToggle[]"
+              on:click="/handleAccordionToggle"
+              aria-expanded="false"
+              aria-controls="FooterFeaturesContent-{{ section.id }}"
+            >
+              {{ features_menu.title }}
+              <span class="shopcom-footer__chevron" aria-hidden="true">
+                {{ 'chevron-down.svg' | inline_asset_content }}
+              </span>
+            </button>
+          </h3>
+          <ul
+            id="FooterFeaturesContent-{{ section.id }}"
+            class="shopcom-footer__link-list"
+            data-footer-accordion-content
+            aria-labelledby="FooterFeaturesHeading-{{ section.id }}"
+            hidden
+          >
+            {%- for link in features_menu.links -%}
+              <li><a href="{{ link.url }}" class="shopcom-footer__link">{{ link.title }}</a></li>
+            {%- endfor -%}
+          </ul>
+        </div>
+      {% endif %}
+
+      {% if learn_menu != blank and learn_menu.links.size > 0 %}
+        <div class="shopcom-footer__column" data-footer-accordion>
+          <h3 class="shopcom-footer__column-heading" id="FooterLearnHeading-{{ section.id }}">
+            <button
+              type="button"
+              class="shopcom-footer__accordion-toggle"
+              data-footer-accordion-toggle
+              ref="accordionToggle[]"
+              on:click="/handleAccordionToggle"
+              aria-expanded="false"
+              aria-controls="FooterLearnContent-{{ section.id }}"
+            >
+              {{ learn_menu.title }}
+              <span class="shopcom-footer__chevron" aria-hidden="true">
+                {{ 'chevron-down.svg' | inline_asset_content }}
+              </span>
+            </button>
+          </h3>
+          <ul
+            id="FooterLearnContent-{{ section.id }}"
+            class="shopcom-footer__link-list"
+            data-footer-accordion-content
+            aria-labelledby="FooterLearnHeading-{{ section.id }}"
+            hidden
+          >
+            {%- for link in learn_menu.links -%}
+              <li><a href="{{ link.url }}" class="shopcom-footer__link">{{ link.title }}</a></li>
+            {%- endfor -%}
+          </ul>
+        </div>
+      {% endif %}
+
+      {% if support_menu != blank and support_menu.links.size > 0 %}
+        <div class="shopcom-footer__column" data-footer-accordion>
+          <h3 class="shopcom-footer__column-heading" id="FooterSupportHeading-{{ section.id }}">
+            <button
+              type="button"
+              class="shopcom-footer__accordion-toggle"
+              data-footer-accordion-toggle
+              ref="accordionToggle[]"
+              on:click="/handleAccordionToggle"
+              aria-expanded="false"
+              aria-controls="FooterSupportContent-{{ section.id }}"
+            >
+              {{ support_menu.title }}
+              <span class="shopcom-footer__chevron" aria-hidden="true">
+                {{ 'chevron-down.svg' | inline_asset_content }}
+              </span>
+            </button>
+          </h3>
+          <ul
+            id="FooterSupportContent-{{ section.id }}"
+            class="shopcom-footer__link-list"
+            data-footer-accordion-content
+            aria-labelledby="FooterSupportHeading-{{ section.id }}"
+            hidden
+          >
+            {%- for link in support_menu.links -%}
+              <li><a href="{{ link.url }}" class="shopcom-footer__link">{{ link.title }}</a></li>
+            {%- endfor -%}
+          </ul>
+        </div>
+      {% endif %}
+    </div>
+
+    {%- comment -%} ============ SOCIAL ICONS ============ {%- endcomment -%}
+    {% if show_social %}
+      <div class="shopcom-footer__social">
+        {% if section.settings.facebook_url != blank %}
+          <a href="{{ section.settings.facebook_url }}" class="shopcom-footer__social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M18 10C18 5.58 14.42 2 10 2C5.58 2 2 5.58 2 10C2 14 4.87 17.29 8.62 17.88V12.44H6.56V10H8.62V8.13C8.62 6.1 9.82 4.97 11.66 4.97C12.54 4.97 13.47 5.13 13.47 5.13V7.13H12.45C11.45 7.13 11.13 7.75 11.13 8.38V10H13.38L12.99 12.44H11.13V17.88C14.88 17.29 18 14 18 10Z" fill="currentColor"/></svg>
+          </a>
+        {% endif %}
+        {% if section.settings.instagram_url != blank %}
+          <a href="{{ section.settings.instagram_url }}" class="shopcom-footer__social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M10 6.5C8.07 6.5 6.5 8.07 6.5 10C6.5 11.93 8.07 13.5 10 13.5C11.93 13.5 13.5 11.93 13.5 10C13.5 8.07 11.93 6.5 10 6.5ZM10 12.17C8.8 12.17 7.83 11.2 7.83 10C7.83 8.8 8.8 7.83 10 7.83C11.2 7.83 12.17 8.8 12.17 10C12.17 11.2 11.2 12.17 10 12.17ZM14.37 6.34C14.37 6.84 13.97 7.24 13.47 7.24C12.97 7.24 12.57 6.84 12.57 6.34C12.57 5.84 12.97 5.44 13.47 5.44C13.97 5.44 14.37 5.84 14.37 6.34ZM17.13 7.27C17.07 6.07 16.8 5.01 15.9 4.11C15 3.22 13.94 2.94 12.74 2.87C11.5 2.8 8.5 2.8 7.26 2.87C6.06 2.94 5.01 3.21 4.1 4.11C3.2 5.01 2.93 6.07 2.87 7.27C2.8 8.5 2.8 11.5 2.87 12.74C2.93 13.94 3.2 14.99 4.1 15.9C5.01 16.8 6.06 17.07 7.26 17.14C8.5 17.2 11.5 17.2 12.74 17.14C13.94 17.07 15 16.8 15.9 15.9C16.8 14.99 17.07 13.94 17.13 12.74C17.2 11.5 17.2 8.51 17.13 7.27ZM15.57 13.94C15.33 14.56 14.82 15.06 14.21 15.31C13.28 15.68 11.21 15.6 10 15.6C8.79 15.6 6.72 15.67 5.79 15.31C5.18 15.07 4.67 14.56 4.43 13.94C4.06 13.02 4.14 10.95 4.14 9.73C4.14 8.52 4.07 6.45 4.43 5.52C4.67 4.91 5.18 4.4 5.79 4.16C6.72 3.79 8.79 3.87 10 3.87C11.21 3.87 13.28 3.8 14.21 4.16C14.82 4.4 15.33 4.91 15.57 5.52C15.94 6.45 15.86 8.52 15.86 9.73C15.86 10.95 15.94 13.02 15.57 13.94Z" fill="currentColor"/></svg>
+          </a>
+        {% endif %}
+        {% if section.settings.twitter_url != blank %}
+          <a href="{{ section.settings.twitter_url }}" class="shopcom-footer__social-link" aria-label="X (Twitter)" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15.27 3H17.58L12.3 9.01L18.48 17H13.68L9.81 12.02L5.42 17H3.1L8.74 10.57L2.82 3H7.74L11.23 7.56L15.27 3ZM14.39 15.52H15.72L6.96 4.36H5.52L14.39 15.52Z" fill="currentColor"/></svg>
+          </a>
+        {% endif %}
+        {% if section.settings.youtube_url != blank %}
+          <a href="{{ section.settings.youtube_url }}" class="shopcom-footer__social-link" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M17.73 6.28C17.55 5.58 17 5.03 16.31 4.84C15.05 4.5 10 4.5 10 4.5C10 4.5 4.95 4.5 3.69 4.84C3 5.03 2.45 5.58 2.27 6.28C1.93 7.54 1.93 10.14 1.93 10.14C1.93 10.14 1.93 12.75 2.27 14.01C2.45 14.71 3 15.26 3.69 15.44C4.95 15.78 10 15.78 10 15.78C10 15.78 15.05 15.78 16.31 15.44C17 15.26 17.55 14.71 17.73 14.01C18.07 12.75 18.07 10.14 18.07 10.14C18.07 10.14 18.07 7.54 17.73 6.28ZM8.36 12.68V7.61L12.82 10.14L8.36 12.68Z" fill="currentColor"/></svg>
+          </a>
+        {% endif %}
+        {% if section.settings.tiktok_url != blank %}
+          <a href="{{ section.settings.tiktok_url }}" class="shopcom-footer__social-link" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M16.31 8.2C15.05 8.2 13.91 7.74 13.03 6.99V12.41C13.03 15.02 10.92 17.13 8.31 17.13C7.25 17.13 6.27 16.79 5.47 16.2C4.28 15.32 3.59 13.91 3.59 12.41C3.59 9.8 5.7 7.69 8.31 7.69C8.5 7.69 8.69 7.71 8.87 7.73V10.41C8.69 10.37 8.5 10.34 8.31 10.34C7.17 10.34 6.24 11.27 6.24 12.41C6.24 13.21 6.7 13.9 7.36 14.24C7.64 14.39 7.97 14.47 8.31 14.47C9.44 14.47 10.36 13.57 10.38 12.45L10.39 2.87H13.03C13.03 3.12 13.06 3.37 13.1 3.61C13.31 4.72 14.01 5.66 14.97 6.2C15.38 6.44 15.83 6.59 16.31 6.63V8.2Z" fill="currentColor"/></svg>
+          </a>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {%- comment -%} ============ BOTTOM BAR: Logo + Copyright + Payment Icons ============ {%- endcomment -%}
+    <div class="shopcom-footer__bottom">
+      <div class="shopcom-footer__bottom-logo">
+        <a href="/" aria-label="{{ shop.name }}">
+          {{ 'shop-logo-all-white-1.svg' | inline_asset_content }}
+        </a>
+      </div>
+
+      <div class="shopcom-footer__bottom-copy">
+        <p>{{ section.settings.copyright_text | default: '© 2025 SHOP.COM. All rights reserved.' }}</p>
+      </div>
+
+      {% if show_payment %}
+        <div class="shopcom-footer__payment">
+          {%- unless shop.enabled_payment_types == empty -%}
+            <ul class="shopcom-footer__payment-list" role="list">
+              {%- for type in shop.enabled_payment_types -%}
+                <li class="shopcom-footer__payment-item">
+                  {{ type | payment_type_svg_tag: class: 'shopcom-footer__payment-icon' }}
+                </li>
+              {%- endfor -%}
+            </ul>
+          {%- endunless -%}
+        </div>
+      {% endif %}
+    </div>
+
+  </div>
+</shopcom-footer-component>
+
+{% stylesheet %}
+  .shopcom-footer {
+    display: block;
+    background-color: var(--footer-bg, #262626);
+    color: var(--footer-text, #FFFFFF);
+    font-family: 'DM Sans', var(--font-body--family), sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  .shopcom-footer__inner {
+    max-width: var(--narrow-page-width, 90rem);
+    margin-inline: auto;
+    padding-inline: var(--padding-md, 1rem);
+    padding-block: 48px 32px;
+  }
+
+  /* ---- Top row: selectors + newsletter ---- */
+  .shopcom-footer__top-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 32px;
+    padding-block-end: 32px;
+    margin-block-end: 32px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .shopcom-footer__selectors {
+    display: flex;
+    gap: 16px;
+    flex-shrink: 0;
+  }
+
+  .shopcom-footer__locale-form {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .shopcom-footer__select-label {
+    font-size: 0.75rem;
+    opacity: 0.7;
+  }
+
+  .shopcom-footer__select {
+    appearance: none;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--footer-text, #FFFFFF);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    padding: 8px 32px 8px 12px;
+    font-size: 0.875rem;
+    font-family: inherit;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='white'%3E%3Cpath d='M6 8L2 4h8L6 8z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    min-width: 140px;
+  }
+
+  .shopcom-footer__select:focus-visible {
+    outline: 2px solid var(--footer-text, #FFFFFF);
+    outline-offset: 2px;
+  }
+
+  .shopcom-footer__newsletter {
+    flex: 1;
+    max-width: 480px;
+  }
+
+  .shopcom-footer__newsletter-heading {
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin: 0 0 12px 0;
+  }
+
+  .shopcom-footer__newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .shopcom-footer__newsletter-field {
+    display: flex;
+    gap: 0;
+  }
+
+  .shopcom-footer__newsletter-input {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--footer-text, #FFFFFF);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+    padding: 10px 14px;
+    font-size: 0.875rem;
+    font-family: inherit;
+  }
+
+  .shopcom-footer__newsletter-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .shopcom-footer__newsletter-input:focus-visible {
+    outline: 2px solid var(--footer-text, #FFFFFF);
+    outline-offset: -2px;
+  }
+
+  .shopcom-footer__newsletter-btn {
+    background-color: var(--footer-subscribe-btn, #207D94);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    padding: 10px 24px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .shopcom-footer__newsletter-btn:hover {
+    opacity: 0.9;
+  }
+
+  .shopcom-footer__newsletter-btn:focus-visible {
+    outline: 2px solid var(--footer-text, #FFFFFF);
+    outline-offset: 2px;
+  }
+
+  .shopcom-footer__newsletter-disclaimer {
+    font-size: 0.75rem;
+    opacity: 0.6;
+    margin-block-start: 4px;
+  }
+
+  /* ---- Link columns ---- */
+  .shopcom-footer__columns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    padding-block-end: 32px;
+    margin-block-end: 32px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .shopcom-footer__column-heading {
+    margin: 0;
+  }
+
+  .shopcom-footer__accordion-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: none;
+    border: none;
+    color: var(--footer-text, #FFFFFF);
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding: 0;
+    margin-block-end: 16px;
+    cursor: default;
+    text-align: start;
+  }
+
+  .shopcom-footer__chevron {
+    display: none;
+    width: 16px;
+    height: 16px;
+    transition: transform 0.2s ease;
+  }
+
+  .shopcom-footer__accordion-toggle[aria-expanded="true"] .shopcom-footer__chevron {
+    transform: rotate(180deg);
+  }
+
+  .shopcom-footer__link-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .shopcom-footer__link {
+    color: var(--footer-text, #FFFFFF);
+    text-decoration: none;
+    opacity: 0.75;
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  .shopcom-footer__link:hover {
+    opacity: 1;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .shopcom-footer__link:focus-visible {
+    outline: 2px solid var(--footer-text, #FFFFFF);
+    outline-offset: 2px;
+  }
+
+  /* ---- Social icons ---- */
+  .shopcom-footer__social {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-block-end: 32px;
+    margin-block-end: 32px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .shopcom-footer__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    color: var(--footer-text, #FFFFFF);
+    opacity: 0.75;
+    border-radius: 50%;
+    transition: opacity 0.15s ease;
+  }
+
+  .shopcom-footer__social-link:hover {
+    opacity: 1;
+  }
+
+  .shopcom-footer__social-link:focus-visible {
+    outline: 2px solid var(--footer-text, #FFFFFF);
+    outline-offset: 2px;
+    opacity: 1;
+  }
+
+  /* ---- Bottom bar ---- */
+  .shopcom-footer__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .shopcom-footer__bottom-logo {
+    flex-shrink: 0;
+  }
+
+  .shopcom-footer__bottom-logo a {
+    display: flex;
+    align-items: center;
+    color: var(--footer-text, #FFFFFF);
+  }
+
+  .shopcom-footer__bottom-logo svg {
+    height: 24px;
+    width: auto;
+  }
+
+  .shopcom-footer__bottom-copy {
+    font-size: 0.75rem;
+    opacity: 0.6;
+  }
+
+  .shopcom-footer__bottom-copy p {
+    margin: 0;
+  }
+
+  .shopcom-footer__payment-list {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+
+  .shopcom-footer__payment-icon {
+    height: 24px;
+    width: auto;
+  }
+
+  /* ---- Screen-reader only ---- */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* ---- Mobile styles ---- */
+  @media screen and (max-width: 749px) {
+    .shopcom-footer__inner {
+      padding-block: 32px 24px;
+    }
+
+    .shopcom-footer__top-row {
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .shopcom-footer__selectors {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .shopcom-footer__select {
+      width: 100%;
+      min-width: unset;
+    }
+
+    .shopcom-footer__newsletter {
+      max-width: 100%;
+    }
+
+    .shopcom-footer__columns {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    .shopcom-footer__column {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .shopcom-footer__columns {
+      border-bottom: none;
+    }
+
+    .shopcom-footer__accordion-toggle {
+      cursor: pointer;
+      padding-block: 14px;
+      margin-block-end: 0;
+    }
+
+    .shopcom-footer__chevron {
+      display: flex;
+    }
+
+    .shopcom-footer__link-list {
+      padding-block-end: 14px;
+    }
+
+    .shopcom-footer__social {
+      justify-content: center;
+    }
+
+    .shopcom-footer__bottom {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 16px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .shopcom-footer__chevron {
+      transition: none;
+    }
+  }
+{% endstylesheet %}
+
+{% javascript %}
+  /* shopcom-footer.js is loaded as an asset via importmap */
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "t:names.shopcom_footer",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:content.footer_menu_1"
+    },
+    {
+      "type": "link_list",
+      "id": "shop_menu",
+      "label": "t:content.footer_menu_1"
+    },
+    {
+      "type": "header",
+      "content": "t:content.footer_menu_2"
+    },
+    {
+      "type": "link_list",
+      "id": "features_menu",
+      "label": "t:content.footer_menu_2"
+    },
+    {
+      "type": "header",
+      "content": "t:content.footer_menu_3"
+    },
+    {
+      "type": "link_list",
+      "id": "learn_menu",
+      "label": "t:content.footer_menu_3"
+    },
+    {
+      "type": "header",
+      "content": "t:content.footer_menu_4"
+    },
+    {
+      "type": "link_list",
+      "id": "support_menu",
+      "label": "t:content.footer_menu_4"
+    },
+    {
+      "type": "header",
+      "content": "t:content.newsletter_heading"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_heading",
+      "label": "t:content.newsletter_heading",
+      "default": "STAY IN THE KNOW"
+    },
+    {
+      "type": "richtext",
+      "id": "newsletter_disclaimer",
+      "label": "t:content.newsletter_text"
+    },
+    {
+      "type": "color",
+      "id": "subscribe_button_color",
+      "label": "Subscribe button color",
+      "default": "#207D94"
+    },
+    {
+      "type": "header",
+      "content": "t:content.copyright"
+    },
+    {
+      "type": "text",
+      "id": "copyright_text",
+      "label": "t:content.copyright_text",
+      "default": "© 2025 SHOP.COM. All rights reserved."
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:settings.background_color",
+      "default": "#262626"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:settings.text_color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "t:content.social_media"
+    },
+    {
+      "type": "url",
+      "id": "facebook_url",
+      "label": "Facebook"
+    },
+    {
+      "type": "url",
+      "id": "instagram_url",
+      "label": "Instagram"
+    },
+    {
+      "type": "url",
+      "id": "twitter_url",
+      "label": "X (Twitter)"
+    },
+    {
+      "type": "url",
+      "id": "youtube_url",
+      "label": "YouTube"
+    },
+    {
+      "type": "url",
+      "id": "tiktok_url",
+      "label": "TikTok"
+    },
+    {
+      "type": "header",
+      "content": "Visibility"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_language_selector",
+      "label": "Show language selector",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_country_selector",
+      "label": "Show country selector",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_newsletter",
+      "label": "Show newsletter",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_social_icons",
+      "label": "Show social icons",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_payment_icons",
+      "label": "t:content.show_payment_icons",
+      "default": true
+    }
+  ],
+  "enabled_on": {
+    "groups": ["footer"]
+  }
+}
+{% endschema %}
