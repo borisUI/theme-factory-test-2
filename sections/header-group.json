@@ -11,32 +11,96 @@
   "type": "header",
   "name": "t:names.header",
   "sections": {
-    "header_announcements_9jGBFp": {
-      "type": "shopcom-announcement-bar",
+    "header_announcements": {
+      "type": "header-announcements",
       "settings": {
-        "left_text": "Your Shop Consultant is",
-        "left_link_text": "SHOP.COM",
-        "right_text": "Start Your SHOP.COM Business",
-        "background_color": "#1a1a1a",
-        "text_color": "#FFFFFF",
-        "show_on_mobile": true
-      }
+        "speed": 5,
+        "section_width": "full-width",
+        "color_scheme": "scheme-5",
+        "divider_width": 0,
+        "padding-block-start": 8,
+        "padding-block-end": 8
+      },
+      "blocks": {
+        "announcement_1": {
+          "type": "_announcement",
+          "settings": {
+            "text": "Your Shop Consultant is <strong>SHOP.COM</strong>"
+          }
+        },
+        "announcement_2": {
+          "type": "_announcement",
+          "settings": {
+            "text": "Start Your SHOP.COM Business"
+          }
+        }
+      },
+      "block_order": [
+        "announcement_1",
+        "announcement_2"
+      ]
     },
     "header_section": {
-      "type": "shopcom-header",
+      "type": "header",
       "settings": {
-        "search_placeholder": "Search for products, brands...",
-        "nav_menu": "main-menu",
-        "take_quiz_text": "Take Quiz",
-        "cashback_text": "Get up to 50% Cashback when you shop!",
-        "cashback_link_text": "Learn More",
-        "promo_text": "Verified Internet-Fed & Tested",
-        "enable_sticky": true
+        "logo_position": "left",
+        "menu_position": "left",
+        "menu_row": "bottom",
+        "show_search": true,
+        "search_position": "right",
+        "search_row": "top",
+        "show_country": false,
+        "show_language": false,
+        "section_width": "page-width",
+        "section_height": "compact",
+        "enable_sticky_header": "always",
+        "border_width": 1,
+        "actions_display_style": "icon",
+        "color_scheme_top": "scheme-1",
+        "color_scheme_bottom": "scheme-1"
       }
+    },
+    "sub_header_nav": {
+      "type": "sub-header-nav",
+      "settings": {
+        "section_width": "page-width",
+        "color_scheme": "scheme-2",
+        "padding-block-start": 8,
+        "padding-block-end": 8
+      },
+      "blocks": {
+        "brand_1": {
+          "type": "text",
+          "settings": {
+            "text": "MA Vitamins",
+            "type_preset": "caption"
+          }
+        },
+        "brand_2": {
+          "type": "text",
+          "settings": {
+            "text": "TLS Weight Management",
+            "type_preset": "caption"
+          }
+        },
+        "brand_3": {
+          "type": "text",
+          "settings": {
+            "text": "Isotonix",
+            "type_preset": "caption"
+          }
+        }
+      },
+      "block_order": [
+        "brand_1",
+        "brand_2",
+        "brand_3"
+      ]
     }
   },
   "order": [
-    "header_announcements_9jGBFp",
-    "header_section"
+    "header_announcements",
+    "header_section",
+    "sub_header_nav"
   ]
 }

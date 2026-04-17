@@ -12,19 +12,74 @@
   "name": "t:names.footer",
   "sections": {
     "footer": {
-      "type": "shopcom-footer",
+      "type": "footer",
       "settings": {
-        "newsletter_heading": "STAY IN THE KNOW",
-        "subscribe_button_color": "#207D94",
-        "copyright_text": "© 2025 SHOP.COM. All rights reserved.",
-        "background_color": "#262626",
-        "text_color": "#FFFFFF",
-        "show_language_selector": false,
-        "show_country_selector": false,
-        "show_newsletter": true,
-        "show_social_icons": true,
-        "show_payment_icons": true
-      }
+        "section_width": "page-width",
+        "gap": 20,
+        "color_scheme": "scheme-5",
+        "padding-block-start": 36,
+        "padding-block-end": 36
+      },
+      "blocks": {
+        "newsletter-group": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "gap": 6,
+            "width": "fill",
+            "inherit_color_scheme": true
+          },
+          "blocks": {
+            "newsletter-heading": {
+              "type": "text",
+              "settings": {
+                "text": "STAY IN THE KNOW",
+                "width": "100%",
+                "alignment": "left",
+                "type_preset": "h3"
+              }
+            },
+            "newsletter-text": {
+              "type": "text",
+              "settings": {
+                "text": "Sign up for exclusive deals and early access to new products.",
+                "width": "100%",
+                "alignment": "left",
+                "type_preset": "rte"
+              }
+            }
+          },
+          "block_order": ["newsletter-heading", "newsletter-text"]
+        },
+        "newsletter-form": {
+          "type": "email-signup",
+          "settings": {
+            "width": "fill"
+          }
+        },
+        "menu-1": {
+          "type": "menu",
+          "settings": {}
+        },
+        "social-links": {
+          "type": "social-links",
+          "settings": {}
+        },
+        "payment-icons": {
+          "type": "payment-icons",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "newsletter-group",
+        "newsletter-form",
+        "menu-1",
+        "social-links",
+        "payment-icons"
+      ]
     },
     "utilities": {
       "type": "footer-utilities",
