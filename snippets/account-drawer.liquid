@@ -1,0 +1,17 @@
+{% doc %}
+  Account Drawer Placeholder
+
+  Account functionality uses Shopify's native <shopify-account> element,
+  which is rendered in snippets/header-actions.liquid within the header section group.
+
+  This snippet exists as a module boundary for the account drawer feature.
+  The native Shopify account UI handles login, registration, and order history
+  without requiring a custom drawer implementation.
+
+  @example {% render 'account-drawer' %}
+{% enddoc %}
+
+{% comment %}
+  Account UI is handled by the native <shopify-account> element in header-actions.liquid.
+  This snippet is intentionally empty — no custom account drawer is needed.
+{% endcomment %}

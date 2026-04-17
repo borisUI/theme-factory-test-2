@@ -1,0 +1,16 @@
+{% doc %}
+  Cart Drawer Placeholder
+
+  The cart drawer implementation lives inline in snippets/header-actions.liquid,
+  which renders the full cart-drawer-component when settings.cart_type == 'drawer'.
+  This file exists as a module boundary for the cart drawer feature.
+
+  Do NOT add duplicate cart drawer markup here — it would cause double rendering.
+
+  @example {% render 'cart-drawer' %}
+{% enddoc %}
+
+{% comment %}
+  Cart drawer is rendered by header-actions.liquid within the header section group.
+  This snippet is intentionally empty to avoid duplicate rendering.
+{% endcomment %}

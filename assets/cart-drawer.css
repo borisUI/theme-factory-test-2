@@ -1,0 +1,46 @@
+/*
+ * Cart Drawer — Supplementary Styles
+ *
+ * Core cart drawer CSS lives in snippets/header-actions.liquid {% stylesheet %} block.
+ * This file provides supplementary styles and overrides loaded globally via theme.liquid.
+ */
+
+/* Cart drawer transition enhancements */
+cart-drawer-component .cart-drawer__dialog[open] {
+  animation: cart-drawer-slide-in 300ms var(--ease-out-quad, cubic-bezier(0.25, 0.46, 0.45, 0.94)) forwards;
+}
+
+cart-drawer-component .cart-drawer__dialog.dialog-closing {
+  animation: cart-drawer-slide-out 200ms var(--ease-out-quad, cubic-bezier(0.25, 0.46, 0.45, 0.94)) forwards;
+}
+
+@keyframes cart-drawer-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes cart-drawer-slide-out {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  cart-drawer-component .cart-drawer__dialog[open],
+  cart-drawer-component .cart-drawer__dialog.dialog-closing {
+    animation: none;
+  }
+}
