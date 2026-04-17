@@ -62,9 +62,14 @@
         "payment-icons": {
           "type": "payment-icons",
           "settings": {}
+        },
+        "footer-logo": {
+          "type": "logo",
+          "settings": {}
         }
       },
       "block_order": [
+        "footer-logo",
         "newsletter-group",
         "newsletter-form",
         "menu-1",

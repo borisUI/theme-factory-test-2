@@ -1,17 +1,211 @@
 {% doc %}
-  Account Drawer Placeholder
+  Account Drawer
 
-  Account functionality uses Shopify's native <shopify-account> element,
-  which is rendered in snippets/header-actions.liquid within the header section group.
+  Renders the account drawer component as a slide-out panel with
+  conditional content based on customer login state.
 
-  This snippet exists as a module boundary for the account drawer feature.
-  The native Shopify account UI handles login, registration, and order history
-  without requiring a custom drawer implementation.
+  When logged in: displays welcome message, navigation links (Orders, Profile, Addresses),
+  and a sign-out link.
+  When logged out: displays guest messaging with sign-in and create account links.
+
+  Account functionality primarily uses Shopify's native <shopify-account> element
+  rendered in snippets/header-actions.liquid. This drawer provides supplementary
+  account navigation for themes that need a custom account menu.
 
   @example {% render 'account-drawer' %}
 {% enddoc %}
 
-{% comment %}
-  Account UI is handled by the native <shopify-account> element in header-actions.liquid.
-  This snippet is intentionally empty — no custom account drawer is needed.
-{% endcomment %}
+<account-drawer-component class="account-drawer">
+  <dialog
+    ref="dialog"
+    class="account-drawer__dialog dialog-modal dialog-drawer color-{{ settings.drawer_color_scheme }}"
+    aria-labelledby="account-drawer-heading"
+  >
+    <div class="account-drawer__inner">
+      <div class="account-drawer__header">
+        <h2 class="account-drawer__heading h4" id="account-drawer-heading">
+          {% if customer %}
+            {{ 'account_drawer.welcome' | t }}
+          {% else %}
+            {{ 'account_drawer.guest_title' | t }}
+          {% endif %}
+        </h2>
+
+        <button
+          ref="closeButton"
+          on:click="account-drawer-component/close"
+          class="button close-button account-drawer__close-button button-unstyled"
+          aria-label="{{ 'actions.close_dialog' | t }}"
+        >
+          <span class="svg-wrapper">
+            {{- 'icon-close.svg' | inline_asset_content -}}
+          </span>
+        </button>
+      </div>
+
+      <div class="account-drawer__content">
+        {% if customer %}
+          <nav class="account-drawer__nav" aria-label="{{ 'account_drawer.title' | t }}">
+            <ul class="account-drawer__menu" role="list">
+              <li class="account-drawer__menu-item">
+                <a href="{{ routes.account_url }}/orders" class="account-drawer__link">
+                  <span class="svg-wrapper account-drawer__icon" aria-hidden="true">
+                    {{- 'icon-orders.svg' | inline_asset_content -}}
+                  </span>
+                  <span>{{ 'account_drawer.orders' | t }}</span>
+                </a>
+              </li>
+              <li class="account-drawer__menu-item">
+                <a href="{{ routes.account_url }}" class="account-drawer__link">
+                  <span class="svg-wrapper account-drawer__icon" aria-hidden="true">
+                    {{- 'icon-account.svg' | inline_asset_content -}}
+                  </span>
+                  <span>{{ 'account_drawer.profile' | t }}</span>
+                </a>
+              </li>
+              <li class="account-drawer__menu-item">
+                <a href="{{ routes.account_url }}/addresses" class="account-drawer__link">
+                  <span class="svg-wrapper account-drawer__icon" aria-hidden="true">
+                    {{- 'icon-pin.svg' | inline_asset_content -}}
+                  </span>
+                  <span>{{ 'account_drawer.addresses' | t }}</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="account-drawer__footer">
+            <a href="{{ routes.account_logout_url }}" class="account-drawer__sign-out button button--secondary">
+              {{ 'account_drawer.sign_out' | t }}
+            </a>
+          </div>
+        {% else %}
+          <p class="account-drawer__guest-text">
+            {{ 'account_drawer.guest_text' | t }}
+          </p>
+
+          <div class="account-drawer__actions">
+            <a href="{{ routes.account_login_url }}" class="account-drawer__action button button--primary">
+              {{ 'account_drawer.sign_in' | t }}
+            </a>
+            <a href="{{ routes.account_register_url }}" class="account-drawer__action button button--secondary">
+              {{ 'account_drawer.create_account' | t }}
+            </a>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </dialog>
+</account-drawer-component>
+
+{% stylesheet %}
+  .account-drawer__dialog {
+    max-width: 400px;
+  }
+
+  .account-drawer__inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .account-drawer__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--padding-md) var(--padding-lg);
+    border-bottom: 1px solid rgb(var(--color-border));
+  }
+
+  .account-drawer__heading {
+    margin: 0;
+  }
+
+  .account-drawer__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: var(--padding-lg);
+    gap: var(--gap-lg);
+  }
+
+  .account-drawer__menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-xs);
+  }
+
+  .account-drawer__link {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-sm);
+    padding: var(--padding-sm) var(--padding-md);
+    border-radius: var(--inputs-border-radius);
+    text-decoration: none;
+    color: rgb(var(--color-foreground));
+    transition: background-color var(--animation-speed) ease;
+  }
+
+  .account-drawer__link:hover {
+    background-color: rgb(var(--color-foreground) / 0.04);
+  }
+
+  .account-drawer__link:focus-visible {
+    outline: 2px solid rgb(var(--color-focus));
+    outline-offset: 2px;
+  }
+
+  .account-drawer__icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+
+  .account-drawer__footer {
+    margin-top: auto;
+    padding-top: var(--padding-lg);
+    border-top: 1px solid rgb(var(--color-border));
+  }
+
+  .account-drawer__sign-out {
+    width: 100%;
+    text-align: center;
+  }
+
+  .account-drawer__guest-text {
+    color: rgb(var(--color-foreground) / 0.75);
+    margin: 0;
+  }
+
+  .account-drawer__actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-sm);
+  }
+
+  .account-drawer__action {
+    width: 100%;
+    text-align: center;
+  }
+{% endstylesheet %}
+
+{% javascript %}
+  import { DialogComponent } from '@theme/dialog';
+
+  class AccountDrawerComponent extends DialogComponent {
+    open() {
+      this.showDialog();
+    }
+
+    close() {
+      this.closeDialog();
+    }
+  }
+
+  if (!customElements.get('account-drawer-component')) {
+    customElements.define('account-drawer-component', AccountDrawerComponent);
+  }
+{% endjavascript %}

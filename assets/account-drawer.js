@@ -1,17 +1,32 @@
-/**
- * Account Drawer Module
- *
- * Account functionality uses Shopify's native <shopify-account> element.
- * This file exists as a module boundary for the account drawer feature.
- *
- * The native Shopify account element handles:
- * - Login/logout
- * - Registration
- * - Order history
- * - Account management
- *
- * No custom drawer component is needed since <shopify-account>
- * provides its own UI and interaction patterns.
- */
+import { DialogComponent } from '@theme/dialog';
 
-// Intentionally minimal — native <shopify-account> handles account UI
+/**
+ * A custom element that manages an account drawer.
+ *
+ * Provides a slide-out panel with account navigation links
+ * for logged-in customers, or sign-in/register CTAs for guests.
+ *
+ * @typedef {object} Refs
+ * @property {HTMLDialogElement} dialog - The dialog element.
+ *
+ * @extends {DialogComponent}
+ */
+class AccountDrawerComponent extends DialogComponent {
+  /**
+   * Opens the account drawer dialog.
+   */
+  open() {
+    this.showDialog();
+  }
+
+  /**
+   * Closes the account drawer dialog.
+   */
+  close() {
+    this.closeDialog();
+  }
+}
+
+if (!customElements.get('account-drawer-component')) {
+  customElements.define('account-drawer-component', AccountDrawerComponent);
+}

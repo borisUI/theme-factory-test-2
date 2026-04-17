@@ -1,16 +1,33 @@
 {% doc %}
-  Cart Drawer Placeholder
+  Cart Drawer
 
-  The cart drawer implementation lives inline in snippets/header-actions.liquid,
+  Renders the cart drawer component as a slide-out panel.
+  The primary cart drawer implementation lives inline in snippets/header-actions.liquid,
   which renders the full cart-drawer-component when settings.cart_type == 'drawer'.
-  This file exists as a module boundary for the cart drawer feature.
 
-  Do NOT add duplicate cart drawer markup here — it would cause double rendering.
+  This snippet is rendered from layout/theme.liquid as a fallback entry point.
+  It is intentionally a no-op because header-actions.liquid already renders the
+  cart drawer within the header section group. Adding duplicate markup here would
+  cause double-rendering of the drawer.
+
+  The cart drawer features:
+  - Slide-out panel with cart line items via cart-products snippet
+  - Quantity controls and item removal
+  - Cart summary with subtotal and checkout CTA
+  - Empty cart state with continue shopping link
+  - Auto-open on add-to-cart when enabled
+  - Keyboard accessible (Escape to close, focus trap)
 
   @example {% render 'cart-drawer' %}
 {% enddoc %}
 
 {% comment %}
-  Cart drawer is rendered by header-actions.liquid within the header section group.
-  This snippet is intentionally empty to avoid duplicate rendering.
+  Cart drawer UI is rendered by header-actions.liquid within the header section group.
+  That implementation (lines 102-226 of header-actions.liquid) includes:
+  - cart-drawer-component custom element with auto-open support
+  - dialog element with cart items, summary, and empty state
+  - Full CSS via stylesheet block
+
+  This snippet intentionally does not duplicate that markup.
+  See header-actions.liquid for the complete cart drawer implementation.
 {% endcomment %}

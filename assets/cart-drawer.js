@@ -68,6 +68,10 @@ class CartDrawerComponent extends DialogComponent {
     if (this.hasAttribute('auto-open')) {
       this.showDialog();
     }
+
+    this.dispatchEvent(new CustomEvent('cart:updated', {
+      bubbles: true,
+    }));
   };
 
   open() {
