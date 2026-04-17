@@ -27,7 +27,7 @@
             "newsletter-heading": {
               "type": "text",
               "settings": {
-                "text": "STAY IN THE KNOW",
+                "text": "<p>STAY IN THE KNOW</p>",
                 "width": "100%",
                 "alignment": "left",
                 "type_preset": "h3"
@@ -36,7 +36,7 @@
             "newsletter-text": {
               "type": "text",
               "settings": {
-                "text": "Sign up for exclusive deals and early access to new products.",
+                "text": "<p>Sign up for exclusive deals and early access to new products.</p>",
                 "width": "100%",
                 "alignment": "left",
                 "type_preset": "rte"

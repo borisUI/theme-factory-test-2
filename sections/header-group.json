@@ -63,21 +63,21 @@
         "brand_1": {
           "type": "text",
           "settings": {
-            "text": "MA Vitamins",
+            "text": "<p>MA Vitamins</p>",
             "type_preset": "caption"
           }
         },
         "brand_2": {
           "type": "text",
           "settings": {
-            "text": "TLS Weight Management",
+            "text": "<p>TLS Weight Management</p>",
             "type_preset": "caption"
           }
         },
         "brand_3": {
           "type": "text",
           "settings": {
-            "text": "Isotonix",
+            "text": "<p>Isotonix</p>",
             "type_preset": "caption"
           }
         }
